@@ -1,5 +1,5 @@
-Sinatra on OpenShift
-====================
+Herosheet Dashboard
+===================
 
 This git repository will help you get up and running quickly with Sinatra on OpenShift.
 
