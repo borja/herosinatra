@@ -1,6 +1,9 @@
 require 'rubygems'
 require 'bundler'
+
 Bundler.require
 
 require './app.rb'
-run Sinatra::Application
+
+# run the modular object based app.rb file that we included above
+run App.new
