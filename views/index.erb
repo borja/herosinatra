@@ -1,11 +1,64 @@
-<h1>Herosheet Project</h1>
-<table>
+<center><img src="images/logo.png" alt="Proyecto Heroquest" /></center>
+<link rel="stylesheet" href="app.css" type="text/css" />
+<table id='table-2'>
 	<thead>
-		<tr><a href=/hero>Héroes</a></tr>
-		<tr>Hechizos</tr>
-		<tr>Habilidades</tr>
-		<tr>Items</tr>
+		<tr>
+			<th>Icono</th>
+			<th><a href=/heros>Héroes</a></th>
+			<th>Nivel</th>
+			<th><a href=/hechizos>Hechizos</a></th>
+			<th><a href=/habilidades>Habilidades</a></th>
+			<th><a href=/objetos>Objetos</a></th>
+		</tr>
 	</thead>
 	<tbody>
+		<% heros.each do |hero| %>
+			<tr>
+				<td><% case hero[:sex]
+							when "male" %>
+							<% case personaje(hero[:personaje])
+								when "enano" then %>
+									<img src="images/enano.png" alt="rss feed" /, id='icon'>
+								<% when "elfo" then %>
+									<img src="images/elfo.png" alt="rss feed" /, id='icon'>
+								<% when "tiefling" then %>
+									<img src="images/tiefling.png" alt="rss feed" /, id='icon'>
+								<% when "mago" then %>
+									<img src="images/mago.png" alt="rss feed" /, id='icon'>
+								<% when "ladron" then %>
+									<img src="images/ladron.png" alt="rss feed" /, id='icon'>
+								<% when "barbaro" then %>
+									<img src="images/barbaro.png" alt="rss feed" /, id='icon'>
+							<% end%>
+							<% when "female" %>
+								<% case personaje(hero[:personaje])
+									when "elfo" then %>
+										<img src="images/elfa.png" alt="rss feed" /, id='icon'>
+									<% when "tiefling" then %>
+										<img src="images/tiefling-female.png" alt="rss feed" /, id='icon'>
+									<% when "mago" then %>
+										<img src="images/maga.png" alt="rss feed" /, id='icon'>
+									<% when "ladron" then %>
+										<img src="images/ladrona.png" alt="rss feed" /, id='icon'>
+									<% when "barbaro" then %>
+										<img src="images/barbara.png" alt="rss feed" /, id='icon'>
+									<% end%>
+						<% end %>
+				</td>
+				<td>
+					<%= hero[:name] %>
+				</td>
+				<td>
+					<%= hero[:nivel] %>
+				</td>
+				<td>
+					<%= hero[:hechizos].count %>
+				</td>
+				<td><%= "Gloria"   %></td>
+				<td><%= item(1)[:name] %></td>
+			</tr>
+		<% end %>
 	</tbody>
 </table>
+
+

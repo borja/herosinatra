@@ -1,0 +1,42 @@
+<h1><center><%= @heroe[:name] %></center></h1><hr>
+<h3><center><%= @heroe[:jugador] %></center></h3>
+<a href=/>Índice</a><br>
+
+<link rel="stylesheet" href="app.css" type="text/css" />
+<table id='table-2'>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Nivel</th>
+			<th>Personaje</th>
+			<th>Raza</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td><%= @heroe[:id] %></td>
+			<td><%= @heroe[:nivel] %></td>
+			<td><%= @heroe[:personaje] %></td>
+			<td><%= personaje(@heroe[:personaje])%></td>
+		</tr>
+	</tbody>
+</table>
+
+<h2>Hechizos</h2>
+<% @heroe[:hechizos].each do |magia|%>
+	<li><%= spell(magia)[:name] %></li>
+<% end %>
+<%= "El personaje no conoce ningun hechizo" if @heroe[:hechizos].empty? %>
+
+<h2>Items</h2>
+<% @heroe[:items].each do |objeto|%>
+	<li><%= item(objeto)[:name] %></li>
+<% end %>
+<%= "El personaje no tiene ningun objeto todavia." if @heroe[:items].empty? %>
+
+
+<h2>Habilidades</h2>
+<% @heroe[:skills].each do |habilidad| %>
+	<li><%= skill(habilidad)[:name] %>
+<% end %>
+<%= "El personaje no tiene ninguna habilidad" if @heroe[:skills].empty? %>
