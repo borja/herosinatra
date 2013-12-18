@@ -43,6 +43,19 @@ def heros
       :items     => [],
       :skills    => [5],
       :sex       => "female"
-    }      
+    },
+    { :id        => 5,
+      :name      => "Savra",
+      :personaje => "hechicero",
+      :jugador   => "Chorni",
+      :nivel     => 5,
+      :cuerpo    => 4,
+      :mente     => 10,
+      :mov       => 7,
+      :hechizos  => [1,2,3,4,5,6,7,8,9],
+      :items     => [1],
+      :skills    => [5],
+      :sex       => "female"
+    }       
   ]
 end
