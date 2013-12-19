@@ -56,6 +56,19 @@ def heros
       :items     => [1],
       :skills    => [5],
       :sex       => "female"
+    },
+    { :id        => 6,
+      :name      => "Yunnow (junior)",
+      :personaje => "conjurador",
+      :jugador   => "Daniel Cabañas",
+      :nivel     => 11,
+      :cuerpo    => 4,
+      :mente     => 16,
+      :mov       => 8,
+      :hechizos  => [1,2,3,4,5,6,7,8,9],
+      :items     => [],
+      :skills    => [],
+      :sex       => "male"
     }       
   ]
 end
