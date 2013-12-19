@@ -86,6 +86,19 @@ def heros
       :items     => [1],
       :skills    => [],
       :sex       => "male"
-    }      
+    },    
+    { :id        => 8,
+      :name      => "Lenny Blanc",
+      :personaje => "vengador",
+      :jugador   => "Daniel Cabañas",
+      :nivel     => 3,
+      :cuerpo    => 7,
+      :mente     => 5,
+      :mov       => 7,
+      :hechizos  => [1,2],
+      :items     => [1],
+      :skills    => [],
+      :sex       => "male"
+    }   
   ]
 end
