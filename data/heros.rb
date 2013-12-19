@@ -72,7 +72,7 @@ def heros
     }, 
     { :id        => 7,
       :name      => "Paul Baloff",
-      :personaje => "barbaro",
+      :personaje => "lord de las bestias",
       :jugador   => "Adrian",
       :nivel     => 1,
       :cuerpo    => 8,
