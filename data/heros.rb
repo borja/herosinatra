@@ -10,13 +10,17 @@ def heros
       :sex       => "male"
     },
     { :id        => 2,
-      :name      => "Arya",
+      :name      => "Elros Amarie",
       :personaje => "druida",
-      :nivel     => 15,
-      :hechizos  => [2],
+      :jugador   => "Iris",
+      :nivel     => 13,
+      :cuerpo    => 11,
+      :mente     => 11,
+      :mov       => 10,
+      :hechizos  => [1,2,3,4,5,6,7,8,9,10,11,12],
       :items     => [],
       :skills    => [],
-      :sex       => "female"
+      :sex       => "male"
     },
     { :id        => 3,
       :name      => "Grunt Mascafilos",
