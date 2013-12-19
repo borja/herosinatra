@@ -69,6 +69,19 @@ def heros
       :items     => [],
       :skills    => [],
       :sex       => "male"
-    }       
+    }, 
+    { :id        => 7,
+      :name      => "Paul Baloff",
+      :personaje => "barbaro",
+      :jugador   => "Adrian",
+      :nivel     => 1,
+      :cuerpo    => 8,
+      :mente     => 2,
+      :mov       => 7,
+      :hechizos  => [],
+      :items     => [1],
+      :skills    => [],
+      :sex       => "male"
+    }      
   ]
 end
