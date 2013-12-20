@@ -45,11 +45,11 @@
 </table>
 <%= "El personaje no conoce ningun hechizo" if @heroe[:hechizos].empty? %>
 
-<h2>Items</h2>
-<% @heroe[:items].each do |objeto|%>
-	<li><%= item(objeto)[:name] %></li>
+<h2>Armas</h2>
+<% @heroe[:armas].each do |objeto|%>
+	<li><%= arma(objeto)[:name] %></li>
 <% end %>
-<%= "El personaje no tiene ningun objeto todavia." if @heroe[:items].empty? %>
+<%= "El personaje no tiene ningun arma todavia." if @heroe[:armas].empty? %>
 
 
 <h2>Habilidades</h2>

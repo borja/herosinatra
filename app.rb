@@ -1,7 +1,7 @@
 require 'sinatra/base'
 require './data/heros'
 require './data/spells'
-require './data/items'
+require './data/armas'
 require './data/skills'
 require './data/chars'
 
@@ -15,11 +15,5 @@ class App < Sinatra::Base
   get '/hero/:id' do |id|
     @heroe = heros[ (id.to_i - 1) ]
     erb :ficha
-  end
-end
-
-helpers do
-  def img(name)
-    "<img src='images/#{name}' alt='#{name}' />"
   end
 end
