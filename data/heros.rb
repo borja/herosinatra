@@ -5,7 +5,7 @@ def heros
       :name      => "Fuckencio",
       :personaje => "asesino",
       :nivel     => 20,
-      :hechizos  => [1,2],
+      :hechizos  => [12],
       :items     => [1],
       :skills    => [1,3],
       :sex       => "male"
@@ -44,7 +44,7 @@ def heros
       :cuerpo    => 7,
       :mente     => 4,
       :mov       => 7,
-      :hechizos  => [1,3],
+      :hechizos  => [1,2,3,13,14,15],
       :items     => [],
       :skills    => [5],
       :sex       => "female"
@@ -96,7 +96,7 @@ def heros
       :cuerpo    => 7,
       :mente     => 5,
       :mov       => 7,
-      :hechizos  => [1,2],
+      :hechizos  => [1,2,3,13,14,15],
       :items     => [1],
       :skills    => [],
       :sex       => "male"

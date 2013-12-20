@@ -2,7 +2,7 @@
 <h3><center><%= @heroe[:jugador] %></center></h3>
 <a href=/>Índice</a><br>
 
-<link rel="stylesheet" href="app.css" type="text/css" />
+<link rel="stylesheet" href="../../app.css" type="text/css" />
 <table id='table-2'>
 	<thead>
 		<tr>
@@ -22,10 +22,27 @@
 	</tbody>
 </table>
 
-<h2>Hechizos</h2>
-<% @heroe[:hechizos].each do |magia|%>
-	<li><%= spell(magia)[:name] %></li>
-<% end %>
+<h2>Hechizos Conocidos</h2>
+<table id='table-2'>
+	<thead>
+		<th>Icono</th>
+		<th>Elemento</th>
+		<th>Nombre</th>
+		<th>Descripción</th>
+	</thead>
+	<tbody>
+		<% @heroe[:hechizos].each do |magia|%>
+			<tr>
+				<td><% img_path = "'../../images/spells/#{spell(magia)[:name]}.png'" %>
+					<img src=<%=img_path%> alt=<%=spell(magia)[:name]%>, id='icon' />
+				</td>
+				<td><%= spell(magia)[:elemento] %></td>
+				<td><%= spell(magia)[:name] %></td>
+				<td><%= spell(magia)[:descripcion] %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
 <%= "El personaje no conoce ningun hechizo" if @heroe[:hechizos].empty? %>
 
 <h2>Items</h2>

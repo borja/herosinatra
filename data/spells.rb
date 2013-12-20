@@ -1,19 +1,19 @@
 def spells
   [
     { :id           => 1,
-      :name         => "Bola de Fuego",
+      :name         => "bola de fuego",
       :elemento     => "Fuego",
       :nivel        => 1,
       :descripcion  => "Causa 2 dados de ataque por fuego."
     },
     { :id           => 2,
-      :name         => "Fuego de Ira",
+      :name         => "fuego de ira",
       :elemento     => "Fuego",
       :nivel        => 1,
       :descripcion  => "Causa 1 dano a un enemigo del tablero."
     },
     { :id           => 3,
-      :name         => "Valentia",
+      :name         => "valentia",
       :elemento     => "Fuego",
       :nivel        => 1,
       :descripcion  => "+1 ataque de un aliado."
@@ -72,6 +72,24 @@ def spells
       :nivel        => 1,
       :descripcion  => "Duerme al objetivo."
     },
+    { :id           => 13,
+      :name         => "flechas de la noche",
+      :elemento     => "Sombra",
+      :nivel        => 1,
+      :descripcion  => "3 dados de ataque de sombras."
+    },
+    { :id           => 14,
+      :name         => "manto de oscuridad",
+      :elemento     => "Sombra",
+      :nivel        => 1,
+      :descripcion  => "Nadie puede atacar en la sala"
+    },
+    { :id           => 15,
+      :name         => "cadena de tinieblas",
+      :elemento     => "Sombra",
+      :nivel        => 1,
+      :descripcion  => "Aturde al objetivo y lo relentiza."
+    }
   ]
 end
 
