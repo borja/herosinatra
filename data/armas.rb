@@ -40,6 +40,30 @@ def armas
       :gemas        => [],
       :diagonal     => true
     },
+    { :id           => 6,
+      :name         => "katar",
+      :categoria    => "cuchillo",
+      :powa         => 2,
+      :ranuras      => 2,
+      :gemas        => [],
+      :diagonal     => false
+    },
+    { :id           => 7,
+      :name         => "escudo",
+      :categoria    => "escudo",
+      :powa         => 1,
+      :ranuras      => 4,
+      :gemas        => [],
+      :diagonal     => true
+    },
+    { :id           => 8,
+      :name         => "baston",
+      :categoria    => "baston",
+      :powa         => 1,
+      :ranuras      => 4,
+      :gemas        => [],
+      :diagonal     => true
+    },
   ]
 end
 

@@ -6,7 +6,7 @@ def heros
       :personaje => "asesino",
       :nivel     => 20,
       :hechizos  => [12],
-      :armas     => [3,3,3,3,3,3,3,3,3,3],
+      :armas     => [3,6],
       :skills    => [1,3],
       :sex       => "male"
     },
@@ -19,7 +19,7 @@ def heros
       :mente     => 11,
       :mov       => 10,
       :hechizos  => [1,2,3,4,5,6,7,8,9,10,11,12],
-      :armas     => [],
+      :armas     => [7],
       :skills    => [],
       :sex       => "male"
     },
@@ -32,7 +32,7 @@ def heros
       :mente     => 3,
       :mov       => 6,
       :hechizos  => [],
-      :armas     => [],
+      :armas     => [7,7],
       :skills    => [3,4],
       :sex       => "male"
     },
@@ -45,7 +45,7 @@ def heros
       :mente     => 4,
       :mov       => 7,
       :hechizos  => [1,2,3,13,14,15],
-      :armas     => [2],
+      :armas     => [2,7],
       :skills    => [5],
       :sex       => "female"
     },
@@ -71,7 +71,7 @@ def heros
       :mente     => 16,
       :mov       => 8,
       :hechizos  => [1,2,3,4,5,6,7,8,9],
-      :armas     => [],
+      :armas     => [8],
       :skills    => [],
       :sex       => "male"
     }, 
@@ -84,7 +84,7 @@ def heros
       :mente     => 2,
       :mov       => 7,
       :hechizos  => [],
-      :armas     => [1],
+      :armas     => [1,7],
       :skills    => [],
       :sex       => "male"
     },    
@@ -97,7 +97,7 @@ def heros
       :mente     => 5,
       :mov       => 7,
       :hechizos  => [1,2,3,13,14,15],
-      :armas     => [1],
+      :armas     => [1,7],
       :skills    => [],
       :sex       => "male"
     }   
