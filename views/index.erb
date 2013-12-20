@@ -61,7 +61,8 @@
 				<td><%= "Not implemented"   %></td>
 				<td>
 					<% hero[:armas].each do |id| %>
-						<li><%= arma(id)[:name] %></li>
+						<% img_path = "'images/#{arma(id)[:name]}.png'" %>
+						<img src=<%=img_path%> alt=<%=arma(id)[:name]%>, id='icon' />
 					<% end %>
 				</td>
 			</tr>
