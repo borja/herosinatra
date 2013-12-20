@@ -18,7 +18,7 @@ def armas
     },
     { :id           => 3,
       :name         => "daga",
-      :categoria    => "Puñal",
+      :categoria    => "cuchillo",
       :powa         => 1,
       :ranuras      => 1,
       :gemas        => [],

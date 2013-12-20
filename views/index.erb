@@ -58,8 +58,12 @@
 				<td>
 					<%= hero[:hechizos].count %>
 				</td>
-				<td><%= "Gloria"   %></td>
-				<td><%= arma(1)[:name] %></td>
+				<td><%= "Not implemented"   %></td>
+				<td>
+					<% hero[:armas].each do |id| %>
+						<li><%= arma(id)[:name] %></li>
+					<% end %>
+				</td>
 			</tr>
 		<% end %>
 	</tbody>
