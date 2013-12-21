@@ -96,3 +96,13 @@ end
 def spell(id)
   spells[id-1]
 end
+
+def color(elemento)
+  case elemento
+	   when "Fuego"  then return 'background-color:#FF6633'
+	   when "Aire"   then return 'background-color:#CCFFFF'
+	   when "Agua"   then return 'background-color:#44CCFF'
+	   when "Tierra" then return 'background-color:#CC9966'
+	   when "Sombra" then return 'background-color:#CC9999'
+  end
+end

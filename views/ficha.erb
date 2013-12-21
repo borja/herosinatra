@@ -31,8 +31,8 @@
 		<th>Descripción</th>
 	</thead>
 	<tbody>
-		<% @heroe[:hechizos].each do |magia|%>
-			<tr>
+		<% @heroe[:hechizos].each do |magia|%>		
+			<tr style=<%= color(spell(magia)[:elemento])%>>				
 				<td><% img_path = "'../../images/spells/#{spell(magia)[:name]}.png'" %>
 					<img src=<%=img_path%> alt=<%=spell(magia)[:name]%>, id='icon' />
 				</td>
