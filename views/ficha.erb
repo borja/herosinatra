@@ -23,7 +23,8 @@
 </table>
 
 <h2>Hechizos Conocidos</h2>
-<table id='table-2'>
+<% unless @heroe[:hechizos].empty? %>
+	<table id='table-2'>
 	<thead>
 		<th>Icono</th>
 		<th>Elemento</th>
@@ -42,8 +43,9 @@
 			</tr>
 		<% end %>
 	</tbody>
-</table>
-<%= "El personaje no conoce ningun hechizo" if @heroe[:hechizos].empty? %>
+	</table>
+<% else %>El personaje no conoce ningun hechizo
+<% end %>
 
 <h2>Armas</h2>
 <% @heroe[:armas].each do |objeto|%>
