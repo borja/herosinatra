@@ -52,8 +52,32 @@
 	<% end %>
 <% end%>
 
-<h2>Habilidades</h2>
-<% @heroe[:skills].each do |habilidad| %>
-	<li><%= skill(habilidad)[:name].capitalize %>
+<h2>Miscelánea</h2>
+<% if @heroe[:miscs].empty? %>
+	El personaje no tiene ninguna nigún objeto misceláneo.
+<% else %>
+	<% @heroe[:miscs].each do |objeto|%>
+		<li><%= miscelanea(objeto)[:name].capitalize %></li>
+	<% end %>
+<% end%>
+
+<h2>Tesoros</h2>
+
+<h3>Runas</h3>
+<% @heroe[:runas].each do |r| %>
+	<li><%= runa(r)[:name].capitalize %>
 <% end %>
-<%= "El personaje no tiene ninguna habilidad" if @heroe[:skills].empty? %>
+<%= "El personaje no tiene ninguna runa." if @heroe[:runas].empty? %>
+
+<h3>Joyas</h3>
+<% @heroe[:joyas].each do |j| %>
+	<li><%= joya(j)[:name].capitalize %>
+<% end %>
+<%= "El personaje no tiene ninguna joya." if @heroe[:joyas].empty? %>
+
+<h3>Gemas</h3>
+<% @heroe[:gemas].each do |g| %>
+	<% img_path = "'../../images/treasures/gemas/#{gema(g)[:name]}.png'" %>
+	<img src=<%=img_path%> alt=<%=gema(g)[:name]%>, id='icon' />
+<% end %>
+<%= "El personaje no tiene ninguna gema." if @heroe[:gemas].empty? %>
