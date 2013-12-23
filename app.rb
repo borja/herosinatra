@@ -7,6 +7,7 @@ require './data/protecciones'
 require './data/skills'
 require './data/chars'
 require './data/pets'
+require './data/miscelaneas'
 
 class App < Sinatra::Base  
   get '/' do
