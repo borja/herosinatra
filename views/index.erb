@@ -10,7 +10,8 @@
 			<th><a href=/hechizos>Hechizos Disponibles</a></th>
 			<th><a href=/armas>Armas</a></th>
 			<th>Armadura</th>
-			<th>Protecciones</th>			
+			<th>Protecciones</th>	
+			<th>Miscelaneas</th>		
 			<th><a href=/pets>Familiares</a></th>
 		</tr>
 	</thead>
@@ -73,6 +74,12 @@
 					<% hero[:prots].each do |id| %>
 						<% img_path = "'images/protecciones/#{proteccion(id)[:name]}.png'" %>
 						<img src=<%=img_path%> alt=<%=proteccion(id)[:name]%>, id='icon' />
+					<% end %>
+				</td>
+				<td>
+					<% hero[:miscs].each do |id| %>
+						<% img_path = "'images/miscs/#{miscelanea(id)[:name]}.png'" %>
+						<img src=<%=img_path%> alt=<%=miscelanea(id)[:name]%>, id='icon' />
 					<% end %>
 				</td>
 				<td>
