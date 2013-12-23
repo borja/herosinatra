@@ -65,13 +65,15 @@
 
 <h3>Runas</h3>
 <% @heroe[:runas].each do |r| %>
-	<li><%= runa(r)[:name].capitalize %>
+	<% img_path = "'../../images/treasures/runas/#{runa(r)[:name]}.png'" %>
+	<img src=<%=img_path%> alt=<%=runa(r)[:name]%>, id='icon' />
 <% end %>
 <%= "El personaje no tiene ninguna runa." if @heroe[:runas].empty? %>
 
 <h3>Joyas</h3>
 <% @heroe[:joyas].each do |j| %>
-	<li><%= joya(j)[:name].capitalize %>
+	<% img_path = "'../../images/treasures/joyas/#{joya(j)[:name]}.png'" %>
+	<img src=<%=img_path%> alt=<%=joya(j)[:name]%>, id='icon' />
 <% end %>
 <%= "El personaje no tiene ninguna joya." if @heroe[:joyas].empty? %>
 
