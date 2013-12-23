@@ -72,6 +72,39 @@ def armas
       :gemas        => [1,2,3],
       :diagonal     => true
     },
+    { :id           => 10,
+      :name         => "espada larga",
+      :categoria    => "Filo",
+      :powa         => 3,
+      :ranuras      => 3,
+      :gemas        => [],
+      :diagonal     => true
+    },
+    { :id           => 11,
+      :name         => "hacha",
+      :categoria    => "Filo",
+      :powa         => 2,
+      :ranuras      => 4,
+      :gemas        => [],
+      :diagonal     => false
+    },
+    { :id           => 12,
+      :name         => "hacha a dos manos",
+      :categoria    => "Filo",
+      :powa         => 4,
+      :ranuras      => 4,
+      :gemas        => [],
+      :diagonal     => false
+    },
+    { :id           => 13,
+      :name         => "maza",
+      :categoria    => "Filo",
+      :powa         => 2,
+      :ranuras      => 4,
+      :gemas        => [],
+      :diagonal     => false
+    },
+    
   ]
 end
 
