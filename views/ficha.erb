@@ -43,6 +43,15 @@
 	<% end %>
 <% end%>
 
+<h2>Miscelánea</h2>
+<% if @heroe[:miscs].empty? %>
+	El personaje no tiene ninguna nigún objeto misceláneo.
+<% else %>
+	<% @heroe[:miscs].each do |objeto|%>
+		<li><%= miscelanea(objeto)[:name].capitalize %></li>
+	<% end %>
+<% end%>
+
 <h2>Habilidades</h2>
 <% @heroe[:skills].each do |habilidad| %>
 	<li><%= skill(habilidad)[:name].capitalize %>
