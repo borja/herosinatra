@@ -52,15 +52,6 @@
 	<% end %>
 <% end%>
 
-<h2>Miscelánea</h2>
-<% if @heroe[:miscs].empty? %>
-	El personaje no tiene ninguna nigún objeto misceláneo.
-<% else %>
-	<% @heroe[:miscs].each do |objeto|%>
-		<li><%= miscelanea(objeto)[:name].capitalize %></li>
-	<% end %>
-<% end%>
-
 <h2>Tesoros</h2>
 
 <h3>Runas</h3>
