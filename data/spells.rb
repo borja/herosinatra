@@ -107,10 +107,10 @@ end
 
 def color(elemento)
   case elemento
-	   when "Fuego"  then return 'background-color:#FF6633'
-	   when "Aire"   then return 'background-color:#CCFFFF'
-	   when "Agua"   then return 'background-color:#44CCFF'
-	   when "Tierra" then return 'background-color:#CC9966'
-	   when "Sombra" then return 'background-color:#CC9999'
+	   when "fuego"  then return 'background-color:#FF6633'
+	   when "aire"   then return 'background-color:#CCFFFF'
+	   when "agua"   then return 'background-color:#44CCFF'
+	   when "tierra" then return 'background-color:#CC9966'
+	   when "sombra" then return 'background-color:#CC9999'
   end
 end
