@@ -16,8 +16,8 @@
 		<tr>
 			<td><%= @heroe[:id] %></td>
 			<td><%= @heroe[:nivel] %></td>
-			<td><%= @heroe[:personaje] %></td>
-			<td><%= personaje(@heroe[:personaje])%></td>
+			<td><%= @heroe[:personaje].capitalize %></td>
+			<td><%= personaje(@heroe[:personaje]).capitalize %></td>
 		</tr>
 	</tbody>
 </table>
@@ -37,8 +37,8 @@
 				<td><% img_path = "'../../images/spells/#{spell(magia)[:name]}.png'" %>
 					<img src=<%=img_path%> alt=<%=spell(magia)[:name]%>, id='icon' />
 				</td>
-				<td><%= spell(magia)[:elemento] %></td>
-				<td><%= spell(magia)[:name] %></td>
+				<td><%= spell(magia)[:elemento].capitalize %></td>
+				<td><%= spell(magia)[:name].capitalize %></td>
 				<td><%= spell(magia)[:descripcion] %></td>
 			</tr>
 		<% end %>
@@ -49,13 +49,13 @@
 
 <h2>Armas</h2>
 <% @heroe[:armas].each do |objeto|%>
-	<li><%= arma(objeto)[:name] %></li>
+	<li><%= arma(objeto)[:name].capitalize %></li>
 <% end %>
 <%= "El personaje no tiene ningun arma todavia." if @heroe[:armas].empty? %>
 
 
 <h2>Habilidades</h2>
 <% @heroe[:skills].each do |habilidad| %>
-	<li><%= skill(habilidad)[:name] %>
+	<li><%= skill(habilidad)[:name].capitalize %>
 <% end %>
 <%= "El personaje no tiene ninguna habilidad" if @heroe[:skills].empty? %>
