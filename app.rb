@@ -4,6 +4,7 @@ require './data/spells'
 require './data/armas'
 require './data/skills'
 require './data/chars'
+require './data/pets'
 
 class App < Sinatra::Base  
   get '/' do

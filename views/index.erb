@@ -9,6 +9,7 @@
 			<th>Nivel</th>
 			<th><a href=/hechizos>Hechizos</a></th>
 			<th><a href=/armas>Armas</a></th>
+			<th><a href=/pets>Familiares</a></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -61,6 +62,12 @@
 					<% hero[:armas].each do |id| %>
 						<% img_path = "'images/#{arma(id)[:name]}.png'" %>
 						<img src=<%=img_path%> alt=<%=arma(id)[:name]%>, id='icon' />
+					<% end %>
+				</td>
+				<td>
+					<% hero[:pets].each do |id| %>
+						<% img_path = "'images/pets/#{pet(id)[:name]}.png'" %>
+						<img src=<%=img_path%> alt=<%=pet(id)[:name]%>, id='icon' />
 					<% end %>
 				</td>
 			</tr>

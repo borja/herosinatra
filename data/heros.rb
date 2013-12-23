@@ -12,7 +12,8 @@ def heros
       :hechizos  => [12],
       :armas     => [3,6],
       :skills    => [1,3],
-      :sex       => "male"
+      :sex       => "male",
+      :pets      => []
     },
     { :id        => 2,
       :name      => "Elros Amarie",
@@ -25,7 +26,8 @@ def heros
       :hechizos  => [1,2,3,4,5,6,7,8,9,10,11,12],
       :armas     => [7],
       :skills    => [],
-      :sex       => "male"
+      :sex       => "male",
+      :pets      => []
     },
     { :id        => 3,
       :name      => "Grunt Mascafilos",
@@ -38,7 +40,8 @@ def heros
       :hechizos  => [],
       :armas     => [7,7],
       :skills    => [3,4],
-      :sex       => "male"
+      :sex       => "male",
+      :pets      => []
     },
     { :id        => 4,
       :name      => "Ellyssa Demoneye",
@@ -51,7 +54,8 @@ def heros
       :hechizos  => [1,2,3,13,14,15],
       :armas     => [2,7],
       :skills    => [5],
-      :sex       => "female"
+      :sex       => "female",
+      :pets      => [1]
     },
     { :id        => 5,
       :name      => "Savra",
@@ -64,7 +68,8 @@ def heros
       :hechizos  => [1,2,3,4,5,6,7,8,9],
       :armas     => [3,4],
       :skills    => [5],
-      :sex       => "female"
+      :sex       => "female",
+      :pets      => [2]
     },
     { :id        => 6,
       :name      => "Yunnow (junior)",
@@ -77,7 +82,8 @@ def heros
       :hechizos  => [1,2,3,4,5,6,7,8,9],
       :armas     => [8],
       :skills    => [],
-      :sex       => "male"
+      :sex       => "male",
+      :pets      => []
     }, 
     { :id        => 7,
       :name      => "Paul Baloff",
@@ -90,7 +96,8 @@ def heros
       :hechizos  => [],
       :armas     => [1,7],
       :skills    => [],
-      :sex       => "male"
+      :sex       => "male",
+      :pets      => [1,3]
     },    
     { :id        => 8,
       :name      => "Lenny Blanc",
@@ -103,7 +110,8 @@ def heros
       :hechizos  => [1,2,3,13,14,15],
       :armas     => [1,7],
       :skills    => [],
-      :sex       => "male"
+      :sex       => "male",
+      :pets      => []
     }   
   ]
 end
