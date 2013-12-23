@@ -8,6 +8,9 @@ require './data/skills'
 require './data/chars'
 require './data/pets'
 require './data/miscelaneas'
+require './data/engarces/gemas'
+require './data/engarces/joyas'
+require './data/engarces/runas'
 
 class App < Sinatra::Base  
   get '/' do
