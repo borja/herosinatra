@@ -13,7 +13,8 @@ def heros
       :armas     => [3,6],
       :skills    => [1,3],
       :sex       => "male",
-      :pets      => []
+      :pets      => [],
+      :repu      => 0,
     },
     { :id        => 2,
       :name      => "Elros Amarie",
@@ -27,7 +28,8 @@ def heros
       :armas     => [7],
       :skills    => [],
       :sex       => "male",
-      :pets      => []
+      :pets      => [],
+      :repu      => 0,
     },
     { :id        => 3,
       :name      => "Grunt Mascafilos",
@@ -41,7 +43,8 @@ def heros
       :armas     => [7,7],
       :skills    => [3,4],
       :sex       => "male",
-      :pets      => []
+      :pets      => [],
+      :repu      => 0,
     },
     { :id        => 4,
       :name      => "Ellyssa Demoneye",
@@ -55,7 +58,8 @@ def heros
       :armas     => [2,7],
       :skills    => [5],
       :sex       => "female",
-      :pets      => [1]
+      :pets      => [1],
+      :repu      => 0,
     },
     { :id        => 5,
       :name      => "Savra",
@@ -69,7 +73,8 @@ def heros
       :armas     => [3,4],
       :skills    => [5],
       :sex       => "female",
-      :pets      => [2]
+      :pets      => [2],
+      :repu      => 0,
     },
     { :id        => 6,
       :name      => "Yunnow (junior)",
@@ -83,7 +88,8 @@ def heros
       :armas     => [8],
       :skills    => [],
       :sex       => "male",
-      :pets      => []
+      :pets      => [],
+      :repu      => 0,
     }, 
     { :id        => 7,
       :name      => "Paul Baloff",
@@ -97,7 +103,8 @@ def heros
       :armas     => [1,7],
       :skills    => [],
       :sex       => "male",
-      :pets      => [1,3]
+      :pets      => [1,3],
+      :repu      => 0,
     },    
     { :id        => 8,
       :name      => "Lenny Blanc",
@@ -111,7 +118,8 @@ def heros
       :armas     => [1,7],
       :skills    => [],
       :sex       => "male",
-      :pets      => []
+      :pets      => [],
+      :repu      => 0,
     }   
   ]
 end

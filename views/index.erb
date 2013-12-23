@@ -7,6 +7,7 @@
 			<th>Nombre</th>
 			<th>Personaje</th>
 			<th>Nivel</th>
+			<th>Reputación</th>
 			<th><a href=/hechizos>Hechizos</a></th>
 			<th><a href=/armas>Armas</a></th>
 			<th><a href=/pets>Familiares</a></th>
@@ -46,18 +47,11 @@
 									<% end%>
 						<% end %>
 				</td>
-				<td>
-					<a href=hero/<%= hero[:id] %>><%= hero[:name] %></a> 
-				</td>
-				<td>
-					<%= hero[:personaje] %>
-				</td>
-				<td>
-					<%= hero[:nivel] %>
-				</td>
-				<td>
-					<%= hero[:hechizos].count %>
-				</td>
+				<td><a href=hero/<%= hero[:id] %>><%= hero[:name] %></a> </td>
+				<td><%= hero[:personaje] %></td>
+				<td><%= hero[:nivel] %></td>
+				<td><%= hero[:repu] %></td>
+				<td><%= hero[:hechizos].count %></td>
 				<td>
 					<% hero[:armas].each do |id| %>
 						<% img_path = "'images/#{arma(id)[:name]}.png'" %>
