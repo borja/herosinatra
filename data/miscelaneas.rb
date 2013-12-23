@@ -15,7 +15,15 @@ def miscelaneas
     {
       :id           => 4,
       :name         => "argolla",
-    },  
+    },
+    {
+      :id           => 5,
+      :name         => "cadena",
+    },
+    {
+      :id           => 6,
+      :name         => "talisman",
+    },
   ]
 end
 
