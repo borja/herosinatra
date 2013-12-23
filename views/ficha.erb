@@ -34,6 +34,14 @@
 <% end %>
 <%= "El personaje no tiene ningun arma todavia." if @heroe[:armas].empty? %>
 
+<h2>Protecciones</h2>
+<% if @heroe[:prots].empty? %>
+	El personaje no tiene ninguna protección aun.
+<% else %>
+	<% @heroe[:prots].each do |objeto|%>
+		<li><%= proteccion(objeto)[:name].capitalize %></li>
+	<% end %>
+<% end%>
 
 <h2>Habilidades</h2>
 <% @heroe[:skills].each do |habilidad| %>
