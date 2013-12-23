@@ -64,6 +64,14 @@ def armas
       :gemas        => [],
       :diagonal     => true
     },
+    { :id           => 9,
+      :name         => "espada roja",
+      :categoria    => "Filo",
+      :powa         => 4,
+      :ranuras      => 3,
+      :gemas        => [1,2,3],
+      :diagonal     => true
+    },
   ]
 end
 
