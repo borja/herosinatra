@@ -97,6 +97,14 @@ def spell(id)
   spells[id-1]
 end
 
+def elements(list)
+  founded = []
+  list.each do |magia|
+      founded << spell(magia)[:elemento] unless founded.include?(spell(magia)[:elemento])
+  end
+  return founded
+end
+
 def color(elemento)
   case elemento
 	   when "Fuego"  then return 'background-color:#FF6633'

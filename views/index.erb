@@ -4,7 +4,6 @@
 	<thead>
 		<tr>
 			<th>Icono</th>
-			<th>Nombre</th>
 			<th>Personaje</th>
 			<th>Nivel</th>
 			<th>Reputación</th>
@@ -47,8 +46,8 @@
 									<% end%>
 						<% end %>
 				</td>
-				<td><a href=hero/<%= hero[:id] %>><%= hero[:name] %></a> </td>
-				<td><%= hero[:personaje] %></td>
+				<td><a href=hero/<%= hero[:id] %>><%= hero[:name] %></a><br>
+					<i><%= hero[:personaje].capitalize.gsub('Lord','Señor') %></i></td>
 				<td><%= hero[:nivel] %></td>
 				<td><%= hero[:repu] %></td>
 				<td><%= hero[:hechizos].count %></td>
