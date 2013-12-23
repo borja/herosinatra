@@ -207,7 +207,7 @@ def heros
     },    
     { :id        => 13,
       :name      => "Godric",
-      :personaje => "pretoriano",
+      :personaje => "falangista",
       :jugador   => "Daniel de Haro",
       :nivel     => 4,
       :cuerpo    => 8,
