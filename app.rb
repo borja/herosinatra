@@ -18,4 +18,8 @@ class App < Sinatra::Base
     @heroe = heros[ (id.to_i - 1) ]
     erb :ficha
   end
+  get '/spells/:hero' do |hero_id|
+    @heroe = heros[ (hero_id.to_i - 1) ]
+    erb :spells
+  end  
 end

@@ -1,0 +1,29 @@
+<h1><center>Lista de Hechizos de <%= @heroe[:name]%></center></h1>
+<a href=/>Índice</a><br><br>
+<link rel="stylesheet" href="../../app.css" type="text/css" />
+
+
+
+<% unless @heroe[:hechizos].empty? %>
+	<table id='table-2'>
+	<thead>
+		<th>Icono</th>
+		<th>Elemento</th>
+		<th>Nombre</th>
+		<th>Descripción</th>
+	</thead>
+	<tbody>
+		<% @heroe[:hechizos].each do |magia|%>		
+			<tr style=<%= color(spell(magia)[:elemento])%>>				
+				<td><% img_path = "'../../images/spells/#{spell(magia)[:name]}.png'" %>
+					<img src=<%=img_path%> alt=<%=spell(magia)[:name]%>, id='icon' />
+				</td>
+				<td><%= spell(magia)[:elemento].capitalize %></td>
+				<td><%= spell(magia)[:name].capitalize %></td>
+				<td><%= spell(magia)[:descripcion] %></td>
+			</tr>
+		<% end %>
+	</tbody>
+	</table>
+<% else %>El personaje no conoce ningun hechizo
+<% end %>
