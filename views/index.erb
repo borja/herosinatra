@@ -9,7 +9,8 @@
 			<th>Reputación</th>
 			<th><a href=/hechizos>Hechizos Disponibles</a></th>
 			<th><a href=/armas>Armas</a></th>
-			<th>Armadura</th>			
+			<th>Armadura</th>
+			<th>Protecciones</th>			
 			<th><a href=/pets>Familiares</a></th>
 		</tr>
 	</thead>
@@ -66,6 +67,12 @@
 					<% hero[:armaduras].each do |id| %>
 						<% img_path = "'images/armaduras/#{armadura(id)[:name]}.png'" %>
 						<img src=<%=img_path%> alt=<%=armadura(id)[:name]%>, id='icon' />
+					<% end %>
+				</td>
+				<td>
+					<% hero[:prots].each do |id| %>
+						<% img_path = "'images/protecciones/#{proteccion(id)[:name]}.png'" %>
+						<img src=<%=img_path%> alt=<%=proteccion(id)[:name]%>, id='icon' />
 					<% end %>
 				</td>
 				<td>
