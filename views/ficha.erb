@@ -6,7 +6,7 @@
 <table id='table-2'>
 	<thead>
 		<tr>
-			<th>ID</th>
+			<th>Icono</th>
 			<th>Nivel</th>
 			<th>Personaje</th>
 			<th>Raza</th>
@@ -14,7 +14,38 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td><%= @heroe[:id] %></td>
+			<td>
+				<% case @heroe[:sex]
+					when "male" %>
+						<% case personaje(@heroe[:personaje])
+						when "enano" then %>
+							<img src="../images/enano.png" alt="rss feed" /, id='icon'>
+						<% when "elfo" then %>
+							<img src="../images/elfo.png" alt="rss feed" /, id='icon'>
+						<% when "tiefling" then %>
+							<img src="../images/tiefling.png" alt="rss feed" /, id='icon'>
+						<% when "mago" then %>
+							<img src="../images/mago.png" alt="rss feed" /, id='icon'>
+						<% when "ladron" then %>
+							<img src="../images/ladron.png" alt="rss feed" /, id='icon'>
+						<% when "barbaro" then %>
+							<img src="../images/barbaro.png" alt="rss feed" /, id='icon'>
+						<% end%>
+					<% when "female" %>
+						<% case personaje(@heroe[:personaje])
+						when "elfo" then %>
+							<img src="../images/elfa.png" alt="rss feed" /, id='icon'>
+						<% when "tiefling" then %>
+							<img src="../images/tiefling-female.png" alt="rss feed" /, id='icon'>
+						<% when "mago" then %>
+							<img src="../images/maga.png" alt="rss feed" /, id='icon'>
+						<% when "ladron" then %>
+							<img src="../images/ladrona.png" alt="rss feed" /, id='icon'>
+						<% when "barbaro" then %>
+							<img src="../images/barbara.png" alt="rss feed" /, id='icon'>
+						<% end%>
+					<% end %>
+			</td>
 			<td><%= @heroe[:nivel] %></td>
 			<td><%= @heroe[:personaje].capitalize %></td>
 			<td><%= personaje(@heroe[:personaje]).capitalize %></td>
