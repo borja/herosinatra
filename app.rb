@@ -13,7 +13,7 @@ require './data/engarces/gemas'
 require './data/engarces/joyas'
 require './data/engarces/runas'
 
-class App < Sinatra::Base  
+class App < Sinatra::Base
   get '/' do
     erb :index
   end
