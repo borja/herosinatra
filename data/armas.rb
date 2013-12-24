@@ -98,9 +98,17 @@ def armas
     },
     { :id           => 13,
       :name         => "maza",
-      :categoria    => "Filo",
+      :categoria    => "Contundentes",
       :powa         => 2,
       :ranuras      => 4,
+      :gemas        => [],
+      :diagonal     => false
+    },
+    { :id           => 14,
+      :name         => "arco",
+      :categoria    => "Distancia",
+      :powa         => 2,
+      :ranuras      => 2,
       :gemas        => [],
       :diagonal     => false
     },
