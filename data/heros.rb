@@ -283,7 +283,7 @@ def heros
       :mente     => 3,
       :mov       => 7,
       :hechizos  => [],
-      :armas     => [],
+      :armas     => [12],
       :armaduras => [3],
       :prots     => [],
       :miscs     => [],
