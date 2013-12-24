@@ -22,5 +22,5 @@ end
 
 def is_human?(char)
   humano   = ['clerigo', 'ladron', 'barbaro', 'mago']
-  humano.include?(raza(char)) ? true : false
+  humano.include?(personaje(char)) ? true : false
 end

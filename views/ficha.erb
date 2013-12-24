@@ -48,7 +48,7 @@
 			</td>
 			<td><%= @heroe[:nivel] %></td>
 			<td><%= @heroe[:personaje].capitalize %></td>
-			<td><%= personaje(@heroe[:personaje]).capitalize %></td>
+			<td><%= is_human?(@heroe[:personaje]) ? "Humano" : personaje(@heroe[:personaje]).capitalize %></td>
 		</tr>
 	</tbody>
 </table>
