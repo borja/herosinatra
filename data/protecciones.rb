@@ -56,6 +56,13 @@ def protecciones
       :ranuras      => 2,
       :gemas        => []
     },
+    { :id           => 9,
+      :name         => "arnes",
+      :categoria    => "cuero",
+      :powa         => 1,
+      :ranuras      => 2,
+      :gemas        => []
+    },
   ]
 end
 

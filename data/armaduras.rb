@@ -35,6 +35,13 @@ def armaduras
       :ranuras      => 4,
       :gemas        => []
     },
+    { :id           => 6,
+      :name         => "armadura de borin",
+      :categoria    => "mithril",
+      :powa         => 4,
+      :ranuras      => 4,
+      :gemas        => []
+    },
   ]
 end
 
