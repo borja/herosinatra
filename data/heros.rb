@@ -349,6 +349,14 @@ def ataque(id)
   return total
 end
 
+def rango(id)
+  total = 0
+  heros[id-1][:armas].each do |a|
+    total += arma(a)[:powa] if arma(a)[:name] == "arco"
+  end
+  return total
+end
+
 def defensa(id)
   total = heros[id-1][:armaduras].first
   heros[id-1][:prots].each do |p|
@@ -356,5 +364,6 @@ def defensa(id)
   end
   heros[id-1][:armas].each do |a|
     total += arma(a)[:powa] if (arma(a)[:id] == 7) # Si es un escudo
-  end  
+  end
+  return total  
 end
