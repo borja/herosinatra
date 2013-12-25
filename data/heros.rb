@@ -348,3 +348,13 @@ def ataque(id)
   end
   return total
 end
+
+def defensa(id)
+  total = heros[id-1][:armaduras].first
+  heros[id-1][:prots].each do |p|
+    total += proteccion(p)[:powa]
+  end
+  heros[id-1][:armas].each do |a|
+    total += arma(a)[:powa] if (arma(a)[:id] == 7) # Si es un escudo
+  end  
+end
