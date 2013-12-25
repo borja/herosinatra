@@ -89,6 +89,12 @@ def spells
       :elemento     => "sombra",
       :nivel        => 1,
       :descripcion  => "Aturde al objetivo y lo relentiza."
+    },
+    { :id           => 16,
+      :name         => "Doble Imagen",
+      :elemento     => "elfico",
+      :nivel        => 1,
+      :descripcion  => "Duplica la probabilidad de esquivar."
     }
   ]
 end
@@ -112,5 +118,6 @@ def color(elemento)
 	   when "agua"   then return 'background-color:#44CCFF'
 	   when "tierra" then return 'background-color:#CC9966'
 	   when "sombra" then return 'background-color:#CC9999'
+	   when "elfico" then return 'background-color:#99FFCC'       
   end
 end
