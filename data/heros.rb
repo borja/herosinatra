@@ -340,3 +340,11 @@ def heros
     
   ]
 end
+
+def ataque(id)
+  total = 0
+  heros[id-1][:armas].each do |a|
+    total += arma(a)[:powa] unless (arma(a)[:id] == 7) # Salvo que sea un escudo
+  end
+  return total
+end

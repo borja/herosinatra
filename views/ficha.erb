@@ -6,8 +6,11 @@
 <table id='table-2'>
 	<thead>
 		<tr>
-			<th>Icono</th>
+			<th>Rostro</th>
 			<th>Nivel</th>
+			<th>Reputación</th>
+			<th>Atributos</th>
+			<th>Combate</th>
 			<th>Personaje</th>
 			<th>Raza</th>
 		</tr>
@@ -19,34 +22,67 @@
 					when "male" %>
 						<% case personaje(@heroe[:personaje])
 						when "enano" then %>
-							<img src="../images/enano.png" alt="rss feed" /, id='icon'>
+							<img src="../images/enano.png" alt="rss feed" /, id='icon2'>
 						<% when "elfo" then %>
-							<img src="../images/elfo.png" alt="rss feed" /, id='icon'>
+							<img src="../images/elfo.png" alt="rss feed" /, id='icon2'>
 						<% when "tiefling" then %>
-							<img src="../images/tiefling.png" alt="rss feed" /, id='icon'>
+							<img src="../images/tiefling.png" alt="rss feed" /, id='icon2'>
 						<% when "mago" then %>
-							<img src="../images/mago.png" alt="rss feed" /, id='icon'>
+							<img src="../images/mago.png" alt="rss feed" /, id='icon2'>
 						<% when "ladron" then %>
-							<img src="../images/ladron.png" alt="rss feed" /, id='icon'>
+							<img src="../images/ladron.png" alt="rss feed" /, id='icon2'>
 						<% when "barbaro" then %>
-							<img src="../images/barbaro.png" alt="rss feed" /, id='icon'>
+							<img src="../images/barbaro.png" alt="rss feed" /, id='icon2'>
 						<% end%>
 					<% when "female" %>
 						<% case personaje(@heroe[:personaje])
 						when "elfo" then %>
-							<img src="../images/elfa.png" alt="rss feed" /, id='icon'>
+							<img src="../images/elfa.png" alt="rss feed" /, id='icon2'>
 						<% when "tiefling" then %>
-							<img src="../images/tiefling-female.png" alt="rss feed" /, id='icon'>
+							<img src="../images/tiefling-female.png" alt="rss feed" /, id='icon2'>
 						<% when "mago" then %>
-							<img src="../images/maga.png" alt="rss feed" /, id='icon'>
+							<img src="../images/maga.png" alt="rss feed" /, id='icon2'>
 						<% when "ladron" then %>
-							<img src="../images/ladrona.png" alt="rss feed" /, id='icon'>
+							<img src="../images/ladrona.png" alt="rss feed" /, id='icon2'>
 						<% when "barbaro" then %>
-							<img src="../images/barbara.png" alt="rss feed" /, id='icon'>
+							<img src="../images/barbara.png" alt="rss feed" /, id='icon2'>
 						<% end%>
 					<% end %>
 			</td>
 			<td><%= @heroe[:nivel] %></td>
+			<td><%= @heroe[:repu] %></td>
+			<td>
+				<table id='table-2'>
+					<tbody>
+						<tr>
+							<td>Cuerpo</td>
+							<td>Mente</td>
+							<td>Movimiento</td>
+						</tr>
+						<tr>
+							<td><%= @heroe[:cuerpo] %></td>
+							<td><%= @heroe[:mente] %></td>
+							<td><%= @heroe[:mov] %></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+			<td>
+				<table id='table-2'>
+					<tbody>
+						<tr>
+							<td>Melee</td>
+							<td>Rango</td>
+							<td>Defensa</td>
+						</tr>
+						<tr>
+							<td><%= ataque(@heroe[:id]) %></td>
+							<td><%= @heroe[:mente] %></td>
+							<td><%= @heroe[:mov] %></td>
+						</tr>
+					</tbody>
+				</table>
+			</td>
 			<td><%= @heroe[:personaje].capitalize %></td>
 			<td><%= is_human?(@heroe[:personaje]) ? "Humano" : personaje(@heroe[:personaje]).capitalize %></td>
 		</tr>
@@ -138,6 +174,41 @@
 					<img src=<%=img_path%> alt=<%=joya(j)[:name]%>, id='icon' />
 				<% end %>
 				<%= "El personaje no tiene ninguna joya." if @heroe[:joyas].empty? %>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<h3><center>Útiles</center></h3>
+<table id='table-2'>
+	<thead>
+		<tr>
+			<th>Pociones</th>
+			<th>Pergaminos</th>
+			<th>Piezas</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<% @heroe[:gemas].each do |g| %>
+					<% img_path = "'../../images/treasures/gemas/#{gema(g)[:name]}.png'" %>
+					<img src=<%=img_path%> alt=<%=gema(g)[:name]%>, id='icon' />
+				<% end %>
+				<%= "El personaje no tiene ninguna poción." if @heroe[:gemas].empty? %>
+			</td>
+			<td>
+				<% @heroe[:runas].each do |r| %>
+					<% img_path = "'../../images/treasures/runas/#{runa(r)[:name]}.png'" %>
+					<img src=<%=img_path%> alt=<%=runa(r)[:name]%>, id='icon' />
+				<% end %>
+				<%= "El personaje no tiene ningun pergamino." if @heroe[:runas].empty? %>
+			</td>
+			<td>
+				<% @heroe[:joyas].each do |j| %>
+					<% img_path = "'../../images/treasures/joyas/#{joya(j)[:name]}.png'" %>
+					<img src=<%=img_path%> alt=<%=joya(j)[:name]%>, id='icon' />
+				<% end %>
+				<%= "El personaje no tiene ninguna pieza." if @heroe[:joyas].empty? %>
 			</td>
 		</tr>
 	</tbody>
