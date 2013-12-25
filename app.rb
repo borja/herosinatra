@@ -30,5 +30,8 @@ class App < Sinatra::Base
   end
   get '/armaduras' do
     erb :armaduras
-  end  
+  end
+  get '/protecciones' do
+    erb :protecciones
+  end    
 end

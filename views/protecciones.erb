@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="../../app.css" type="text/css" />
+
+<h1><center>Lista de Protecciones</center></h1>
+<a href=/>Índice</a><br><br>
+
+<table id='table-2'>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Icono</th>
+			<th>Nombre</th>
+			<th>Categoría</th>
+			<th>Defensa</th>
+			<th>Ranuras Permitidas</th>
+		</tr>	
+	</thead>
+	<tbody>
+		<% protecciones.each do |p| %>
+			<tr>
+				<td><%= p[:id] %></td>
+				<td>
+					<% img_path = "'../images/protecciones/#{p[:name]}.png'" %>
+					<img src=<%=img_path%> alt=<%=p[:name]%>, id='icon' />
+				</td>
+				<td><%= p[:name].capitalize %></td>
+				<td><%= p[:categoria].capitalize %></td>
+				<td><%= p[:powa] %></td>
+				<td><%= p[:ranuras]%></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
