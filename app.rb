@@ -36,5 +36,11 @@ class App < Sinatra::Base
   end   
   get '/miscelaneas' do
     erb :miscelaneas
-  end    
+  end
+  get '/armas' do
+    erb :armas
+  end       
+  get '/familiares' do
+    erb :familiares
+  end   
 end
