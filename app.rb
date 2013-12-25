@@ -12,6 +12,9 @@ require './data/miscelaneas'
 require './data/engarces/gemas'
 require './data/engarces/joyas'
 require './data/engarces/runas'
+require './data/engarces/piezas'
+require './data/engarces/pergaminos'
+require './data/engarces/pociones'
 
 class App < Sinatra::Base
   get '/' do
