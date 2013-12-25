@@ -123,7 +123,7 @@ def heros
       :sex       => "male",
       :pets      => [],
       :repu      => 3,
-      :runas     => [],
+      :runas     => [8],
       :gemas     => [],
       :joyas     => [],
     }, 
