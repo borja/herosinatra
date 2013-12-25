@@ -33,5 +33,8 @@ class App < Sinatra::Base
   end
   get '/protecciones' do
     erb :protecciones
+  end   
+  get '/miscelaneas' do
+    erb :miscelaneas
   end    
 end
