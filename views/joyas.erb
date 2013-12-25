@@ -1,0 +1,26 @@
+<link rel="stylesheet" href="../../app.css" type="text/css" />
+
+<h1><center>Lista de Joyas</center></h1>
+<a href=/>Índice</a><br><br>
+
+<table id='table-2'>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Icono</th>
+			<th>Nombre</th>
+		</tr>	
+	</thead>
+	<tbody>
+		<% joyas.each do |j| %>
+			<tr>
+				<td><%= j[:id] %></td>
+				<td>
+					<% img_path = "'../images/treasures/joyas/#{j[:name]}.png'" %>
+					<img src=<%=img_path%> alt=<%=j[:name]%>, id='icon' />
+				</td>
+				<td>Joya <%= j[:name] %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

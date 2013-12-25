@@ -42,5 +42,14 @@ class App < Sinatra::Base
   end       
   get '/familiares' do
     erb :familiares
-  end   
+  end
+  get '/gemas' do
+    erb :gemas
+  end
+  get '/runas' do
+    erb :runas
+  end  
+  get '/joyas' do
+    erb :joyas
+  end      
 end
