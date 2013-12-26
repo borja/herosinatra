@@ -21,7 +21,7 @@ class App < Sinatra::Base
     erb :index
   end
   get '/heros' do
-    erb :hero
+    erb :heros
   end
   get '/hero/:id' do |id|
     @heroe = heros[ (id.to_i - 1) ]
