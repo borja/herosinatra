@@ -85,7 +85,8 @@
 				</table>
 			</td>
 			<td><%= @heroe[:personaje].capitalize %></td>
-			<td><%= is_human?(@heroe[:personaje]) ? "Humano" : personaje(@heroe[:personaje]).capitalize %></td>
+			<td><% raza = is_human?(@heroe[:personaje]) ? "humano" : personaje(@heroe[:personaje]) %>
+				<%= genderize(raza,@heroe[:sex]).capitalize %></td>
 		</tr>
 	</tbody>
 </table>

@@ -24,3 +24,20 @@ def is_human?(char)
   humano   = ['clerigo', 'ladron', 'barbaro', 'mago']
   humano.include?(personaje(char)) ? true : false
 end
+
+def genderize(raza,gender)
+  case gender
+  when "female" then case raza
+    when "elfo"     then return "elfa"
+    when "humano"   then return "humana"
+    when "mago"     then return "maga"
+    when "barbaro"  then return "barbara"
+    when "clerigo"  then return "cleriga"
+    when "ladron"   then return "ladrona"
+    else                 return raza
+    end
+  when "male"   then return raza
+  end
+end
+    
+  
