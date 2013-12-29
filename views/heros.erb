@@ -1,10 +1,11 @@
-<title>Hero Sheet</title>
+<title>HeroSheet: Lista de héroes</title>
 <center><img src="images/logo.png" alt="Proyecto Heroquest" /></center>
 <link rel="stylesheet" href="app.css" type="text/css" />
 <table id='table-2'>
 	<thead>
 		<tr>
 			<th>Icono</th>
+			<th>Héroe</th>
 			<th>Personaje</th>
 			<th>Nivel</th>
 			<th>Reputación</th>
@@ -51,7 +52,12 @@
 						<% end %>
 				</td>
 				<td><a href=hero/<%= hero[:id] %>><%= hero[:name] %></a><br>
-					<i><%= hero[:personaje].capitalize.gsub('Lord','Señor') %></i></td>
+					<i><%= hero[:jugador] %></i>
+				</td>
+				<td>
+					<%= genderize(personaje(hero[:personaje]),hero[:sex]).capitalize %><br>
+					<i><%= hero[:personaje].capitalize.gsub('Lord','Señor') %></i>
+				</td>
 				<td><%= hero[:nivel] %></td>
 				<td><%= hero[:repu] %></td>
 				<td><% elements(hero[:hechizos]).each do |e| %>	
