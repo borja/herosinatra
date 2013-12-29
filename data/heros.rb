@@ -10,7 +10,8 @@ def heros
       :mente     => 11,
       :mov       => 18,
       :hechizos  => [14],
-      :armas     => [3,6],
+      :armas     => [{:id => 3}, 
+                     {:id => 6}],
       :armaduras => [2],
       :prots     => [1,2,3,4,5,9],
       :miscs     => [],
@@ -31,7 +32,8 @@ def heros
       :mente     => 11,
       :mov       => 10,
       :hechizos  => [1,2,3,4,5,6,7,8,9,10,11,12,16],
-      :armas     => [7,9],
+      :armas     => [{:id => 7}, 
+                     {:id => 9}],
       :armaduras => [6],
       :prots     => [1,2,3,4,5],
       :miscs     => [1,2],
@@ -52,7 +54,8 @@ def heros
       :mente     => 3,
       :mov       => 6,
       :hechizos  => [],
-      :armas     => [7,7],
+      :armas     => [{:id => 7}, 
+                     {:id => 7}],
       :armaduras => [2],
       :prots     => [2],
       :miscs     => [2],
@@ -73,7 +76,8 @@ def heros
       :mente     => 4,
       :mov       => 7,
       :hechizos  => [1,2,3,13,14,15],
-      :armas     => [2,7],
+      :armas     => [{:id => 2}, 
+                     {:id => 7}],
       :armaduras => [3],
       :prots     => [],
       :miscs     => [],
@@ -94,7 +98,8 @@ def heros
       :mente     => 13,
       :mov       => 7,
       :hechizos  => [1,2,3,4,5,6,7,8,9],
-      :armas     => [3,4],
+      :armas     => [{:id => 3}, 
+                     {:id => 4}],
       :armaduras => [1],
       :prots     => [1,3,8],
       :miscs     => [1,2],
@@ -115,7 +120,7 @@ def heros
       :mente     => 16,
       :mov       => 8,
       :hechizos  => [1,2,3,4,5,6,7,8,9],
-      :armas     => [8],
+      :armas     => [{:id => 8}],
       :armaduras => [1],
       :prots     => [3,4],
       :miscs     => [1],
@@ -136,7 +141,8 @@ def heros
       :mente     => 2,
       :mov       => 7,
       :hechizos  => [],
-      :armas     => [11,7],
+      :armas     => [{:id => 11}, 
+                     {:id => 7}],
       :armaduras => [2],
       :prots     => [2,8],
       :miscs     => [],
@@ -157,7 +163,8 @@ def heros
       :mente     => 5,
       :mov       => 7,
       :hechizos  => [1,2,3,13,14,15],
-      :armas     => [10,7],
+      :armas     => [{:id => 10}, 
+                     {:id => 7}],
       :armaduras => [1],
       :prots     => [],
       :miscs     => [],
@@ -178,7 +185,8 @@ def heros
       :mente     => 4,
       :mov       => 14,
       :hechizos  => [4,5,6],
-      :armas     => [2,5],
+      :armas     => [{:id => 2}, 
+                     {:id => 5}],
       :armaduras => [2],
       :prots     => [2,3],
       :miscs     => [1,2,3],
@@ -199,7 +207,7 @@ def heros
       :mente     => 6,
       :mov       => 7,
       :hechizos  => [1,2,3,4,5,6,7,8,9,10,11,12],
-      :armas     => [3],
+      :armas     => [{:id => 3}],
       :armaduras => [1],
       :prots     => [],
       :miscs     => [2],
@@ -220,7 +228,8 @@ def heros
       :mente     => 4,
       :mov       => 13,
       :hechizos  => [4,5,6],
-      :armas     => [1,1],
+      :armas     => [{:id => 1}, 
+                     {:id => 1}],
       :armaduras => [2],
       :prots     => [2,5],
       :miscs     => [],
@@ -241,7 +250,8 @@ def heros
       :mente     => 4,
       :mov       => 10,
       :hechizos  => [],
-      :armas     => [2,12],
+      :armas     => [{:id => 12}, 
+                     {:id => 2}],
       :armaduras => [3],
       :prots     => [1,2,3],
       :miscs     => [1,2],
@@ -262,7 +272,8 @@ def heros
       :mente     => 4,
       :mov       => 6,
       :hechizos  => [],
-      :armas     => [13, 7],
+      :armas     => [{:id => 13}, 
+                     {:id => 7}],
       :armaduras => [2],
       :prots     => [],
       :miscs     => [],
@@ -283,7 +294,7 @@ def heros
       :mente     => 3,
       :mov       => 7,
       :hechizos  => [],
-      :armas     => [12],
+      :armas     => [{:id => 12}],
       :armaduras => [3],
       :prots     => [],
       :miscs     => [],
@@ -304,7 +315,7 @@ def heros
       :mente     => 10,
       :mov       => 15,
       :hechizos  => [4,5,6,7,8,9,10,11,12,16],
-      :armas     => [14],
+      :armas     => [{:id => 14}],
       :armaduras => [2],
       :prots     => [],
       :miscs     => [],
@@ -325,7 +336,7 @@ def heros
       :mente     => 8,
       :mov       => 7,
       :hechizos  => [1,2,3,4,5,6,7,8,9,10,11,12],
-      :armas     => [3],
+      :armas     => [{:id => 3}],
       :armaduras => [2],
       :prots     => [],
       :miscs     => [],
@@ -342,17 +353,17 @@ def heros
 end
 
 def ataque(id)
-  total = 0
-  heros[id-1][:armas].each do |a|
-    total += arma(a)[:powa] unless (arma(a)[:id] == 7) # Salvo que sea un escudo
-  end
-  return total
+ total = 0
+ heros[id-1][:armas].each do |a|
+   total += arma(a[:id])[:powa] unless a[:id] == 7 # Salvo que sea un escudo
+ end
+ return total
 end
 
 def rango(id)
   total = 0
   heros[id-1][:armas].each do |a|
-    total += arma(a)[:powa] if arma(a)[:name] == "arco"
+    total += arma(a[:id])[:powa] if arma(a[:id])[:name] == "arco"
   end
   return total
 end
@@ -363,7 +374,7 @@ def defensa(id)
     total += proteccion(p)[:powa]
   end
   heros[id-1][:armas].each do |a|
-    total += arma(a)[:powa] if (arma(a)[:id] == 7) # Si es un escudo
+    total += arma(a[:id])[:powa] if a[:id] == 7 # Si es un escudo
   end
   return total  
 end

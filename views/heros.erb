@@ -60,9 +60,9 @@
 					<% end %>						
 				</td>
 				<td>
-					<% hero[:armas].each do |id| %>
-						<% img_path = "'images/armas/#{arma(id)[:name]}.png'" %>
-						<img src=<%=img_path%> alt=<%=arma(id)[:name]%>, id='icon' />
+					<% hero[:armas].each do |a| %>
+						<% img_path = "'images/armas/#{arma(a[:id])[:name]}.png'" %>
+						<img src=<%=img_path%> alt=<%=arma(a[:id])[:name]%>, id='icon' />
 					<% end %>
 				</td>
 				<td>
