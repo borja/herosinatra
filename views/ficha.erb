@@ -90,17 +90,15 @@
 		</tr>
 	</tbody>
 </table>
-<h3><center>Armas</center></h3>
+<h3><center>Armamento</center></h3>
 <table id='table-2'>
 	<thead>
 		<tr>
 			<th>ID</th>
 			<th>Icono</th>
 			<th>Nombre</th>
-			<th>Gemas</th>
-			<th>Joyas</th>
 			<th>Encantamientos</th>
-			<th>Runas</th>
+			<th>Engarces</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -111,19 +109,31 @@
 					<img src=<%=img_path%> alt=<%=arma(a[:id])[:name]%>, id='icon' />
 				</td>
 				<td><%= arma(a[:id])[:name].capitalize %></td>
+				<td><%= a[:encantamientos] || "Arma mundana" %></td>
 				<td>
-					<% if a[:gemas].nil? %>
-						El arma no tiene gemas.
+					<% if (a[:gemas].nil? && a[:joyas].nil? && a[:runas].nil? ) %>
+						El arma no tiene engarces.
 					<% else %>
-						<% a[:gemas].each do |g| %>
-							<% img_path = "'../../images/treasures/gemas/#{gema(g)[:name]}.png'" %>
-							<img src=<%=img_path%> alt=<%=gema(g)[:name]%>, id='icon' />
+						<% if a[:gemas] %>
+							<% a[:gemas].each do |g| %>
+								<% img_path = "'../../images/treasures/gemas/#{gema(g)[:name]}.png'" %>
+								<img src=<%=img_path%> alt=<%=gema(g)[:name]%>, id='icon' />
 							<% end %>
+						<% end %>
+						<% if a[:joyas] %>						
+							<% a[:joyas].each do |j| %>
+								<% img_path = "'../../images/treasures/joyas/#{joya(j)[:name]}.png'" %>
+								<img src=<%=img_path%> alt=<%=joya(j)[:name]%>, id='icon' />
+							<% end %>
+						<% end%>
+						<% if a[:joyas] %>
+							<% a[:runas].each do |r| %>
+								<% img_path = "'../../images/treasures/runas/#{runa(r)[:name]}.png'" %>
+								<img src=<%=img_path%> alt=<%=runa(r)[:name]%>, id='icon' />
+							<% end %>
+						<% end %>
 					<% end %>
 				</td>
-				<td><%= a[:joyas] || "El arma no tiene joyas." %></td>
-				<td><%= a[:encantamientos] || "Arma mundana" %></td>
-				<td><%= a[:runas] || "Sin runas" %></td>
 			</tr>
 		<% end %>
 		<%= "El personaje no tiene ningun arma todavia." if @heroe[:armas].empty? %>
