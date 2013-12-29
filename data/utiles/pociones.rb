@@ -1,13 +1,19 @@
 def pociones
   [
     { :id           => 1,
-      :name         => "curativa",
+      :name         => "restauracion menor",
+      :efecto       => "recupera 2 PC.",
+      :precio       => 50,
     },
     { :id           => 2,
-      :name         => "de fuerza",
+      :name         => "vision elfica",
+      :efecto       => "ve puertas secretas y trampas en su alcance de vision.",
+      :precio       => 50,
     },
     { :id           => 3,
-      :name         => "de resistencia",
+      :name         => "restauracion mental",
+      :efecto       => "Recupera 2 PM.",
+      :precio       => 25,
     },
   ]
 end
