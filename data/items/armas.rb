@@ -98,7 +98,13 @@ def armas
       :ranuras      => 2,
       :diagonal     => false
     },
-    
+    { :id           => 15,
+      :name         => "alabarda",
+      :categoria    => "asta",
+      :powa         => 3,
+      :ranuras      => 4,
+      :diagonal     => true
+    },
   ]
 end
 
