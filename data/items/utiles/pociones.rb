@@ -15,6 +15,16 @@ def pociones
       :efecto       => "Recupera 2 PM.",
       :precio       => 25,
     },
+    { :id           => 4,
+      :name         => "de resistencia",
+      :efecto       => "+1 Defensa",
+      :precio       => 25,
+    },
+    { :id           => 5,
+      :name         => "de fuerza",
+      :efecto       => "+1 dado de ataque.",
+      :precio       => 25,
+    },
   ]
 end
 
