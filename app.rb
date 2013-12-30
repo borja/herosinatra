@@ -39,6 +39,9 @@ class App < Sinatra::Base
   get '/joyas' do
     erb :joyas
   end
+  get '/encantamientos' do
+    erb :encantamientos
+  end
   get '/display' do
     erb :display
   end      
