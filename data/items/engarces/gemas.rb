@@ -151,3 +151,18 @@ end
 def gema(id)
   gemas[id-1]
 end
+
+def gema_calidad(numero)
+  case numero
+  when 1 then return "Gemas Comunes"
+  when 2 then return "Gemas Infrecuentes"
+  when 3 then return "Gemas Valiosas"
+  when 4 then return "Piedras Preciosas"
+  when 5 then return "Piedras de Poder"
+  when 6 then return "Gemas Legendarias"
+  else return "Error!"
+  end
+end    
+    
+    
+    
