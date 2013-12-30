@@ -112,7 +112,13 @@
 															<img src=<%=img_path%> alt='ranura-hueca', id='icon' />
 															<% end %>						
 													<% end %>						
-												<% end %>	
+												<% end %>
+											<% if a[:enchants] %>	
+												<h4>Propiedades mágicas</h4>
+												<% a[:enchants].each do |e| %>
+													<li><%= enchant(e)[:name].capitalize %>
+												<% end %>
+											<% end %>	
 										</div>
 									</div></td>
 								<% end %>
