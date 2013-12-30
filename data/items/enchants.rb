@@ -11,7 +11,7 @@ def enchants
       :tipo         => "drow",
     },
     { :id           => 3,
-      :name         => "deleznable",
+      :name         => "taimada",
       :descripcion  => "Duplica las bonificaciones por la espalda",
       :tipo         => "tenebro",
     },
