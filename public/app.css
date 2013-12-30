@@ -74,7 +74,7 @@ div.information_popup_container > div.popup_information {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	background-color: #222;
-	padding: .2em 0.5em .2em .5em;
+	padding: .1em 3em 1em 1em;
 	text-align: left;
 	
 	/* Position Information */
