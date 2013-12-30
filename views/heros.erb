@@ -164,10 +164,27 @@
 					</table>
 				</td>
 				<td>
-					<% hero[:miscs].each do |id| %>
-						<% img_path = "'images/miscelaneas/#{miscelanea(id)[:name]}.png'" %>
-						<img src=<%=img_path%> alt=<%=miscelanea(id)[:name]%>, id='icon' />
-					<% end %>
+					<table id='table-2'>
+						<tbody>
+							<tr>
+								<% hero[:miscs].each do |m| %>
+									<td><div class="information_popup_container">
+										<div class="information">
+											<% img_path = "'images/miscelaneas/#{miscelanea(m)[:name]}.png'" %>
+											<img src=<%=img_path%> alt=<%=miscelanea(m)[:name]%>, id='icon' /> 
+										</div>
+										<div class="popup_information">
+											<% img_path = "'images/miscelaneas/#{miscelanea(m)[:name]}.png'" %>
+											<center><h3>
+												<%=miscelanea(m)[:name].capitalize %><br><br>
+												<img src=<%=img_path%> alt=<%=miscelanea(m)[:name]%>, id='icon3' /> 
+											</h3></center>
+										</div>
+									</div></td>
+								<% end %>
+							</tr>
+						</tbody>
+					</table>
 				</td>
 				<td>
 					<% hero[:pets].each do |id| %>
