@@ -74,7 +74,11 @@
 								<img src=<%=img_path%> alt=<%=arma(a[:id])[:name]%>, id='icon' /> 
 							</div>
 							<div class="popup_information">
-								<center><h3><%=arma(a[:id])[:name].capitalize %><br><h3></center>
+								<% img_path = "'images/armas/#{arma(a[:id])[:name]}.png'" %>
+								<center><h3>
+									<%=arma(a[:id])[:name].capitalize %><br>
+									<img src=<%=img_path%> alt=<%=arma(a[:id])[:name]%>, id='icon3' /> 
+								</h3></center>
 								<li>Valor de ataque: <%=arma(a[:id])[:powa] %></li>
 								<%= "<li>Permite atacar en diagonal</li>" if arma(a[:id])[:diagonal] %>
 								<h4>Engarces</h4>

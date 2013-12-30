@@ -50,6 +50,11 @@
 	weight: 60px;
 	height: 60px;
 }
+#icon3 {
+	padding: 2px;
+	weight: 80px;
+	height: 80px;
+}
 #box {
 	padding: 2px;
 	weight: 245px;
@@ -74,7 +79,7 @@ div.information_popup_container > div.popup_information {
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
 	background-color: #222;
-	padding: .1em 3em 1em 1em;
+	padding: .1em 1em 1em 1em;
 	text-align: left;
 	
 	/* Position Information */
