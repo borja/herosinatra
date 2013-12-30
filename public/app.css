@@ -55,3 +55,10 @@
 	weight: 245px;
 	height: 191px;
 }
+div {
+    display: none;
+}
+
+a:hover + div {
+    display: block;
+}

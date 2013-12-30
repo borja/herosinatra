@@ -74,7 +74,8 @@
 				<td>
 					<% hero[:armaduras].each do |id| %>
 						<% img_path = "'images/armaduras/#{armadura(id)[:name]}.png'" %>
-						<img src=<%=img_path%> alt=<%=armadura(id)[:name]%>, id='icon' />
+						<a><img src=<%=img_path%> alt=<%=armadura(id)[:name]%>, id='icon' /></a>
+						<div><%= armadura(id)[:name].capitalize %></div>
 					<% end %>
 				</td>
 				<td>
