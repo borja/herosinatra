@@ -44,7 +44,7 @@ def heros
       :pets      => [],
       :repu      => 6,
       :runas     => [],
-      :gemas     => [],
+      :gemas     => [20,28,27,8],
       :joyas     => [],
     },
     { :id        => 3,

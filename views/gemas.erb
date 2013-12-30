@@ -4,23 +4,72 @@
 <a href=/>Índice</a><br><br>
 
 <table id='table-2'>
-	<thead>
-		<tr>
-			<th>ID</th>
-			<th>Icono</th>
-			<th>Nombre</th>
-		</tr>	
-	</thead>
 	<tbody>
-		<% gemas.each do |g| %>
-			<tr>
-				<td><%= g[:id] %></td>
+		<tr>
+			<% 3.times do |i| %>
 				<td>
-					<% img_path = "'../images/treasures/gemas/#{g[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=g[:name]%>, id='icon' />
-				</td>
-				<td><%= g[:name].capitalize %></td>
-			</tr>
-		<% end %>
+					<center><h3>Calidad <%= i+1 %></h3></center>
+					<table id='table-2'>
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Icono</th>
+								<th>Nombre</th>
+							</tr>	
+						</thead>
+						<tbody>
+							<% gemas.each do |g| %>
+								<% if g[:calidad] == (i+1) %>
+									<tr>
+										<td><%= g[:id] %></td>
+										<td>
+											<% img_path = "'../images/treasures/gemas/#{g[:name]}.png'" %>
+											<img src=<%=img_path%> alt=<%=g[:name]%>, id='icon' />
+										</td>
+										<td><%= g[:name].capitalize %></td>
+									</tr>
+								<% end%>
+							<% end %>
+						</tbody>
+					</table>
+					<br>
+				</td>	
+			<% end%>
+		</tr>
+	</tbody>
+</table>
+<table id='table-2'>
+	<tbody>
+		<tr>
+			<% 3.times do |i| %>
+				<td>
+					<center><h3>Calidad <%= i+4 %></h3></center>
+					<table id='table-2'>
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Icono</th>
+								<th>Nombre</th>
+							</tr>	
+						</thead>
+						<tbody>
+							<% gemas.each do |g| %>
+								<% if g[:calidad] == (i+4) %>
+									<tr>
+										<td><%= g[:id] %></td>
+										<td>
+											<% img_path = "'../images/treasures/gemas/#{g[:name]}.png'" %>
+											<img src=<%=img_path%> alt=<%=g[:name]%>, id='icon' />
+										</td>
+										<td><%= g[:name].capitalize %></td>
+									</tr>
+								<% end%>
+							<% end %>
+						</tbody>
+					</table>
+					<br>
+				</td>	
+			<% end%>
+		</tr>
 	</tbody>
 </table>
