@@ -129,7 +129,7 @@
 							</div>
 							<div class="popup_information">
 								<center><h3>	
-									<%=armadura(id)[:name].capitalize %><br>
+									<%=armadura(id)[:name].capitalize %><br><br>
 									<img src=<%=img_path%> alt=<%=armadura(id)[:name]%>, id='icon3' />
 								</h3></center>
 								<li>Valor defensivo: <%=armadura(id)[:powa] %></li>
@@ -140,10 +140,28 @@
 					<% end %>
 				</td>
 				<td>
-					<% hero[:prots].each do |id| %>
-						<% img_path = "'images/protecciones/#{proteccion(id)[:name]}.png'" %>
-						<img src=<%=img_path%> alt=<%=proteccion(id)[:name]%>, id='icon' />
-					<% end %>
+					<table id='table-2'>
+						<tbody>
+							<tr>
+								<% hero[:prots].each do |p| %>
+									<td><div class="information_popup_container">
+										<div class="information">
+											<% img_path = "'images/protecciones/#{proteccion(p)[:name]}.png'" %>
+											<img src=<%=img_path%> alt=<%=proteccion(p)[:name]%>, id='icon' /> 
+										</div>
+										<div class="popup_information">
+											<% img_path = "'images/protecciones/#{proteccion(p)[:name]}.png'" %>
+											<center><h3>
+												<%=proteccion(p)[:name].capitalize %><br><br>
+												<img src=<%=img_path%> alt=<%=proteccion(p)[:name]%>, id='icon3' /> 
+											</h3></center>
+											<li>Potencia defensiva: <%=proteccion(p)[:powa] %></li>	
+										</div>
+									</div></td>
+								<% end %>
+							</tr>
+						</tbody>
+					</table>
 				</td>
 				<td>
 					<% hero[:miscs].each do |id| %>
@@ -164,9 +182,7 @@
 									<img src=<%=img_path%> alt=<%=pet(id)[:name]%>, id='icon3' />
 								</h3></center>
 							</div>
-						</div>
-						
-						
+						</div>						
 					<% end %>
 				</td>
 			</tr>
