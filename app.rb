@@ -38,5 +38,8 @@ class App < Sinatra::Base
   end  
   get '/joyas' do
     erb :joyas
+  end
+  get '/display' do
+    erb :display
   end      
 end

@@ -1,6 +1,7 @@
 <title>HeroSheet: Lista de héroes</title>
 <center><img src="images/logo.png" alt="Proyecto Heroquest" /></center>
 <link rel="stylesheet" href="app.css" type="text/css" />
+
 <table id='table-2'>
 	<thead>
 		<tr>
@@ -73,9 +74,15 @@
 				</td>
 				<td>
 					<% hero[:armaduras].each do |id| %>
-						<% img_path = "'images/armaduras/#{armadura(id)[:name]}.png'" %>
-						<a><img src=<%=img_path%> alt=<%=armadura(id)[:name]%>, id='icon' /></a>
-						<div><%= armadura(id)[:name].capitalize %></div>
+						<div class="information_popup_container">
+							<div class="information">
+								<% img_path = "'images/armaduras/#{armadura(id)[:name]}.png'" %>
+								<img src=<%=img_path%> alt=<%=armadura(id)[:name]%>, id='icon' /> 
+							</div>
+							<div class="popup_information">
+								<%=armadura(id)[:name]%>
+							</div>
+						</div>
 					<% end %>
 				</td>
 				<td>

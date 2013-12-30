@@ -55,10 +55,32 @@
 	weight: 245px;
 	height: 191px;
 }
-div {
-    display: none;
+div.information_popup_container {
+	/* Position Information */
+	/* Appearance Information */
 }
-
-a:hover + div {
-    display: block;
+div.information_popup_container > div.information {
+	/* Position Information */
+	/* Appearance Information */
+}
+div.information_popup_container > div.popup_information {
+	position:   absolute;
+	visibility: hidden;
+	line-height: 20px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size:   14px;
+	color: #CBCBCB;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	background-color: #222;
+	padding: .2em 0.5em .2em .5em;
+	text-align: left;
+	
+	/* Position Information */
+	/* Appearance Information */
+}
+div.information_popup_container > div.information:hover + div.popup_information {
+	visibility: visible;
+	z-index:    200;
 }
