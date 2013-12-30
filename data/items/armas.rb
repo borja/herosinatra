@@ -5,7 +5,6 @@ def armas
       :categoria    => "Filo",
       :powa         => 2,
       :ranuras      => 2,
-      :gemas        => [],
       :diagonal     => false
     },
     { :id           => 2,
@@ -13,7 +12,6 @@ def armas
       :categoria    => "Filo",
       :powa         => 3,
       :ranuras      => 3,
-      :gemas        => [],
       :diagonal     => false
     },
     { :id           => 3,
@@ -21,7 +19,6 @@ def armas
       :categoria    => "cuchillo",
       :powa         => 1,
       :ranuras      => 1,
-      :gemas        => [],
       :diagonal     => false
     },
     { :id           => 4,
@@ -29,7 +26,6 @@ def armas
       :categoria    => "libro",
       :powa         => 1,
       :ranuras      => 4,
-      :gemas        => [],
       :diagonal     => false
     },
     { :id           => 5,
@@ -37,7 +33,6 @@ def armas
       :categoria    => "asta",
       :powa         => 2,
       :ranuras      => 3,
-      :gemas        => [],
       :diagonal     => true
     },
     { :id           => 6,
@@ -45,7 +40,6 @@ def armas
       :categoria    => "cuchillo",
       :powa         => 2,
       :ranuras      => 2,
-      :gemas        => [],
       :diagonal     => false
     },
     { :id           => 7,
@@ -53,7 +47,6 @@ def armas
       :categoria    => "escudo",
       :powa         => 1,
       :ranuras      => 4,
-      :gemas        => [],
       :diagonal     => true
     },
     { :id           => 8,
@@ -61,7 +54,6 @@ def armas
       :categoria    => "baston",
       :powa         => 1,
       :ranuras      => 4,
-      :gemas        => [],
       :diagonal     => true
     },
     { :id           => 9,
@@ -69,7 +61,6 @@ def armas
       :categoria    => "Filo",
       :powa         => 4,
       :ranuras      => 3,
-      :gemas        => [1,2,3],
       :diagonal     => true
     },
     { :id           => 10,
@@ -77,7 +68,6 @@ def armas
       :categoria    => "Filo",
       :powa         => 3,
       :ranuras      => 3,
-      :gemas        => [],
       :diagonal     => true
     },
     { :id           => 11,
@@ -85,7 +75,6 @@ def armas
       :categoria    => "Filo",
       :powa         => 2,
       :ranuras      => 4,
-      :gemas        => [],
       :diagonal     => false
     },
     { :id           => 12,
@@ -93,7 +82,6 @@ def armas
       :categoria    => "Filo",
       :powa         => 4,
       :ranuras      => 4,
-      :gemas        => [],
       :diagonal     => false
     },
     { :id           => 13,
@@ -101,7 +89,6 @@ def armas
       :categoria    => "Contundentes",
       :powa         => 2,
       :ranuras      => 4,
-      :gemas        => [],
       :diagonal     => false
     },
     { :id           => 14,
@@ -109,7 +96,6 @@ def armas
       :categoria    => "Distancia",
       :powa         => 2,
       :ranuras      => 2,
-      :gemas        => [],
       :diagonal     => false
     },
     

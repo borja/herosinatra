@@ -97,6 +97,7 @@
 			<th>ID</th>
 			<th>Icono</th>
 			<th>Nombre</th>
+			<th>Poder</th>
 			<th>Encantamientos</th>
 			<th>Engarces</th>
 		</tr>
@@ -109,9 +110,10 @@
 					<img src=<%=img_path%> alt=<%=arma(a[:id])[:name]%>, id='icon' />
 				</td>
 				<td><%= arma(a[:id])[:name].capitalize %></td>
+				<td><%= arma(a[:id])[:powa] %></td>				
 				<td><%= a[:encantamientos] || "Arma mundana" %></td>
 				<td>
-					<% if (a[:gemas].nil? && a[:joyas].nil? && a[:runas].nil? ) %>
+					<% if (a[:gemas].nil? && a[:joyas].nil? && a[:runas].nil? && a[:ranuras].nil? ) %>
 						El arma no tiene engarces.
 					<% else %>
 						<% if a[:gemas] %>
@@ -126,12 +128,18 @@
 								<img src=<%=img_path%> alt=<%=joya(j)[:name]%>, id='icon' />
 							<% end %>
 						<% end%>
-						<% if a[:joyas] %>
+						<% if a[:runas] %>
 							<% a[:runas].each do |r| %>
 								<% img_path = "'../../images/treasures/runas/#{runa(r)[:name]}.png'" %>
 								<img src=<%=img_path%> alt=<%=runa(r)[:name]%>, id='icon' />
 							<% end %>
 						<% end %>
+						<% if a[:ranuras] %>
+							<% a[:ranuras].times do %>
+								<% img_path = "'../../images/treasures/socket.png'" %>
+								<img src=<%=img_path%> alt='ranura-hueca', id='icon' />
+								<% end %>						
+						<% end %>						
 					<% end %>
 				</td>
 			</tr>
