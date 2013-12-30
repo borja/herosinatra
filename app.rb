@@ -45,6 +45,9 @@ class App < Sinatra::Base
   get '/pociones' do
     erb :pociones
   end
+  get '/habilidades' do
+    erb :habilidades
+  end
   get '/display' do
     erb :display
   end      
