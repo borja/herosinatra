@@ -54,7 +54,7 @@ def heros
                      {:id       => 5,
                       :enchants => [5]}],
       :miscs     => [{:id       => 1,
-                      :gemas    => [20]}, 
+                      :gemas    => [38,20]}, 
                      {:id       => 2,
                       :gemas    => [39]},
                      {:id       => 7}],
