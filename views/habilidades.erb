@@ -6,30 +6,20 @@
 <table id='table-2'>
 	<thead>
 		<tr>
-			<td>Enanos</td>
-			<td>Bárbaros</td>
-			<td>Elfos</td>
-			<td>Magos</td>
-			<td>Tieflings</td>
-			<td>Clérigos</td>
-			<td>Ladrones</td>
+			<% personajes.each do |pj| %>
+				<td><%= pj.capitalize %></td>
+			<% end %>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td><img src="../images/enano.png" 				alt="enano" /, 	  id='icon2'></td>
-			<td><img src="../images/barbaro.png" 			alt="barbaro" /,  id='icon2'>
-				<img src="../images/barbara.png" 			alt="barbaro" /,  id='icon2'></td>
-			<td><img src="../images/elfo.png" 				alt="elfo" /,     id='icon2'>
-				<img src="../images/elfa.png" 				alt="elfa" /,     id='icon2'></td>
-			<td><img src="../images/mago.png" 				alt="mago" /,     id='icon2'>
-				<img src="../images/maga.png" 				alt="maga" /,     id='icon2'></td>
-			<td><img src="../images/tiefling.png" 			alt="tiefling" /, id='icon2'>
-				<img src="../images/tiefling-female.png" 	alt="tiefling" /, id='icon2'></td>
-			<td><img src="../images/clerigo.png" 			alt="clerigo" /,  id='icon2'>
-				<img src="../images/cleriga.png" 			alt="cleriga" /,  id='icon2'></td>
-			<td><img src="../images/ladron.png" 			alt="ladron" /,   id='icon2'>
-				<img src="../images/ladrona.png" 			alt="ladrona" /,  id='icon2'></td>
+			<% personajes.each do |pj| %>
+				<td><img src=../images/<%= pj                     %>.png alt="personaje" /, id='icon2'>
+					<% unless pj=="enano" %>
+						<img src=../images/<%= genderize(pj,"female") %>.png alt="personaje" /, id='icon2'>
+					<% end %>
+				</td>
+			<% end %>
 		</tr>
 		<tr>
 			<td><img src="../images/clases/falangista.png" 				alt="enano" /, 	  id='icon4'></td>

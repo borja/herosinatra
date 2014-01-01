@@ -34,10 +34,15 @@ def genderize(raza,gender)
     when "barbaro"  then return "barbara"
     when "clerigo"  then return "cleriga"
     when "ladron"   then return "ladrona"
+    when "tiefling" then return "tiefling-female"
     else                 return raza
     end
   when "male"   then return raza
   end
+end
+
+def personajes
+  ["enano","barbaro","elfo","mago","tiefling","clerigo","ladron"]
 end
     
   
