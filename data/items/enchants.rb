@@ -20,6 +20,11 @@ def enchants
       :descripcion  => "El portador recupera 1PC al matar con el arma.",
       :tipo         => "tenebro",
     },
+    { :id           => 5,
+      :name         => "basilisco",
+      :descripcion  => "6+ vs todas las magias",
+      :tipo         => "criptico",
+    },
   ]
 end
 
