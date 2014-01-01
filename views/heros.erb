@@ -197,6 +197,35 @@
 												<img src=<%=img_path%> alt=<%=proteccion(p[:id])[:name]%>, id='icon3' /> 
 											</h3></center>
 											<li>Potencia defensiva: <%=proteccion(p[:id])[:powa] %></li>
+											<h4>Engarces</h4>
+											<% if (p[:gemas].nil? && p[:joyas].nil? && p[:runas].nil? && p[:ranuras].nil? ) %>
+												El objeto no tiene engarces.
+											<% else %>
+												<% if p[:gemas] %>
+													<% p[:gemas].each do |g| %>
+														<% img_path = "'../../images/treasures/gemas/#{gema(g)[:name]}.png'" %>
+														<img src=<%=img_path%> alt=<%=gema(g)[:name]%>, id='icon' />
+													<% end %>
+												<% end %>
+												<% if p[:joyas] %>						
+													<% p[:joyas].each do |j| %>
+														<% img_path = "'../../images/treasures/joyas/#{joya(j)[:name]}.png'" %>
+														<img src=<%=img_path%> alt=<%=joya(j)[:name]%>, id='icon' />
+													<% end %>
+												<% end%>
+												<% if p[:runas] %>
+													<% p[:runas].each do |r| %>
+														<% img_path = "'../../images/treasures/runas/#{runa(r)[:name]}.png'" %>
+														<img src=<%=img_path%> alt=<%=runa(r)[:name]%>, id='icon' />
+													<% end %>
+												<% end %>
+												<% if p[:ranuras] %>
+													<% p[:ranuras].times do %>
+														<% img_path = "'../../images/treasures/socket.png'" %>
+														<img src=<%=img_path%> alt='ranura-hueca', id='icon' />
+														<% end %>						
+												<% end %>						
+											<% end %>
 											<% if p[:enchants] %>	
 												<h4>Propiedades mágicas</h4>
 												<% p[:enchants].each do |e| %>
