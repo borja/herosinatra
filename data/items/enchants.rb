@@ -25,6 +25,11 @@ def enchants
       :descripcion  => "6+ vs todas las magias",
       :tipo         => "criptico",
     },
+    { :id           => 6,
+      :name         => "bienestar",
+      :descripcion  => "recupera +1PC 1 vez por reto ",
+      :tipo         => "bendicion",
+    },
   ]
 end
 
