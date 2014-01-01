@@ -36,6 +36,9 @@ def joyas
     { :id           => 12,
       :name         => "de sigmar",
     },
+    { :id           => 13,
+      :name         => "cerebro congelado",
+    },
   ]
 end
 
