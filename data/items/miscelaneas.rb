@@ -35,6 +35,11 @@ def miscelaneas
       :name         => "camafeo draconico",
       :max          => 1
     },
+    {
+      :id           => 8,
+      :name         => "herramientas +1 vs trampas",
+      :max          => 0
+    },
   ]
 end
 
