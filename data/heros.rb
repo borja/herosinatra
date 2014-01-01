@@ -614,12 +614,12 @@ def rango(id)
 end
 
 def defensa(id)
-  total = heros[id-1][:armaduras].first
-  heros[id-1][:prots].each do |p|
-    total += proteccion(p)[:powa]
-  end
-  heros[id-1][:armas].each do |a|
-    total += arma(a[:id])[:powa] if a[:id] == 7 # Si es un escudo
-  end
-  return total  
+ #total = heros[id-1][:armaduras].first[:powa]
+ #heros[id-1][:prots].each do |p|
+ #  total += proteccion(p[:id])[:powa]
+ #end
+ #heros[id-1][:armas].each do |a|
+ #  total += arma(a[:id])[:powa] if a[:id] == 7 # Si es un escudo
+ #end
+  return 1#total  
 end
