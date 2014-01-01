@@ -196,7 +196,13 @@
 												<%=proteccion(p[:id])[:name].capitalize %><br><br>
 												<img src=<%=img_path%> alt=<%=proteccion(p[:id])[:name]%>, id='icon3' /> 
 											</h3></center>
-											<li>Potencia defensiva: <%=proteccion(p[:id])[:powa] %></li>	
+											<li>Potencia defensiva: <%=proteccion(p[:id])[:powa] %></li>
+											<% if p[:enchants] %>	
+												<h4>Propiedades mágicas</h4>
+												<% p[:enchants].each do |e| %>
+													<li><%= enchant(e)[:name].capitalize %>
+												<% end %>
+											<% end %>	
 										</div>
 									</div></td>
 								<% end %>
