@@ -144,6 +144,14 @@ def gemas
       :name         => "camafeo",
       :calidad      => 6,
     },
+    { :id           => 37,
+      :name         => "serpentina del dragon",
+      :calidad      => 7,
+    },
+    { :id           => 38,
+      :name         => "hierro antigravedad",
+      :calidad      => 7,
+    },
     
   ]
 end
@@ -160,6 +168,7 @@ def gema_calidad(numero)
   when 4 then return "Piedras Preciosas"
   when 5 then return "Piedras de Poder"
   when 6 then return "Gemas Legendarias"
+  when 7 then return "Gemas Insolitas"
   else return "Error!"
   end
 end    
