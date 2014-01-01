@@ -54,6 +54,12 @@ def protecciones
       :powa         => 1,
       :ranuras      => 2,
     },
+    { :id           => 10,
+      :name         => "guantes",
+      :categoria    => "cuero",
+      :powa         => 0,
+      :ranuras      => 2,
+    },
   ]
 end
 
