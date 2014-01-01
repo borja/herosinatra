@@ -208,7 +208,7 @@ def heros
       :prots     => [{:id => 2}, 
                      {:id => 3}],
       :miscs     => [{:id => 1}, 
-                     {:id => 2} 
+                     {:id => 2}, 
                      {:id => 3}],
       :skills    => [],
       :sex       => "female",
