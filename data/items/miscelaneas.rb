@@ -30,6 +30,11 @@ def miscelaneas
       :name         => "talisman",
       :max          => 3
     },
+    {
+      :id           => 7,
+      :name         => "camafeo draconico",
+      :max          => 1
+    },
   ]
 end
 
