@@ -60,6 +60,12 @@ def protecciones
       :powa         => 0,
       :ranuras      => 2,
     },
+    { :id           => 11,
+      :name         => "cinturon alquimico",
+      :categoria    => "cuero",
+      :powa         => 1,
+      :ranuras      => 1,
+    },
   ]
 end
 
