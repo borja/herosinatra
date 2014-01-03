@@ -57,7 +57,7 @@
 											<li>Valor de ataque: <%=arma(a[:id])[:powa] %></li>
 											<%= "<li>Permite atacar en diagonal</li>" if arma(a[:id])[:diagonal] %>
 											<h4>Engarces</h4>
-												<% if (a[:gemas].nil? && a[:joyas].nil? && a[:runas].nil? && a[:ranuras].nil? ) %>
+												<% if mundano?(a) %>
 													El arma no tiene engarces.
 												<% else %>
 													<% if a[:gemas] %>
@@ -113,7 +113,7 @@
 								<li>Valor defensivo: <%=armadura(a[:id])[:powa] %></li>
 								<li>Tipo: <%=armadura(a[:id])[:categoria].capitalize %></li>
 								<h4>Engarces</h4>
-								<% if (a[:gemas].nil? && a[:joyas].nil? && a[:runas].nil? && a[:ranuras].nil? ) %>
+								<% if mundano?(a) %>
 									El arma no tiene engarces.
 								<% else %>
 									<% if a[:gemas] %>
@@ -169,7 +169,7 @@
 											</h3></center>
 											<li>Potencia defensiva: <%=proteccion(p[:id])[:powa] %></li>
 											<h4>Engarces</h4>
-											<% if (p[:gemas].nil? && p[:joyas].nil? && p[:runas].nil? && p[:ranuras].nil? ) %>
+											<% if mundano?(p) %>
 												El objeto no tiene engarces.
 											<% else %>
 												<% if p[:gemas] %>
@@ -227,7 +227,7 @@
 												<img src=<%=img_path%> alt=<%=miscelanea(m[:id])[:name]%>, id='icon3' /> 
 											</h3></center>
 											<h4>Engarces</h4>
-											<% if (m[:gemas].nil? && m[:joyas].nil? && m[:runas].nil? && m[:ranuras].nil? ) %>
+											<% if mundano?(m) %>
 												El objeto no tiene engarces.
 											<% else %>
 												<% if m[:gemas] %>

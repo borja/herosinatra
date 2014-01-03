@@ -92,7 +92,7 @@
 					<% end%>
 				</td>
 				<td>
-					<% if (a[:gemas].nil? && a[:joyas].nil? && a[:runas].nil? && a[:ranuras].nil? ) %>
+					<% if mundano?(a) %>
 						El arma no tiene engarces.
 					<% else %>
 						<% if a[:gemas] %>

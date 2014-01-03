@@ -648,6 +648,14 @@ def rango(id)
   return total
 end
 
+def mundano?(item)
+  case
+    when (item.class != Hash ) then return "class error"
+    when (item[:gemas].nil? && item[:joyas].nil? && item[:runas].nil? && item[:ranuras].nil?) then return true
+    else return false
+  end 
+end
+
 def defensa(id)
  #total = heros[id-1][:armaduras].first[:powa]
  #heros[id-1][:prots].each do |p|
