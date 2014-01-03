@@ -1,0 +1,24 @@
+<h1><center>Listas de Hechizos</center></h1>
+<a href=/>Índice</a><br><br>
+<link rel="stylesheet" href="../../app.css" type="text/css" />
+
+<table id='table-2'>
+<thead>
+	<th>Icono</th>
+	<th>Elemento</th>
+	<th>Nombre</th>
+	<th>Descripción</th>
+</thead>
+<tbody>
+	<% spells.each do |s|%>		
+		<tr style=<%= color(spell(s[:id])[:elemento])%>>				
+			<td><% img_path = "'../../images/spells/#{spell(s[:id])[:name]}.png'" %>
+				<img src=<%=img_path%> alt=<%=spell(s[:id])[:name]%>, id='icon' />
+			</td>
+			<td><%= spell(s[:id])[:elemento].capitalize %></td>
+			<td><%= spell(s[:id])[:name].capitalize %></td>
+			<td><%= spell(s[:id])[:descripcion] %></td>
+		</tr>
+	<% end %>
+</tbody>
+</table>

@@ -50,5 +50,8 @@ class App < Sinatra::Base
   end
   get '/display' do
     erb :display
-  end      
+  end
+  get '/hechizos' do
+    erb :hechizos
+  end       
 end
