@@ -17,7 +17,7 @@
 			<td><img src=../images/personajes/<%= genderize(personaje(@heroe[:personaje]), @heroe[:sex] ) %>.png 
 				alt="personaje" /, id='icon2'></td>
 			<td><%= @heroe[:nivel] %></td>
-			<td><%= @heroe[:repu] %></td>
+			<td><%= @heroe[:repu] || 0 %></td>
 			<td>
 				<table id='table-2'>
 					<tbody>

@@ -32,7 +32,7 @@
 					<i><%= hero[:personaje].capitalize.gsub('Lord','Señor') %></i>
 				</td>
 				<td><%= hero[:nivel] %></td>
-				<td><%= hero[:repu] %></td>
+				<td><%= hero[:repu] || 0 %></td>
 				<td><% elements(hero[:hechizos]).each do |e| %>	
 						<% img_path =  "'images/elements/#{e}.png'" %>
 						<img src=<%=img_path%> alt=<%=e%>, id='icon' />
