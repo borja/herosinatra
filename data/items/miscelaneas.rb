@@ -37,7 +37,7 @@ def miscelaneas
     },
     {
       :id           => 8,
-      :name         => "herramientas +1 vs trampas",
+      :name         => "herramientas",
       :max          => 0
     },
   ]
