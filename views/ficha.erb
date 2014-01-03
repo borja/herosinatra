@@ -130,7 +130,7 @@
 			<th>Armadura</th>
 			<th>Protecciones</th>
 			<th>Miscelánea</th>
-			<th>Hechizos Conocidos</th>
+			<th><a href=../spells/<%=@heroe[:id]%>>Lista de hechizos conocidos</a></th>
 		</tr>
 	</thead>
 	<tbody>
@@ -158,13 +158,13 @@
 				<% end %>
 			</td>
 			<td>
-				<% elements(@heroe[:hechizos]).each do |e| %>	
-					<% img_path =  "'../images/elements/#{e}.png'" %>
-					<img src=<%=img_path%> alt=<%=e%>, id='icon' />
-				<% end %>
-				<% unless @heroe[:hechizos].empty? %>
-					<br><a href=../spells/<%=@heroe[:id]%>>Lista de hechizos conocidos</a><br>
-				<% else %>El personaje no conoce ningun hechizo
+				<% if @heroe[:hechizos] %>
+					<% elements(@heroe[:hechizos]).each do |e| %>	
+						<% img_path =  "'../images/elements/#{e}.png'" %>
+						<img src=<%=img_path%> alt=<%=e%>, id='icon' />
+					<% end %>
+				<% else %>
+					El personaje no conoce ningun hechizo.
 				<% end %>					
 			</td>
 		</tr>
