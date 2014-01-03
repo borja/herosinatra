@@ -14,9 +14,9 @@
 	<tbody>
 		<tr>
 			<% personajes.each do |pj| %>
-				<td><img src=../images/<%= pj                     %>.png alt="personaje" /, id='icon2'>
+				<td><img src=../images/personajes/<%= pj                     %>.png alt="personaje" /, id='icon2'>
 					<% unless pj=="enano" %>
-						<img src=../images/<%= genderize(pj,"female") %>.png alt="personaje" /, id='icon2'>
+						<img src=../images/personajes/<%= genderize(pj,"female") %>.png alt="personaje" /, id='icon2'>
 					<% end %>
 				</td>
 			<% end %>
