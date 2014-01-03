@@ -268,21 +268,20 @@
 						</tbody>
 					</table>
 				</td>
-				<td>
-					<% hero[:pets].each do |id| %>
+				<td><% if hero[:pets] %>
 						<div class="information_popup_container">
 							<div class="information">
-								<% img_path = "'images/pets/#{pet(id)[:name]}.png'" %>
-								<img src=<%=img_path%> alt=<%=pet(id)[:name]%>, id='icon' /> 
+								<% img_path = "'images/pets/#{pet(hero[:pets])[:name]}.png'" %>
+								<img src=<%=img_path%> alt=<%=pet(hero[:pets])[:name]%>, id='icon' /> 
 							</div>
 							<div class="popup_information">
 								<center><h3>	
-									<%=pet(id)[:name].capitalize %><br>
-									<img src=<%=img_path%> alt=<%=pet(id)[:name]%>, id='icon3' />
+									<%=pet(hero[:pets])[:name].capitalize %><br>
+									<img src=<%=img_path%> alt=<%=pet(hero[:pets])[:name]%>, id='icon3' />
 								</h3></center>
 							</div>
-						</div>						
-					<% end %>
+						</div>
+					<% end %>						
 				</td>
 			</tr>
 		<% end %>

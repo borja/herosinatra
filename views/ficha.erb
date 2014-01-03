@@ -196,7 +196,7 @@
 			</tr>
 		</thead>
 		<body>
-			<tr><% familiar = pet(@heroe[:pets].first) %>
+			<tr><% familiar = pet(@heroe[:pets]) %>
 				<td>
 					<% img_path = "'../../images/pets/#{familiar[:name]}.png'" %>
 					<img src=<%=img_path%> alt=<%=familiar[:name]%>, id='icon' />
