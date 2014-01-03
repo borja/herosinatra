@@ -184,6 +184,30 @@
 		</tr>
 	</tbody>
 </table>
+
+<% if @heroe[:pets] %>
+	<h3><center>Familiar</center></h3>
+	<table id='table-2'>
+		<thead>
+			<tr>
+				<th>Icono</th>
+				<th>Nombre</th>
+				<th>Descripción</th>
+			</tr>
+		</thead>
+		<body>
+			<tr><% familiar = pet(@heroe[:pets].first) %>
+				<td>
+					<% img_path = "'../../images/pets/#{familiar[:name]}.png'" %>
+					<img src=<%=img_path%> alt=<%=familiar[:name]%>, id='icon' />
+				</td>
+				<td><%= familiar[:name].capitalize %></td>
+				<td><%= familiar[:bono] %></td>
+			</tr>
+		</tbody>
+	</table>
+<% end %>
+
 <h3><center>Útiles</center></h3>
 <table id='table-2'>
 	<thead>
