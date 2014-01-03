@@ -22,37 +22,8 @@
 	<tbody>
 		<% heros.each do |hero| %>
 			<tr>
-				<td><% case hero[:sex]
-							when "male" %>
-							<% case personaje(hero[:personaje])
-								when "enano" then %>
-									<img src="images/personajes/enano.png" alt="rss feed" /, id='icon'>
-								<% when "elfo" then %>
-									<img src="images/personajes/elfo.png" alt="rss feed" /, id='icon'>
-								<% when "tiefling" then %>
-									<img src="images/personajes/tiefling.png" alt="rss feed" /, id='icon'>
-								<% when "mago" then %>
-									<img src="images/personajes/mago.png" alt="rss feed" /, id='icon'>
-								<% when "ladron" then %>
-									<img src="images/personajes/ladron.png" alt="rss feed" /, id='icon'>
-								<% when "barbaro" then %>
-									<img src="images/personajes/barbaro.png" alt="rss feed" /, id='icon'>
-							<% end%>
-							<% when "female" %>
-								<% case personaje(hero[:personaje])
-									when "elfo" then %>
-										<img src="images/personajes/elfa.png" alt="rss feed" /, id='icon'>
-									<% when "tiefling" then %>
-										<img src="images/personajes/tiefling-female.png" alt="rss feed" /, id='icon'>
-									<% when "mago" then %>
-										<img src="images/personajes/maga.png" alt="rss feed" /, id='icon'>
-									<% when "ladron" then %>
-										<img src="images/personajes/ladrona.png" alt="rss feed" /, id='icon'>
-									<% when "barbaro" then %>
-										<img src="images/personajes/barbara.png" alt="rss feed" /, id='icon'>
-									<% end%>
-						<% end %>
-				</td>
+				<td><img src=../images/personajes/<%= genderize(personaje(hero[:personaje]), hero[:sex] ) %>.png 
+					alt="personaje" /, id='icon'></td>
 				<td><a href=hero/<%= hero[:id] %>><%= hero[:name] %></a><br>
 					<i><%= hero[:jugador] %></i>
 				</td>
