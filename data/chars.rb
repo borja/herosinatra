@@ -1,13 +1,36 @@
+def personajes
+  ["enano","barbaro","elfo","mago","tiefling","clerigo","ladron"]
+end
+
+def barbaro
+  ["lord de las bestias","berserker","hoplita"]
+end
+
+def enano
+  ["falangista","matador","ingeniero"]
+end
+
+def mago
+  ["invocador", "conjurador", "hechicero"]
+end
+
+def elfo
+  ["derviche", "druida", "arquero"]
+end
+
+def ladron
+  ["nigromante", "asesino", "ladron"]
+end
+
+def clerigo
+  ["clerigo", "paladin", "sacerdote"]
+end
+
+def tiefling
+  ["vengador", "caminante", "brujo"]
+end
+
 def personaje(char)
-  
-  enano    = ['falangista', 'ingeniero', 'matador']
-  elfo     = ['druida', 'derviche', 'arquero']
-  tiefling = ['vengador', 'brujo', 'caminante']
-  barbaro  = ['lord de las bestias', 'berserker', 'hoplita']
-  mago     = ['invocador', 'conjurador', 'hechicero']
-  ladron   = ['ladron','nigromante', 'asesino']
-  clerigo  = ['clerigo','paladin', 'sacerdote']  
-    
   case
     when enano.include?(char.downcase)    then return 'enano'
     when elfo.include?(char.downcase)     then return 'elfo'
@@ -40,9 +63,3 @@ def genderize(raza,gender)
   when "male"   then return raza
   end
 end
-
-def personajes
-  ["enano","barbaro","elfo","mago","tiefling","clerigo","ladron"]
-end
-    
-  
