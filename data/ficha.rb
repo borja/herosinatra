@@ -18,3 +18,11 @@ def engarces
     "runas"
   ]
 end
+
+def utiles
+  [
+    "pociones",
+    "pergaminos",
+    "piezas"
+  ]
+end

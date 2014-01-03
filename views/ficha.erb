@@ -167,13 +167,17 @@
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
+		<tr>				
 			<% engarces.each do |engarce| %>
 				<td>
-					<% @heroe[eval(":#{engarce}")].each do |e| %>
-						<% e_name = send(engarce.gsub('s',''),e)[:name] %>
-						<% img_path = "'../images/treasures/#{engarce}/#{e_name}.png'" %>
-						<img src=<%=img_path%> alt=<%= e_name %>, id='icon' />
+					<% if @heroe[eval(":#{engarce}")] %>
+						<% @heroe[eval(":#{engarce}")].each do |e| %>
+							<% e_name = send(engarce.gsub('s',''),e)[:name] %>
+							<% img_path = "'../images/treasures/#{engarce}/#{e_name}.png'" %>
+							<img src=<%=img_path%> alt=<%= e_name %>, id='icon' />
+						<% end %>
+					<% else %>
+						El héroe no tiene <%= engarce %>.
 					<% end %>
 				</td>
 			<% end %>
@@ -184,9 +188,9 @@
 <table id='table-2'>
 	<thead>
 		<tr>
-			<th>Pociones</th>
-			<th>Pergaminos</th>
-			<th>Piezas</th>
+			<% utiles.each do |util| %>
+				<th><%= util.capitalize %></th>
+			<% end %>
 		</tr>
 	</thead>
 	<tbody>
