@@ -1,12 +1,20 @@
 # encoding: UTF-8
 def descripcion
   [
-	  "Rostro",
-	  "Nivel",
-	  "Reputación",
-	  "Atributos",
-	  "Combate",
-	  "Personaje",
-	  "Raza"
+	  "rostro",
+	  "nivel",
+	  "reputación",
+	  "atributos",
+	  "combate",
+	  "personaje",
+	  "raza"
+  ]
+end
+
+def engarces
+  [
+    "gemas",
+    "joyas",
+    "runas"
   ]
 end

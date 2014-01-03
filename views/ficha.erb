@@ -7,8 +7,8 @@
 <table id='table-2'>
 	<thead>
 		<tr>
-			<% descripcion.each do |field| %>
-				<th><%= field %></th>
+			<% descripcion.each do |f| %>
+				<th><%= f.capitalize %></th>
 			<% end%>
 		</tr>
 	</thead>
@@ -43,8 +43,8 @@
 							<td>Defensa</td>
 						</tr>
 						<tr>
-							<td><%= ataque(@heroe[:id]) %></td>
-							<td><%= rango(@heroe[:id]) %></td>
+							<td><%= ataque( @heroe[:id]) %></td>
+							<td><%= rango(  @heroe[:id]) %></td>
 							<td><%= defensa(@heroe[:id]) %></td>
 						</tr>
 					</tbody>
