@@ -25,6 +25,11 @@ def pociones
       :efecto       => "+1 dado de ataque.",
       :precio       => 25,
     },
+    { :id           => 6,
+      :name         => "curativa",
+      :efecto       => "Recupera 4 puntos de cuerpo.",
+      :precio       => 100,
+    },
   ]
 end
 

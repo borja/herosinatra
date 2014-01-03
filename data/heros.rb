@@ -66,6 +66,7 @@ def heros
       :runas     => [],
       :gemas     => [20,28,27,8],
       :joyas     => [],
+      :pociones  => [6],
     },
     { :id        => 3,
       :name      => "Grunt Mascafilos",

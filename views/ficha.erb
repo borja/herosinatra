@@ -254,25 +254,34 @@
 	<tbody>
 		<tr>
 			<td>
-				<% @heroe[:gemas].each do |g| %>
-					<% img_path = "'../../images/treasures/gemas/#{gema(g)[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=gema(g)[:name]%>, id='icon' />
+				<% if @heroe[:pociones] %>
+					<% @heroe[:pociones].each do |p| %>
+						<% img_path = "'../../images/utiles/pociones/#{pocion(p)[:name]}.png'" %>
+						<img src=<%=img_path%> alt=<%=pocion(p)[:name]%>, id='icon' />
+					<% end %>
+				<% else %>
+					El personaje no tiene ninguna poción.
 				<% end %>
-				<%= "El personaje no tiene ninguna poción." if @heroe[:gemas].empty? %>
 			</td>
 			<td>
-				<% @heroe[:runas].each do |r| %>
-					<% img_path = "'../../images/treasures/runas/#{runa(r)[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=runa(r)[:name]%>, id='icon' />
+				<% if @heroe[:pergaminos] %>
+					<% @heroe[:pergaminos].each do |p| %>
+						<% img_path = "'../../images/utiles/pergaminos/#{pergamino(p)[:name]}.png'" %>
+						<img src=<%=img_path%> alt=<%=pocion(p)[:name]%>, id='icon' />
+					<% end %>
+				<% else %>
+					El personaje no tiene ninguna pergamino.
 				<% end %>
-				<%= "El personaje no tiene ningun pergamino." if @heroe[:runas].empty? %>
 			</td>
 			<td>
-				<% @heroe[:joyas].each do |j| %>
-					<% img_path = "'../../images/treasures/joyas/#{joya(j)[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=joya(j)[:name]%>, id='icon' />
+				<% if @heroe[:piezas] %>
+					<% @heroe[:piezas].each do |p| %>
+						<% img_path = "'../../images/utiles/piezas/#{pieza(p)[:name]}.png'" %>
+						<img src=<%=img_path%> alt=<%=pieza(p)[:name]%>, id='icon' />
+					<% end %>
+				<% else %>
+					El personaje no tiene ninguna pieza de profesión.
 				<% end %>
-				<%= "El personaje no tiene ninguna pieza." if @heroe[:joyas].empty? %>
 			</td>
 		</tr>
 	</tbody>
