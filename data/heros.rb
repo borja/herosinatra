@@ -151,7 +151,7 @@ def heros
                       :ranuras => 2}],
       :armaduras => [{:id      => 1}],
       :prots     => [{:id      => 3,
-                      :gemas   => 12}, 
+                      :gemas   => [12]}, 
                      {:id      => 4}],
       :miscs     => [{:id      => 1},
                      {:id      => 6},
