@@ -161,35 +161,22 @@
 <h3><center>Tesoros</center></h3>
 <table id='table-2'>
 	<thead>
-		<tr>
-			<th>Gemas</th>
-			<th>Runas</th>
-			<th>Joyas</th>
+		<tr><% engarces.each do |engarce| %>
+				<th><%= engarce.capitalize %></th>
+			<% end %>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<td>
-				<% @heroe[:gemas].each do |g| %>
-					<% img_path = "'../../images/treasures/gemas/#{gema(g)[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=gema(g)[:name]%>, id='icon' />
-				<% end %>
-				<%= "El personaje no tiene ninguna gema." if @heroe[:gemas].empty? %>
-			</td>
-			<td>
-				<% @heroe[:runas].each do |r| %>
-					<% img_path = "'../../images/treasures/runas/#{runa(r)[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=runa(r)[:name]%>, id='icon' />
-				<% end %>
-				<%= "El personaje no tiene ninguna runa." if @heroe[:runas].empty? %>
-			</td>
-			<td>
-				<% @heroe[:joyas].each do |j| %>
-					<% img_path = "'../../images/treasures/joyas/#{joya(j)[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=joya(j)[:name]%>, id='icon' />
-				<% end %>
-				<%= "El personaje no tiene ninguna joya." if @heroe[:joyas].empty? %>
-			</td>
+			<% engarces.each do |engarce| %>
+				<td>
+					<% @heroe[eval(":#{engarce}")].each do |e| %>
+						<% e_name = send(engarce.gsub('s',''),e)[:name] %>
+						<% img_path = "'../images/treasures/#{engarce}/#{e_name}.png'" %>
+						<img src=<%=img_path%> alt=<%= e_name %>, id='icon' />
+					<% end %>
+				</td>
+			<% end %>
 		</tr>
 	</tbody>
 </table>
