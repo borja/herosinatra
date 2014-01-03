@@ -1,29 +1,29 @@
-# encoding: UTF-8
+﻿# encoding: UTF-8
 def pets
   [
     { :id           => 1,
       :name         => "gato",
-      :personaje    => ["mago"],
+      :personajes    => ["mago"],
       :bono         => "+1 movimiento"
     },
     { :id           => 2,
       :name         => "mapache",
-      :personaje    => ["barbaro"],
+      :personajes    => ["barbaro"],
       :bono         => "+1 encontrar puertas secretas"
     },
     { :id           => 3,
       :name         => "marmota",
-      :personaje    => ["barbaro","enano"],
+      :personajes    => ["barbaro","enano"],
       :bono         => "+1 bonificacion en comida y bebida"
     },
     { :id           => 4,
       :name         => "rata",
-      :personaje    => ["mago"],
+      :personajes    => ["mago"],
       :bono         => "+1 resistencia (todo)"
     },
     { :id           => 5,
       :name         => "murciélago",
-      :personaje    => ["mago"],
+      :personajes    => ["mago"],
       :bono         => "dagas/cuchillos: +1 robo de vida"
     },
     { :id           => 6,
@@ -33,12 +33,12 @@ def pets
     },
     { :id           => 7,
       :name         => "culebra",
-      :personaje    => ["mago"],
+      :personajes    => ["mago"],
       :bono         => "dagas/cuchillos: envenenan"
     },
     { :id           => 8,
       :name         => "búho",
-      :personaje    => ["mago"],
+      :personajes    => ["mago"],
       :bono         => "+1 hechizo"
     },
     { :id           => 9,
@@ -48,52 +48,52 @@ def pets
     },
     { :id           => 10,
       :name         => "urraca",
-      :personaje    => ["mago"],
+      :personajes    => ["mago"],
       :bono         => "+10 al oro del tesoro"
     },
     { :id           => 11,
       :name         => "saprolín",
-      :personaje    => ["elfo"],
+      :personajes    => ["elfo"],
       :bono         => "+1 PV"
     },
     { :id           => 12,
       :name         => "duende",
-      :personaje    => ["elfo"],
+      :personajes    => ["elfo"],
       :bono         => "+10 al oro del tesoro"
     },
     { :id           => 13,
       :name         => "hada",
-      :personaje    => ["elfo"],
+      :personajes    => ["elfo"],
       :bono         => "+1 hechizo élfico"
     },
     { :id           => 14,
       :name         => "luciérnaga",
-      :personaje    => ["elfo"],
+      :personajes    => ["elfo"],
       :bono         => "+1 detectar trampas"
     },
     { :id           => 15,
       :name         => "mariposa",
-      :personaje    => ["elfo"],
+      :personajes    => ["elfo"],
       :bono         => "+1 resistencia (todo)"
     },
     { :id           => 16,
       :name         => "huron",
-      :personaje    => ["barbaro"],
+      :personajes    => ["barbaro"],
       :bono         => "+1 movimiento"
     },
     { :id           => 17,
       :name         => "ardilla",
-      :personaje    => ["barbaro"],
+      :personajes    => ["barbaro"],
       :bono         => "+1 PM"
     },
     { :id           => 18,
       :name         => "comadreja",
-      :personaje    => ["barbaro"],
+      :personajes    => ["barbaro"],
       :bono         => "+1 resistencia (todo)"
     },
       { :id         => 19,
       :name         => "pitufo",
-      :personaje    => ["elfo"],
+      :personajes    => ["elfo"],
       :bono         => "+1 PM"
     },
   ]
