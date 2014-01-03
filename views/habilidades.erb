@@ -14,39 +14,19 @@
 	<tbody>
 		<tr>
 			<% personajes.each do |pj| %>
-				<td><img src=../images/personajes/<%= pj                     %>.png alt="personaje" /, id='icon2'>
+				<td><img src=../images/personajes/<%= pj %>.png alt="personaje" /, id='icon2'>
 					<% unless pj=="enano" %>
 						<img src=../images/personajes/<%= genderize(pj,"female") %>.png alt="personaje" /, id='icon2'>
 					<% end %>
 				</td>
 			<% end %>
 		</tr>
-		<tr>
-			<td><img src="../images/clases/falangista.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/lord de las bestias.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/druida.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/hechicero.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/vengador.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/clerigo.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/ladron.png" 				alt="enano" /, 	  id='icon4'></td>
-		</tr>
-		<tr>
-			<td><img src="../images/clases/matador.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/berserker.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/derviche.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/conjurador.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/caminante.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/paladin.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/asesino.png" 				alt="enano" /, 	  id='icon4'></td>
-		</tr>
-		<tr>
-			<td><img src="../images/clases/ingeniero.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/hoplita.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/arquero.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/invocador.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/brujo.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/sacerdote.png" 				alt="enano" /, 	  id='icon4'></td>
-			<td><img src="../images/clases/nigromante.png" 				alt="enano" /, 	  id='icon4'></td>
-		</tr>
+		<% 3.times do |i| %>
+			<tr>
+				<% personajes.each do |pj| %>
+					<td><img src="../images/clases/<%= send(pj)[i] %>.png" alt=<%= send(pj)[i] %> /, id='icon4'></td>
+				<% end %>
+			</tr>	
+		<% end %>
 	</tbody>
 </table>
