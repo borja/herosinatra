@@ -1,6 +1,18 @@
 <title>Hero Sheet: Ficha de <%= @heroe[:name] %></title>
-<h1><center><%= @heroe[:name] %></center></h1>
-<h3><center><%= @heroe[:jugador] %></center></h3>
+
+<center><table>
+	<tbody>
+		<tr>
+			<td><img src="../images/clases/<%= @heroe[:personaje] %>.png" alt=<%=  @heroe[:personaje] %> /, id='box'></td>
+			<td>
+				<center><h1><%= @heroe[:name   ] %></h1></center><br>
+				<center><h3><%= @heroe[:jugador] %></h3></center>
+			</td>
+			<td><img src="../images/clases/<%= @heroe[:personaje] %>.png" alt=<%=  @heroe[:personaje] %> /, id='box'></td>
+		</r>
+	</tbody>
+</table></center>
+
 <a href=/>Índice</a><br>
 
 <link rel="stylesheet" href="../../app.css" type="text/css" />

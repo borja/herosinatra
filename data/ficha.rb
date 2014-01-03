@@ -26,3 +26,11 @@ def utiles
     "piezas"
   ]
 end
+
+def desprovisto?(hero)
+  case
+    when (hero.class != Hash ) then return "class error"
+    when (hero[:pergaminos].nil? && hero[:pociones].nil? && hero[:piezas].nil?) then return true
+    else return false
+  end 
+end
