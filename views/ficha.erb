@@ -158,32 +158,35 @@
 		</tr>
 	</tbody>
 </table>
-<h3><center>Tesoros</center></h3>
-<table id='table-2'>
-	<thead>
-		<tr><% engarces.each do |engarce| %>
-				<th><%= engarce.capitalize %></th>
-			<% end %>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>				
-			<% engarces.each do |engarce| %>
-				<td>
-					<% if @heroe[eval(":#{engarce}")] %>
-						<% @heroe[eval(":#{engarce}")].each do |e| %>
-							<% e_name = send(engarce.gsub('s',''),e)[:name] %>
-							<% img_path = "'../images/treasures/#{engarce}/#{e_name}.png'" %>
-							<img src=<%=img_path%> alt=<%= e_name %>, id='icon' />
+
+<% unless mundano?(@heroe) %>
+	<h3><center>Tesoros</center></h3>
+	<table id='table-2'>
+		<thead>
+			<tr><% engarces.each do |engarce| %>
+					<th><%= engarce.capitalize %></th>
+				<% end %>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>				
+				<% engarces.each do |engarce| %>
+					<td>
+						<% if @heroe[eval(":#{engarce}")] %>
+							<% @heroe[eval(":#{engarce}")].each do |e| %>
+								<% e_name = send(engarce.gsub('s',''),e)[:name] %>
+								<% img_path = "'../images/treasures/#{engarce}/#{e_name}.png'" %>
+								<img src=<%=img_path%> alt=<%= e_name %>, id='icon' />
+							<% end %>
+						<% else %>
+							El héroe no tiene <%= engarce %>.
 						<% end %>
-					<% else %>
-						El héroe no tiene <%= engarce %>.
-					<% end %>
-				</td>
-			<% end %>
-		</tr>
-	</tbody>
-</table>
+					</td>
+				<% end %>
+			</tr>
+		</tbody>
+	</table>
+<% end %>
 
 <% if @heroe[:pets] %>
 	<h3><center>Familiar</center></h3>
@@ -207,6 +210,8 @@
 		</tbody>
 	</table>
 <% end %>
+
+
 
 <h3><center>Útiles</center></h3>
 <table id='table-2'>
