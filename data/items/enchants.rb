@@ -40,6 +40,11 @@ def enchants
       :descripcion  => "+1 movimiento",
       :tipo         => "bendicion",
     },
+    { :id           => 9,
+      :name         => "rubi",
+      :descripcion  => "lanza 1 bola de fuego 1 vez por reto",
+      :tipo         => "bendicion",
+    },
     
   ]
 end
