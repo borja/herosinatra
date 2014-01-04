@@ -23,6 +23,7 @@ def heros
       :skills    => [1,3],
       :sex       => "male",
       :repu      => 7,
+      :status    => "activo"
     },
     { :id        => 2,
       :name      => "Elros Amarie",
@@ -61,6 +62,8 @@ def heros
       :repu      => 6,
       :gemas     => [20,28,27,8],
       :pociones  => [6],
+      :status    => "activo"
+
     },
     { :id        => 3,
       :name      => "Grunt Mascafilos",
@@ -78,6 +81,7 @@ def heros
       :miscs     => [{:id => 2}],
       :skills    => [3,4],
       :sex       => "male",
+      :status    => "reserva"
     },
     { :id        => 4,
       :name      => "Ellyssa Demoneye",
@@ -96,6 +100,7 @@ def heros
       :skills    => [5],
       :sex       => "female",
       :pets      => 1,
+      :status    => "reserva"
     },
     { :id        => 5,
       :name      => "Savra",
@@ -117,6 +122,7 @@ def heros
       :skills    => [5],
       :sex       => "female",
       :pets      => 2,
+      :status    => "ausente"
     },
     { :id        => 6,
       :name      => "Yunnow (junior)",
@@ -142,6 +148,7 @@ def heros
       :runas     => [8],
       :gemas     => [6,10],
       :joyas     => [11,12],
+      :status    => "activo"
     }, 
     { :id        => 7,
       :name      => "Paul Baloff",
@@ -161,6 +168,7 @@ def heros
       :skills    => [],
       :sex       => "male",
       :pets      => 3,
+      :status    => "ausente"
     },    
     { :id        => 8,
       :name      => "Lenny Blanc",
@@ -179,6 +187,8 @@ def heros
       :skills    => [],
       :sex       => "male",
       :repu      => -1,
+      :status    => "retirado",
+      :muerto    => true
     },    
     { :id        => 9,
       :name      => "Selene",
@@ -200,6 +210,7 @@ def heros
       :skills    => [],
       :sex       => "female",
       :repu      => 2,
+      :status    => "ausente"
     },    
     { :id        => 10,
       :name      => "Xavier Umbradrack",
@@ -219,6 +230,7 @@ def heros
       :runas     => [2],
       :gemas     => [1,2,3],
       :joyas     => [1,2],
+      :status    => "activo"
     },    
     { :id        => 11,
       :name      => "Lindele",
@@ -237,6 +249,7 @@ def heros
       :miscs     => [],
       :skills    => [1,2],
       :sex       => "female",
+      :status    => "activo"
     },    
     { :id        => 12,
       :name      => "Domasuegras",
@@ -258,6 +271,7 @@ def heros
       :skills    => [],
       :sex       => "male",
       :repu      => 2,
+      :status    => "activo"
     },    
     { :id        => 13,
       :name      => "Godric",
@@ -275,6 +289,7 @@ def heros
       :miscs     => [],
       :skills    => [3,4],
       :sex       => "male",
+      :status    => "activo"
     },    
     { :id        => 14,
       :name      => "Thor",
@@ -292,6 +307,7 @@ def heros
       :skills    => [3],
       :sex       => "male",
       :repu      => 1,
+      :status    => "activo"
     },    
     { :id        => 15,
       :name      => "Indra",
@@ -329,6 +345,7 @@ def heros
       :sex       => "female",
       :gemas     => [3,4,8,22],
       :joyas     => [14],
+      :status    => "ausente"
     },    
     { :id        => 16,
       :name      => "Tim el mago",
@@ -347,6 +364,7 @@ def heros
       :sex       => "male",
       :runas     => [3,3],
       :joyas     => [1],
+      :status    => "activo"
     },
     { :id        => 17,
       :name      => "Chandalf, el Morado",
@@ -366,6 +384,7 @@ def heros
       :skills    => [],
       :sex       => "male",
       :runas     => [5],
+      :status    => "ausente"
     },
     { :id        => 18,
       :name      => "Torox",
@@ -388,6 +407,7 @@ def heros
       :repu      => 1,
       :runas     => [5,5,5],
       :gemas     => [20],
+      :status    => "ausente"
     },
     { :id        => 19,
       :name      => "Nan",
@@ -404,6 +424,7 @@ def heros
       :miscs     => [],
       :skills    => [],
       :sex       => "male",
+      :status    => "ausente"
     },
     { :id        => 20,
       :name      => "Roek",
@@ -420,6 +441,7 @@ def heros
       :miscs     => [],
       :skills    => [],
       :sex       => "male",
+      :status    => "ausente"
     },
     { :id        => 21,
       :name      => "Obama",
@@ -438,6 +460,7 @@ def heros
       :skills    => [],
       :sex       => "male",
       :gemas     => [21],
+      :status    => "ausente"
     },
     { :id        => 22,
       :name      => "Grimm",
@@ -455,6 +478,7 @@ def heros
       :skills    => [],
       :sex       => "male",
       :repu      => 1,
+      :status    => "ausente"
     },
     { :id        => 23,
       :name      => "Veitt",
@@ -472,6 +496,7 @@ def heros
       :miscs     => [],
       :skills    => [],
       :sex       => "male",
+      :status    => "ausente"
     },
     { :id        => 24,
       :name      => "Drako",
@@ -489,6 +514,7 @@ def heros
       :miscs     => [{:id => 1}],
       :skills    => [],
       :sex       => "male",
+      :status    => "ausente"
     },
     { :id        => 25,
       :name      => "Cromi",
@@ -508,6 +534,7 @@ def heros
                      {:id => 6}],
       :skills    => [],
       :sex       => "male",
+      :status    => "ausente"
     },
     { :id        => 26,
       :name      => "Namhayd",
@@ -525,6 +552,7 @@ def heros
       :miscs     => [{:id => 1}],
       :skills    => [],
       :sex       => "male",
+      :status    => "ausente"
     },              
   ]
 end

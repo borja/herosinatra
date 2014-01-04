@@ -103,3 +103,24 @@ div.information_popup_container > div.information:hover + div.popup_information 
 	visibility: visible;
 	z-index:    200;
 }
+#tabs {
+	border-bottom: .5em solid #03c;
+	margin: 0;
+	padding: 0;
+}
+#tabs li { 
+	display:inline; 
+	border-top: .1em solid #03c;
+	border-left: .1em solid #03c;
+	border-right: .1em solid #03c;
+}
+#tabs li a {
+	text-decoration: none;
+	padding: 0.25em 1em;
+	color: #fff;
+}
+#page1 #tabs li#tab1 a, #page2 #tabs li#tab2 a, #page3 #tabs li#tab3 a, .page4 #tab4 a{
+	padding: 0.25em 1em;
+	background-color: #03c;
+	color: #fff;
+} 

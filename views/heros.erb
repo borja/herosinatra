@@ -1,7 +1,16 @@
 <title>HeroSheet: Lista de héroes</title>
+<body>
 <center><img src="images/logo.png" alt="Proyecto Heroquest" /></center>
 <link rel="stylesheet" href="app.css" type="text/css" />
-<a href=/>Índice</a><br>
+<a href=/>Índice</a><br><br>
+
+
+<ul id="tabs">
+ <li id="tab1"><a href="heros">Activos</a></li>
+ <li id="tab2"><a href="reservistas">Reservistas</a></li>
+ <li id="tab3"><a href="licenciados">Licenciados</a></li>
+ <li id="tab4"><a href="ausentes">Ermitaños</a></li>
+</ul>
 
 <table id='table-2'>
 	<thead>
@@ -20,10 +29,15 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% heros.each do |hero| %>
+		<% heros.each do |hero| %><% if (hero[:status] == @status) %>
 			<tr>
-				<td><img src=../images/personajes/<%= genderize(personaje(hero[:personaje]), hero[:sex] ) %>.png 
-					alt="personaje" /, id='icon'></td>
+				<td><% if hero[:muerto] %>
+						<img src=../images/personajes/dead.png	alt="muerto" /, id='icon'>
+					<% else %>
+						<img src=../images/personajes/<%= genderize(personaje(hero[:personaje]), hero[:sex] ) %>.png 
+						alt="personaje" /, id='icon'>
+					<% end%>
+				</td>
 				<td><a href=hero/<%= hero[:id] %>><%= hero[:name] %></a><br>
 					<i><%= hero[:jugador] %></i>
 				</td>
@@ -284,8 +298,8 @@
 					<% end %>						
 				</td>
 			</tr>
-		<% end %>
+		<% end %><% end %>
 	</tbody>
 </table>
-
+</body>
 

@@ -5,8 +5,21 @@ class App < Sinatra::Base
     erb :index
   end
   get '/heros' do
+    @status = "activo"
     erb :heros
   end
+  get '/reservistas' do
+    @status = "reserva"
+    erb :heros
+  end
+  get '/ausentes' do
+    @status = "ausente"
+    erb :heros
+  end
+  get '/licenciados' do
+    @status = "retirado"
+    erb :heros
+  end  
   get '/hero/:id' do |id|
     @heroe = heros[ (id.to_i - 1) ]
     erb :ficha
