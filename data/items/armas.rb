@@ -47,7 +47,7 @@ def armas
       :categoria    => "escudo",
       :powa         => 1,
       :ranuras      => 4,
-      :diagonal     => true
+      :diagonal     => false
     },
     { :id           => 8,
       :name         => "baston",
@@ -104,6 +104,13 @@ def armas
       :powa         => 3,
       :ranuras      => 4,
       :diagonal     => true
+    },
+    { :id           => 16,
+      :name         => "caliz",
+      :categoria    => "copa",
+      :powa         => 1,
+      :ranuras      => 6,
+      :diagonal     => false
     },
   ]
 end
