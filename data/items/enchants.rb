@@ -30,6 +30,17 @@ def enchants
       :descripcion  => "recupera +1PC 1 vez por reto ",
       :tipo         => "bendicion",
     },
+    { :id           => 7,
+      :name         => "ignifuga",
+      :descripcion  => "5+ vs fuego",
+      :tipo         => "bendicion",
+    },
+    { :id           => 8,
+      :name         => "velocidad",
+      :descripcion  => "+1 movimiento",
+      :tipo         => "bendicion",
+    },
+    
   ]
 end
 
