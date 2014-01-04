@@ -110,14 +110,21 @@ div.information_popup_container > div.information:hover + div.popup_information 
 }
 #tabs li { 
 	display:inline; 
-	border-top: .1em solid #03c;
-	border-left: .1em solid #03c;
-	border-right: .1em solid #03c;
+	background-color: #999;
+	border-top: .1em solid #FFF;
+	border-left: .1em solid #999;
+	border-right: .1em solid #fff;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	padding: .6em 1em .1em 1em;
 }
 #tabs li a {
 	text-decoration: none;
 	padding: 0.25em 1em;
-	color: #fff;
+	color: #232;
+	font-size: 18px;
+	text-shadow: white 1px 1px 1px;
 }
 #page1 #tabs li#tab1 a, #page2 #tabs li#tab2 a, #page3 #tabs li#tab3 a, .page4 #tab4 a{
 	padding: 0.25em 1em;
