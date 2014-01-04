@@ -581,7 +581,7 @@ def heros
       :sex       => "female",
       :repu      => 5,
       :gemas     => [2,11,12,28,37,38],
-      :joyas     => [13]
+      :joyas     => [13],
       :pociones  => [6],
       :status    => "retirado"
       },
