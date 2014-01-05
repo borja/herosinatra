@@ -2,12 +2,11 @@
 def descripcion
   [
 	  "rostro",
-	  "nivel",
-	  "reputación",
-	  "atributos",
-	  "combate",
+    "héroe",
+	  "raza",
 	  "personaje",
-	  "raza"
+	  "nivel",
+	  "reputación"
   ]
 end
 

@@ -49,6 +49,21 @@ body{
 #table-2 td:hover {
 	background-color: #fff;
 }
+
+#tlabel {
+    width: 100%;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	text-align: center;
+}
+
+#tficha {
+    width: 80%;
+    margin-left:auto; 
+    margin-right:auto;
+}
+
 #icon {
 	padding: 2px;
 	weight: 40px;

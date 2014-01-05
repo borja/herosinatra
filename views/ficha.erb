@@ -1,253 +1,278 @@
+<link rel="stylesheet" href="../../app.css" type="text/css" />
+<a href=/>Índice</a><br><br>
+
 <title>Hero Sheet: Ficha de <%= @heroe[:name] %></title>
 
-<center><table>
+<table id='tlabel'>
 	<tbody>
 		<tr>
 			<td><img src="../images/clases/<%= @heroe[:personaje] %>.png" alt=<%=  @heroe[:personaje] %> /, id='box'></td>
 			<td>
-				<center><h1><%= @heroe[:name   ] %></h1></center><br>
-				<center><h3><%= @heroe[:jugador] %></h3></center>
+				<table id='table-2'>
+					<thead>
+						<tr>
+							<% descripcion.each do |f| %>
+								<th><%= f.capitalize %></th>
+							<% end%>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td><img src=../images/personajes/<%= genderize(personaje(@heroe[:personaje]), @heroe[:sex] ) %>.png 
+								alt="personaje" /, id='icon2'></td>
+							<td><%= @heroe[:name   ] %><br>
+								<%= @heroe[:jugador] %></td>
+							<td><% raza = is_human?(@heroe[:personaje]) ? "humano" : personaje(@heroe[:personaje]) %>
+								<%= genderize(raza,@heroe[:sex]).capitalize %></td>
+							<td><%= @heroe[:personaje].capitalize %></td>
+							<td><%= @heroe[:nivel  ] %></td>
+							<td><%= @heroe[:repu   ] || 0 %></td>
+						</tr>
+					</tbody>
+				</table>				
 			</td>
 			<td><img src="../images/clases/<%= @heroe[:personaje] %>.png" alt=<%=  @heroe[:personaje] %> /, id='box'></td>
 		</r>
 	</tbody>
-</table></center>
-
-<a href=/>Índice</a><br>
-
-<link rel="stylesheet" href="../../app.css" type="text/css" />
-<table id='table-2'>
-	<thead>
-		<tr>
-			<% descripcion.each do |f| %>
-				<th><%= f.capitalize %></th>
-			<% end%>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td><img src=../images/personajes/<%= genderize(personaje(@heroe[:personaje]), @heroe[:sex] ) %>.png 
-				alt="personaje" /, id='icon2'></td>
-			<td><%= @heroe[:nivel] %></td>
-			<td><%= @heroe[:repu] || 0 %></td>
-			<td>
-				<table id='table-2'>
-					<tbody>
-						<tr>
-							<td>Cuerpo</td>
-							<td>Mente</td>
-							<td>Movimiento</td>
-						</tr>
-						<tr>
-							<td><%= @heroe[:cuerpo] %></td>
-							<td><%= @heroe[:mente] %></td>
-							<td><%= @heroe[:mov] %></td>
-						</tr>
-					</tbody>
-				</table>
-			</td>
-			<td>
-				<table id='table-2'>
-					<tbody>
-						<tr>
-							<td>Melee</td>
-							<td>Rango</td>
-							<td>Defensa</td>
-						</tr>
-						<tr>
-							<td><%= ataque( @heroe[:id]) %></td>
-							<td><%= rango(  @heroe[:id]) %></td>
-							<td><%= defensa(@heroe[:id]) %></td>
-						</tr>
-					</tbody>
-				</table>
-			</td>
-			<td><%= @heroe[:personaje].capitalize %></td>
-			<td><% raza = is_human?(@heroe[:personaje]) ? "humano" : personaje(@heroe[:personaje]) %>
-				<%= genderize(raza,@heroe[:sex]).capitalize %></td>
-		</tr>
-	</tbody>
 </table>
-<h3><center>Armamento</center></h3>
-<table id='table-2'>
-	<thead>
-		<tr>
-			<th>ID</th>
-			<th>Icono</th>
-			<th>Nombre</th>
-			<th>Poder</th>
-			<th><a href=/encantamientos>Encantamientos</a></th>
-			<th>Engarces</th>
-		</tr>
-	</thead>
+
+<table id='tficha'>
+	<theader>
+	</theader>
 	<tbody>
-		<% @heroe[:armas].each do |a| %>
-			<tr>
-				<td><%= a[:id] %></td>
-				<td><% img_path = "'../images/armas/#{arma(a[:id])[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=arma(a[:id])[:name]%>, id='icon' />
-				</td>
-				<td><%= arma(a[:id])[:name].capitalize %></td>
-				<td><%= arma(a[:id])[:powa] %></td>				
-				<td><% if a[:enchants].nil? %>
-					Arma mundana
-					<% else %>
+		<tr><td>
+			<table id='tlabel' width='50%'>
+				<tbody>
+					<tr>
+						<td><img src="../images/ficha/combat.png" alt=<%='combate' %> /, id='icon2'></td>
+						<td><h3><center>Combate</center></h3></td>
+						<td><img src="../images/ficha/combat.png" alt=<%='combate' %> /, id='icon2'></td>
+					</tr>
+				</tobdy>
+			</table>
+			<table id='tlabel'>
+				<tr>
+					<td>
 						<table id='table-2'>
+							<thead>
+								<tr>
+									<th>Cuerpo</th>
+									<th>Mente</th>
+									<th>Movimiento</th>
+								</tr>
+							</thead>
 							<tbody>
 								<tr>
-									<% a[:enchants].each do |e| %>
-										<td><%= enchant(e)[:name].capitalize %></td>
-									<% end %>
+									<td><%= @heroe[:cuerpo] %></td>
+									<td><%= @heroe[:mente ] %></td>
+									<td><%= @heroe[:mov   ] %></td>
+								</tr>
+							</tbody>
+						</table>			
+					</td>
+					<td>
+						<table id='table-2'>
+							<thead>
+								<tr>
+									<th>Melee</th>
+									<th>Rango</th>
+									<th>Defensa</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><%= ataque( @heroe[:id]) %></td>
+									<td><%= rango(  @heroe[:id]) %></td>
+									<td><%= defensa(@heroe[:id]) %></td>
 								</tr>
 							</tbody>
 						</table>
-					<% end%>
-				</td>
-				<td>
-					<% if mundano?(a) %>
-						El arma no tiene engarces.
-					<% else %>
-						<% engarces.each do |engarce| %>
-							<% if a[eval(':' + engarce)] %>
-								<% a[eval(':' + engarce)].each do |e| %>
-									<% e_name = send(engarce.gsub('s',''),e)[:name] %>
-									<% img_path = "'../images/treasures/#{engarce}/#{e_name}.png'" %>
-									<img src=<%=img_path%> alt=<%= e_name %>, id='icon' />
-								<% end %>
-							<% end %>
-						<% end %>					
-					<% end %>
-				</td>
-			</tr>
-		<% end %>
-		<%= "El personaje no tiene ningun arma todavia." if @heroe[:armas].empty? %>
-	</tbody>
-</table>
-<br>
-<table id='table-2'>
-	<thead>
-		<tr>
-			<th>Armadura</th>
-			<th>Protecciones</th>
-			<th>Miscelánea</th>
-			<th><a href=../spells/<%=@heroe[:id]%>>Lista de hechizos conocidos</a></th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>
-				<% @heroe[:armaduras].each do |a| %>
-					<% img_path = "'../images/armaduras/#{armadura(a[:id])[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=armadura(a[:id])[:name]%>, id='icon' />
-				<% end %>
-			</td>
-			<td>
-				<% if @heroe[:prots].empty? %>
-					El personaje no tiene ninguna protección aun.
-				<% else %>
-					<% @heroe[:prots].each do |p|%>
-						<% img_path = "'../images/protecciones/#{proteccion(p[:id])[:name]}.png'" %>
-						<img src=<%=img_path%> alt=<%=proteccion(p[:id])[:name]%>, id='icon' />
-					<% end %>
-				<% end%>
-			</td>
-			<td>
-				<% @heroe[:miscs].each do |m| %>
-					<% img_path = "'../images/miscelaneas/#{miscelanea(m[:id])[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=miscelanea(m[:id])[:name]%>, id='icon' />
-				<% end %>
-			</td>
-			<td>
-				<% if @heroe[:hechizos] %>
-					<% elements(@heroe[:hechizos]).each do |e| %>	
-						<% img_path =  "'../images/elements/#{e}.png'" %>
-						<img src=<%=img_path%> alt=<%=e%>, id='icon' />
-					<% end %>
-				<% else %>
-					El personaje no conoce ningun hechizo.
-				<% end %>					
-			</td>
-		</tr>
-	</tbody>
-</table>
-
-<% if @heroe[:pets] %>
-	<h3><center>Familiar</center></h3>
-	<table id='table-2'>
-		<thead>
-			<tr>
-				<th>Icono</th>
-				<th>Nombre</th>
-				<th>Descripción</th>
-			</tr>
-		</thead>
-		<body>
-			<tr><% familiar = pet(@heroe[:pets]) %>
-				<td>
-					<% img_path = "'../../images/pets/#{familiar[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=familiar[:name]%>, id='icon' />
-				</td>
-				<td><%= familiar[:name].capitalize %></td>
-				<td><%= familiar[:bono] %></td>
-			</tr>
-		</tbody>
-	</table>
-<% end %>
-
-<% unless mundano?(@heroe) %>
-	<h3><center>Tesoros</center></h3>
-	<table id='table-2'>
-		<thead>
-			<tr><% engarces.each do |engarce| %>
-					<th><%= engarce.capitalize %></th>
-				<% end %>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>				
-				<% engarces.each do |engarce| %>
-					<td>
-						<% if @heroe[eval(":#{engarce}")] %>
-							<% @heroe[eval(":#{engarce}")].each do |e| %>
-								<% e_name = send(engarce.gsub('s',''),e)[:name] %>
-								<% img_path = "'../images/treasures/#{engarce}/#{e_name}.png'" %>
-								<img src=<%=img_path%> alt=<%= e_name %>, id='icon' />
-							<% end %>
-						<% else %>
-							El héroe no tiene <%= engarce %>.
-						<% end %>
 					</td>
-				<% end %>
-			</tr>
-		</tbody>
-	</table>
-<% end %>
-
-<% unless desprovisto?(@heroe) %>
-<h3><center>Útiles</center></h3>
-<table id='table-2'>
-	<thead>
-		<tr><% utiles.each do |util| %>
-				<th><%= util.capitalize %></th>
-			<% end %>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>				
-			<% utiles.each do |util| %>
-				<td>
-					<% if @heroe[eval(":#{util}")] %>
-						<% @heroe[eval(":#{util}")].each do |u| %>
-							<% u_name = send(util.gsub('es','').gsub('s',''),u)[:name] %>
-							<% img_path = "'../images/utiles/#{util}/#{u_name}.png'" %>
-							<img src=<%=img_path%> alt=<%= u_name %>, id='icon' />
-						<% end %>
-					<% else %>
-						El héroe no tiene <%= util %>.
+				</tr>
+			</table>
+			<h3><center>Armamento</center></h3>
+			<table id='table-2'>
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Icono</th>
+						<th>Nombre</th>
+						<th>Poder</th>
+						<th><a href=/encantamientos>Encantamientos</a></th>
+						<th>Engarces</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @heroe[:armas].each do |a| %>
+						<tr>
+							<td><%= a[:id] %></td>
+							<td><% img_path = "'../images/armas/#{arma(a[:id])[:name]}.png'" %>
+								<img src=<%=img_path%> alt=<%=arma(a[:id])[:name]%>, id='icon' />
+							</td>
+							<td><%= arma(a[:id])[:name].capitalize %></td>
+							<td><%= arma(a[:id])[:powa] %></td>				
+							<td><% if a[:enchants].nil? %>
+								Arma mundana
+								<% else %>
+									<table id='table-2'>
+										<tbody>
+											<tr>
+												<% a[:enchants].each do |e| %>
+													<td><%= enchant(e)[:name].capitalize %></td>
+												<% end %>
+											</tr>
+										</tbody>
+									</table>
+								<% end%>
+							</td>
+							<td>
+								<% if mundano?(a) %>
+									El arma no tiene engarces.
+								<% else %>
+									<% engarces.each do |engarce| %>
+										<% if a[eval(':' + engarce)] %>
+											<% a[eval(':' + engarce)].each do |e| %>
+												<% e_name = send(engarce.gsub('s',''),e)[:name] %>
+												<% img_path = "'../images/treasures/#{engarce}/#{e_name}.png'" %>
+												<img src=<%=img_path%> alt=<%= e_name %>, id='icon' />
+											<% end %>
+										<% end %>
+									<% end %>					
+								<% end %>
+							</td>
+						</tr>
 					<% end %>
-				</td>
+					<%= "El personaje no tiene ningun arma todavia." if @heroe[:armas].empty? %>
+				</tbody>
+			</table>
+			<br>
+			<table id='table-2'>
+				<thead>
+					<tr>
+						<th>Armadura</th>
+						<th>Protecciones</th>
+						<th>Miscelánea</th>
+						<th><a href=../spells/<%=@heroe[:id]%>>Lista de hechizos conocidos</a></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<% @heroe[:armaduras].each do |a| %>
+								<% img_path = "'../images/armaduras/#{armadura(a[:id])[:name]}.png'" %>
+								<img src=<%=img_path%> alt=<%=armadura(a[:id])[:name]%>, id='icon' />
+							<% end %>
+						</td>
+						<td>
+							<% if @heroe[:prots].empty? %>
+								El personaje no tiene ninguna protección aun.
+							<% else %>
+								<% @heroe[:prots].each do |p|%>
+									<% img_path = "'../images/protecciones/#{proteccion(p[:id])[:name]}.png'" %>
+									<img src=<%=img_path%> alt=<%=proteccion(p[:id])[:name]%>, id='icon' />
+								<% end %>
+							<% end%>
+						</td>
+						<td>
+							<% @heroe[:miscs].each do |m| %>
+								<% img_path = "'../images/miscelaneas/#{miscelanea(m[:id])[:name]}.png'" %>
+								<img src=<%=img_path%> alt=<%=miscelanea(m[:id])[:name]%>, id='icon' />
+							<% end %>
+						</td>
+						<td>
+							<% if @heroe[:hechizos] %>
+								<% elements(@heroe[:hechizos]).each do |e| %>	
+									<% img_path =  "'../images/elements/#{e}.png'" %>
+									<img src=<%=img_path%> alt=<%=e%>, id='icon' />
+								<% end %>
+							<% else %>
+								El personaje no conoce ningun hechizo.
+							<% end %>					
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<% if @heroe[:pets] %>
+				<h3><center>Familiar</center></h3>
+				<table id='table-2'>
+					<thead>
+						<tr>
+							<th>Icono</th>
+							<th>Nombre</th>
+							<th>Descripción</th>
+						</tr>
+					</thead>
+					<body>
+						<tr><% familiar = pet(@heroe[:pets]) %>
+							<td>
+								<% img_path = "'../../images/pets/#{familiar[:name]}.png'" %>
+								<img src=<%=img_path%> alt=<%=familiar[:name]%>, id='icon' />
+							</td>
+							<td><%= familiar[:name].capitalize %></td>
+							<td><%= familiar[:bono] %></td>
+						</tr>
+					</tbody>
+				</table>
 			<% end %>
-		</tr>
+			
+			<% unless mundano?(@heroe) %>
+				<h3><center>Tesoros</center></h3>
+				<table id='table-2'>
+					<thead>
+						<tr><% engarces.each do |engarce| %>
+								<th><%= engarce.capitalize %></th>
+							<% end %>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>				
+							<% engarces.each do |engarce| %>
+								<td>
+									<% if @heroe[eval(":#{engarce}")] %>
+										<% @heroe[eval(":#{engarce}")].each do |e| %>
+											<% e_name = send(engarce.gsub('s',''),e)[:name] %>
+											<% img_path = "'../images/treasures/#{engarce}/#{e_name}.png'" %>
+											<img src=<%=img_path%> alt=<%= e_name %>, id='icon' />
+										<% end %>
+									<% else %>
+										El héroe no tiene <%= engarce %>.
+									<% end %>
+								</td>
+							<% end %>
+						</tr>
+					</tbody>
+				</table>
+			<% end %>
+			
+			<% unless desprovisto?(@heroe) %>
+			<h3><center>Útiles</center></h3>
+			<table id='table-2'>
+				<thead>
+					<tr><% utiles.each do |util| %>
+							<th><%= util.capitalize %></th>
+						<% end %>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>				
+						<% utiles.each do |util| %>
+							<td>
+								<% if @heroe[eval(":#{util}")] %>
+									<% @heroe[eval(":#{util}")].each do |u| %>
+										<% u_name = send(util.gsub('es','').gsub('s',''),u)[:name] %>
+										<% img_path = "'../images/utiles/#{util}/#{u_name}.png'" %>
+										<img src=<%=img_path%> alt=<%= u_name %>, id='icon' />
+									<% end %>
+								<% else %>
+									El héroe no tiene <%= util %>.
+								<% end %>
+							</td>
+						<% end %>
+					</tr>
+				</tbody>
+			</table>
+			<% end %>
+		</td></tr>
 	</tbody>
 </table>
-<% end %>
