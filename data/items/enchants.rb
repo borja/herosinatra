@@ -45,6 +45,11 @@ def enchants
       :descripcion  => "lanza 1 bola de fuego 1 vez por reto",
       :tipo         => "bendicion",
     },
+    { :id           => 10,
+      :name         => "hierro negro",
+      :descripcion  => "6+ vs Tenebro",
+      :tipo         => "alquimico",
+    },
     
   ]
 end
