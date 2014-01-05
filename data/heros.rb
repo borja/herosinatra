@@ -77,12 +77,16 @@ def heros
       :mov       => 6,
       :hechizos  => [],
       :armas     => [{:id => 7}, 
-                     {:id => 7, :runas => [10]}],
+                     {:id => 7, 
+                      :runas => [10]}],
       :armaduras => [{:id => 2}],
-      :prots     => [{:id => 2}],
+      :prots     => [{:id => 2
+                      :gemas =>[7]}],
       :miscs     => [{:id => 2}],
       :skills    => [3,4],
       :sex       => "male",
+      :runas     =>[4],
+      :gemas     =>[2,2,5,10,11,18,18,23,24,31],
       :status    => "reserva"
     },
     { :id        => 4,
