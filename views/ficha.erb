@@ -26,7 +26,9 @@
 								<%= genderize(raza,@heroe[:sex]).capitalize %></td>
 							<td><%= @heroe[:personaje].capitalize %></td>
 							<td><%= @heroe[:nivel  ] %></td>
-							<td><%= @heroe[:repu   ] || 0 %></td>
+							<td style="background-image:url(../images/ficha/star.png); 
+								background-repeat: no-repeat; background-position:center;">
+								<%= @heroe[:repu   ] || 0 %></td>
 						</tr>
 					</tbody>
 				</table>				
