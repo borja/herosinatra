@@ -64,6 +64,7 @@ def heros
       :repu      => 6,
       :gemas     => [20,28,27,8,40],
       :pociones  => [6],
+      :pets      => 11,
       :status    => "activo"
 
     },
@@ -105,7 +106,7 @@ def heros
       :miscs     => [],
       :skills    => [5],
       :sex       => "female",
-      :pets      => 1,
+      :pets      => 19,
       :status    => "reserva"
     },
     { :id        => 5,
@@ -127,7 +128,6 @@ def heros
                      {:id => 2}],
       :skills    => [5],
       :sex       => "female",
-      :pets      => 2,
       :status    => "ausente"
     },
     { :id        => 6,
@@ -174,7 +174,6 @@ def heros
       :miscs     => [],
       :skills    => [],
       :sex       => "male",
-      :pets      => 3,
       :status    => "ausente"
     },    
     { :id        => 8,
@@ -647,7 +646,6 @@ def heros
       :miscs     => [],
       :skills    => [5],
       :sex       => "female",
-      :pets      => 1,
       :status    => "reserva",
     }
   ]
