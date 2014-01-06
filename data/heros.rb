@@ -631,7 +631,24 @@ def heros
       :runas     => [10],
       :status    => "retirado",
       :muerto    => true
-    }
+    },
+    { :id        => 29,
+      :name      => "Eleazar",
+      :personaje => "vengador",
+      :jugador   => "Celia",
+      :nivel     => 1,
+      :cuerpo    => 6,
+      :mente     => 4,
+      :mov       => 7,
+      :hechizos  => [1,2,3,13,14,15],
+      :armas     => [{:id => 2}],
+      :armaduras => [{:id => 1}],
+      :prots     => [],
+      :miscs     => [],
+      :skills    => [5],
+      :sex       => "female",
+      :pets      => 1,
+      :status    => "reserva"
   ]
 end
 
