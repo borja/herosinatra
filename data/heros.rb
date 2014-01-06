@@ -64,8 +64,9 @@ def heros
       :repu      => 6,
       :gemas     => [20,28,27,8,40],
       :pociones  => [6],
-      :status    => "activo"
-
+      :pergaminos => [{:id      => 1,
+                       :spells  => [1]}],
+      :status    => "activo",
     },
     { :id        => 3,
       :name      => "Grunt Mascafilos",

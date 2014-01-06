@@ -251,26 +251,44 @@
 			<h3><center>Útiles</center></h3>
 			<table id='table-2'>
 				<thead>
-					<tr><% utiles.each do |util| %>
-							<th><%= util.capitalize %></th>
-						<% end %>
+					<tr><th>Pociones</th>
+						<th>Pergaminos</th>
+						<th>Piezas</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>				
-						<% utiles.each do |util| %>
-							<td>
-								<% if @heroe[eval(":#{util}")] %>
-									<% @heroe[eval(":#{util}")].each do |u| %>
-										<% u_name = send(util.gsub('es','').gsub('s',''),u)[:name] %>
-										<% img_path = "'../images/utiles/#{util}/#{u_name}.png'" %>
-										<img src=<%=img_path%> alt=<%= u_name %>, id='icon' />
-									<% end %>
-								<% else %>
-									El héroe no tiene <%= util %>.
+						<td>
+							<% if @heroe[:pociones] %>
+								<% @heroe[:pociones].each do |p| %>
+									<% img_path = "'../images/utiles/pociones/#{pocion(p)[:name]}.png'" %>
+									<img src=<%=img_path%> alt=<%= pocion(p)[:name] %>, id='icon' />
 								<% end %>
-							</td>
-						<% end %>
+							<% else %>
+								El héroe no tiene pociones.
+							<% end %>
+						</td>
+						<td>
+							<% if @heroe[:pergaminos] %>
+								<% @heroe[:pergaminos].each do |p| %>
+									<% name = pergamino(p[:id])[:name] %>
+									<% img_path = "'../images/utiles/pergaminos/#{name}.png'" %>
+									<img src=<%=img_path%> alt=<%= name %>, id='icon' />
+								<% end %>
+							<% else %>
+								El héroe no tiene pergamino.
+							<% end %>
+						</td>
+						<td>
+							<% if @heroe[:piezas] %>
+								<% @heroe[:piezas].each do |p| %>
+									<% img_path = "'../images/utiles/piezas/#{pieza(p)[:name]}.png'" %>
+									<img src=<%=img_path%> alt=<%= pocion(p)[:name] %>, id='icon' />
+								<% end %>
+							<% else %>
+								El héroe no tiene piezas.
+							<% end %>
+						</td>
 					</tr>
 				</tbody>
 			</table>

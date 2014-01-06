@@ -18,14 +18,6 @@ def engarces
   ]
 end
 
-def utiles
-  [
-    "pociones",
-    "pergaminos",
-    "piezas"
-  ]
-end
-
 def desprovisto?(hero)
   case
     when (hero.class != Hash ) then return "class error"
