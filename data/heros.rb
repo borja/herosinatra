@@ -283,20 +283,21 @@ def heros
       :mente     => 4,
       :mov       => 10,
       :hechizos  => [],
-      :armas     => [{:id => 12}, 
-                     {:id => 17,
-                     :gemas => [40]}],
-      :armaduras => [{:id => 3}],
-      :prots     => [{:id => 1,
-                      :ranuras => 2}, 
-                     {:id => 2}, 
+      :armas     => [{:id       => 12,
+                      :enchants => [12]}, 
+                     {:id       => 17,
+                     :gemas     => [40]}],
+      :armaduras => [{:id       => 3}],
+      :prots     => [{:id       => 1,
+                      :ranuras  => 2}, 
+                     {:id       => 2}, 
                      {:id       => 3,
                       :enchants => [8]},
-                     {:id => 4}],
-      :miscs     => [{:id => 1,
+                     {:id       => 4}],
+      :miscs     => [{:id       => 1,
                       :enchants => [11]}, 
-                     {:id => 2,
-                     :enchants => [6]}],
+                     {:id       => 2,
+                     :enchants  => [6]}],
       :skills    => [],
       :sex       => "male",
       :gemas     => [6,6,11,14,27,30],
@@ -663,6 +664,10 @@ def heros
       :status    => "reserva",
     }
   ]
+end
+
+def hero(id)
+  heros[id-1]
 end
 
 def ataque(id)

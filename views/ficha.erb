@@ -108,8 +108,8 @@
 					<% @heroe[:armas].each do |a| %>
 						<tr>
 							<td><%= a[:id] %></td>
-							<td><% img_path = "'../images/armas/#{arma(a[:id])[:name]}.png'" %>
-								<img src=<%=img_path%> alt=<%=arma(a[:id])[:name]%>, id='icon' />
+							<td><% img_path = enthralled(a) %>
+								<img src='<%= img_path %>' alt=<%=arma(a[:id])[:name]%>, id='icon' />
 							</td>
 							<td><%= arma(a[:id])[:name].capitalize %></td>
 							<td><%= arma(a[:id])[:powa] %></td>				
