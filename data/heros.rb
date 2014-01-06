@@ -259,8 +259,8 @@ def heros
       :miscs     => [],
       :skills    => [1,2],
       :sex       => "female",
-      :gemas     => [2]
-      :status    => "activo"
+      :gemas     => [2],
+      :status    => "activo",
     },    
     { :id        => 12,
       :name      => "Domasuegras",
