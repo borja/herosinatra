@@ -152,11 +152,14 @@ def gemas
       :name         => "hierro antigravedad",
       :calidad      => 7,
     },
-     { :id          => 39,
+    { :id          => 39,
       :name         => "prisma de luz",
       :calidad      => 7,
     },
-    
+    { :id          => 40,
+      :name         => "jacinto de sangre",
+      :calidad      => 7,
+   },    
   ]
 end
 
