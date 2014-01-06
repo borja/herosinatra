@@ -380,7 +380,7 @@ def heros
       :sex       => "female",
       :gemas     => [3,4,8,22],
       :joyas     => [14],
-      :repu      => [5],
+      :repu      => 5,
       :status    => "activo"
     },    
     { :id        => 16,
