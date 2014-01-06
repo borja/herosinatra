@@ -131,6 +131,10 @@ def encantada?(arma)
 end
 
 def enthralled(a)
-  "../images/armas/magic/#{a[:enchants] ? (arma(a[:id])[:name]+a[:enchants].size.to_s) : a[:name] }.png"
+  if a[:enchants]
+    return "../images/armas/magic/#{arma(a[:id])[:name] + a[:enchants].size.to_s}.png"
+  else
+    return "../images/armas/#{arma(a[:id])[:name]}.png"
+  end
 end
   
