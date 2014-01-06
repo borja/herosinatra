@@ -648,7 +648,8 @@ def heros
       :skills    => [5],
       :sex       => "female",
       :pets      => 1,
-      :status    => "reserva"
+      :status    => "reserva",
+    }
   ]
 end
 
