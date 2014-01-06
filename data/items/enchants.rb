@@ -59,7 +59,22 @@ def enchants
       :name         => "explosiva",
       :descripcion  => "Aturdidora y aullante",
       :tipo         => "bendicion",
-    },    
+    },   
+    { :id           => 13,
+      :name         => "tarot",
+      :descripcion  => "1d12 cartas del tarot con efectos malvados.",
+      :tipo         => "tenebro",
+    }, 
+    { :id           => 14,
+      :name         => "dispersador",
+      :descripcion  => "2/reto: Desencantar",
+      :tipo         => "arcano",
+    }, 
+    { :id           => 15,
+      :name         => "transmutacion umbraflamigera",
+      :descripcion  => "Permite transmutar elemento fuego en sombra",
+      :tipo         => "sombra",
+    },
   ]
 end
 
