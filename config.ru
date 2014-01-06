@@ -3,6 +3,7 @@ require 'bundler'
 
 # Dependencies
 require './data/heros'
+require './data/menu'
 require './data/spells'
 require './data/skills'
 require './data/chars'
