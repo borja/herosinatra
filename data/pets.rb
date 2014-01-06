@@ -96,6 +96,11 @@ def pets
       :personajes    => ["elfo"],
       :bono         => "+1 PM"
     },
+    { :id         => 20,
+    :name         => "diablillo chillón",
+    :personajes    => ["tiefling"],
+    :bono         => "+1 Punto de Sombra"
+  },
   ]
 end
 
