@@ -55,7 +55,11 @@ def enchants
       :descripcion  => "bloquea 1 ataque/magia 1 vez por reto",
       :tipo         => "bendicion",
     },
-    
+    { :id           => 12,
+      :name         => "explosiva",
+      :descripcion  => "Aturdidora y aullante",
+      :tipo         => "bendicion",
+    },    
   ]
 end
 

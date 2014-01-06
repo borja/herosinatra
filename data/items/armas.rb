@@ -125,3 +125,12 @@ end
 def arma(id)
   armas[id-1]
 end
+
+def encantada?(arma)
+  arma[:enchants]
+end
+
+def enthralled(a)
+  "../images/armas/magic/#{a[:enchants] ? (arma(a[:id])[:name]+a[:enchants].size.to_s) : a[:name] }.png"
+end
+  
