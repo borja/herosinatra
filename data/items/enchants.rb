@@ -50,6 +50,11 @@ def enchants
       :descripcion  => "6+ vs Tenebro",
       :tipo         => "alquimico",
     },
+    { :id           => 11,
+      :name         => "proteccion",
+      :descripcion  => "bloquea 1 ataque/magia 1 vez por reto",
+      :tipo         => "bendicion",
+    },
     
   ]
 end
