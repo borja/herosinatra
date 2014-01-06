@@ -71,7 +71,6 @@ def heros
                       {:id      => 2,
                        :spells  => [6,9]},
                       {:id      => 3}],
-      :status    => "activo",
       :pets      => 11,
       :status    => "activo"
     },
@@ -379,7 +378,7 @@ def heros
       :sex       => "female",
       :gemas     => [3,4,8,22],
       :joyas     => [14],
-      :status    => "ausente"
+      :status    => "activo"
     },    
     { :id        => 16,
       :name      => "Tim el mago",
