@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="../../app.css" type="text/css" />
+
+<h1><center>Lista de Pergaminos</center></h1>
+<a href=/>Índice</a><br><br>
+
+<table id='table-2'>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Icono</th>
+			<th>Nombre</th>
+			<th>Hechizos</th>
+		</tr>	
+	</thead>
+	<tbody>
+		<% pergaminos.each do |p| %>
+			<tr>
+				<td><%= p[:id] %></td>
+				<td>
+					<% img_path = "'../images/utiles/pergaminos/#{p[:name]}.png'" %>
+					<img src=<%=img_path%> alt=<%=p[:name]%>, id='icon' />
+				</td>
+				<td>Pergamino <%= j[:name] %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
