@@ -9,6 +9,7 @@
 			<th>ID</th>
 			<th>Icono</th>
 			<th>Nombre</th>
+			<th>Descripción</th>
 		</tr>	
 	</thead>
 	<tbody>
@@ -20,6 +21,7 @@
 					<img src=<%=img_path%> alt=<%=p[:name]%>, id='icon' />
 				</td>
 				<td><%= p[:name].capitalize %></td>
+				<td><%= p[:bono] %></td>
 			</tr>
 		<% end %>
 	</tbody>

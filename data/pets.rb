@@ -47,7 +47,7 @@ def pets
       :bono         => "+1 saltar fosos"
     },
     { :id           => 10,
-      :name         => "urraca",
+      :name         => "urraca púrpura",
       :personajes    => ["mago"],
       :bono         => "+10 al oro del tesoro"
     },
@@ -96,6 +96,11 @@ def pets
       :personajes    => ["elfo"],
       :bono         => "+1 PM"
     },
+    { :id         => 20,
+    :name         => "diablillo chillón",
+    :personajes    => ["tiefling"],
+    :bono         => "+1 Punto de Sombra"
+  },
   ]
 end
 
