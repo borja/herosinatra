@@ -123,7 +123,7 @@ def heros
       :cuerpo    => 4,
       :mente     => 13,
       :mov       => 7,
-      :hechizos  => [1,2,3,4,5,6,7,8,9],
+      :hechizos  => [1,2,3,4,5,6,7,8,9,10,11,12],
       :armas     => [{:id      => 3}, 
                      {:id      => 4}],
       :armaduras => [{:id      => 1,
@@ -378,6 +378,7 @@ def heros
       :sex       => "female",
       :gemas     => [3,4,8,22],
       :joyas     => [14],
+      :repu      => [5],
       :status    => "activo"
     },    
     { :id        => 16,
