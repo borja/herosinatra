@@ -45,7 +45,7 @@
 					<%= genderize(personaje(hero[:personaje]),hero[:sex]).capitalize %><br>
 					<i><%= hero[:personaje].capitalize.gsub('Lord','Señor') %></i>
 				</td>
-				<td><%= hero[:nivel] %></td>
+				<td style="font-size:28px;"><%= hero[:nivel] %></td>
 				<td style="background-image:url(../images/ficha/star.png); 
 					background-repeat: no-repeat; background-position:center;">
 					<%= hero[:repu] || 0 %></td>
