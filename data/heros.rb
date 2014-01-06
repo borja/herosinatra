@@ -62,7 +62,7 @@ def heros
       :skills    => [1,2],
       :sex       => "male",
       :repu      => 6,
-      :gemas     => [20,28,27,8],
+      :gemas     => [20,28,27,8,40],
       :pociones  => [6],
       :status    => "activo"
 
