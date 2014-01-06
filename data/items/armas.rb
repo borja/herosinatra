@@ -112,6 +112,13 @@ def armas
       :ranuras      => 6,
       :diagonal     => false
     },
+    { :id           => 17,
+      :name         => "espada tumularia",
+      :categoria    => "Filo",
+      :powa         => 4,
+      :ranuras      => 4,
+      :diagonal     => true
+    },
   ]
 end
 

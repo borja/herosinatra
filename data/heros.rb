@@ -272,7 +272,7 @@ def heros
       :mov       => 10,
       :hechizos  => [],
       :armas     => [{:id => 12}, 
-                     {:id => 2,
+                     {:id => 17,
                      :gemas => [40]}],
       :armaduras => [{:id => 3}],
       :prots     => [{:id => 1,
