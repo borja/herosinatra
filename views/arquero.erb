@@ -3,3 +3,26 @@
 <body>
 	<h1>Lista de Habilidades del Arquero</h1>
 </body>
+
+<table id='table-2'>
+	<tr>
+		<th>ID</th>
+		<th>Icono</th>
+		<th>Tipo</th>
+		<th>Nombre</th>
+		<th>Descripción</th>
+		<th>Nivel</th>
+		<th>Requisitos</th>
+	</tr>
+	<% arqueros.each do |a| %>
+		<tr>
+			<td><% a[:id] %></td>
+			<td><% "XXX" %></td>
+			<td><% a[:type] %></td>
+			<td><% a[:name] %></td>
+			<td><% a[:description] %></td>
+			<td><% "In progress" %></td>
+			<td><% "In progress" %></td>
+		</tr>
+	<% end %>
+</table>
