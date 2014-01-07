@@ -1,4 +1,4 @@
-def druidicas
+def druidas
   [
     {
       :id           => 1,
