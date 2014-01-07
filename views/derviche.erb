@@ -2,32 +2,34 @@
 <link rel="stylesheet" href="../../app.css" type="text/css" />
 <body>
 	<h1>Lista de Habilidades del Derviche</h1>
-</body>
+	<a href=/habilidades>Habilidades</a><br><br>
 
-<table id='table-2'>
-	<thead>
-		<tr>
-			<th>ID</th>
-			<th>Icono</th>
-			<th>Tipo</th>
-			<th>Nombre</th>
-			<th>Descripción</th>
-			<th>Nivel</th>
-			<th>Requisitos</th>
-		</tr>
-	</thead>
-	</thead>
-	<tbody>
-		<% derviches.each do |a| %>
+
+	<table id='table-2'>
+		<thead>
 			<tr>
-				<td><%= a[:id] %></td>
-				<td><%= "XXX" %></td>
-				<td><%= a[:type] %></td>
-				<td><%= a[:name] %></td>
-				<td><%= a[:description] %></td>
-				<td><%= "In progress" %></td>
-				<td><%= "In progress" %></td>
+				<th>ID</th>
+				<th>Icono</th>
+				<th>Tipo</th>
+				<th>Nombre</th>
+				<th>Descripción</th>
+				<th>Nivel</th>
+				<th>Requisitos</th>
 			</tr>
-		<% end %>
-	</tbody>
-</table>
+		</thead>
+		</thead>
+		<tbody>
+			<% derviches.each do |a| %>
+				<tr>
+					<td><%= a[:id] %></td>
+					<td><%= "XXX" %></td>
+					<td><%= a[:type] %></td>
+					<td><%= a[:name] %></td>
+					<td><%= a[:description] %></td>
+					<td><%= "In progress" %></td>
+					<td><%= "In progress" %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</body>
