@@ -695,7 +695,7 @@ def heros
       :name      => "Fuckencia",
       :personaje => "asesino",
       :jugador   => "Alberto",
-      :nivel     => 20,
+      :nivel     => 10,
       :cuerpo    => 11,
       :mente     => 11,
       :mov       => 18,
