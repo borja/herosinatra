@@ -20,10 +20,13 @@
 			<% druidas.each do |a| %>
 				<tr>
 					<td><%= a[:id] %></td>
-					<td><%= "XXX" %></td>
+					<td>
+						<% img_path = "'../images/skills/druida/#{a[:name]}.png'" %>
+						<img src=<%=img_path%> alt=<%= a[:name] %>, id='icon' />
+					</td>
 					<td><%= a[:type] %></td>
 					<td><%= a[:name] %></td>
-					<td><%= a[:description] %></td>
+					<td><i><%= a[:description] %></i></td>
 					<td><%= "In progress" %></td>
 					<td><%= "In progress" %></td>
 				</tr>
