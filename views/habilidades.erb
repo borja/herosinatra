@@ -26,7 +26,7 @@
 				<% personajes.each do |pj| %>
 					<td>
 						<% h = send(pj)[i] %>
-						<a href="/hablidades/<%= h %>">
+						<a href="/habilidades/<%= h %>">
 						<%= h.gsub('lord','señor').capitalize %><br>
 						<img src="../images/clases/<%= h %>.png" alt=<%= h %> /, id='icon4'></a>
 					</td>
