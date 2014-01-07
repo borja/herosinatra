@@ -5,7 +5,7 @@ def druidas
       :name         => "Espiritu Menor",
       :description  => "Invoca un espritu guardian de nivel 1.",
       :type         => "Activa"
-    },
+    }
   ]
 end
 
