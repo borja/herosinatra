@@ -39,7 +39,7 @@ def druidas
     {
       :id           => 7,
       :name         => "posesion espiritual mayor",
-      :description  => "el espiritu guardian puede convivir con el heroe sin que esté en estado de locura, por 1PV.",
+      :description  => "el espiritu guardian puede convivir con el heroe sin que este en estado de locura, por 1PV.",
       :type         => "Activa"
     },
     {
@@ -63,7 +63,7 @@ def druidas
     {
       :id           => 11,
       :name         => "karma",
-      :description  => "al ser dañado, el heroe gana 1PV.",
+      :description  => "al recibir heridas, el heroe gana 1PV.",
       :type         => "Reactiva"
     },
     {
@@ -90,12 +90,12 @@ def druidas
       :description  => "cada espiritu tiene habilidades extras.",
       :type         => "Pasiva"
     },
-    }
+    {
       :id           => 16,
       :name         => "armadura del bosque",
       :description  => "por 1PV los dados de defensa son verdes, por cada PV acumulado, +1Potencia defensiva.",
       :type         => "Declarativa"
-    },    
+    }    
   ]
 end
 
