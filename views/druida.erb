@@ -5,24 +5,29 @@
 </body>
 
 <table id='table-2'>
-	<tr>
-		<th>ID</th>
-		<th>Icono</th>
-		<th>Tipo</th>
-		<th>Nombre</th>
-		<th>Descripción</th>
-		<th>Nivel</th>
-		<th>Requisitos</th>
-	</tr>
-	<% druidas.each do |a| %>
+	<thead>
 		<tr>
-			<td><% a[:id] %></td>
-			<td><% "XXX" %></td>
-			<td><% a[:type] %></td>
-			<td><% a[:name] %></td>
-			<td><% a[:description] %></td>
-			<td><% "In progress" %></td>
-			<td><% "In progress" %></td>
+			<th>ID</th>
+			<th>Icono</th>
+			<th>Tipo</th>
+			<th>Nombre</th>
+			<th>Descripción</th>
+			<th>Nivel</th>
+			<th>Requisitos</th>
 		</tr>
-	<% end %>
+	</thead>
+	</thead>
+	<tbody>
+		<% druidas.each do |a| %>
+			<tr>
+				<td><% a[:id] %></td>
+				<td><% "XXX" %></td>
+				<td><% a[:type] %></td>
+				<td><% a[:name] %></td>
+				<td><% a[:description] %></td>
+				<td><% "In progress" %></td>
+				<td><% "In progress" %></td>
+			</tr>
+		<% end %>
+	</tbody>
 </table>
