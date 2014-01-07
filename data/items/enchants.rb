@@ -75,6 +75,11 @@ def enchants
       :descripcion  => "Permite transmutar elemento fuego en sombra",
       :tipo         => "sombra",
     },
+    { :id           => 16,
+      :name         => "eletrica",
+      :descripcion  => "+1 dado extra por rayo.",
+      :tipo         => "viento",
+    },
   ]
 end
 
