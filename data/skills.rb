@@ -42,7 +42,7 @@ def skills
       :type         => "Pasiva"      
     },
     {
-      :id           => 6,
+      :id           => 7,
       :name         => "Hechiceria elfica",
       :description  => "El heroe tiene conocimientos sobre hechiceria elfica y puede ejecutarla",
       :type         => "Pasiva"      
