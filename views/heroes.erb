@@ -61,14 +61,14 @@
 								<% hero[:armas].each do |a| %>
 									<td><div class="information_popup_container">
 										<div class="information">
-											<% img_path = "'images/armas/#{arma(a[:id])[:name]}.png'" %>
-											<img src=<%=img_path%> alt=<%=arma(a[:id])[:name]%>, id='icon' /> 
+											<% img_path = enthralled(a) %>
+											<img src='<%=img_path%>' alt=<%=arma(a[:id])[:name]%>, id='icon' /> 
 										</div>
 										<div class="popup_information">
-											<% img_path = "'images/armas/#{arma(a[:id])[:name]}.png'" %>
+											<% img_path = enthralled(a) %>
 											<center><h3>
 												<%=arma(a[:id])[:name].capitalize %><br><br>
-												<img src=<%=img_path%> alt=<%=arma(a[:id])[:name]%>, id='icon3' /> 
+												<img src='<%=img_path%>' alt=<%=arma(a[:id])[:name]%>, id='icon3' /> 
 											</h3></center>
 											<li>Valor de ataque: <%=arma(a[:id])[:powa] %></li>
 											<%= "<li>Permite atacar en diagonal</li>" if arma(a[:id])[:diagonal] %>
