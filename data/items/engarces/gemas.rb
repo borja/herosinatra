@@ -159,8 +159,13 @@ def gemas
     { :id          => 40,
       :name         => "jacinto de sangre",
       :calidad      => 7,
+   },
+    { :id          => 41,
+      :name         => "piedra de alma",
+      :calidad      => 7,
    },    
-  ]
+  ]   
+
 end
 
 def gema(id)
