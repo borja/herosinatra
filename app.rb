@@ -69,5 +69,14 @@ class App < Sinatra::Base
   end
   get '/hechizos' do
     erb :hechizos
-  end       
+  end
+  get '/habilidades/druida'
+    erb :druida
+  end
+  get '/habilidades/arquero'
+    erb :arquero
+  end 
+  get '/habilidades/derviche'
+    erb :derviche
+  end        
 end
