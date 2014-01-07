@@ -9,6 +9,18 @@ def piezas
     { :id           => 3,
       :name         => "documento",
     },
+    { :id           => 4,
+      :name         => "herramientas vs trampas",
+    },
+    { :id           => 5,
+      :name         => "caja de gemas",
+    },
+    { :id           => 6,
+      :name         => "antorcha",
+    },
+    { :id           => 7,
+      :name         => "estuche de pergaminos",
+    },
   ]
 end
 
