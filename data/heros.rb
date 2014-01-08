@@ -701,10 +701,10 @@ def heros
                      {:id       => 11},
                      {:id       => 3,
                       :gemas    => [12]}],
-      :miscs     => [{:id       => 1
+      :miscs     => [{:id       => 1,
                       :ranuras  => 1},
                      {:id       => 8},
-                     {:id       => 6
+                     {:id       => 6,
                       :enchants => [6]}],
       :skills    => [1,2,4,8,11,13,20,21],
       :sex       => "male",
