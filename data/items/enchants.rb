@@ -90,6 +90,11 @@ def enchants
       :descripcion  => "el objeto pone a prueba la valia de su poseedor, para verificar si es digno.",
       :tipo         => "drow",
     },
+    { :id           => 19,
+      :name         => "flamigera",
+      :descripcion  => "ataca con fuego.",
+      :tipo         => "fuego",
+    },
   ]
 end
 
