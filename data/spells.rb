@@ -28,43 +28,43 @@ def spells
       :name         => "tempestad",
       :elemento     => "aire",
       :nivel        => 1,
-      :descripcion  => "Causa 1 dano a un enemigo del tablero."
+      :descripcion  => "Aturde a un enemigo"
     },
     { :id           => 6,
       :name         => "rafaga",
       :elemento     => "aire",
       :nivel        => 1,
-      :descripcion  => "+1 ataque de un aliado."
+      :descripcion  => "+5 puntos de movimiento"
     },
     { :id           => 7,
       :name         => "piel de piedra",
       :elemento     => "tierra",
       :nivel        => 1,
-      :descripcion  => "Causa 2 dados de ataque por fuego."
+      :descripcion  => "+1 defensa"
     },
     { :id           => 8,
       :name         => "atravesar muros",
       :elemento     => "tierra",
       :nivel        => 1,
-      :descripcion  => "Causa 1 dano a un enemigo del tablero."
+      :descripcion  => "Permite atravesar muros"
     },
     { :id           => 9,
       :name         => "cura corporal",
       :elemento     => "tierra",
       :nivel        => 1,
-      :descripcion  => "+1 ataque de un aliado."
+      :descripcion  => "Restaura 4 PC."
     },
     { :id           => 10,
       :name         => "niebla",
       :elemento     => "agua",
       :nivel        => 1,
-      :descripcion  => "Causa 2 dados de ataque por fuego."
+      :descripcion  => "Permite moverse sin ser visto"
     },
     { :id           => 11,
       :name         => "agua que cura",
       :elemento     => "agua",
       :nivel        => 1,
-      :descripcion  => "Causa 1 dano a un enemigo del tablero."
+      :descripcion  => "Restaura 4 PC."
     },
     { :id           => 12,
       :name         => "dormir",
@@ -91,49 +91,49 @@ def spells
       :descripcion  => "Aturde al objetivo y lo relentiza."
     },
     { :id           => 16,
-      :name         => "Doble Imagen",
+      :name         => "doble Imagen",
       :elemento     => "elfico",
       :nivel        => 1,
       :descripcion  => "Duplica la probabilidad de esquivar."
     },
     { :id           => 17,
-      :name         => "Parar el tiempo",
+      :name         => "parar el tiempo",
       :elemento     => "elfico",
       :nivel        => 1,
       :descripcion  => "Permite tener otro turno extra."
     },
     { :id           => 18,
-      :name         => "Pereza",
+      :name         => "pereza",
       :elemento     => "elfico",
       :nivel        => 1,
       :descripcion  => "Reduce en 1 el movimiento, el ataque y la defensa de un monstruo, no siendo nunca >1."
     },
     { :id           => 19,
-      :name         => "Reviviscencia",
+      :name         => "reviviscencia",
       :elemento     => "elfico",
       :nivel        => 1,
       :descripcion  => "Permite revivir el mismo turno. El anterior turno no se tendra en cuenta."
     },
     { :id           => 20,
-      :name         => "Sofronizar",
+      :name         => "sofronizar",
       :elemento     => "elfico",
       :nivel        => 1,
       :descripcion  => "El monstruo caera dormido inmediantamente. El monstruo debe encontrarse en linea directa con el Heroe y tener 1-3PM."
     },
     { :id           => 21,
-      :name         => "Deformar la madera",
+      :name         => "deformar la madera",
       :elemento     => "elfico",
       :nivel        => 1,
       :descripcion  => "Cualquier arma hecha de madera se vuelve inservible."
     },
     { :id           => 22,
-      :name         => "Invisibilidad",
+      :name         => "invisibilidad",
       :elemento     => "elfico",
       :nivel        => 1,
       :descripcion  => "El heroe deja de ser visto por los monstruos. Solo podra moverse y abrir puertas.Si saca un 6 o realiza otra accion, el hechizo se cancela"
     },
     { :id           => 23,
-      :name         => "Llamarada hipnotica",
+      :name         => "llamarada hipnotica",
       :elemento     => "elfico",
       :nivel        => 1,
       :descripcion  => "Cualquier criatura o personaje en la misma sala/pasillo queda 1 turno catatonico sin hacer nada. Puede defenderse sacando menos que sus PM."
