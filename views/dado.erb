@@ -1,0 +1,27 @@
+<title>Herosheet: dado de combate</title>
+<link rel="stylesheet" href="../../app.css" type="text/css" />
+
+<body>
+	<h1>Dado de combate</h1>
+	<table id='table-2'>
+		<thead>
+			<tr>
+				<th>Tirada</th>
+				<th>Resultado</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= @dados %> dados de combate </td>
+				<td>
+					<% caras = ['attack','attack','attack','defend','defend','black']%>
+					<% @dados.to_i.times do %>
+						<% resultado = caras[rand(6)] %>
+						<% img_path = "../images/dado/#{resultado}.png"%>
+						<img src=<%=img_path%> alt=<%= resultado %>, id='icon' />
+					<% end %>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</body>

@@ -73,5 +73,9 @@ class App < Sinatra::Base
   get '/habilidades/:char' do |clase|
     @char = clase
     erb :disciplinas
+  end
+  get '/dado/:veces' do |veces|
+    @dados = veces
+    erb :dado
   end      
 end
