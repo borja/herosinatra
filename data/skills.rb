@@ -1,7 +1,21 @@
 require './data/skills/arquero'
 require './data/skills/derviche'
 require './data/skills/druida'
-
+require './data/skills/berserker'
+require './data/skills/lord de las bestias'
+require './data/skills/hoplita'
+require './data/skills/vengador'
+require './data/skills/caminante'
+require './data/skills/brujo'
+require './data/skills/clerigo'
+require './data/skills/paladin'
+require './data/skills/sacerdote'
+require './data/skills/invocador'
+require './data/skills/conjurador'
+require './data/skills/hechicero'
+require './data/skills/falangista'
+require './data/skills/ingeniero'
+require './data/skills/matador'
 
 def skills
   [
