@@ -377,7 +377,7 @@ def heros
                      {:id    => 4},
                      {:id    => 5, 
                       :gemas => [20,24]}],
-      :skills    => [2,6],
+      :skills    => [2,6,7],
       :sex       => "female",
       :gemas     => [3,4,8,22],
       :joyas     => [14],
