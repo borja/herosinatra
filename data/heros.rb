@@ -706,6 +706,7 @@ def heros
                      {:id       => 8},
                      {:id       => 6
                       :enchants => [6]}],
+      :skills    => [1,2,4,8,11,13,20,21],
       :sex       => "male",
       :repu      => 3,
       :gemas     => [2,3,6,40],
