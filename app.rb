@@ -77,5 +77,8 @@ class App < Sinatra::Base
   get '/dado/:veces' do |veces|
     @dados = veces
     erb :dado
+  end
+  get '/tesoro' do
+    erb :tesoro
   end      
 end

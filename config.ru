@@ -9,6 +9,8 @@ require './data/skills'
 require './data/chars'
 require './data/pets'
 require './data/ficha'
+require './data/tesoro'
+
 
 # Items Data Base
 require './data/items/miscelaneas'
