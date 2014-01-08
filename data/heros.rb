@@ -694,7 +694,7 @@ def heros
       :mov       => 9,
       :armas     => [{:id       => 18,
                       :ranuras  => 2,
-                      :enchants =>[9]}],
+                      :enchants =>[19]}],
       :armaduras => [{:id       => 4,
                       :gemas    => [24,24]}],
       :prots     => [{:id       => 2}, 
@@ -707,6 +707,9 @@ def heros
                      {:id       => 6
                       :enchants => [6]}],
       :sex       => "male",
+      :repu      => 3,
+      :gemas     => [2,3,6,40],
+      :pociones  => [6],
       :status    => "retirado"
     },
   ]
