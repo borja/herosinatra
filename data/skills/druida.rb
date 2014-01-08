@@ -100,5 +100,5 @@ def druidas
 end
 
 def druida(id)
-  druidicas[id-1]
+  druidas[id-1]
 end

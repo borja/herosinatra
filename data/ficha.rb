@@ -30,6 +30,15 @@ def disciplinas
   ]  
 end
 
+def habs
+  [
+    "icono",
+    "tipo",
+    "nombre",
+    "descripción",
+  ]  
+end
+
 def desprovisto?(hero)
   case
     when (hero.class != Hash ) then return "class error"

@@ -198,23 +198,21 @@
 			<h3><center>Habilidades</center></h3>
 			<table id='table-2'>
 				<thead>
-					<tr><% disciplinas.each do |d| %>
-							<th><%= d.capitalize %></th>
+					<tr><% habs.each do |h| %>
+							<th><%= h.capitalize %></th>
 						<% end %>
 					</tr>
 				</thead>
 				<tbody>
-					<% plural = ((@heroe[:personaje] == "lord de las bestias") ? "lords" : (@heroe[:personaje]+"s")) %>
-					<% send(plural).each do |c| %>
-						<tr><td><%= c[:id] %></td>
-							<td><% img_path = "'../images/skills/#{@heroe[:personaje]}/#{c[:name]}.png'" %>
-								<img src=<%=img_path%> alt=<%= c[:name] %>, id='icon' />
+					<% clase = ((@heroe[:personaje] == "lord de las bestias") ? "lord" : @heroe[:personaje] ) %>
+					<% @heroe[:skills].each do |id| %>
+						<% habilidad = send(@heroe[:personaje],id) %>
+						<tr><td><% img_path = "'../images/skills/#{@heroe[:personaje]}/#{habilidad[:name]}.png'" %>
+								<img src=<%=img_path%> alt=<%= habilidad[:name] %>, id='icon' />
 							</td>
-							<td><%= c[:type] %></td>
-							<td><%= c[:name].capitalize %></td>
-							<td><i><%= c[:description] %></i></td>
-							<td><%= "In progress" %></td>
-							<td><%= "In progress" %></td>
+							<td>	<%= habilidad[:type].capitalize %></td>
+							<td>	<%= habilidad[:name].capitalize %></td>
+							<td><i>	<%= habilidad[:description] %></i></td>
 						</tr>
 					<% end %>
 				</tbody>
