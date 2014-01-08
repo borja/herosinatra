@@ -116,8 +116,8 @@ def druidas
     },
     {
       :id           => 20,
-      :name         => "hoz purpura",
-      :description  => "por 2PV invoca una hoz purpura. Ataca con 3 dados morados, potencia 2.",
+      :name         => "azada purpura",
+      :description  => "por 2PV invoca una azada purpura. Ataca con 3 dados morados, potencia 2.",
       :type         => "Activa"
     },
     {
