@@ -20,8 +20,8 @@ def druidas
     },
     {
       :id           => 4,
-      :name         => "fuerza de Taal",
-      :description  => "1/reto: +1 caracteristicas espiritus.",
+      :name         => "fuerza de taal",
+      :description  => "1/reto: Todos los espiritus, incluidos los de otros druidas aliados obtienen +1 a todos los atributos.",
       :type         => "Unica"
     },
     {
