@@ -70,13 +70,8 @@ class App < Sinatra::Base
   get '/hechizos' do
     erb :hechizos
   end
-  get '/habilidades/druida' do
-    erb :druida
-  end
-  get '/habilidades/arquero' do
-    erb :arquero
-  end 
-  get '/habilidades/derviche' do
-    erb :derviche
-  end        
+  get '/habilidades/:char' do |clase|
+    @char = clase
+    erb :disciplinas
+  end      
 end
