@@ -1,7 +1,7 @@
 def pociones
   [
     { :id           => 1,
-      :name         => "restauracion menor",
+      :name         => "curacion menor",
       :efecto       => "recupera 2 PC.",
       :precio       => 50,
     },
@@ -11,9 +11,9 @@ def pociones
       :precio       => 50,
     },
     { :id           => 3,
-      :name         => "restauracion mental",
-      :efecto       => "Recupera 2 PM.",
-      :precio       => 25,
+      :name         => "curacion",
+      :efecto       => "Recupera 4 puntos de cuerpo.",
+      :precio       => 100,
     },
     { :id           => 4,
       :name         => "resistencia",
@@ -26,20 +26,20 @@ def pociones
       :precio       => 25,
     },
     { :id           => 6,
-      :name         => "curacion",
-      :efecto       => "Recupera 4 puntos de cuerpo.",
-      :precio       => 100,
-    },
-    { :id           => 7,
       :name         => "curacion mayor",
       :efecto       => "Recupera 6 puntos de cuerpo.",
       :precio       => 150,
     },
-    { :id           => 8,
+    { :id           => 7,
       :name         => "curacion total",
       :efecto       => "Recupera 8 puntos de cuerpo.",
       :precio       => 200,
     },
+    { :id           => 8,
+      :name         => "restauracion mental",
+      :efecto       => "Recupera 2 PM.",
+      :precio       => 25,
+    }
   ]
 end
 
