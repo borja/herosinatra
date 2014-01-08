@@ -20,7 +20,6 @@ def heros
                      {:id => 5}, 
                      {:id => 9}],
       :miscs     => [],
-      :skills    => [1,3,6],
       :sex       => "male",
       :repu      => 7,
       :status    => "activo"
@@ -89,7 +88,6 @@ def heros
       :prots     => [{:id    => 2,
                       :gemas =>[7]}],
       :miscs     => [{:id    => 2}],
-      :skills    => [3,4],
       :sex       => "male",
       :runas     =>[4],
       :gemas     =>[2,2,5,10,11,18,18,23,24,31],
@@ -110,7 +108,6 @@ def heros
       :armaduras => [{:id => 3}],
       :prots     => [],
       :miscs     => [],
-      :skills    => [5],
       :sex       => "female",
       :pets      => 19,
       :status    => "reserva"
@@ -140,7 +137,6 @@ def heros
                      {:id      => 2,
                       :gemas   => [23]},
                      {:id      => 6}],
-      :skills    => [5,6],
       :sex       => "female",
       :status    => "ausente"
     },
@@ -162,7 +158,6 @@ def heros
       :miscs     => [{:id       => 1},
                      {:id       => 6},
                      {:id       => 8}],
-      :skills    => [6],
       :sex       => "male",
       :repu      => 3,
       :runas     => [8],
@@ -185,7 +180,6 @@ def heros
                      {:id     => 8,
                      :ranuras => 4}],
       :miscs     => [],
-      :skills    => [],
       :sex       => "male",
       :status    => "ausente"
     },    
@@ -203,7 +197,6 @@ def heros
       :armaduras => [{:id => 1}],
       :prots     => [],
       :miscs     => [],
-      :skills    => [5,6],
       :sex       => "male",
       :repu      => -1,
       :status    => "retirado",
@@ -226,7 +219,6 @@ def heros
       :miscs     => [{:id => 1}, 
                      {:id => 2}, 
                      {:id => 3}],
-      :skills    => [6],
       :sex       => "female",
       :repu      => 2,
       :status    => "ausente"
@@ -247,7 +239,6 @@ def heros
       :prots     => [],
       :miscs     => [{:id => 2,
                       :ranuras => 1}],
-      :skills    => [6],
       :sex       => "male",
       :gemas     => [5,21],
       :status    => "activo"
@@ -297,7 +288,6 @@ def heros
                       :enchants => [11]}, 
                      {:id       => 2,
                      :enchants  => [6]}],
-      :skills    => [],
       :sex       => "male",
       :gemas     => [6,6,11,14,27,30],
       :joyas     => [3],
@@ -318,7 +308,6 @@ def heros
       :prots     => [{:id       => 2}],
       :miscs     => [{:id       => 1,
                       :enchants => [10]}],
-      :skills    => [3,4],
       :sex       => "male",
       :gemas     => [3,12,24],
       :status    => "activo"
@@ -335,7 +324,6 @@ def heros
       :armaduras => [{:id => 3}],
       :prots     => [],
       :miscs     => [],
-      :skills    => [3],
       :sex       => "male",
       :repu      => 1,
       :status    => "activo"
@@ -392,7 +380,6 @@ def heros
       :armaduras => [{:id => 2}],
       :prots     => [],
       :miscs     => [],
-      :skills    => [6],
       :sex       => "male",
       :runas     => [3,3],
       :joyas     => [1],
@@ -413,7 +400,6 @@ def heros
                      {:id => 8}],
       :miscs     => [{:id => 2}, 
                      {:id => 5}],
-      :skills    => [6],
       :sex       => "male",
       :runas     => [5],
       :status    => "ausente"
@@ -433,7 +419,6 @@ def heros
                      {:id => 3}],
       :miscs     => [{:id => 1}, 
                      {:id => 2}],
-      :skills    => [],
       :sex       => "male",
       :repu      => 1,
       :runas     => [5,5,5],
@@ -452,7 +437,6 @@ def heros
       :armaduras => [{:id => 2}],
       :prots     => [],
       :miscs     => [],
-      :skills    => [],
       :sex       => "male",
       :status    => "ausente"
     },
@@ -468,7 +452,6 @@ def heros
       :armaduras => [{:id => 2}],
       :prots     => [],
       :miscs     => [],
-      :skills    => [],
       :sex       => "male",
       :status    => "ausente"
     },
@@ -485,7 +468,6 @@ def heros
       :armaduras => [{:id => 2}],
       :prots     => [{:id => 2}],
       :miscs     => [],
-      :skills    => [],
       :sex       => "male",
       :gemas     => [21],
       :status    => "ausente"
@@ -503,7 +485,6 @@ def heros
       :armaduras => [{:id => 2}],
       :prots     => [{:id => 2}],
       :miscs     => [],
-      :skills    => [],
       :sex       => "male",
       :repu      => 1,
       :status    => "ausente"
@@ -521,7 +502,6 @@ def heros
       :armaduras => [{:id => 2}],
       :prots     => [],
       :miscs     => [],
-      :skills    => [],
       :sex       => "male",
       :status    => "ausente"
     },
@@ -539,7 +519,6 @@ def heros
       :armaduras => [{:id => 1}],
       :prots     => [],
       :miscs     => [{:id => 1}],
-      :skills    => [6],
       :sex       => "male",
       :status    => "ausente"
     },
@@ -558,7 +537,6 @@ def heros
                      {:id => 8}],
       :miscs     => [{:id => 2}, 
                      {:id => 6}],
-      :skills    => [],
       :sex       => "male",
       :status    => "ausente"
     },
@@ -576,7 +554,6 @@ def heros
       :armaduras => [{:id => 1}],
       :prots     => [{:id => 8}],
       :miscs     => [{:id => 1}],
-      :skills    => [6],
       :sex       => "male",
       :status    => "ausente"
     }, 
@@ -608,7 +585,6 @@ def heros
                      :enchants => [9]}, 
                      {:id       => 7},
                      {:id       => 8}],
-      :skills    => [2,6,7],
       :sex       => "female",
       :repu      => 5,
       :gemas     => [2,11,12,28,37,38],
@@ -630,7 +606,6 @@ def heros
       :armaduras => [{:id => 1}],
       :prots     => [],
       :miscs     => [],
-      :skills    => [6],
       :sex       => "female",
       :repu      => 2,
       :runas     => [10],
@@ -650,7 +625,6 @@ def heros
       :armaduras => [{:id => 1}],
       :prots     => [],
       :miscs     => [],
-      :skills    => [5,6],
       :sex       => "female",
       :status    => "reserva",
     },
@@ -676,7 +650,6 @@ def heros
       :miscs     => [{:id => 1},
                      {:id => 2},
                      {:id => 6}],
-      :skills    => [1],
       :sex       => "male",
       :status    => "retirado"
     },
@@ -699,7 +672,6 @@ def heros
                      {:id => 5}, 
                      {:id => 9}],
       :miscs     => [],
-      :skills    => [1,3,6],
       :sex       => "female",
       :repu      => 7,
       :status    => "retirado"
