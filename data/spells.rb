@@ -115,7 +115,7 @@ def spells
       :descripcion  => "Permite revivir el mismo turno. El anterior turno no se tendra en cuenta."
     },
     { :id           => 20,
-      :name         => "Sueño profundo",
+      :name         => "Sofronizar",
       :elemento     => "elfico",
       :nivel        => 1,
       :descripcion  => "El monstruo caera dormido inmediantamente. El monstruo debe encontrarse en linea directa con el Heroe y tener 1-3PM."
