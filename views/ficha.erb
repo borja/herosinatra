@@ -154,7 +154,9 @@
 						<th>Armadura</th>
 						<th>Protecciones</th>
 						<th>Miscelánea</th>
-						<th><a href=../spells/<%=@heroe[:id]%>>Lista de hechizos conocidos</a></th>
+						<% if @heroe[:hechizos] %>
+							<th><a href=../spells/<%=@heroe[:id]%>>Lista de hechizos conocidos</a></th>
+						<% end %>
 					</tr>
 				</thead>
 				<tbody>
@@ -181,16 +183,13 @@
 								<img src=<%=img_path%> alt=<%=miscelanea(m[:id])[:name]%>, id='icon' />
 							<% end %>
 						</td>
-						<td>
-							<% if @heroe[:hechizos] %>
-								<% elements(@heroe[:hechizos]).each do |e| %>	
+						<% if @heroe[:hechizos] %>
+							<td><% elements(@heroe[:hechizos]).each do |e| %>	
 									<% img_path =  "'../images/elements/#{e}.png'" %>
 									<img src=<%=img_path%> alt=<%=e%>, id='icon' />
 								<% end %>
-							<% else %>
-								El personaje no conoce ningun hechizo.
-							<% end %>					
-						</td>
+							</td>
+						<% end %>					
 					</tr>
 				</tbody>
 			</table>

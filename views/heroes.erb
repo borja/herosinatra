@@ -49,10 +49,12 @@
 				<td style="background-image:url(../images/ficha/star.png); 
 					background-repeat: no-repeat; background-position:center;">
 					<%= hero[:repu] || 0 %></td>
-				<td><% elements(hero[:hechizos]).each do |e| %>	
-						<% img_path =  "'images/elements/#{e}.png'" %>
-						<img src=<%=img_path%> alt=<%=e%>, id='icon' />
-					<% end %>						
+				<td><% if hero[:hechizos] %>
+						<% elements(hero[:hechizos]).each do |e| %>	
+							<% img_path =  "'images/elements/#{e}.png'" %>
+							<img src=<%=img_path%> alt=<%=e%>, id='icon' />
+						<% end %>
+					<% end %>					
 				</td>
 				<td>
 					<table id='table-2'>
