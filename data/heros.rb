@@ -109,6 +109,7 @@ def heros
       :prots     => [],
       :miscs     => [],
       :sex       => "female",
+      :joyas     => [8],
       :gemas     => [14,15,18,22],
       :pets      => 19,
       :status    => "reserva"
