@@ -99,7 +99,7 @@ def druidas
     {
       :id           => 17,
       :name         => "bandada de murcielagos",
-      :description  => "invoca con 1d3 una bandada de murcielagos a cambio de X +1 puntos de mente. X seran el numero de murcielagos que salgan.",
+      :description  => "invoca con 1d3 una bandada de murcielagos a cambio de X+1 puntos de mente. X seran el numero de murcielagos que salgan.",
       :type         => "Activa"
     },
     {
@@ -113,6 +113,18 @@ def druidas
       :name         => "dragon verde",
       :description  => "invoca un gran dragon verde a cambio de 5 puntos de vinculo. Mantenerlo cada turno cuesta 3 PV.",
       :type         => "Activa"
+    },
+    {
+      :id           => 20,
+      :name         => "hoz purpura",
+      :description  => "por 2PV invoca una hoz purpura. Ataca con 3 dados morados, potencia 2.",
+      :type         => "Activa"
+    },
+    {
+      :id           => 21,
+      :name         => "espinas",
+      :description  => "por 1PV el elfo y espiritu obtienen +1 defensa, potencia y centinela. La defensa excedida sera utilizada como ataque al monstruo.",
+      :type         => "Declarativa"
     },
   ]
 end
