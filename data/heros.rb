@@ -684,7 +684,7 @@ def heros
       :repu      => 7,
       :status    => "retirado"
     },
-    { :id        => 31,
+    { :id        => 32,
       :name      => "Shin-o",
       :personaje => "druida",
       :jugador   => "Daniel Cabañas",
