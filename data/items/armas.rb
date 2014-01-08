@@ -119,6 +119,13 @@ def armas
       :ranuras      => 4,
       :diagonal     => true
     },
+    { :id           => 18,
+      :name         => "ballesta",
+      :categoria    => "Distancia",
+      :powa         => 3,
+      :ranuras      => 2,
+      :diagonal     => false
+    },
   ]
 end
 
