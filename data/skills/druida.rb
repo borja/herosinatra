@@ -44,7 +44,7 @@ def druidas
     },
     {
       :id           => 8,
-      :name         => "centinela de Taal",
+      :name         => "centinela de taal",
       :description  => "se gana 1 Punto de Taal al defender con exito el espiritu guardian.",
       :type         => "Reactiva"
     },
@@ -68,7 +68,7 @@ def druidas
     },
     {
       :id           => 12,
-      :name         => "bendicion de Gaia",
+      :name         => "bendicion de gaia",
       :description  => "1 aliado comparte Karma.",
       :type         => "Declarativa"
     },
