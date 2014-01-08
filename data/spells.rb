@@ -95,7 +95,49 @@ def spells
       :elemento     => "elfico",
       :nivel        => 1,
       :descripcion  => "Duplica la probabilidad de esquivar."
-    }
+    },
+    { :id           => 17,
+      :name         => "Parar el tiempo",
+      :elemento     => "elfico",
+      :nivel        => 1,
+      :descripcion  => "Permite tener otro turno extra."
+    },
+    { :id           => 18,
+      :name         => "Pereza",
+      :elemento     => "elfico",
+      :nivel        => 1,
+      :descripcion  => "Reduce en 1 el movimiento, el ataque y la defensa de un monstruo, no siendo nunca >1."
+    },
+    { :id           => 19,
+      :name         => "Reviviscencia",
+      :elemento     => "elfico",
+      :nivel        => 1,
+      :descripcion  => "Permite revivir el mismo turno. El anterior turno no se tendra en cuenta."
+    },
+    { :id           => 20,
+      :name         => "Sueño profundo",
+      :elemento     => "elfico",
+      :nivel        => 1,
+      :descripcion  => "El monstruo caera dormido inmediantamente. El monstruo debe encontrarse en linea directa con el Heroe y tener 1-3PM."
+    },
+    { :id           => 21,
+      :name         => "Deformar la madera",
+      :elemento     => "elfico",
+      :nivel        => 1,
+      :descripcion  => "Cualquier arma hecha de madera se vuelve inservible."
+    },
+    { :id           => 22,
+      :name         => "Invisibilidad",
+      :elemento     => "elfico",
+      :nivel        => 1,
+      :descripcion  => "El heroe deja de ser visto por los monstruos. Solo podra moverse y abrir puertas.Si saca un 6 o realiza otra accion, el hechizo se cancela"
+    },
+    { :id           => 23,
+      :name         => "Llamarada hipnotica",
+      :elemento     => "elfico",
+      :nivel        => 1,
+      :descripcion  => "Cualquier criatura o personaje en la misma sala/pasillo queda 1 turno catatonico sin hacer nada. Puede defenderse sacando menos que sus PM."
+    },
   ]
 end
 
