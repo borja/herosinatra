@@ -18,7 +18,7 @@ def engarces
   ]
 end
 
-def disciplina
+def disciplinas
   [
     "id",
     "icono",
