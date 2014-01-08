@@ -2,100 +2,112 @@ def asesinos
   [
     {
       :id           => 1,
-      :name         => "espiritu guardian menor",
-      :description  => "Invoca un espritu guardian de nivel 1.",
+      :name         => "sigilo",
+      :description  => "Por describir.",
       :type         => "Activa"
     },
     {
       :id           => 2,
-      :name         => "espiritu guardian medio",
-      :description  => "Invoca un espritu guardian de nivel 2.",
+      :name         => "dos armas",
+      :description  => "Por describir.",
       :type         => "Activa"
     },
     {
       :id           => 3,
-      :name         => "espiritu guardian mayor",
-      :description  => "Invoca un espritu guardian de nivel 3.",
+      :name         => "cuchillada trapera",
+      :description  => "Por describir.",
       :type         => "Activa"
     },
     {
       :id           => 4,
-      :name         => "fuerza de Taal",
-      :description  => "1/reto: +1 caracteristicas espiritus.",
+      :name         => "emboscada",
+      :description  => "Por describir.",
       :type         => "Unica"
     },
     {
       :id           => 5,
-      :name         => "transmutacion",
-      :description  => "consumir 1 magia permite cambiar 1 espiritu guardian por otro.",
+      :name         => "acrobacias",
+      :description  => "Por describir.",
       :type         => "Activa"
     },
     {
       :id           => 6,
-      :name         => "posesion espiritual menor",
-      :description  => "cuando el heroe tiene 0 de mente, por 1 PV el espiritu guardian le controla.",
+      :name         => "venenos",
+      :description  => "Por describir.",
       :type         => "Activa"
     },
     {
       :id           => 7,
-      :name         => "posesion espiritual mayor",
-      :description  => "el espiritu guardian puede convivir con el heroe sin que este en estado de locura, por 1PV.",
+      :name         => "dagas voladoras",
+      :description  => "Por describir.",
       :type         => "Activa"
     },
     {
       :id           => 8,
-      :name         => "centinela de taal",
-      :description  => "se gana 1 Punto de Taal al defender con exito el espiritu guardian.",
+      :name         => "honor de ladrones",
+      :description  => "Por describir.",
       :type         => "Reactiva"
     },
     {
       :id           => 9,
-      :name         => "imbuir arcano",
-      :description  => "el espiritu hechiza a cambio de 1PV.",
+      :name         => "lanzamiento preciso",
+      :description  => "Por describir.",
       :type         => "Activa"
     },
     {
       :id           => 10,
-      :name         => "bellotas espirituales",
-      :description  => "por 1PV, se crea 1 bellota espiritual.",
+      :name         => "paso de sombras",
+      :description  => "Por describir.",
       :type         => "Activa"
     },
     {
       :id           => 11,
-      :name         => "karma",
-      :description  => "al recibir heridas, el heroe gana 1PV.",
+      :name         => "golpe a la carotida",
+      :description  => "Por describir.",
       :type         => "Reactiva"
     },
     {
       :id           => 12,
-      :name         => "bendicion de gaia",
-      :description  => "1 aliado comparte Karma.",
-      :type         => "Declarativa"
+      :name         => "subterfugio",
+      :description  => "al matar, el heroe entra en sigilo.",
+      :type         => "Pasiva"
     },
     {
       :id           => 13,
-      :name         => "torsion espiritual",
-      :description  => "el espiritu cambia su posicion con el heroe.",
+      :name         => "siempre al acecho",
+      :description  => "Por describir.",
       :type         => "Declarativa"
     },
     {
       :id           => 14,
-      :name         => "animismo",
-      :description  => "se gana 1 torsion espiritual cuando el espiritu mata.",
+      :name         => "paso de combate",
+      :description  => "Por describir.",
       :type         => "Pasiva"
     },
     {
       :id           => 15,
-      :name         => "fuerza espiritual",
-      :description  => "cada espiritu tiene habilidades extras.",
+      :name         => "sombras gemelas",
+      :description  => "la sombra de un aliado puede atacar como si fuera el propio asesino.",
       :type         => "Pasiva"
     },
     {
       :id           => 16,
-      :name         => "armadura del bosque",
-      :description  => "por 1PV los dados de defensa son verdes, por cada PV acumulado, +1Potencia defensiva.",
+      :name         => "intimidar",
+      :description  => "Por describir.",
       :type         => "Declarativa"
-    }    
+    },
+    {
+      :id           => 17,
+      :name         => "estocada limpia",
+      :description  => "Por describir.",
+      :type         => "Declarativa"
+    },
+    {
+      :id           => 18,
+      :name         => "daga de sombras",
+      :description  => "Por describir.",
+      :type         => "Declarativa"
+    },
   ]
 end
 
