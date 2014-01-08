@@ -91,7 +91,7 @@ def spells
       :descripcion  => "Aturde al objetivo y lo relentiza."
     },
     { :id           => 16,
-      :name         => "doble Imagen",
+      :name         => "doble imagen",
       :elemento     => "elfico",
       :nivel        => 1,
       :descripcion  => "Duplica la probabilidad de esquivar."
