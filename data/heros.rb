@@ -684,6 +684,31 @@ def heros
       :repu      => 7,
       :status    => "retirado"
     },
+    { :id        => 31,
+      :name      => "Shin-o",
+      :personaje => "druida",
+      :jugador   => "Daniel Cabañas",
+      :nivel     => 10,
+      :cuerpo    => 10,
+      :mente     => 9,
+      :mov       => 9,
+      :armas     => [{:id       => 18,
+                      :ranuras  => 2,
+                      :enchants =>[9]}],
+      :armaduras => [{:id       => 4,
+                      :gemas    => [24,24]}],
+      :prots     => [{:id       => 2}, 
+                     {:id       => 11},
+                     {:id       => 3,
+                      :gemas    => [12]}],
+      :miscs     => [{:id       => 1
+                      :ranuras  => 1},
+                     {:id       => 8},
+                     {:id       => 6
+                      :enchants => [6]}],
+      :sex       => "male",
+      :status    => "retirado"
+    },
   ]
 end
 
