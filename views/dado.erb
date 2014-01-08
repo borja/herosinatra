@@ -8,19 +8,29 @@
 			<tr>
 				<th>Tirada</th>
 				<th>Resultado</th>
+				<th>Calaveras</th>
+				<th>Defensas</th>
+				<th>Negros</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
 				<td><%= @dados %> dados de combate </td>
+				<% calaveras = 0 ; defensas = 0; negros = 0 %>
 				<td>
 					<% caras = ['attack','attack','attack','defend','defend','black']%>
 					<% @dados.to_i.times do %>
 						<% resultado = caras[rand(6)] %>
-						<% img_path = "../images/dado/#{resultado}.png"%>
+							<% calaveras += 1 if resultado == 'attack' %>
+							<% defensas  += 1 if resultado == 'defend' %>
+							<% negros    += 1 if resultado == 'black' %>
+						<% img_path  = "../images/dado/#{resultado}.png"%>
 						<img src=<%=img_path%> alt=<%= resultado %>, id='icon' />
 					<% end %>
 				</td>
+				<td><%= calaveras %></td>
+				<td><%= defensas  %></td>
+				<td><%= negros    %></td>
 			</tr>
 		</tbody>
 	</table>
