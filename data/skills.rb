@@ -2,7 +2,7 @@ require './data/skills/arquero'
 require './data/skills/derviche'
 require './data/skills/druida'
 require './data/skills/berserker'
-require './data/skills/lord de las bestias'
+require "./data/skills/beastslord"
 require './data/skills/hoplita'
 require './data/skills/vengador'
 require './data/skills/caminante'
