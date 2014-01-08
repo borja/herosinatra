@@ -55,8 +55,8 @@ end
 def caja(sigmar)
   case sigmar
     when 'eagle'  then gema(rand(1..41))[:name]
-    when 'plus'   then joya(rand(1..41))[:name]
-    when 'blank'  then runa(rand(1..41))[:name]
+    when 'plus'   then joya(rand(1..14))[:name]
+    when 'blank'  then runa(rand(1..12))[:name]
     when 'hammer' then 'gema estropeada'
     when 'comet'  then 'anillo'
   end
@@ -65,8 +65,8 @@ end
 def cofre(sigmar)
   case sigmar
     when 'eagle'  then gema(rand(1..41))[:name] + " + " + gema(rand(1..41))[:name]
-    when 'plus'   then joya(rand(1..41))[:name] + " + " + joya(rand(1..41))[:name]
-    when 'blank'  then runa(rand(1..41))[:name] + " + " + runa(rand(1..41))[:name]
+    when 'plus'   then joya(rand(1..14))[:name] + " + " + joya(rand(1..14))[:name]
+    when 'blank'  then runa(rand(1..12))[:name] + " + " + runa(rand(1..12))[:name]
     when 'hammer' then 'objeto magico'
     when 'comet'  then 'artefacto'
   end
