@@ -66,6 +66,18 @@ def protecciones
       :powa         => 1,
       :ranuras      => 1,
     },
+    { :id           => 12,
+      :name         => "correas de ajuste",
+      :categoria    => "cuero",
+      :powa         => 1,
+      :ranuras      => 2,
+    },
+    { :id           => 13,
+      :name         => "embozo",
+      :categoria    => "cuero",
+      :powa         => 1,
+      :ranuras      => 2,
+    },
   ]
 end
 
