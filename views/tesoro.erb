@@ -1,35 +1,44 @@
 <title>Herosheet: tirada de tesoro</title>
 <link rel="stylesheet" href="../../app.css" type="text/css" />
 
-<body>
-	<h1>Tirada de tesoro</h1>
-	
-	<% amarillo = ['hammer','comet','plus','blank','eagle','eagle']%>
-	<% sigmar   = amarillo[rand(6)] %>
-	<% dados    = rand(6) + rand(6) +2 %>
-	
-	<table id='table-2'>
-		<thead>
-			<tr>
-				<th>Tirada</th>
-				<th>Interpretación</th>
-				<th>Icono</th>
-				<th>Descripción</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td style="font-size:34px">
-					<%= dados %>
-					<% img_path  = "../images/tesoro/#{sigmar}.png"%>
-					<img style="vertical-align:middle" 
-						 src=<%=img_path%> alt=<%= sigmar %>, id='icon' />	
-				<td><%= tesoro(dados,sigmar).capitalize %>
-				</td>
-				<td>
+<% amarillo = ['hammer','comet','plus','blank','eagle','eagle']%>
+<% sigmar   = amarillo[rand(6)] %>
+<% dado1    = rand(6) +1 		%>
+<% dado2    = rand(6) +1 		%>
+<% dados    = dado1 + dado2 	%>
 
+<body>
+	<table id='tlabel'>
+		<tbody>
+			<tr><td><img src="../images/tesoro/chest.png" alt='tesoro' /, id='box2'></td>
+				<td><h1>Tirada de tesoro</h1>
+					<table id='table-2'>
+						<thead>
+							<tr>
+								<th>Tirada</th>
+								<th>Interpretación</th>
+								<th>Icono</th>
+								<th>Descripción</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td style="font-size:34px">
+									<%= dados %>
+									<% img_path  = "../images/tesoro/#{sigmar}.png"%>
+									<img style="vertical-align:middle" 
+										 src=<%=img_path%> alt=<%= sigmar %>, id='icon' />	
+								<td><%= tesoro(dados,sigmar).capitalize %>
+								</td>
+								<td>
+
+								</td>
+								<td><%= "descripción"    %></td>
+							</tr>
+						</tbody>
+					</table>
 				</td>
-				<td><%= "descripción"    %></td>
+				<td><img src="../images/tesoro/chest.png" alt='tesoro' /, id='box'></td>
 			</tr>
 		</tbody>
 	</table>
