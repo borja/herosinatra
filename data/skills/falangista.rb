@@ -20,7 +20,7 @@ def falangistas
     },
     {
       :id           => 4,
-      :name         => "¡a salvo!",
+      :name         => "a salvo!",
       :description  => "sacrificando el movimiento, el falangista le da su defensa a un aliado.",
       :type         => "Pasiva"
     },
