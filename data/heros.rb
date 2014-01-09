@@ -11,7 +11,7 @@ def heros
       :mov       => 18,
       :hechizos  => [14],
       :armas     => [{:id => 3}, 
-                     {:id => 19,
+                     {:id => 6,
                       :joyas => [11,11]}],
       :armaduras => [{:id => 2,
                       :gemas => [24]}],
