@@ -16,7 +16,7 @@ def heros
       :armaduras => [{:id => 2,
                       :gemas => [24]}],
       :prots     => [{:id => 1}, 
-                     {:id => 13,
+                     {:id => 12,
                       :gemas => [40],
                       :joyas => [4]},
                      {:id => 3,
