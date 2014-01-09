@@ -126,6 +126,13 @@ def armas
       :ranuras      => 2,
       :diagonal     => false
     },
+    { :id           => 19,
+      :name         => "alfanje",
+      :categoria    => "Filo",
+      :powa         => 2,
+      :ranuras      => 2,
+      :diagonal     => false
+    },
   ]
 end
 
