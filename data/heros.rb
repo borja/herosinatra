@@ -266,7 +266,7 @@ def heros
                       :ranuras => 1}],
       :skills    => [1,2],
       :sex       => "male",
-      :gemas     => [5,21],
+      :gemas     => [5,21,41],
       :status    => "activo"
     },    
     { :id        => 11,
