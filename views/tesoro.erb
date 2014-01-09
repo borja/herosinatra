@@ -3,8 +3,8 @@
 
 <% amarillo  = ['hammer','comet','plus','blank','eagle','eagle']%>
 <% sigmar    = amarillo[rand(6)] %>
-<% dado1     = rand(6) +1 		%>
-<% dado2     = rand(6) +1 		%>
+<% dado1     = 5#rand(6) +1 		%>
+<% dado2     = 1#rand(6) +1 		%>
 <% dados     = dado1 + dado2 	%>
 <% resultado = tesoro(dados,sigmar) %>
 
@@ -47,7 +47,7 @@
 											<img style="vertical-align:middle" 
 												 src=<%= img_path %> alt=<%= alimento %>, id='icon2' />	
 			 			 			<%	when 6 then %>
-			                        		<% perg      = {:id => 2, :spells  => [6,9]} %>
+			                        		<% perg      = {:id => 2, :spells  => [rand(1..16),rand(1..16)]} %>
 											<div class="information_popup_container">
 												<div class="information">
 													<% name = pergamino(perg[:id])[:name] %>
