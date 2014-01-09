@@ -89,6 +89,7 @@ def heros
       :prots     => [{:id    => 2,
                       :gemas =>[7]}],
       :miscs     => [{:id    => 2}],
+      :skills    => [1,2,3,4,5,6],
       :sex       => "male",
       :runas     => [4],
       :gemas     => [2,2,5,10,11,18,18,23,24,31],
@@ -314,6 +315,7 @@ def heros
       :prots     => [{:id       => 2}],
       :miscs     => [{:id       => 1,
                       :enchants => [10]}],
+      :skills    => [1,2,3,4,5,6],
       :sex       => "male",
       :gemas     => [3,12,24],
       :status    => "activo"
