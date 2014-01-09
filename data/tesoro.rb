@@ -7,11 +7,23 @@ def vacia(sigmar)
 end
 
 def comida(sigmar)
-  "manzanas"
+  case sigmar
+    when 'eagle'  then 'comida : asado'
+    when 'plus'   then 'comida : manzanas'
+    when 'blank'  then 'comida : podrida'
+    when 'hammer' then 'comida : agua'
+    when 'comet'  then 'comida : sidra'
+  end
 end
 
 def perg(sigmar)
-  "pergamino doble"
+  case sigmar
+    when 'eagle'  then 'pergamino : doble'
+    when 'plus'   then 'pergamino : documentos'
+    when 'blank'  then 'pergamino : blanco'
+    when 'hammer' then 'pergamino : basico'
+    when 'comet'  then 'pergamino : arcano'
+  end
 end
 
 def oro(sigmar)
@@ -34,31 +46,31 @@ end
 
 def pot(sigmar)
   case sigmar
-    when 'eagle'  then 'pocima curativa'
-    when 'plus'   then 'pocima de resistencia'
-    when 'blank'  then 'pocima de fuerza'
-    when 'hammer' then 'agua bendita'
-    when 'comet'  then 'pocima de velocidad'
+    when 'eagle'  then "pocion de curacion"
+    when 'plus'   then "pocion de resistencia"
+    when 'blank'  then "pocion de fuerza"
+    when 'hammer' then "pocion de velocidad"
+    when 'comet'  then "pocion de heroes"
   end
 end
 
 def trampa(sigmar)
   case sigmar
-    when 'eagle'  then 'flecha trampa'
-    when 'plus'   then 'foso'
-    when 'blank'  then 'lazo venenoso'
-    when 'hammer' then 'roca caida'
-    when 'comet'  then 'trampa seleccionada por el brujo'
+    when 'eagle'  then 'trampa de flecha'
+    when 'plus'   then 'trampa de foso'
+    when 'blank'  then 'trampa de veneno'
+    when 'hammer' then 'trampa de roca'
+    when 'comet'  then 'trampa de hacha'
   end
 end
 
 def caja(sigmar)
   case sigmar
-    when 'eagle'  then gema(rand(1..41))[:name]
-    when 'plus'   then joya(rand(1..14))[:name]
-    when 'blank'  then runa(rand(1..12))[:name]
-    when 'hammer' then 'gema estropeada'
-    when 'comet'  then 'anillo'
+    when 'eagle'  then 'gema: ' + gema(rand(1..41))[:name]
+    when 'plus'   then 'runa: ' + joya(rand(1..12))[:name]
+    when 'blank'  then 'gema: estropeada'
+    when 'hammer' then 'gema: ' + gema(rand(1..41))[:name]
+    when 'comet'  then 'joya: ' + joya(rand(1..14))[:name]
   end
 end
 
@@ -67,7 +79,7 @@ def cofre(sigmar)
     when 'eagle'  then gema(rand(1..41))[:name] + " + " + gema(rand(1..41))[:name]
     when 'plus'   then joya(rand(1..14))[:name] + " + " + joya(rand(1..14))[:name]
     when 'blank'  then runa(rand(1..12))[:name] + " + " + runa(rand(1..12))[:name]
-    when 'hammer' then 'objeto magico'
+    when 'hammer' then 'objeto'
     when 'comet'  then 'artefacto'
   end
 end

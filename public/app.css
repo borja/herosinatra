@@ -103,6 +103,14 @@ body{
     filter: FlipH;
     -ms-filter: "FlipH";
 }
+#dice {
+	padding: 2px;
+	weight: 40px;
+	height: 40px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
 
 div.information_popup_container {
 	/* Position Information */

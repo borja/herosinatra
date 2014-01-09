@@ -1,11 +1,12 @@
 <title>Herosheet: tirada de tesoro</title>
 <link rel="stylesheet" href="../../app.css" type="text/css" />
 
-<% amarillo = ['hammer','comet','plus','blank','eagle','eagle']%>
-<% sigmar   = amarillo[rand(6)] %>
-<% dado1    = rand(6) +1 		%>
-<% dado2    = rand(6) +1 		%>
-<% dados    = dado1 + dado2 	%>
+<% amarillo  = ['hammer','comet','plus','blank','eagle','eagle']%>
+<% sigmar    = amarillo[rand(6)] %>
+<% dado1     = rand(6) +1 		%>
+<% dado2     = rand(6) +1 		%>
+<% dados     = dado1 + dado2 	%>
+<% resultado = tesoro(dados,sigmar) %>
 
 <body>
 	<table id='tlabel'>
@@ -18,7 +19,6 @@
 								<th>Tirada</th>
 								<th>Interpretación</th>
 								<th>Icono</th>
-								<th>Descripción</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -27,13 +27,84 @@
 									<%= dados %>
 									<% img_path  = "../images/tesoro/#{sigmar}.png"%>
 									<img style="vertical-align:middle" 
-										 src=<%=img_path%> alt=<%= sigmar %>, id='icon' />	
-								<td><%= tesoro(dados,sigmar).capitalize %>
+										 src=<%=img_path%> alt=<%= sigmar %>, id='dice' />	
+								<td><%= resultado.capitalize %>
 								</td>
 								<td>
-
+									<% case dados
+										when 2 then %>
+											<% pifia     = (resultado == 'pifia ligera') ? 'leve' : 'pifia' %>
+											<% img_path  = "../images/tesoro/pifia/#{pifia}.png"%>
+											<img style="vertical-align:middle" 
+												 src=<%= img_path %> alt=<%= pifia %>, id='icon2' />
+			 						<%	when 3,4 then %>
+			 								<% img_path  = "../images/tesoro/nada.png"%>
+			 								<img style="vertical-align:middle" 
+			 									 src=<%= img_path %> alt='nada', id='icon2' />													
+									<%	when 5 then %>
+											<% alimento  = resultado.split(':')[1].strip %>
+											<% img_path  = "../images/food/#{alimento}.png"%>
+											<img style="vertical-align:middle" 
+												 src=<%= img_path %> alt=<%= alimento %>, id='icon2' />	
+			 			 			<%	when 6 then %>
+			                        		<% perg      = {:id => 2, :spells  => [6,9]} %>
+											<div class="information_popup_container">
+												<div class="information">
+													<% name = pergamino(perg[:id])[:name] %>
+													<% img_path = "'../images/utiles/pergaminos/#{name}.png'" %>
+													<img src=<%=img_path%> alt=<%= name %>, id='icon2' />
+												</div>
+												<div class="popup_information">
+													<center><h3>	
+														Pergamino <%= pergamino(perg[:id])[:name] %><br><br>
+														<img src=<%=img_path%> alt=<%= name %>, id='icon3' />
+													</h3></center>
+													<% if perg[:spells] %>
+														<% perg[:spells].each do |magia| %>
+															<% hechizo = (spell(magia))[:name] %>									
+															<% img_path   = "'../images/spells/#{hechizo}.png'"     %>
+															<img style="vertical-align:middle" 
+																 src=<%=img_path%> alt=<%= hechizo %>, id='icon' />		
+															<%= hechizo.capitalize %><br>
+														<% end %>	
+													<% else %>
+														El pergamino no contiene hechizos.
+													<% end %>
+												</div>
+											</div>
+									<%	when 7 then %>
+											<% img_path  = "../images/tesoro/gold.png"%>
+											<img style="vertical-align:middle" 
+												 src=<%= img_path %> alt='oro', id='icon2' />	
+			 						<%	when 8 then %>
+			 								<% img_path  = "../images/tesoro/monstruo.png"%>
+			 								<img style="vertical-align:middle" 
+			 									 src=<%= img_path %> alt='monstruo', id='icon2' />	
+			 						<%	when 9 then %>
+			 								<% img_path  = "../images/utiles/pociones/#{resultado.gsub('pocion de ','')}.png"%>
+			 								<img style="vertical-align:middle" 
+			 									 src=<%= img_path %> alt='pocion', id='icon2' />	
+			 						<%	when 10 then %>
+			 								<% img_path  = "../images/tesoro/trampas/#{resultado.gsub('trampa de ','')}.png"%>
+			 								<img style="vertical-align:middle" 
+			 									 src=<%= img_path %> alt='trampa', id='icon2' />	
+			 			 			<%	when 11 then %>
+											<% engarce = resultado.split(':') %>
+			 			 					<% img_path  = "../images/treasures/#{engarce.first + 's'}/#{engarce[1].strip}.png"%>
+			 			 					<img style="vertical-align:middle" 
+			 			 						 src=<%= img_path %> alt=<%= engarce[0] %>, id='icon2' />	
+			 			 			<%	when 12 then %>
+										<% case resultado 
+											when 'artefacto' then %>	
+												<% a = ['armadura de borin', 'talisman', 'espada tumularia'] %>
+												<%= a[rand(0..a.size)]%>
+											<% when 'objeto' then %>
+												<%= resultado %>
+											<% else %>
+												Aún sin implementar 
+										<% end %>
+									<% end %>
 								</td>
-								<td><%= "descripción"    %></td>
 							</tr>
 						</tbody>
 					</table>

@@ -39,6 +39,11 @@ def pociones
       :name         => "restauracion mental",
       :efecto       => "Recupera 2 PM.",
       :precio       => 25,
+    },
+    { :id           => 9,
+      :name         => "velocidad",
+      :efecto       => "+5 movimiento",
+      :precio       => 25,
     }
   ]
 end
