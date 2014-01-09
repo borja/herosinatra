@@ -3,7 +3,7 @@ def conjuradores
     {
       :id           => 1,
       :name         => "biblioteca",
-      :description  => "numero de hechizos que puede utilizar el conjurador en un reto.",
+      :description  => "numero de hechizos que puede utilizar el conjurador en un reto. Aumentan a 1/nivel y empieza por 9 hechizos.",
       :type         => "Activa"
     },
     {
