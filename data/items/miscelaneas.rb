@@ -37,7 +37,7 @@ def miscelaneas
     },
     {
       :id           => 8,
-      :name         => "herramientas",
+      :name         => "dado magiorco",
       :max          => 0
     },
   ]
