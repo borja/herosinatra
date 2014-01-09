@@ -18,11 +18,11 @@ end
 
 def perg(sigmar)
   case sigmar
-    when 'eagle'  then 'pergamino : doble'
-    when 'plus'   then 'pergamino : documentos'
-    when 'blank'  then 'pergamino : blanco'
-    when 'hammer' then 'pergamino : basico'
-    when 'comet'  then 'pergamino : arcano'
+    when 'eagle'  then 'pergamino: doble'
+    when 'plus'   then 'pergamino: documentos'
+    when 'blank'  then 'pergamino: blanco'
+    when 'hammer' then 'pergamino: basico'
+    when 'comet'  then 'pergamino: arcano'
   end
 end
 
