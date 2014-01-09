@@ -16,6 +16,9 @@ require './data/skills/hechicero'
 require './data/skills/falangista'
 require './data/skills/ingeniero'
 require './data/skills/matador'
+require './data/skills/asesino'
+require './data/skills/ladron'
+require './data/skills/nigromante'
 
 def skills
   [
