@@ -1,14 +1,20 @@
-<link rel="stylesheet" href="app.css" type="text/css" />
+<!DOCTYPE HTML>
 
-<div class="information_popup_container">
-	<div class="information">
-		<!-- The thing or things you want to hover over go here such as images, tables, 
-     	   paragraphs, objects other divisions etc. -->
-		Hola 
+<html>
+<head>
+	<title>Display</title>
+	<link rel="stylesheet" href="app.css" type="text/css" />
+</head>
+
+<body>
+	<div class="information_popup_container">
+		<div class="information">
+			<%= @show_me %> 
+		</div>
+		<div class="popup_information">
+			<%= @hide_me %>
+		</div>
 	</div>
-	<div class="popup_information">
-		<!-- The thing or things you want to popup go here such as images, tables, 
-     	   paragraphs, objects other divisions etc. -->
-		La armadura es una mugre.
-	</div>
-</div>
+</body>
+
+</html>
