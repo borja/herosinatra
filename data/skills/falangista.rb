@@ -15,7 +15,7 @@ def falangistas
     {
       :id           => 3,
       :name         => "represalias",
-      :description  => "El atacante recibe el exceso de defensa como daño defendible.",
+      :description  => "El atacante recibe el exceso de defensa como ataque defendible.",
       :type         => "Pasiva"
     },
     {
