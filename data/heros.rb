@@ -134,7 +134,7 @@ def heros
       :sex       => "female",
       :joyas     => [8],
       :gemas     => [14,15,18,22],
-      :pets      => 19,
+      :pets      => 20,
       :status    => "reserva"
     },
     { :id        => 5,
