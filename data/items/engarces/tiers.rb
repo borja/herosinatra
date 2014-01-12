@@ -18,6 +18,24 @@ def tiers
         {:tipo => 'gema', :id => 21},
         {:tipo => 'gema', :id => 21},
         {:tipo => 'gema', :id => 21}]
+    },
+    {
+      :id    => 2,
+      :name  => "maestra del fuego",
+      :bono  => "+1 de ataque",
+      :mix   => [
+        {:tipo => 'gema', :id => 23},
+        {:tipo => 'gema', :id => 23},
+        {:tipo => 'gema', :id => 16}]
+    },
+    {
+      :id    => 3,
+      :name  => "joturos",
+      :bono  => "+1 PV al obtener al menos un escudo negro en la defensa.",
+      :mix   => [
+        {:tipo => 'gema', :id => 27},
+        {:tipo => 'gema', :id => 25},
+        {:tipo => 'gema', :id => 27}]
     }
   ]
 end
