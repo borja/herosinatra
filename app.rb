@@ -79,5 +79,6 @@ class App < Sinatra::Base
     erb :tesoro
   end 
   get '/display' do
-    erb :display     
+    erb :display
+  end     
 end
