@@ -1,8 +1,9 @@
 Herosheet Dashboard
 ===================
 
-This git repository will help you get up and running quickly with Sinatra on OpenShift.
+[![wercker status](https://app.wercker.com/status/4c38ae43c4609f479aedf505f70c6395/m "wercker status")](https://app.wercker.com/project/bykey/4c38ae43c4609f479aedf505f70c6395)
 
+This git repository will help you get up and running quickly with Sinatra on OpenShift.
 
 Running on OpenShift
 ----------------------------
