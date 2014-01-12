@@ -2,9 +2,7 @@ require 'sinatra/base'
 
 class App < Sinatra::Base
   get '/' do
-    erb :display
-    @show_me = 'show'
-    @hide_me = 'hide'
+    erb :index
   end
   get '/heroes' do
     @status = "activo"
@@ -79,5 +77,7 @@ class App < Sinatra::Base
   end
   get '/tesoro' do
     erb :tesoro
-  end      
+  end 
+  get '/display' do
+    erb :display     
 end
