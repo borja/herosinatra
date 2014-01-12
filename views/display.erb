@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+<link rel="stylesheet" href="app.css" type="text/css" />
 
 <html>
 <head>
@@ -9,12 +9,10 @@
 <body>
 	<div class="information_popup_container">
 		<div class="information">
-			<%= @show_me %> 
+			<%= erb :show %>
 		</div>
 		<div class="popup_information">
-			<%= @hide_me %>
+			<%= erb :hide %>
 		</div>
 	</div>
 </body>
-
-</html>
