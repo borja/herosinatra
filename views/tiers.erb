@@ -16,12 +16,12 @@
 		<% tiers.each do |t| %>
 			<tr>
 				<td><%= t[:id] %></td>
-				<td>
-					<% t[:mix].each do |engarce| %>
-						<% familia = engarce[:tipo] + 's' %>
-						<% nombre  = send(engarce[:tipo], engarce[:id])[:name] %>
-						<% img_path = "'../images/treasures/#{familia}/#{nombre}.png'" %>
-						<img src=<%=img_path%> alt=<%= nombre %>, id='icon' />
+				<td><% t[:mix].keys.each do |familia| %>
+						<% t[:mix][familia.to_sym].each do |id| %>
+							<% engarce = send(familia)[id - 1][:name] %>
+							<% img_path = "'../images/treasures/#{familia}/#{engarce}.png'" %>
+							<img src=<%=img_path%> alt=<%= engarce %>, id='icon' />
+						<% end %>
 					<% end%>
 				</td>
 				<td><%= t[:name].capitalize %></td>

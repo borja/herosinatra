@@ -5,50 +5,40 @@ def tiers
       :id    => 0,
       :name  => "turmalina",
       :bono  => "dos imperiales azules aturden al objetivo",
-      :mix   => [
-        {:tipo => 'gema', :id => 14},
-        {:tipo => 'gema', :id => 20},
-        {:tipo => 'gema', :id => 21}]
+      :mix   => {:gemas => [14,20,21] }
     },
     {
       :id    => 1,
       :name  => "maestra helada",
       :bono  => "+1 de ataque",
-      :mix   => [
-        {:tipo => 'gema', :id => 21},
-        {:tipo => 'gema', :id => 21},
-        {:tipo => 'gema', :id => 21}]
+      :mix   => {:gemas => [21,21,21] }
     },
     {
       :id    => 2,
       :name  => "maestra del fuego",
       :bono  => "+1 de ataque",
-      :mix   => [
-        {:tipo => 'gema', :id => 23},
-        {:tipo => 'gema', :id => 23},
-        {:tipo => 'gema', :id => 16}]
+      :mix   => {:gemas => [23,16,23] }
     },
     {
       :id    => 3,
       :name  => "joturos",
       :bono  => "+1 PV al obtener al menos un escudo negro en la defensa.",
-      :mix   => [
-        {:tipo => 'gema', :id => 27},
-        {:tipo => 'gema', :id => 25},
-        {:tipo => 'gema', :id => 27}]
+      :mix   => {:gemas => [27,25,27] }
+
     },
     {
       :id    => 4,
       :name  => "mil ojos",
       :bono  => "Rayos a los enemigos adyacentes",
-      :mix   => [
-        {:tipo => 'gema', :id => 5},
-        {:tipo => 'gema', :id => 5},
-        {:tipo => 'gema', :id => 5}]
+      :mix   => {:gemas => [5,5,5] }
     }
   ]
 end
 
 def tier(id)
   tiers[id]
+end
+
+def is_tier?(combo)
+  false
 end
