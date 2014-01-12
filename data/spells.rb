@@ -22,31 +22,31 @@ def spells
       :name         => "genio",
       :elemento     => "aire",
       :nivel        => 1,
-      :descripcion  => "Causa 2 dados de ataque por fuego."
+      :descripcion  => "Causa 4 dados de ataque por aire, o abre una puerta desvelando la sala."
     },
     { :id           => 5,
       :name         => "tempestad",
       :elemento     => "aire",
       :nivel        => 1,
-      :descripcion  => "Aturde a un enemigo"
+      :descripcion  => "Aturde a un enemigo."
     },
     { :id           => 6,
       :name         => "rafaga",
       :elemento     => "aire",
       :nivel        => 1,
-      :descripcion  => "+5 puntos de movimiento"
+      :descripcion  => "+5 puntos de movimiento."
     },
     { :id           => 7,
       :name         => "piel de piedra",
       :elemento     => "tierra",
       :nivel        => 1,
-      :descripcion  => "+1 defensa"
+      :descripcion  => "+1 defensa."
     },
     { :id           => 8,
       :name         => "atravesar muros",
       :elemento     => "tierra",
       :nivel        => 1,
-      :descripcion  => "Permite atravesar muros"
+      :descripcion  => "Permite atravesar muros."
     },
     { :id           => 9,
       :name         => "cura corporal",
@@ -58,7 +58,7 @@ def spells
       :name         => "niebla",
       :elemento     => "agua",
       :nivel        => 1,
-      :descripcion  => "Permite moverse sin ser visto"
+      :descripcion  => "Permite moverse sin ser visto."
     },
     { :id           => 11,
       :name         => "agua que cura",
@@ -82,7 +82,7 @@ def spells
       :name         => "manto de oscuridad",
       :elemento     => "sombra",
       :nivel        => 1,
-      :descripcion  => "Nadie puede atacar en la sala"
+      :descripcion  => "Nadie puede atacar en la sala."
     },
     { :id           => 15,
       :name         => "cadena de tinieblas",
