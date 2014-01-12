@@ -36,6 +36,15 @@ def tiers
         {:tipo => 'gema', :id => 27},
         {:tipo => 'gema', :id => 25},
         {:tipo => 'gema', :id => 27}]
+    },
+    {
+      :id    => 4,
+      :name  => "mil ojos",
+      :bono  => "Rayos a los enemigos adyacentes",
+      :mix   => [
+        {:tipo => 'gema', :id => 5},
+        {:tipo => 'gema', :id => 5},
+        {:tipo => 'gema', :id => 5}]
     }
   ]
 end
