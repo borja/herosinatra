@@ -9,8 +9,10 @@
 		</h3></center>
 		<li>Valor de ataque: <%= arma(a[:id])[:powa] %></li>
 		<%= "<li>Permite atacar en diagonal</li>" if arma(a[:id])[:diagonal] %>
-		<%= "<li>Arma mundana</li>" if mundano?(a) %>
-		
+		<%= "<li>Arma mundana</li>"               if mundano?(a) %>
+			<% if is_tier?({:gemas => a[:gemas]}) %>
+				<%= "<li>TIER : #{tier(is_tier?({:gemas => a[:gemas]}))[:name].capitalize } </li>" %>
+			<% end %>
 		<% unless mundano?(a) %>
 			<h4>Engarces</h4>
 			<% if a[:gemas] %>

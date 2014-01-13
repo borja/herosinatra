@@ -40,5 +40,9 @@ def tier(id)
 end
 
 def is_tier?(combo)
-  false
+  output = nil
+  tiers.each do |t|
+    output = t[:id] if t[:mix] == combo
+  end
+  return output
 end
