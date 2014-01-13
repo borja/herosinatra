@@ -66,11 +66,9 @@
 						</table>
 					<% end %>					
 				</td>
-				<td>
-					<table id='table-2'>
+				<td><table id='table-2'>
 						<tbody>
-							<tr>
-								<% hero[:armas].each do |a| %>
+							<tr><% hero[:armas].each do |a| %>
 									<td><%= erb :'display/item', :locals => { :a => a } %></td>
 								<% end %>
 							</tr>
