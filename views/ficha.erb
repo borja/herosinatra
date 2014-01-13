@@ -233,8 +233,10 @@
 					<body>
 						<tr><% familiar = pet(@heroe[:pets]) %>
 							<td>
-								<% img_path = "'../../images/pets/#{familiar[:name]}.png'" %>
-								<img src=<%=img_path%> alt=<%=familiar[:name]%>, id='icon' />
+								<%= erb :'display/display', :locals => { 
+									:title       => familiar[:name].capitalize, 
+									:path        => "'../../images/pets/#{familiar[:name]}.png'",
+									:description => familiar[:bono] } %>
 							</td>
 							<td><%= familiar[:name].capitalize %></td>
 							<td><%= familiar[:bono] %></td>
@@ -350,7 +352,3 @@
 		</td></tr>
 	</tbody>
 </table>
-
-<%= erb :'display/display', :locals => { :title       => 'Valentia', 
-										 :path        => "'../images/spells/cura\ corporal.png'",
-										 :description => '+1 dado de ataque'} %>
