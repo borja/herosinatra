@@ -1,6 +1,11 @@
 ﻿# encoding: UTF-8
 def pets
   [
+    { :id           => 0,
+      :name         => "castor",
+      :personajes    => ["enano"],
+      :bono         => "+1 puertas secretas"
+    },
     { :id           => 1,
       :name         => "gato",
       :personajes    => ["mago"],
@@ -105,5 +110,5 @@ def pets
 end
 
 def pet(id)
-  pets[id-1]
+  pets[id]
 end
