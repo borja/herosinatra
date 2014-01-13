@@ -80,11 +80,5 @@ class App < Sinatra::Base
   end
   get '/tesoro' do
     erb :tesoro
-  end 
-  get '/display' do
-    @name = 'Title'
-    @path = "'../images/spells/valentia.png'"
-    @description = '+1 dado de ataque'
-    erb :display
-  end     
+  end    
 end
