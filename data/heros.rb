@@ -287,7 +287,7 @@ def heros
                      {:id => 5,
                       :enchants => [8]}],
       :miscs     => [],
-      :skills    => [1,2,6],
+      :skills    => [1],
       :sex       => "female",
       :gemas     => [2],
       :status    => "activo",
