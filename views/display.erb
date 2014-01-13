@@ -1,18 +1,15 @@
-<link rel="stylesheet" href="app.css" type="text/css" />
-
-<html>
-<head>
-	<title>Display</title>
-	<link rel="stylesheet" href="app.css" type="text/css" />
-</head>
-
-<body>
-	<div class="information_popup_container">
-		<div class="information">
-			<%= erb :show %>
-		</div>
-		<div class="popup_information">
-			<%= erb :hide %>
-		</div>
+<div class="information_popup_container">
+	<div class="information">
+		<% @title %>
+		<img src=<%= @path %> alt=<%= @title %>, id='icon' />
 	</div>
-</body>
+	<div class="popup_information">
+		<center>
+			<h3>	
+				<%= @title %><br><br>
+				<img src=<%= @path %> alt=<%= @title %>, id='icon3' />
+			</h3>
+		</center>
+		<%= @description %>
+	</div>
+</div>
