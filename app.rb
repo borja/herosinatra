@@ -82,6 +82,8 @@ class App < Sinatra::Base
     erb :tesoro
   end 
   get '/display' do
+    @show = 'Title'
+    @hide = 'Description'
     erb :display
   end     
 end
