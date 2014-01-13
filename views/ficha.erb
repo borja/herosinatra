@@ -350,8 +350,7 @@
 		</td></tr>
 	</tbody>
 </table>
-<% @name = 'Valentia' %>
-<% @path = "'../images/spells/cura\ corporal.png'" %>
-<% @description = '+1 dado de ataque' %>
 
-<%= erb :display %>
+<%= erb :'display/display', :locals => { :title       => 'Valentia', 
+										 :path        => "'../images/spells/cura\ corporal.png'",
+										 :description => '+1 dado de ataque'} %>
