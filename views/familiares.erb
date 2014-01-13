@@ -9,7 +9,9 @@
 			<th>ID</th>
 			<th>Icono</th>
 			<th>Nombre</th>
-			<th>Descripción</th>
+			<th>Clases</th>
+			<th>Bonificador</th>
+			<th>Lacra</th>
 		</tr>	
 	</thead>
 	<tbody>
@@ -18,10 +20,18 @@
 				<td><%= p[:id] %></td>
 				<td>
 					<% img_path = "'../images/pets/#{p[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=p[:name]%>, id='icon' />
+					<img src=<%=img_path%> alt=<%=p[:name]%>, id='icon2' />
 				</td>
 				<td><%= p[:name].capitalize %></td>
+				<td><% p[:personajes].each do |pj| %>
+						<img src=../images/personajes/<%= pj %>.png alt=<%= pj %> /, id='icon'>
+						<% unless pj=="enano" %>
+							<img src=../images/personajes/<%= genderize(pj,"female") %>.png alt="personaje" /, id='icon'>
+						<% end %>
+					<% end %>
+				</td>
 				<td><%= p[:bono] %></td>
+				<td>XXX</td>
 			</tr>
 		<% end %>
 	</tbody>

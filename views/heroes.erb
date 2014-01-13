@@ -19,13 +19,13 @@
 			<th>Héroe</th>
 			<th>Personaje</th>
 			<th>Nivel</th>
-			<th>Reputación</th>
+			<th><a href=/familiares>Familiares</a></th>
 			<th>Hechizos Conocidos</th>
 			<th><a href=/armas>Armas</a></th>
 			<th><a href=/armaduras>Armaduras</a></th>
 			<th><a href=/protecciones>Protecciones</a></th>	
 			<th><a href=/miscelaneas>Miscelaneas</a></th>		
-			<th><a href=/familiares>Familiares</a></th>
+			<th>Reputación</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -46,9 +46,13 @@
 					<i><%= hero[:personaje].capitalize.gsub('Lord','Señor') %></i>
 				</td>
 				<td style="font-size:28px;"><%= hero[:nivel] %></td>
-				<td style="background-image:url(../images/ficha/star.png); 
-					background-repeat: no-repeat; background-position:center;">
-					<%= hero[:repu] || 0 %></td>
+				<td><% if hero[:pet] %>
+						<%= erb :'display/display', :locals => { 
+							:title       => pet(hero[:pet])[:name], 
+							:path        => "'images/pets/#{pet(hero[:pet])[:name]}.png'",
+							:description => pet(hero[:pet])[:bono] } %>
+					<% end %>						
+				</td>
 				<td><% if hero[:hechizos] %>
 						<table id='table-2'>
 							<tbody>
@@ -245,21 +249,9 @@
 						</tbody>
 					</table>
 				</td>
-				<td><% if hero[:pet] %>
-						<div class="information_popup_container">
-							<div class="information">
-								<% img_path = "'images/pets/#{pet(hero[:pet])[:name]}.png'" %>
-								<img src=<%=img_path%> alt=<%=pet(hero[:pet])[:name]%>, id='icon' /> 
-							</div>
-							<div class="popup_information">
-								<center><h3>	
-									<%=pet(hero[:pet])[:name].capitalize %><br>
-									<img src=<%=img_path%> alt=<%=pet(hero[:pet])[:name]%>, id='icon3' />
-								</h3></center>
-							</div>
-						</div>
-					<% end %>						
-				</td>
+				<td style="background-image:url(../images/ficha/star.png); 
+					background-repeat: no-repeat; background-position:center;">
+					<%= hero[:repu] || 0 %></td>
 			</tr>
 		<% end %><% end %>
 	</tbody>

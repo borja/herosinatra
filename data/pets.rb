@@ -33,8 +33,9 @@ def pets
     },
     { :id           => 6,
       :name         => "sapo",
-      :razas        => ["mago"],
-      :bono         => "+1 PC"
+      :personajes   => ["mago"],
+      :bono         => "+1 PC",
+      :lacra        => "-1 vs Peste"
     },
     { :id           => 7,
       :name         => "culebra",
@@ -48,7 +49,7 @@ def pets
     },
     { :id           => 9,
       :name         => "araña",
-      :razas        => ["mago"],
+      :personajes   => ["mago"],
       :bono         => "+1 saltar fosos"
     },
     { :id           => 10,
