@@ -1,0 +1,48 @@
+<div class="information_popup_container">
+	<div class="information">
+		<img src=<%= enthralled(a) %> alt=<%= arma(a[:id])[:name] %>, id='icon' />
+	</div>
+	<div class="popup_information">
+		<center><h3>
+			<%= arma(a[:id])[:name].capitalize %><br>
+			<img src=<%= enthralled(a) %> alt=<%= arma(a[:id])[:name] %>, id='icon3' />
+		</h3></center>
+		<li>Valor de ataque: <%= arma(a[:id])[:powa] %></li>
+		<%= "<li>Permite atacar en diagonal</li>" if arma(a[:id])[:diagonal] %>
+		<h4>Engarces</h4>
+			<% if mundano?(a) %>
+				El arma no tiene engarces.
+			<% else %>
+				<% if a[:gemas] %>
+					<% a[:gemas].each do |g| %>
+						<% img_path = "'../../images/treasures/gemas/#{gema(g)[:name]}.png'" %>
+						<img src=<%=img_path%> alt=<%=gema(g)[:name]%>, id='icon' />
+					<% end %>
+				<% end %>
+				<% if a[:joyas] %>						
+					<% a[:joyas].each do |j| %>
+						<% img_path = "'../../images/treasures/joyas/#{joya(j)[:name]}.png'" %>
+						<img src=<%=img_path%> alt=<%=joya(j)[:name]%>, id='icon' />
+					<% end %>
+				<% end%>
+				<% if a[:runas] %>
+					<% a[:runas].each do |r| %>
+						<% img_path = "'../../images/treasures/runas/#{runa(r)[:name]}.png'" %>
+						<img src=<%=img_path%> alt=<%=runa(r)[:name]%>, id='icon' />
+					<% end %>
+				<% end %>
+				<% if a[:ranuras] %>
+					<% a[:ranuras].times do %>
+						<% img_path = "'../../images/treasures/socket.png'" %>
+						<img src=<%=img_path%> alt='ranura-hueca', id='icon' />
+						<% end %>						
+				<% end %>						
+			<% end %>
+		<% if a[:enchants] %>	
+			<h4>Propiedades mágicas</h4>
+			<% a[:enchants].each do |e| %>
+				<li><%= enchant(e)[:name].capitalize %>
+			<% end %>
+		<% end %>	
+	</div>
+</div>
