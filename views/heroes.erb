@@ -286,16 +286,16 @@
 						</tbody>
 					</table>
 				</td>
-				<td><% if hero[:pets] %>
+				<td><% if hero[:pet] %>
 						<div class="information_popup_container">
 							<div class="information">
-								<% img_path = "'images/pets/#{pet(hero[:pets])[:name]}.png'" %>
-								<img src=<%=img_path%> alt=<%=pet(hero[:pets])[:name]%>, id='icon' /> 
+								<% img_path = "'images/pets/#{pet(hero[:pet])[:name]}.png'" %>
+								<img src=<%=img_path%> alt=<%=pet(hero[:pet])[:name]%>, id='icon' /> 
 							</div>
 							<div class="popup_information">
 								<center><h3>	
-									<%=pet(hero[:pets])[:name].capitalize %><br>
-									<img src=<%=img_path%> alt=<%=pet(hero[:pets])[:name]%>, id='icon3' />
+									<%=pet(hero[:pet])[:name].capitalize %><br>
+									<img src=<%=img_path%> alt=<%=pet(hero[:pet])[:name]%>, id='icon3' />
 								</h3></center>
 							</div>
 						</div>

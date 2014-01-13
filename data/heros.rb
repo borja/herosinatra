@@ -89,7 +89,7 @@ def heros
                       {:id      => 2,
                        :spells  => [6,9]},
                       {:id      => 3}],
-      :pets      => 11,
+      :pet       => 11,
       :status    => "activo"
     },
     { :id        => 3,
@@ -134,7 +134,7 @@ def heros
       :sex       => "female",
       :joyas     => [8],
       :gemas     => [14,15,18,22],
-      :pets      => 20,
+      :pet       => 20,
       :status    => "reserva"
     },
     { :id        => 5,
