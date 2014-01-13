@@ -4,10 +4,10 @@
 	</div>
 	<div class="popup_information">
 		<center><h3>
-			<%= arma(a[:id])[:name].capitalize %><br>
+			<%= arma(a[:id])[:name].capitalize %><br><br>
 			<img src=<%= enthralled(a) %> alt=<%= arma(a[:id])[:name] %>, id='icon3' />
 		</h3></center>
-		<li>Valor de ataque: <%= arma(a[:id])[:powa] %></li>
+		<li>Valor de combate: <%= arma(a[:id])[:powa] %></li>
 		<%= "<li>Permite atacar en diagonal</li>" if arma(a[:id])[:diagonal] %>
 		<%= "<li>Arma mundana</li>"               if mundano?(a) %>
 		<% unless mundano?(a) %>
