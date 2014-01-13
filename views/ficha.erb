@@ -171,10 +171,20 @@
 							<% if @heroe[:prots].empty? %>
 								El personaje no tiene ninguna protección aun.
 							<% else %>
-								<% @heroe[:prots].each do |p|%>
-									<% img_path = "'../images/protecciones/#{proteccion(p[:id])[:name]}.png'" %>
-									<img src=<%=img_path%> alt=<%=proteccion(p[:id])[:name]%>, id='icon' />
-								<% end %>
+								<table id='table-2'>
+									<tbody>
+										<tr>
+											<% @heroe[:prots].each do |p|%>
+												<td>
+													<%= erb :'display/display', :locals => { 
+														:title       => proteccion(p[:id])[:name].capitalize, 
+														:path        => "'../images/protecciones/#{proteccion(p[:id])[:name]}.png'",
+														:description => proteccion(p[:id])[:powa] } %>
+												</td>
+											<% end %>
+										</tr>
+									</tbody>
+								</table>
 							<% end%>
 						</td>
 						<td>
