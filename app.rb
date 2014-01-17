@@ -72,6 +72,12 @@ class App < Sinatra::Base
   get '/hechizos' do
     erb :hechizos
   end
+  get '/piezas' do
+    erb :piezas
+  end
+  get '/supervivencia' do
+    erb :supervivencia
+  end
   get '/habilidades/:char' do |clase|
     @char = clase
     erb :disciplinas
