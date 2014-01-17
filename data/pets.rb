@@ -13,7 +13,7 @@ def pets
     },
     { :id           => 2,
       :name         => "mapache",
-      :personajes    => ["barbaro"],
+      :personajes    => ["barbaro","enano"],
       :bono         => "+1 encontrar puertas secretas"
     },
     { :id           => 3,
@@ -84,12 +84,12 @@ def pets
     },
     { :id           => 16,
       :name         => "huron",
-      :personajes    => ["barbaro"],
+      :personajes    => ["barbaro","enano"],
       :bono         => "+1 movimiento"
     },
     { :id           => 17,
       :name         => "ardilla",
-      :personajes    => ["barbaro"],
+      :personajes    => ["barbaro","enano"],
       :bono         => "+1 PM"
     },
     { :id           => 18,
