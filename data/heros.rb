@@ -339,6 +339,10 @@ def heros
       :skills    => [1,2,3,4,5,6],
       :sex       => "male",
       :gemas     => [3,12,24],
+      :pergaminos => [{:id => 3,
+                       :spells => [1]},
+                      {:id => 3,
+                       :spells => [1]},
       :status    => "activo"
     },    
     { :id        => 14,
