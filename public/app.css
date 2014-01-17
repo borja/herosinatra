@@ -1,5 +1,10 @@
 html {background-color:#878787;}
-h1 {text-align: center;}
+h1 {text-align: center;
+	padding:10px 5px 15px 20px;}
+	
+h3 {text-align: center;
+	padding:15px 5px 15px 5px;
+	color: white;}
 
 #table-2 {
     width: 96%;
