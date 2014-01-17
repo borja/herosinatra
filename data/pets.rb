@@ -94,8 +94,9 @@ def pets
     },
     { :id           => 18,
       :name         => "comadreja",
-      :personajes    => ["barbaro"],
-      :bono         => "+1 resistencia (todo)"
+      :personajes    => ["barbaro","enano"],
+      :bono         => "+1 resistencia (peste)"
+      :lacra        => "Roba el primer tesoro de comida del reto, podrida o no"
     },
       { :id         => 19,
       :name         => "pitufo",
