@@ -2,7 +2,8 @@ require 'sinatra/base'
 
 class App < Sinatra::Base
   get '/' do
-    erb :menu
+    @status = "activo"
+    erb :heroes
   end
 
   get '/heroes' do
