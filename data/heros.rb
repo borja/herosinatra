@@ -268,6 +268,7 @@ def heros
       :gemas     => [5,21,41],
       :joyas     => [3],
       :status    => "activo",
+      :pet       => 8,
     },    
     { :id        => 11,
       :name      => "Lindele",
