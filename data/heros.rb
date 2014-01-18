@@ -263,7 +263,7 @@ def heros
       :armaduras => [{:id => 1}],
       :prots     => [{:id => 6, :ranuras => 1}],
       :miscs     => [{:id => 2, :ranuras => 1}],
-      :skills    => [1,2],
+      :skills    => [0,1,2,3],
       :sex       => "male",
       :gemas     => [5,21,41],
       :joyas     => [3],
