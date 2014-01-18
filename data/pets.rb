@@ -56,6 +56,7 @@ def pets
       :name         => "urraca púrpura",
       :personajes   => ["mago"],
       :bono         => "+10 al oro del tesoro"
+      :lacra        => "Roba la mitad de oro de la primera tirada de tesoro de un aliado"
     },
     { :id           => 11,
       :name         => "saprolín",
