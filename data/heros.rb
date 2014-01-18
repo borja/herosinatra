@@ -327,7 +327,7 @@ def heros
       :personaje => "falangista",
       :jugador   => "Daniel de Haro",
       :nivel     => 4,
-      :cuerpo    => 8,
+      :cuerpo    => 9,
       :mente     => 4,
       :mov       => 6,
       :armas     => [{:id       => 7,
