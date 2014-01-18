@@ -1,7 +1,9 @@
+<%= erb :menu %><br><br><br<br>
+
+<link rel="stylesheet" href="../../css/main.css" type="text/css" />
 <link rel="stylesheet" href="../../app.css" type="text/css" />
 
-<h1><center>Lista de Familiares</center></h1>
-<a href=/>Índice</a><br><br>
+<h1>Lista de Familiares</h1><br><br>
 
 <table id='table-2'>
 	<thead>
@@ -31,7 +33,7 @@
 					<% end %>
 				</td>
 				<td><%= p[:bono] %></td>
-				<td>XXX</td>
+				<td><%= p[:lacra] || "Sin implementar" %></td>
 			</tr>
 		<% end %>
 	</tbody>
