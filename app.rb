@@ -70,6 +70,11 @@ class App < Sinatra::Base
     erb :habilidades
   end
   get '/hechizos' do
+    @spelllevel = 1
+    erb :hechizos
+  end
+  get '/hechizos/:level' do |level|
+    @spelllevel = level
     erb :hechizos
   end
   get '/piezas' do
