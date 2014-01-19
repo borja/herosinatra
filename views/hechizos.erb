@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="../../css/main.css" type="text/css" />
 <link rel="stylesheet" href="../../app.css" type="text/css" />
 
-<h1>Lista de Hechizos</h1><br><br>
+<h1>Hechizos de nivel <%= @spelllevel %></h1><br><br>
 
 <table id='table-2'>
 <thead>
@@ -15,13 +15,14 @@
 <tbody>
 	<% spells.each do |s|%>
 		<% if @spelllevel.to_i == s[:nivel] %>
-			<tr style=<%= color(spell(s[:id])[:elemento])%>>				
-				<td><% img_path = "'../../images/spells/#{spell(s[:id])[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=spell(s[:id])[:name]%>, id='icon' />
+			<% magic = spell(s[:id]) %>
+			<tr style=<%= color(magic[:elemento])%>>				
+				<td><% img_path = "'../../images/spells/#{magic[:name]}.png'" %>
+					<img src=<%=img_path%> alt=<%=magic[:name]%>, id='icon' />
 				</td>
-				<td><%= spell(s[:id])[:elemento].capitalize %></td>
-				<td><%= spell(s[:id])[:name].capitalize %></td>
-				<td><%= spell(s[:id])[:descripcion] %></td>
+				<td><%= magic[:elemento].capitalize %></td>
+				<td><%= magic[:name].capitalize %></td>
+				<td><%= magic[:descripcion] %></td>
 			</tr>
 		<% end %>
 	<% end %>
