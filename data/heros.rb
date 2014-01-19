@@ -753,6 +753,23 @@ def heros
       :pociones  => [6],
       :status    => "retirado"
     },
+    { :id        => 33,
+      :name      => "El Kolo",
+      :personaje => "berserker",
+      :jugador   => "Daniel Cabañas",
+      :nivel     => 1,
+      :cuerpo    => 8,
+      :mente     => 2,
+      :mov       => 7,
+      :armas     => [{:id => 10, :ranuras => 1}],
+      :armaduras => [{:id => 2}],
+      :prots     => [{:id => 1}],
+      :miscs     => [],
+      :skills    => [],
+      :sex       => "male",
+      :runas     => [3],
+      :status    => "reserva",
+    }
   ]
 end
 
