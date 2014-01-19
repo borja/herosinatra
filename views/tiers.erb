@@ -1,7 +1,9 @@
+<%= erb :menu %><br><br><br<br>
+
+<link rel="stylesheet" href="../../css/main.css" type="text/css" />
 <link rel="stylesheet" href="../../app.css" type="text/css" />
 
-<h1><center>Lista de Tiers</center></h1>
-<a href=/>Índice</a><br><br>
+<h1>Lista de Tiers</h1><br><br>
 
 <table id='table-2'>
 	<thead>
@@ -16,13 +18,34 @@
 		<% tiers.each do |t| %>
 			<tr>
 				<td><%= t[:id] %></td>
-				<td><% t[:mix].keys.each do |familia| %>
-						<% t[:mix][familia.to_sym].each do |id| %>
-							<% engarce = send(familia)[id - 1][:name] %>
-							<% img_path = "'../images/treasures/#{familia}/#{engarce}.png'" %>
-							<img src=<%=img_path%> alt=<%= engarce %>, id='icon' />
-						<% end %>
-					<% end%>
+				<td><table id='table-2'>
+						<tbody>
+							<tr>
+								<% t[:mix].keys.each do |familia| %>
+									<% t[:mix][familia.to_sym].each do |id| %>
+										<td>
+											<div class="information_popup_container">
+												<div class="information">
+													<% engarce = send(familia)[id - 1][:name] %>
+													<% img_path = "'../images/treasures/#{familia}/#{engarce}.png'" %>
+													<img src=<%=img_path%> alt=<%= engarce %>, id='icon' />
+												</div>
+												<div class="popup_information">
+													<center><h3>	
+														<%= engarce.capitalize %><br><br>
+														<img src=<%=img_path%> alt=<%= engarce %>, id='icon3' />
+													</h3></center>
+													<% if familia.to_s == 'gemas' %><br>
+														<%= gema_calidad(send(familia)[id - 1][:calidad]) %>
+													<% end %>
+												</div>
+											</div>
+										</td>
+									<% end %>
+								<% end %>
+							</tr>
+						</tbody>
+					</table>
 				</td>
 				<td><%= t[:name].capitalize %></td>
 				<td><%= t[:bono].capitalize %></td>
@@ -30,3 +53,4 @@
 		<% end %>
 	</tbody>
 </table>
+

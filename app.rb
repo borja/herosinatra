@@ -2,8 +2,10 @@ require 'sinatra/base'
 
 class App < Sinatra::Base
   get '/' do
-    erb :index
+    @status = "activo"
+    erb :heroes
   end
+
   get '/heroes' do
     @status = "activo"
     erb :heroes
@@ -68,7 +70,18 @@ class App < Sinatra::Base
     erb :habilidades
   end
   get '/hechizos' do
+    @spelllevel = 1
     erb :hechizos
+  end
+  get '/hechizos/:level' do |level|
+    @spelllevel = level
+    erb :hechizos
+  end
+  get '/piezas' do
+    erb :piezas
+  end
+  get '/supervivencia' do
+    erb :supervivencia
   end
   get '/habilidades/:char' do |clase|
     @char = clase
@@ -80,8 +93,5 @@ class App < Sinatra::Base
   end
   get '/tesoro' do
     erb :tesoro
-  end 
-  get '/display' do
-    erb :display
-  end     
+  end    
 end

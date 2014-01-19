@@ -138,6 +138,12 @@ def spells
       :nivel        => 1,
       :descripcion  => "Cualquier criatura o personaje en la misma sala/pasillo queda 1 turno catatonico sin hacer nada. Puede defenderse sacando menos que sus PM."
     },
+    { :id           => 24,
+      :name         => "cono de llamas",
+      :elemento     => "fuego",
+      :nivel        => 2,
+      :descripcion  => "Cono de 1-3-5. 2 dados rojos de ataque por fuego, defendibles.",
+    },
   ]
 end
 

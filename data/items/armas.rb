@@ -146,7 +146,7 @@ end
 
 def enthralled(a)
   if a[:enchants]
-    return "../images/armas/magic/#{arma(a[:id])[:name] + a[:enchants].size.to_s}.png"
+    return "'../images/armas/magic/#{arma(a[:id])[:name] + a[:enchants].size.to_s}.png'"
   else
     return "../images/armas/#{arma(a[:id])[:name]}.png"
   end

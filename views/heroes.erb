@@ -1,16 +1,7 @@
 <title>HeroSheet: Lista de héroes</title>
 <body>
-<center><img src="images/logo.png" alt="Proyecto Heroquest" /></center>
+<%= erb :menu %><br><br><br<br>
 <link rel="stylesheet" href="app.css" type="text/css" />
-<a href=/>Índice</a><br><br>
-
-
-<ul id="tabs">
- <li id="tab1"><a href="heroes">Activos</a></li>
- <li id="tab2"><a href="reservistas">Reservistas</a></li>
- <li id="tab3"><a href="licenciados">Licenciados</a></li>
- <li id="tab4"><a href="ausentes">Ermitaños</a></li>
-</ul>
 
 <table id='table-2'>
 	<thead>
@@ -19,13 +10,13 @@
 			<th>Héroe</th>
 			<th>Personaje</th>
 			<th>Nivel</th>
-			<th>Reputación</th>
+			<th><a href=/familiares>Familiares</a></th>
 			<th>Hechizos Conocidos</th>
 			<th><a href=/armas>Armas</a></th>
 			<th><a href=/armaduras>Armaduras</a></th>
 			<th><a href=/protecciones>Protecciones</a></th>	
 			<th><a href=/miscelaneas>Miscelaneas</a></th>		
-			<th><a href=/familiares>Familiares</a></th>
+			<th>Reputación</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -46,71 +37,34 @@
 					<i><%= hero[:personaje].capitalize.gsub('Lord','Señor') %></i>
 				</td>
 				<td style="font-size:28px;"><%= hero[:nivel] %></td>
-				<td style="background-image:url(../images/ficha/star.png); 
-					background-repeat: no-repeat; background-position:center;">
-					<%= hero[:repu] || 0 %></td>
+				<td><% if hero[:pet] %>
+						<%= erb :'display/display', :locals => { 
+							:title       => pet(hero[:pet])[:name], 
+							:path        => "'images/pets/#{pet(hero[:pet])[:name]}.png'",
+							:description => pet(hero[:pet])[:bono] } %>
+					<% end %>						
+				</td>
 				<td><% if hero[:hechizos] %>
-						<% elements(hero[:hechizos]).each do |e| %>	
-							<% img_path =  "'images/elements/#{e}.png'" %>
-							<img src=<%=img_path%> alt=<%=e%>, id='icon' />
-						<% end %>
+						<table id='table-2'>
+							<tbody>
+								<tr>
+									<% elements(hero[:hechizos]).each do |e| %>	
+										<td>
+											<%= erb :'display/display', :locals => { 
+												:title       => e, 
+												:path        => "'../images/elements/#{e}.png'",
+												:description => "" } %>
+										</td>
+									<% end %>
+								</tr>
+							</tbody>
+						</table>
 					<% end %>					
 				</td>
-				<td>
-					<table id='table-2'>
+				<td><table id='table-2'>
 						<tbody>
-							<tr>
-								<% hero[:armas].each do |a| %>
-									<td><div class="information_popup_container">
-										<div class="information">
-											<% img_path = enthralled(a) %>
-											<img src='<%=img_path%>' alt=<%=arma(a[:id])[:name]%>, id='icon' /> 
-										</div>
-										<div class="popup_information">
-											<% img_path = enthralled(a) %>
-											<center><h3>
-												<%=arma(a[:id])[:name].capitalize %><br><br>
-												<img src='<%=img_path%>' alt=<%=arma(a[:id])[:name]%>, id='icon3' /> 
-											</h3></center>
-											<li>Valor de ataque: <%=arma(a[:id])[:powa] %></li>
-											<%= "<li>Permite atacar en diagonal</li>" if arma(a[:id])[:diagonal] %>
-											<h4>Engarces</h4>
-												<% if mundano?(a) %>
-													El arma no tiene engarces.
-												<% else %>
-													<% if a[:gemas] %>
-														<% a[:gemas].each do |g| %>
-															<% img_path = "'../../images/treasures/gemas/#{gema(g)[:name]}.png'" %>
-															<img src=<%=img_path%> alt=<%=gema(g)[:name]%>, id='icon' />
-														<% end %>
-													<% end %>
-													<% if a[:joyas] %>						
-														<% a[:joyas].each do |j| %>
-															<% img_path = "'../../images/treasures/joyas/#{joya(j)[:name]}.png'" %>
-															<img src=<%=img_path%> alt=<%=joya(j)[:name]%>, id='icon' />
-														<% end %>
-													<% end%>
-													<% if a[:runas] %>
-														<% a[:runas].each do |r| %>
-															<% img_path = "'../../images/treasures/runas/#{runa(r)[:name]}.png'" %>
-															<img src=<%=img_path%> alt=<%=runa(r)[:name]%>, id='icon' />
-														<% end %>
-													<% end %>
-													<% if a[:ranuras] %>
-														<% a[:ranuras].times do %>
-															<% img_path = "'../../images/treasures/socket.png'" %>
-															<img src=<%=img_path%> alt='ranura-hueca', id='icon' />
-															<% end %>						
-													<% end %>						
-												<% end %>
-											<% if a[:enchants] %>	
-												<h4>Propiedades mágicas</h4>
-												<% a[:enchants].each do |e| %>
-													<li><%= enchant(e)[:name].capitalize %>
-												<% end %>
-											<% end %>	
-										</div>
-									</div></td>
+							<tr><% hero[:armas].each do |a| %>
+									<td><%= erb :'display/item', :locals => { :a => a } %></td>
 								<% end %>
 							</tr>
 						</tbody>
@@ -286,21 +240,9 @@
 						</tbody>
 					</table>
 				</td>
-				<td><% if hero[:pets] %>
-						<div class="information_popup_container">
-							<div class="information">
-								<% img_path = "'images/pets/#{pet(hero[:pets])[:name]}.png'" %>
-								<img src=<%=img_path%> alt=<%=pet(hero[:pets])[:name]%>, id='icon' /> 
-							</div>
-							<div class="popup_information">
-								<center><h3>	
-									<%=pet(hero[:pets])[:name].capitalize %><br>
-									<img src=<%=img_path%> alt=<%=pet(hero[:pets])[:name]%>, id='icon3' />
-								</h3></center>
-							</div>
-						</div>
-					<% end %>						
-				</td>
+				<td style="background-image:url(../images/ficha/star.png); 
+					background-repeat: no-repeat; background-position:center;">
+					<%= hero[:repu] || 0 %></td>
 			</tr>
 		<% end %><% end %>
 	</tbody>

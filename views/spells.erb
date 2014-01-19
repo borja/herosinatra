@@ -1,6 +1,9 @@
-<h1><center>Lista de Hechizos de <%= @heroe[:name]%></center></h1>
-<a href=/>Índice</a><br><br>
+<%= erb :menu %><br><br><br<br>
+
+<link rel="stylesheet" href="../../css/main.css" type="text/css" />
 <link rel="stylesheet" href="../../app.css" type="text/css" />
+
+<h1>Hechizos de <%= @heroe[:name]%></h1><br><br>
 
 <% unless @heroe[:hechizos].empty? %>
 	<table id='table-2'>
