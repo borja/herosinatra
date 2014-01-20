@@ -95,6 +95,16 @@ def enchants
       :descripcion  => "ataca con fuego.",
       :tipo         => "fuego",
     },
+    { :id           => 20,
+      :name         => "imperial",
+      :descripcion  => "el objeto otorga + 1 Punto de reputacion.",
+      :tipo         => "imperial",
+    },
+    { :id           => 21,
+      :name         => "osea",
+      :descripcion  => "1/reto: 6+/Gloria del Heroe.",
+      :tipo         => "hueso",
+    },
   ]
 end
 
