@@ -46,6 +46,7 @@ def pets
       :name         => "búho",
       :personajes   => ["mago"],
       :bono         => "+1 hechizo",
+      :lacra         => "Mientras el buho sea visible, todos los familiares roedores de los aliados se negaran a salir.",
     },
     { :id           => 9,
       :name         => "araña",
@@ -82,6 +83,7 @@ def pets
       :name         => "mariposa",
       :personajes   => ["elfo"],
       :bono         => "+1 resistencia (todo)",
+      :lacra         => "Si muere el personaje, ella tambien muere.",
     },
     { :id           => 16,
       :name         => "huron",
@@ -108,6 +110,7 @@ def pets
       :name         => "diablillo chillón",
       :personajes   => ["tiefling"],
       :bono         => "+1 Punto de Sombra",
+      :lacra         => "1/reto el Malvado Brujo podra hacer repetir la tirada de locura que le interese",
   },
   ]
 end
