@@ -10,7 +10,7 @@ def spells
       :name         => "fuego de ira",
       :elemento     => "fuego",
       :nivel        => 1,
-      :descripcion  => "Causa 1 dano a un enemigo del tablero."
+      :descripcion  => "Causa 1 dado de ataque a un enemigo del tablero."
     },
     { :id           => 3,
       :name         => "valentia",
@@ -154,31 +154,31 @@ def spells
       :name         => "aura de calor",
       :elemento     => "fuego",
       :nivel        => 2,
-      :descripcion  => "las miniaturas a melee arden. Se pierde el aura cuando se sufre una herida y se obtiene una defensa vs fuego de 4+, o +1."
+      :descripcion  => "Las miniaturas a melee arden. Se pierde el aura cuando se sufre una herida y se obtiene una defensa vs fuego de 4+, o +1."
     },
     { :id           => 27,
       :name         => "muro de fuego",
       :elemento     => "fuego",
       :nivel        => 2,
-      :descripcion  => "en 5 casillas lineales, si se atraviesan, hace 3 heridas por fuego. Se pueden reducir las casillas, aumentando el ataque a 5/fuego."
+      :descripcion  => "En 5 casillas lineales, si se atraviesan, hace 3 heridas por fuego. Se pueden reducir las casillas, aumentando el ataque a 5/fuego."
     },
     { :id           => 28,
       :name         => "lluvia de fuego",
       :elemento     => "fuego",
       :nivel        => 2,
-      :descripcion  => "en una sala, ataque de 1 dado de fuego. Todo objeto es destruido. Los enemigos se defienden con 1 solo dado."
+      :descripcion  => "En una sala, ataque de 1 dado de fuego. Todo objeto es destruido. Los enemigos se defienden con 1 solo dado."
     },
     { :id           => 29,
       :name         => "infierno",
       :elemento     => "fuego",
       :nivel        => 2,
-      :descripcion  => "en 1 casilla, ataque igneo de dados =mente del conjurador/2. Las casillas contiguas reciben 2. Magia sacrificada= +1 casilla de fuego."
+      :descripcion  => "En 1 casilla, ataque igneo de dados =mente del conjurador/2. Las casillas contiguas reciben 2. Magia sacrificada= +1 casilla de fuego."
     },
     { :id           => 30,
       :name         => "maldicion de piedra",
       :elemento     => "tierra",
       :nivel        => 2,
-      :descripcion  => "el objetivo se convierte en una estatua de piedra. Su defensa son +5 dados. Con una herida, muere. Hechizo permanente salvo que el objetivo obtenga 1 escudo negro en su primera defensa."
+      :descripcion  => "El objetivo se convierte en una estatua de piedra. Su defensa son +5 dados. Con una herida, muere. Hechizo permanente salvo que el objetivo obtenga 1 escudo negro en su primera defensa."
     },
     { :id           => 31,
       :name         => "muro de piedra",
@@ -190,13 +190,13 @@ def spells
       :name         => "tromba de meteoros",
       :elemento     => "tierra",
       :nivel        => 2,
-      :descripcion  => "las miniaturas sufren un ataque de 2 dados, que podran defender."
+      :descripcion  => "Las miniaturas sufren un ataque de 2 dados, que podran defender."
     },
     { :id           => 33,
       :name         => "hecatombe",
       :elemento     => "tierra",
       :nivel        => 2,
-      :descripcion  => "se invoca una roca cuyo ataque = mente del conjurador, defendible de 1 dado/punto de mente del conjurador."
+      :descripcion  => "Se invoca una roca cuyo ataque = mente del conjurador, defendible de 1 dado/punto de mente del conjurador."
     },
     { :id           => 34,
       :name         => "prision petrea",
@@ -208,7 +208,7 @@ def spells
       :name         => "escudo torreon",
       :elemento     => "tierra",
       :nivel        => 2,
-      :descripcion  => "un escudo de granito surge en la casilla frontal del mago. Se mueve con el ocupando una casilla adyacente, a eleccion. La defensa aumenta en +2 y dura hasta que el mago tenga una herida o no quepa el escudo."
+      :descripcion  => "Un escudo de granito surge en la casilla frontal del mago. Se mueve con el ocupando una casilla adyacente, a eleccion. La defensa aumenta en +2 y dura hasta que el mago tenga una herida o no quepa el escudo."
     },
     { :id           => 36,
       :name         => "rayo destructor",
@@ -238,13 +238,49 @@ def spells
       :name         => "aura de la tormenta",
       :elemento     => "aire",
       :nivel        => 2,
-      :descripcion  => "se usa sobre uno mismo. Defensa: +1. Los seres que se acerquen a melee sufren 1 ataque electrico y al final de su turno deben retroceder una casilla hacia atras, pudiendo sufrir colision. Duracion: hasta que el mago sufra una herida. ."
+      :descripcion  => "Se usa sobre uno mismo. Defensa: +1. Los seres que se acerquen a melee sufren 1 ataque electrico y al final de su turno deben retroceder una casilla hacia atras, pudiendo sufrir colision. Duracion: hasta que el mago sufra una herida. ."
     },
     { :id           => 41,
       :name         => "area de vacio",
       :elemento     => "aire",
       :nivel        => 2,
-      :descripcion  => "el mago elige 3 casillas contiguas y no lineales. El objetivo dentro de esas casillas, sufre un ataque de 1 dado. Si el objetivo sale de las casillas, el ataque sera de 3, pero el efecto desaparecera en las casillas anteriores."
+      :descripcion  => "El mago elige 3 casillas contiguas y no lineales. El objetivo dentro de esas casillas, sufre un ataque de 1 dado. Si el objetivo sale de las casillas, el ataque sera de 3, pero el efecto desaparecera en las casillas anteriores."
+    },
+    { :id           => 42,
+      :name         => "contrarrestar",
+      :elemento     => "agua",
+      :nivel        => 2,
+      :descripcion  => "Habilidad instantanea. El hechizo objetivo es anulado. Con un dado, si se obtiene una tirada igual o menor a la mente del adversario, se descarta la carta. Si no, se mantiene."
+    },
+    { :id           => 43,
+      :name         => "nube venenosa",
+      :elemento     => "agua",
+      :nivel        => 2,
+      :descripcion  => "No afecta a no-muertos. En 4 casillas elegidas, no lineales, el personaje que atraviese la nube pierde 1 PM, siendo defendible. Se puede desplazar la nube. Duracion= mente del hechicero."
+    },
+    { :id           => 44,
+      :name         => "cono acido",
+      :elemento     => "agua",
+      :nivel        => 2,
+      :descripcion  => "La casilla frontal al hechicero sufre un ataque por acido de 3 dados. Las 3 casillas posteriores, centradas en la frontal, 2 dados, y las 5 siguientes, centradas, 1 dado."
+    },
+    { :id           => 45,
+      :name         => "borboton",
+      :elemento     => "agua",
+      :nivel        => 2,
+      :descripcion  => "Proyecta a un enemigo en el aire y en el impacto de la caida sufre un ataque de 3 por agua y otros 4 por combate. El oponente puede estar en cualquier lugar del tablero."
+    },
+    { :id           => 46,
+      :name         => "la fuente de la vida",
+      :elemento     => "agua",
+      :nivel        => 2,
+      :descripcion  => "Sana durante 1d6 turnos 2 puntos de vida a cada personaje que beba de ella, y causa 2 ataques a muertes vivientes."
+    },
+    { :id           => 47,
+      :name         => "tsunami",
+      :elemento     => "agua",
+      :nivel        => 2,
+      :descripcion  => "Se inunda una habitacion ya revelada. Todos los objetos no magicos son destruidos. Defendible: sacando un escudo con 2 dados, o reducir en 1 sus puntos de cuerpo."
     },
   ]
 end
