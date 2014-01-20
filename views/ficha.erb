@@ -258,7 +258,7 @@
 						<% clase = ((@heroe[:personaje] == "lord de las bestias") ? "lord" : @heroe[:personaje] ) %>
 						<% @heroe[:skills].each do |id| %>
 							<% habilidad = send(@heroe[:personaje],id) %>
-							<tr><td><% img_path = "'../images/skills/#{@heroe[:personaje]}/#{habilidad[:name]}.png'" %>
+							<tr><td><% img_path = "'../images/skills/#{@heroe[:personaje]}/#{habilidad[:name].downcase}.png'" %>
 									<img src=<%=img_path%> alt=<%= habilidad[:name] %>, id='icon' />
 								</td>
 								<td>	<%= habilidad[:type].capitalize %></td>
