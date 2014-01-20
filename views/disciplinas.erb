@@ -1,29 +1,30 @@
 <title>Hero Sheet: Habilidades del <%= @char %></title>
+<%= erb :menu %><br><br><br<br>
+
+<link rel="stylesheet" href="../../css/main.css" type="text/css" />
 <link rel="stylesheet" href="../../app.css" type="text/css" />
-<body>
-	<h1>Lista de Habilidades del <%= @char %></h1>
-	<a href=/habilidades>Habilidades</a><br><br>
-	<table id='table-2'>
-		<thead>
-			<tr><% disciplinas.each do |d| %>
-					<th><%= d.capitalize %></th>
-				<% end %>
-			</tr>
-		</thead>
-		<tbody>
-			<% plural = ((@char == "lord de las bestias") ? "lords" : (@char+"s")) %>
-			<% send(plural).each do |c| %>
-				<tr><td><%= c[:id] %></td>
-					<td><% img_path = "'../images/skills/druida/#{c[:name]}.png'" %>
-						<img src=<%=img_path%> alt=<%= c[:name] %>, id='icon' />
-					</td>
-					<td><%= c[:type] %></td>
-					<td><%= c[:name].capitalize %></td>
-					<td><i><%= c[:description] %></i></td>
-					<td><%= "In progress" %></td>
-					<td><%= "In progress" %></td>
-				</tr>
+
+<h1>Lista de Habilidades del <%= @char %></h1>
+<table id='table-2'>
+	<thead>
+		<tr><% disciplinas.each do |d| %>
+				<th><%= d.capitalize %></th>
 			<% end %>
-		</tbody>
-	</table>
-</body>
+		</tr>
+	</thead>
+	<tbody>
+		<% plural = ((@char == "lord de las bestias") ? "lords" : (@char+"s")) %>
+		<% send(plural).each do |c| %>
+			<tr><td><%= c[:id] %></td>
+				<td><% img_path = "'../images/skills/druida/#{c[:name]}.png'" %>
+					<img src=<%=img_path%> alt=<%= c[:name] %>, id='icon' />
+				</td>
+				<td><%= c[:type] %></td>
+				<td><%= c[:name].capitalize %></td>
+				<td><i><%= c[:description] %></i></td>
+				<td><%= "In progress" %></td>
+				<td><%= "In progress" %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>
