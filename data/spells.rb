@@ -210,6 +210,42 @@ def spells
       :nivel        => 2,
       :descripcion  => "un escudo de granito surge en la casilla frontal del mago. Se mueve con el ocupando una casilla adyacente, a eleccion. La defensa aumenta en +2 y dura hasta que el mago tenga una herida o no quepa el escudo."
     },
+    { :id           => 36,
+      :name         => "rayo destructor",
+      :elemento     => "aire",
+      :nivel        => 2,
+      :descripcion  => "1 dado de ataque electrico."
+    },
+    { :id           => 37,
+      :name         => "rayo prismatico",
+      :elemento     => "aire",
+      :nivel        => 2,
+      :descripcion  => "3 dados de un primer rayo, defendibles. Un segundo rayo con 2 dados, y un tercer rayo con 1 dado."
+    },
+    { :id           => 38,
+      :name         => "tornado",
+      :elemento     => "aire",
+      :nivel        => 2,
+      :descripcion  => "4 dados de ataque, en una casilla. El tornado se puede mover a otra casilla, con un dado, a eleccion del mago (1-4) o del master (5-6). Duracion: si el hechicero se mueve, sufre una herida o el tornado repite la casilla."
+    },
+    { :id           => 39,
+      :name         => "relampago",
+      :elemento     => "aire",
+      :nivel        => 2,
+      :descripcion  => "3 dados de ataque electrico, defendibles por el objetivo con dados de combate. 1 escudo de su categoria defiende 2 ataques."
+    },
+    { :id           => 40,
+      :name         => "aura de la tormenta",
+      :elemento     => "aire",
+      :nivel        => 2,
+      :descripcion  => "se usa sobre uno mismo. Defensa: +1. Los seres que se acerquen a melee sufren 1 ataque electrico y al final de su turno deben retroceder una casilla hacia atras, pudiendo sufrir colision. Duracion: hasta que el mago sufra una herida. ."
+    },
+    { :id           => 41,
+      :name         => "area de vacio",
+      :elemento     => "aire",
+      :nivel        => 2,
+      :descripcion  => "el mago elige 3 casillas contiguas y no lineales. El objetivo dentro de esas casillas, sufre un ataque de 1 dado. Si el objetivo sale de las casillas, el ataque sera de 3, pero el efecto desaparecera en las casillas anteriores."
+    },
   ]
 end
 
