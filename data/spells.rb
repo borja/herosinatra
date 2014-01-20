@@ -174,6 +174,12 @@ def spells
       :nivel        => 2,
       :descripcion  => "en 1 casilla, ataque igneo de dados =mente del conjurador/2. Las casillas contiguas reciben 2. Magia sacrificada= +1 casilla de fuego."
     },
+    { :id           => 30,
+      :name         => "maldicion de piedra",
+      :elemento     => "tierra",
+      :nivel        => 2,
+      :descripcion  => "el objetivo se convierte en una estatua de piedra. Su defensa son +5 dados. Con una herida, muere. Hechizo permanente salvo que el objetivo obtenga 1 escudo negro en su primera defensa."
+    },
   ]
 end
 
