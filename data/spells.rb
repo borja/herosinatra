@@ -144,6 +144,36 @@ def spells
       :nivel        => 2,
       :descripcion  => "Cono de 1-3-5. 2 dados rojos de ataque por fuego, defendibles.",
     },
+    { :id           => 25,
+      :name         => "rayo igneo",
+      :elemento     => "fuego",
+      :nivel        => 2,
+      :descripcion  => "3 dados de ataque. 2 dados defendibles por cada herida causada. El rayo avanza a mas victimas y se defienden con 1 dado adicional a la victima anterior."
+    },
+    { :id           => 26,
+      :name         => "aura de calor",
+      :elemento     => "fuego",
+      :nivel        => 2,
+      :descripcion  => "las miniaturas a melee arden. Se pierde el aura cuando se sufre una herida y se obtiene una defensa vs fuego de 4+, o +1."
+    },
+    { :id           => 27,
+      :name         => "muro de fuego",
+      :elemento     => "fuego",
+      :nivel        => 2,
+      :descripcion  => "en 5 casillas lineales, si se atraviesan, hace 3 heridas por fuego. Se pueden reducir las casillas, aumentando el ataque a 5/fuego."
+    },
+    { :id           => 28,
+      :name         => "lluvia de fuego",
+      :elemento     => "fuego",
+      :nivel        => 2,
+      :descripcion  => "en una sala, ataque de 1 dado de fuego. Todo objeto es destruido. Los enemigos se defienden con 1 solo dado."
+    },
+    { :id           => 29,
+      :name         => "infierno",
+      :elemento     => "fuego",
+      :nivel        => 2,
+      :descripcion  => "en 1 casilla, ataque igneo de dados =mente del conjurador/2. Las casillas contiguas reciben 2. Magia sacrificada= +1 casilla de fuego."
+    },
   ]
 end
 
