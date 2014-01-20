@@ -80,6 +80,12 @@ class App < Sinatra::Base
   get '/piezas' do
     erb :piezas
   end
+  get '/objetosmagicos' do
+    erb :objetosmagicos
+  end
+  get '/artefactos' do
+    erb :artefactos
+  end
   get '/supervivencia' do
     erb :supervivencia
   end
