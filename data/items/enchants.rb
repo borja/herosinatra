@@ -105,6 +105,11 @@ def enchants
       :descripcion  => "1/reto: 6+/Gloria del Heroe.",
       :tipo         => "hueso",
     },
+    { :id           => 22,
+      :name         => "basalto",
+      :descripcion  => "3+ vs veneno; 1 PS al matar; 1PM al recibir 1 herida de fuego.",
+      :tipo         => "sombra",
+    },
   ]
 end
 
