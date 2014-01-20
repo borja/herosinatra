@@ -10,7 +10,7 @@ def spells
       :name         => "fuego de ira",
       :elemento     => "fuego",
       :nivel        => 1,
-      :descripcion  => "Causa 1 dano a un enemigo del tablero."
+      :descripcion  => "Causa 1 dado de ataque a un enemigo del tablero."
     },
     { :id           => 3,
       :name         => "valentia",
