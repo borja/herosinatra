@@ -180,6 +180,36 @@ def spells
       :nivel        => 2,
       :descripcion  => "el objetivo se convierte en una estatua de piedra. Su defensa son +5 dados. Con una herida, muere. Hechizo permanente salvo que el objetivo obtenga 1 escudo negro en su primera defensa."
     },
+    { :id           => 31,
+      :name         => "muro de piedra",
+      :elemento     => "tierra",
+      :nivel        => 2,
+      :descripcion  => "1-5 casillas (a eleccion) lineales desocupadas se convertiran en bloques de piedra. Duracion = mente del hechicero."
+    },
+    { :id           => 32,
+      :name         => "tromba de meteoros",
+      :elemento     => "tierra",
+      :nivel        => 2,
+      :descripcion  => "las miniaturas sufren un ataque de 2 dados, que podran defender."
+    },
+    { :id           => 33,
+      :name         => "hecatombe",
+      :elemento     => "tierra",
+      :nivel        => 2,
+      :descripcion  => "se invoca una roca cuyo ataque = mente del conjurador, defendible de 1 dado/punto de mente del conjurador."
+    },
+    { :id           => 34,
+      :name         => "prision petrea",
+      :elemento     => "tierra",
+      :nivel        => 2,
+      :descripcion  => "1 casilla libre adyacente al objetivo queda ocupada por 1 bloque de piedra. Duracion= mente del hechicero - 1 turno/bloque conjurado."
+    },
+    { :id           => 35,
+      :name         => "escudo torreon",
+      :elemento     => "tierra",
+      :nivel        => 2,
+      :descripcion  => "un escudo de granito surge en la casilla frontal del mago. Se mueve con el ocupando una casilla adyacente, a eleccion. La defensa aumenta en +2 y dura hasta que el mago tenga una herida o no quepa el escudo."
+    },
   ]
 end
 
