@@ -1,3 +1,4 @@
+# encoding: UTF-8
 def joyas
   [
     { :id           => 1,

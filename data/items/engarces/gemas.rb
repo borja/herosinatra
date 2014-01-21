@@ -1,3 +1,4 @@
+# encoding: UTF-8
 def gemas
   [
     { :id           => 1,

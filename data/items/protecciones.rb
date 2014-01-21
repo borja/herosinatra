@@ -1,3 +1,4 @@
+# encoding: UTF-8
 def protecciones
   [
     { :id           => 1,

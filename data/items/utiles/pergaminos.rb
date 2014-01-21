@@ -1,3 +1,4 @@
+# encoding: UTF-8
 def pergaminos
   [
     { :id           => 1,
