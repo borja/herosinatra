@@ -1,3 +1,4 @@
+# encoding: UTF-8
 def pifia(sigmar)
   sigmar == 'eagle' ? 'pifia ligera' : 'pifia' 
 end

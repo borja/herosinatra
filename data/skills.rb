@@ -1,3 +1,4 @@
+# encoding: UTF-8
 require './data/skills/arquero'
 require './data/skills/derviche'
 require './data/skills/druida'

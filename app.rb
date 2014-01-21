@@ -45,6 +45,9 @@ class App < Sinatra::Base
   get '/familiares' do
     erb :familiares
   end
+  get '/profesiones' do
+    erb :profesiones
+  end
   get '/gemas' do
     erb :gemas
   end
