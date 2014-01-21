@@ -1,4 +1,5 @@
-def invocadores
+# encoding: UTF-8
+def invocadors
   [
     {
       :id           => 0,
@@ -28,5 +29,5 @@ def invocadores
 end
 
 def invocador(id)
-  invocadores[id]
+  invocadors[id]
 end
