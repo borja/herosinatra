@@ -16,7 +16,7 @@
 		<% plural = ((@char == "lord de las bestias") ? "lords" : (@char+"s")) %>
 		<% send(plural).each do |c| %>
 			<tr><td><%= c[:id] %></td>
-				<td><% img_path = "'../images/skills/druida/#{c[:name]}.png'" %>
+				<td><% img_path = "'../images/skills/#{@char}/#{c[:name]}.png'" %>
 					<img src=<%=img_path%> alt=<%= c[:name] %>, id='icon' />
 				</td>
 				<td><%= c[:type] %></td>
