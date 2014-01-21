@@ -126,6 +126,12 @@ def druidas
       :description  => "por 1PV el elfo y espiritu obtienen +1 defensa, potencia y centinela. La defensa excedida sera utilizada como ataque al monstruo.",
       :type         => "Declarativa"
     },
+    {
+      :id           => 22,
+      :name         => "invocar elemental de agua",
+      :description  => "invoca un espiritu de nivel 3 que ataca a todo su alrededor, excepto aliados, dandoles a todos 1PC..",
+      :type         => "Activa"
+    },
   ]
 end
 
