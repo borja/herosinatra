@@ -129,7 +129,7 @@ def druidas
     {
       :id           => 22,
       :name         => "invocar elemental de agua",
-      :description  => "invoca un espiritu de nivel 3 que ataca a todo su alrededor, excepto aliados, dandoles a todos 1PC..",
+      :description  => "invoca un espiritu de nivel 3 que ataca a todo su alrededor, excepto aliados, dandoles a todos 1PC.",
       :type         => "Activa"
     },
   ]
