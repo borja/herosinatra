@@ -27,7 +27,7 @@ def tiers
       :name  => "joturos",
       :bono  => "+1 PV al obtener al menos un escudo negro en la defensa.",
       :mix   => {:gemas => [27,25,27] },
-      :color => "#003366"
+      :color => "#1C975B"
     },
     {
       :id    => 4,
