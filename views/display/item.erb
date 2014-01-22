@@ -12,7 +12,7 @@
 			<%= send(item,(a[:id]))[:name].capitalize %><br><br>
 			<img src=<%= img_path %> alt=<%= send(item,(a[:id]))[:name] %>, id='icon3' />
 		</h3></center>
-		<li>Valor de combate: <%= send(item,(a[:id]))[:powa] %></li>
+		<%= "<li>Valor de combate: #{send(item,(a[:id]))[:powa]}</li>" if send(item,(a[:id]))[:powa] %>
 		<%= "<li>Permite atacar en diagonal</li>" if send(item,(a[:id]))[:diagonal] %>
 		<%= "<li>#{item.capitalize} mundana</li>" if mundano?(a) %>
 		<%= "<li>Tipo: #{armadura(a[:id])[:categoria]} </li>"   if item == 'armadura' %>
