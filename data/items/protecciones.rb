@@ -1,6 +1,12 @@
 # encoding: UTF-8
-def protecciones
+def proteccions
   [
+    { :id           => 0,
+      :name         => "huevera",
+      :categoria    => "metal",
+      :powa         => 0,
+      :ranuras      => 1,
+    },
     { :id           => 1,
       :name         => "capa",
       :categoria    => "tela",
@@ -77,5 +83,5 @@ def protecciones
 end
 
 def proteccion(id)
-  protecciones[id-1]
+  proteccions[id]
 end

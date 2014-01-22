@@ -61,60 +61,10 @@
 						</tbody>
 					</table>
 				</td>
-				<td>
-					<table id='table-2'>
+				<td><table id='table-2'>
 						<tbody>
-							<tr>
-								<% hero[:prots].each do |p| %>
-									<td><div class="information_popup_container">
-										<div class="information">
-											<% img_path = "'images/protecciones/#{proteccion(p[:id])[:name]}.png'" %>
-											<img src=<%=img_path%> alt=<%=proteccion(p[:id])[:name]%>, id='icon' /> 
-										</div>
-										<div class="popup_information">
-											<% img_path = "'images/protecciones/#{proteccion(p[:id])[:name]}.png'" %>
-											<center><h3>
-												<%=proteccion(p[:id])[:name].capitalize %><br><br>
-												<img src=<%=img_path%> alt=<%=proteccion(p[:id])[:name]%>, id='icon3' /> 
-											</h3></center>
-											<li>Potencia defensiva: <%=proteccion(p[:id])[:powa] %></li>
-											<h4>Engarces</h4>
-											<% if mundano?(p) %>
-												El objeto no tiene engarces.
-											<% else %>
-												<% if p[:gemas] %>
-													<% p[:gemas].each do |g| %>
-														<% img_path = "'../../images/treasures/gemas/#{gema(g)[:name]}.png'" %>
-														<img src=<%=img_path%> alt=<%=gema(g)[:name]%>, id='icon' />
-													<% end %>
-												<% end %>
-												<% if p[:joyas] %>						
-													<% p[:joyas].each do |j| %>
-														<% img_path = "'../../images/treasures/joyas/#{joya(j)[:name]}.png'" %>
-														<img src=<%=img_path%> alt=<%=joya(j)[:name]%>, id='icon' />
-													<% end %>
-												<% end%>
-												<% if p[:runas] %>
-													<% p[:runas].each do |r| %>
-														<% img_path = "'../../images/treasures/runas/#{runa(r)[:name]}.png'" %>
-														<img src=<%=img_path%> alt=<%=runa(r)[:name]%>, id='icon' />
-													<% end %>
-												<% end %>
-												<% if p[:ranuras] %>
-													<% p[:ranuras].times do %>
-														<% img_path = "'../../images/treasures/socket.png'" %>
-														<img src=<%=img_path%> alt='ranura-hueca', id='icon' />
-														<% end %>						
-												<% end %>						
-											<% end %>
-											<% if p[:enchants] %>	
-												<h4>Propiedades mágicas</h4>
-												<% p[:enchants].each do |e| %>
-													<li><%= enchant(e)[:name].capitalize %>
-												<% end %>
-											<% end %>	
-										</div>
-									</div></td>
+							<tr><% hero[:prots].each do |p| %>
+									<td><%= erb :'display/item', :locals => { :a => p, :item => "proteccion"} %></td>
 								<% end %>
 							</tr>
 						</tbody>
