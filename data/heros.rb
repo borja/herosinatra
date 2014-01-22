@@ -141,6 +141,7 @@ def heros
       :runas     => [4],
       :gemas     => [15,18,20,22,41],
       :pet       => 20,
+      :repu      => 1,
       :status    => "reserva",
     },
     { :id        => 5,
