@@ -34,7 +34,7 @@ def tiers
       :name  => "mil ojos",
       :bono  => "Rayos a los enemigos adyacentes",
       :mix   => {:gemas => [5,5,5] },
-      :color => "#003366"
+      :color => "#CE7D1B"
     }
   ]
 end
