@@ -58,7 +58,7 @@
 	</theader>
 	<tbody>
 		<tr><td>
-			<table id='tlabel' width='50%'>
+			<table id='tlabel' width='30%'>
 				<tbody>
 					<tr>
 						<td><img src="../images/ficha/combat.png" alt=<%='combate' %> /, id='icon2'></td>
@@ -67,46 +67,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<table id='tlabel'>
-				<tr>
-					<td>
-						<table id='table-2'>
-							<thead>
-								<tr>
-									<th>Cuerpo</th>
-									<th>Mente</th>
-									<th>Movimiento</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><%= @heroe[:cuerpo] %></td>
-									<td><%= @heroe[:mente ] %></td>
-									<td><%= @heroe[:mov   ] %></td>
-								</tr>
-							</tbody>
-						</table>			
-					</td>
-					<td>
-						<table id='table-2'>
-							<thead>
-								<tr>
-									<th>Melee</th>
-									<th>Rango</th>
-									<th>Defensa</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><%= ataque( @heroe[:id]) %></td>
-									<td><%= rango(  @heroe[:id]) %></td>
-									<td><%= defensa(@heroe[:id]) %></td>
-								</tr>
-							</tbody>
-						</table>
-					</td>
-				</tr>
-			</table>
+			<%= erb :'ficha/inventario' %>
 			<h3><center>Armamento</center></h3>
 			<br>
 			<table id='table-2'>
@@ -116,9 +77,6 @@
 						<th>Armadura</th>
 						<th>Protecciones</th>
 						<th>Miscelánea</th>
-						<% if @heroe[:hechizos] %>
-							<th><a href=../spells/<%=@heroe[:id]%>>Lista de hechizos conocidos</a></th>
-						<% end %>
 					</tr>
 				</thead>
 				<tbody>
@@ -164,24 +122,7 @@
 									</tbody>
 								</table>
 							<% end%>
-						</td>
-						<% if @heroe[:hechizos] %>
-							<td><table id='table-2'>
-									<tbody>
-										<tr>
-											<% elements(@heroe[:hechizos]).each do |e| %>	
-												<td>
-													<%= erb :'display/display', :locals => { 
-														:title       => e, 
-														:path        => "'../images/elements/#{e}.png'",
-														:description => "" } %>
-												</td>
-											<% end %>
-										</tr>
-									</tbody>
-								</table>
-							</td>
-						<% end %>					
+						</td>				
 					</tr>
 				</tbody>
 			</table>

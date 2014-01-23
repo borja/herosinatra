@@ -496,7 +496,6 @@ def heros
       :cuerpo    => 7,
       :mente     => 3,
       :mov       => 6,
-      :hechizos  => [],
       :armas     => [{:id => 12}],
       :armaduras => [{:id => 2}],
       :proteccions     => [{:id => 2}],
