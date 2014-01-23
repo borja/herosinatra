@@ -22,6 +22,9 @@
 				<tbody>
 					<tr>
 						<td>
+							<% if is_tier?({:joyas => a[:joyas]}) %>
+								<h3>Tier de <%= tier(is_tier?({:joyas => a[:joyas]}))[:name].capitalize %></h3>
+								<% end %>
 							<% if is_tier?({:gemas => a[:gemas]}) %>
 								<h3>Tier de <%= tier(is_tier?({:gemas => a[:gemas]}))[:name].capitalize %></h3>
 							<% else %>
