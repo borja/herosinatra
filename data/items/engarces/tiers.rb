@@ -13,7 +13,7 @@ def tiers
       :name  => "maestra helada",
       :bono  => "+1 de ataque",
       :mix   => {:gemas => [21,21,21] },
-      :color => "#003366"
+      :color => "#0FBBCE"
     },
     {
       :id    => 2,
