@@ -108,60 +108,11 @@
 				</tr>
 			</table>
 			<h3><center>Armamento</center></h3>
-			<table id='table-2'>
-				<thead>
-					<tr>
-						<th>Icono</th>
-						<th>Nombre</th>
-						<th>Poder</th>
-						<th><a href=/encantamientos>Encantamientos</a></th>
-						<th>Engarces</th>
-					</tr>
-				</thead>
-				<tbody>
-					<% @heroe[:armas].each do |a| %>
-						<tr>
-							<td><%= erb :'display/item', :locals => { :a => a, :item => "arma"} %></td>
-							<td><%= arma(a[:id])[:name].capitalize %></td>
-							<td><%= arma(a[:id])[:powa] %></td>				
-							<td><% if a[:enchants].nil? %>
-								Arma mundana
-								<% else %>
-									<table id='table-2'>
-										<tbody>
-											<tr>
-												<% a[:enchants].each do |e| %>
-													<td><%= enchant(e)[:name].capitalize %></td>
-												<% end %>
-											</tr>
-										</tbody>
-									</table>
-								<% end%>
-							</td>
-							<td>
-								<% if mundano?(a) %>
-									El arma no tiene engarces.
-								<% else %>
-									<% engarces.each do |engarce| %>
-										<% if a[eval(':' + engarce)] %>
-											<% a[eval(':' + engarce)].each do |e| %>
-												<% e_name = send(engarce.gsub('s',''),e)[:name] %>
-												<% img_path = "'../images/treasures/#{engarce}/#{e_name}.png'" %>
-												<img src=<%=img_path%> alt=<%= e_name %>, id='icon' />
-											<% end %>
-										<% end %>
-									<% end %>					
-								<% end %>
-							</td>
-						</tr>
-					<% end %>
-					<%= "El personaje no tiene ningun arma todavia." if @heroe[:armas].empty? %>
-				</tbody>
-			</table>
 			<br>
 			<table id='table-2'>
 				<thead>
 					<tr>
+						<th>Armas</th>
 						<th>Armadura</th>
 						<th>Protecciones</th>
 						<th>Miscelánea</th>
@@ -171,7 +122,15 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>
+					<tr><td><table id='table-2'>
+								<tbody>
+									<tr><% @heroe[:armas].each do |a|%>
+											<td><%= erb :'display/item', :locals => { :a => a, :item => "arma"} %></td>
+										<% end %>
+									</tr>
+								</tbody>
+							</table>
+						</td>
 						<td><% @heroe[:armaduras].each do |a| %>
 								<%= erb :'display/item', :locals => { :a => a, :item => "armadura"} %>
 							<% end %>
