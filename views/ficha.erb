@@ -185,17 +185,17 @@
 							<% end %>
 						</td>
 						<td>
-							<% if @heroe[:prots].empty? %>
+							<% if @heroe[:proteccions].empty? %>
 								El personaje no tiene ninguna protección aun.
 							<% else %>
 								<table id='table-2'>
 									<tbody>
 										<tr>
-											<% @heroe[:prots].each do |p|%>
+											<% @heroe[:proteccions].each do |p|%>
 												<td>
 													<%= erb :'display/display', :locals => { 
 														:title       => proteccion(p[:id])[:name], 
-														:path        => "'../images/protecciones/#{proteccion(p[:id])[:name]}.png'",
+														:path        => "'../images/proteccions/#{proteccion(p[:id])[:name]}.png'",
 														:description => proteccion(p[:id])[:powa] } %>
 												</td>
 											<% end %>
@@ -205,13 +205,13 @@
 							<% end%>
 						</td>
 						<td>
-							<% if @heroe[:miscs].empty? %>
+							<% if @heroe[:miscelaneas].empty? %>
 								El personaje no tiene misceláneas.
 							<% else %>
 								<table id='table-2'>
 									<tbody>
 										<tr>
-											<% @heroe[:miscs].each do |m|%>
+											<% @heroe[:miscelaneas].each do |m|%>
 												<td>
 													<%= erb :'display/display', :locals => { 
 														:title       => miscelanea(m[:id])[:name], 

@@ -31,8 +31,7 @@
 				<td><a href=hero/<%= hero[:id] %>><%= hero[:name] %></a><br>
 					<i><%= hero[:jugador] %></i>
 				</td>
-				<td>
-					<%= genderize(personaje(hero[:personaje]),hero[:sex]).capitalize %><br>
+				<td><%= genderize(personaje(hero[:personaje]),hero[:sex]).capitalize %><br>
 					<i><%= hero[:personaje].capitalize.gsub('Lord','Señor') %></i>
 				</td>
 				<td style="font-size:28px;"><%= hero[:nivel] %></td>
@@ -43,42 +42,17 @@
 							:description => pet(hero[:pet])[:bono] } %>
 					<% end %>						
 				</td>
-				<td><table id='table-2'>
-						<tbody>
-							<tr><% hero[:armas].each do |a| %>
-									<td><%= erb :'display/item', :locals => { :a => a, :item => "arma"} %></td>
-								<% end %>
-							</tr>
-						</tbody>
-					</table>
-				</td>
-				<td><table id='table-2'>
-						<tbody>
-							<tr><% hero[:armaduras].each do |a| %>
-									<td><%= erb :'display/item', :locals => { :a => a, :item => "armadura"} %></td>
-								<% end %>
-							</tr>
-						</tbody>
-					</table>
-				</td>
-				<td><table id='table-2'>
-						<tbody>
-							<tr><% hero[:prots].each do |p| %>
-									<td><%= erb :'display/item', :locals => { :a => p, :item => "proteccion"} %></td>
-								<% end %>
-							</tr>
-						</tbody>
-					</table>
-				</td>
-				<td><table id='table-2'>
-						<tbody>
-							<tr><% hero[:miscs].each do |m| %>
-									<td><%= erb :'display/item', :locals => { :a => m, :item => "miscelanea"} %></td>
-								<% end %>
-							</tr>
-						</tbody>
-					</table>
-				</td>
+				<% ["armas", "armaduras", "proteccions", "miscelaneas"].each do |items| %>
+					<td><table id='table-2'>
+							<tbody>
+								<tr><% hero[items.to_sym].each do |a| %>
+										<td><%= erb :'display/item', :locals => { :a => a, :item => items[0..-2]} %></td>
+									<% end %>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				<% end %>
 				<td style="background-image:url(../images/ficha/star.png); 
 					background-repeat: no-repeat; background-position:center;">
 					<%= hero[:repu] || 0 %></td>
