@@ -294,10 +294,20 @@
 					<tr>				
 						<td>
 							<% if @heroe[:pociones] %>
-								<% @heroe[:pociones].each do |p| %>
-									<% img_path = "'../images/utiles/pociones/#{pocion(p)[:name]}.png'" %>
-									<img src=<%=img_path%> alt=<%= pocion(p)[:name] %>, id='icon' />
-								<% end %>
+								<table id='table-2'>
+									<tbody>
+										<tr>
+											<% @heroe[:pociones].each do |p| %>
+                                    			<td>
+													<%= erb :'display/display', :locals => { 
+															:title       => pocion(p)[:name], 
+															:path        => "'../images/utiles/pociones/#{pocion(p)[:name]}.png'",
+															:description => pocion(p)[:efecto] } %>
+												</td>
+											<% end %>
+										</tr>
+									</tbody>
+								</table>
 							<% else %>
 								El héroe no tiene pociones.
 							<% end %>
@@ -344,10 +354,20 @@
 						</td>
 						<td>
 							<% if @heroe[:piezas] %>
-								<% @heroe[:piezas].each do |p| %>
-									<% img_path = "'../images/utiles/piezas/#{pieza(p)[:name]}.png'" %>
-									<img src=<%=img_path%> alt=<%= pocion(p)[:name] %>, id='icon' />
-								<% end %>
+								<table id='table-2'>
+									<tbody>
+										<tr>
+											<% @heroe[:piezas].each do |p| %>
+                                    			<td>
+													<%= erb :'display/display', :locals => { 
+															:title       => pieza(p)[:name], 
+															:path        => "'../images/utiles/piezas/#{pieza(p)[:name]}.png'",
+															:description => "" } %>
+												</td>
+											<% end %>
+										</tr>
+									</tbody>
+								</table>
 							<% else %>
 								El héroe no tiene piezas.
 							<% end %>
