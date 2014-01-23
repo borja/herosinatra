@@ -27,8 +27,8 @@
 									:path        => "'../images/personajes/#{ genderize(personaje(@heroe[:personaje]), @heroe[:sex] ) }.png'",
 									:description => @heroe[:story] || "" } %>
 							</td>
-							<td><%= @heroe[:name   ] %><br>
-								<%= @heroe[:jugador] %></td>
+							<td><%= @heroe[:name   ].capitalize %><br>
+								<%= @heroe[:jugador].capitalize %></td>
 							<td><% raza = is_human?(@heroe[:personaje]) ? "humano" : personaje(@heroe[:personaje]) %>
 								<%= genderize(raza,@heroe[:sex]).capitalize %></td>
 							<td><%= @heroe[:personaje].capitalize %></td>
@@ -121,11 +121,7 @@
 				<tbody>
 					<% @heroe[:armas].each do |a| %>
 						<tr>
-							<td><%= erb :'display/display', :locals => { 
-									:title       => arma(a[:id])[:name], 
-									:path        => enthralled(a),
-									:description => arma(a[:id])[:powa] } %>
-							</td>
+							<td><%= erb :'display/item', :locals => { :a => a, :item => "arma"} %></td>
 							<td><%= arma(a[:id])[:name].capitalize %></td>
 							<td><%= arma(a[:id])[:powa] %></td>				
 							<td><% if a[:enchants].nil? %>
@@ -176,12 +172,8 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>
-							<% @heroe[:armaduras].each do |a| %>
-								<%= erb :'display/display', :locals => { 
-									:title       => armadura(a[:id])[:name], 
-									:path        => "'../images/armaduras/#{armadura(a[:id])[:name]}.png'",
-									:description => armadura(a[:id])[:powa] } %>
+						<td><% @heroe[:armaduras].each do |a| %>
+								<%= erb :'display/item', :locals => { :a => a, :item => "armadura"} %>
 							<% end %>
 						</td>
 						<td>
@@ -192,12 +184,7 @@
 									<tbody>
 										<tr>
 											<% @heroe[:proteccions].each do |p|%>
-												<td>
-													<%= erb :'display/display', :locals => { 
-														:title       => proteccion(p[:id])[:name], 
-														:path        => "'../images/proteccions/#{proteccion(p[:id])[:name]}.png'",
-														:description => proteccion(p[:id])[:powa] } %>
-												</td>
+												<td><%= erb :'display/item', :locals => { :a => p, :item => "proteccion"} %></td>
 											<% end %>
 										</tr>
 									</tbody>
@@ -212,12 +199,7 @@
 									<tbody>
 										<tr>
 											<% @heroe[:miscelaneas].each do |m|%>
-												<td>
-													<%= erb :'display/display', :locals => { 
-														:title       => miscelanea(m[:id])[:name], 
-														:path        => "'../images/miscelaneas/#{miscelanea(m[:id])[:name]}.png'",
-														:description => miscelanea(m[:id])[:name] } %>
-												</td>
+												<td><%= erb :'display/item', :locals => { :a => m, :item => "miscelanea"} %></td>
 											<% end %>
 										</tr>
 									</tbody>
