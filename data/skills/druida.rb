@@ -3,13 +3,13 @@ def druidas
   [
     {
       :id           => 0,
-      :name         => "espiritu guardian menor",
+      :name         => "espíritu guardián menor",
       :description  => "Invoca un espritu guardián de nivel 1 a cambio de 2 puntos de mente. Se invocará a elección una rata, murciélago o araña pequeña.",
       :type         => "Activa"
     },
     {
       :id           => 1,
-      :name         => "espiritu guardian medio",
+      :name         => "espíritu guardián medio",
       :description  => "Invoca un espíritu guardián de nivel 2 a cambio de 3 puntos de mente. Se invocará a elección un lobo o araña gigante.",
       :type         => "Activa"
     },
@@ -21,31 +21,31 @@ def druidas
     },
     {
       :id           => 3,
-      :name         => "transmutacion espiritual",
+      :name         => "transmutación espiritual",
       :description  => "Consumir 1 magia permite cambiar 1 espíritu guardián por otro sin coste de puntos de mente.",
       :type         => "Activa"
     },
     {
       :id           => 4,
-      :name         => "posesion espiritual menor",
+      :name         => "posesión espiritual menor",
       :description  => "cuando el héroe tiene 0 de mente, por 1 punto de vínculo el espíritu guardián le controla.",
       :type         => "Activa"
     },
     {
       :id           => 5,
-      :name         => "torsion espiritual",
+      :name         => "torsión espiritual",
       :description  => "el espiritu cambia su posicion con el heroe.",
       :type         => "Declarativa"
     },
     {
       :id           => 6,
-      :name         => "espiritu guardian mayor",
+      :name         => "espíritu guardián mayor",
       :description  => "Invoca un espíritu guardián de nivel 3 a cambio de 4 puntos de mente.",
       :type         => "Activa"
     },
     {
       :id           => 7,
-      :name         => "bandada de murcielagos",
+      :name         => "bandada de murciélagos",
       :description  => "Invoca con 1d3 una bandada de murciélagos a cambio de X+1 puntos de mente. X serán el número de murciélagos que salgan.",
       :type         => "Activa"
     },
@@ -69,7 +69,7 @@ def druidas
     },
     {
       :id           => 11,
-      :name         => "bendicion de Gaia",
+      :name         => "bendición de Gaia",
       :description  => "1 aliado comparte Karma.",
       :type         => "Declarativa"
     },
@@ -87,7 +87,7 @@ def druidas
     },
     {
       :id           => 14,
-      :name         => "guadaña purpura",
+      :name         => "guadaña púrpura",
       :description  => "Por 2PV invoca una guadaña purpura. Ataca con 3 dados morados, potencia 2.",
       :type         => "Activa"
     },
@@ -117,19 +117,19 @@ def druidas
     },
     {
       :id           => 19,
-      :name         => "posesion espiritual mayor",
+      :name         => "posesión espiritual mayor",
       :description  => "El espíritu guardián puede convivir con el héroe sin que esté en estado de locura, por 1 punto de vínculo.",
       :type         => "Activa"
     },
     {
       :id           => 20,
-      :name         => "dragon verde",
+      :name         => "dragón verde",
       :description  => "Invoca un gran dragón verde a cambio de 5 puntos de vínculo. Mantenerlo cada turno cuesta 4 PV.",
       :type         => "Activa"
     },
     {
       :id           => 21,
-      :name         => "saprolines",
+      :name         => "estallido de saprolines",
       :description  => "Invoca con 1d6 seres que son el resultado de un hongo y una planta, a cambio de PV. Cada saprolin realizará habilidades únicas.",
       :type         => "Activa"
     },
@@ -141,7 +141,7 @@ def druidas
     },
     {
       :id           => 23,
-      :name         => "invocar buho",
+      :name         => "invocar búho",
       :description  => "Invoca un espíritu místico de nivel 4 en forma de búho. Conoce todos los secretos y se le puede preguntar pistas.",
       :type         => "Activa"
     },
