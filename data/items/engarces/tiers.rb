@@ -35,6 +35,13 @@ def tiers
       :bono  => "Rayos a los enemigos adyacentes",
       :mix   => {:gemas => [5,5,5] },
       :color => "#CE7D1B"
+    },
+    {
+      :id    => 5,
+      :name  => "armonía estacional",
+      :bono  => "control de las estaciones <por definir>",
+      :mix   => {:joyas => [15,19,16] },
+      :color => "#9933CC"
     }
   ]
 end

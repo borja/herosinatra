@@ -111,6 +111,16 @@ def enchants
       :descripcion  => "3+ vs veneno; 1 PS al matar; 1PM al recibir 1 herida de fuego.",
       :tipo         => "sombra",
     },
+    { :id           => 23,
+      :name         => "de fresno",
+      :descripcion  => "Por definir",
+      :tipo         => "natura",
+    },
+    { :id           => 24,
+      :name         => "armonía estacional",
+      :descripcion  => "por definir",
+      :tipo         => "natura",
+    }
   ]
 end
 
