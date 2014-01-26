@@ -85,7 +85,7 @@
 				<thead>
 					<tr>
 						<th width='80%'>Anillo Izquierdo</th>
-						<% if a = @heroe[:miscelaneas].detect {|p| p[:id] == 1 } %>
+						<% if a = @heroe[:miscelaneas].find_all { |a|  a[:id] == 1 }[0] %>
 							<td><%= erb :'display/item', :locals => { :a => a , :item => "miscelanea"} %></td>
 						<% else %>
 							<% img_path = "'../../images/treasures/socket.png'" %>
@@ -94,7 +94,7 @@
 					</tr>
 					<tr>
 						<th width='80%'>Anillo Derecho</th>
-						<% if a = @heroe[:miscelaneas].detect {|p| p[:id] == 1 } %>
+						<% if a = @heroe[:miscelaneas].find_all { |a|  a[:id] == 1 }[1] %>
 							<td><%= erb :'display/item', :locals => { :a => a , :item => "miscelanea"} %></td>
 						<% else %>
 							<% img_path = "'../../images/treasures/socket.png'" %>
