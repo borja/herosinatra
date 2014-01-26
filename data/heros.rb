@@ -726,7 +726,7 @@ def heros
                       :ranuras  => 1},
                      {:id       => 6,
                       :enchants => [6]}],
-      :skills    => [0,1,2,12,14,15],
+      :skills    => [0,1,2,5,6,8,9,12,14,15,16],
       :sex       => "male",
       :repu      => 3,
       :gemas     => [2,3,6,40],
