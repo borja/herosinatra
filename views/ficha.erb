@@ -67,66 +67,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<%= erb :'ficha/inventario' %>
-			<h3><center>Armamento</center></h3>
-			<br>
-			<table id='table-2'>
-				<thead>
-					<tr>
-						<th>Armas</th>
-						<th>Armadura</th>
-						<th>Protecciones</th>
-						<th>Miscelánea</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr><td><table id='table-2'>
-								<tbody>
-									<tr><% @heroe[:armas].each do |a|%>
-											<td><%= erb :'display/item', :locals => { :a => a, :item => "arma"} %></td>
-										<% end %>
-									</tr>
-								</tbody>
-							</table>
-						</td>
-						<td><% @heroe[:armaduras].each do |a| %>
-								<%= erb :'display/item', :locals => { :a => a, :item => "armadura"} %>
-							<% end %>
-						</td>
-						<td>
-							<% if @heroe[:proteccions].empty? %>
-								El personaje no tiene ninguna protección aun.
-							<% else %>
-								<table id='table-2'>
-									<tbody>
-										<tr>
-											<% @heroe[:proteccions].each do |p|%>
-												<td><%= erb :'display/item', :locals => { :a => p, :item => "proteccion"} %></td>
-											<% end %>
-										</tr>
-									</tbody>
-								</table>
-							<% end%>
-						</td>
-						<td>
-							<% if @heroe[:miscelaneas].empty? %>
-								El personaje no tiene misceláneas.
-							<% else %>
-								<table id='table-2'>
-									<tbody>
-										<tr>
-											<% @heroe[:miscelaneas].each do |m|%>
-												<td><%= erb :'display/item', :locals => { :a => m, :item => "miscelanea"} %></td>
-											<% end %>
-										</tr>
-									</tbody>
-								</table>
-							<% end%>
-						</td>				
-					</tr>
-				</tbody>
-			</table>
-			
+			<%= erb :'ficha/inventario' %>			
 			<% if @heroe[:skills] %>
 				<h3><center>Habilidades</center></h3>
 				<table id='table-2'>
