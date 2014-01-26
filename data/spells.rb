@@ -362,7 +362,7 @@ def spells
       :descripcion  => "Sigue al objetivo hasta que muera. En ese momento, el objetivo resucitará en estado de dormido con tantos puntos de cuerpo como tenga su mente.",
     },
     { :id           => 61,
-      :name         => "el caliz sagrado",
+      :name         => "el cáliz sagrado",
       :elemento     => "agua",
       :nivel        => 3,
       :descripcion  => "Dura tantos turnos como los puntos de mente del invocador. Reestablecerá 1PC y 1PM por turno a todos los que beban de él. Contará como acción gratuita.",
