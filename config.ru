@@ -29,6 +29,7 @@ require './data/items/protecciones'
 
 # Criatures Data Base
 require './data/criaturas/dragones'
+require './data/criaturas/elementales'
 
 Bundler.require
 

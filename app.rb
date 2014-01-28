@@ -106,4 +106,7 @@ class App < Sinatra::Base
   get '/criaturas/dragones' do
     erb :'criaturas/dragones'
   end
+  get '/criaturas/elementales' do
+    erb :'criaturas/elementales'
+  end
 end
