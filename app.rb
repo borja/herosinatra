@@ -109,4 +109,7 @@ class App < Sinatra::Base
   get '/criaturas/elementales' do
     erb :'criaturas/elementales'
   end
+  get '/magia/escuelas' do
+    erb :'escuelas'
+  end
 end

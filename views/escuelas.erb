@@ -1,0 +1,25 @@
+<%= erb :menu %><br><br><br<br>
+
+<link rel="stylesheet" href="../../css/main.css" type="text/css" />
+<link rel="stylesheet" href="../../app.css" type="text/css" />
+
+<h1>Escuelas de la magia</h1><br><br>
+
+<table id='table-2'>
+	<thead>
+		<tr><% escuelas.each do |e| %>
+				<th><%= e.capitalize %></th>
+			<% end %>
+		</tr>	
+	</thead>
+	<tbody>
+		<tr>
+			<% escuelas.each do |e| %>
+				<td>
+					<% img_path = "'../images/schools/#{e}.png'" %>
+					<img src=<%=img_path%> alt=<%= e %>, id='icon2' />
+				</td>
+			<% end %>
+		</tr>
+	</tbody>
+</table>

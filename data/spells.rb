@@ -452,3 +452,7 @@ def color(elemento)
 	   when "elfico" then return 'background-color:#99FFCC'       
   end
 end
+
+def escuelas
+  ["aire","fuego","agua","tierra","tenebro","sangre","luz"]
+end
