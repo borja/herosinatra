@@ -151,6 +151,18 @@ def druidas
       :description  => "Cada espíritu tiene habilidades extras.",
       :type         => "Pasiva"
     },
+    {
+      :id           => 25,
+      :name         => "torsion de gaia",
+      :description  => "El espiritu puede hacer torsión con el aliado que tuviera Bendición de Gaia.",
+      :type         => "Activa"
+    },
+    {
+      :id           => 26,
+      :name         => "imbuir arcano mejorado",
+      :description  => "Los hechizos que ejecutan los espíritus tienen +1 potencia, gastando 1 PV. La potencia no es acumulable.",
+      :type         => "Activa"
+    },
     
     
   ]
