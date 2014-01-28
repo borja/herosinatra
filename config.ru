@@ -27,6 +27,9 @@ require './data/items/armas'
 require './data/items/armaduras'
 require './data/items/protecciones'
 
+# Criatures Data Base
+require './data/criaturas/dragones'
+
 Bundler.require
 
 require './app.rb'
