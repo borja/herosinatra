@@ -18,7 +18,14 @@
 		<%= "<li>Tipo: #{armadura(a[:id])[:categoria]} </li>"   if item == 'armadura' %>
 		<% unless mundano?(a) %>
 			<br>
-			<table id='tier', style="background-color:<%= is_tier?({:gemas => a[:gemas]}) ? tier(is_tier?({:gemas => a[:gemas]}))[:color] : 'black' %>;">
+			<% if is_tier?({:gemas => a[:gemas]}) %>
+				<% color = tier(is_tier?({:gemas => a[:gemas]}))[:color] %>
+			<% elsif is_tier?({:joyas => a[:joyas]}) %>
+				<% color = tier(is_tier?({:joyas => a[:joyas]}))[:color] %>
+			<% else %>
+				<% color = 'black' %>
+			<% end %>
+			<table id='tier', style="background-color:<%= color %>;">
 				<tbody>
 					<tr>
 						<td>

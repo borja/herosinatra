@@ -41,7 +41,7 @@ def tiers
       :name  => "armonía estacional",
       :bono  => "control de las estaciones <por definir>",
       :mix   => {:joyas => [15,19,16] },
-      :color => "#9933CC"
+      :color => "#660033"
     }
   ]
 end
