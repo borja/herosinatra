@@ -16,7 +16,7 @@ def druidas
     {
       :id           => 2,
       :name         => "fuerza de Taal",
-      :description  => "1/reto: Todos los espíritus, incluidos los de otros druidas aliados obtienen +1 a todos los atributos.",
+      :description  => "1/reto: Todos los espíritus, incluidos los de otros druidas aliados obtienen +1 a todos los atributos. También si el espíritu está imbuido con alguien.",
       :type         => "Unica"
     },
     {
@@ -94,8 +94,8 @@ def druidas
     {
       :id           => 15,
       :name         => "espinas",
-      :description  => "Por 1PV el elfo y espíritu obtienen +1 defensa, potencia y centinela. La defensa excedida será utilizada como ataque al monstruo.",
-      :type         => "Declarativa"
+      :description  => "Por 1PV el elfo y espíritu obtienen +1 potencia defensiva y centinela. La defensa excedida será utilizada como ataque defendible al monstruo.",
+      :type         => "Instintiva"
     },
     {
       :id           => 16,
@@ -117,27 +117,27 @@ def druidas
     },
     {
       :id           => 19,
-      :name         => "posesión espiritual mayor",
-      :description  => "El espíritu guardián puede convivir con el héroe sin que esté en estado de locura, por 1 punto de vínculo.",
-      :type         => "Activa"
-    },
-    {
-      :id           => 20,
       :name         => "dragón verde",
       :description  => "Invoca un gran dragón verde a cambio de 5 puntos de vínculo. Mantenerlo cada turno cuesta 4 PV.",
       :type         => "Activa"
     },
     {
-      :id           => 21,
+      :id           => 20,
       :name         => "estallido de saprolines",
       :description  => "Invoca con 1d6 seres que son el resultado de un hongo y una planta, a cambio de PV. Cada saprolin realizará habilidades únicas.",
+      :type         => "Activa"
+    },
+    {
+      :id           => 21,
+      :name         => "posesión espiritual mayor",
+      :description  => "El espíritu guardián puede convivir con el héroe sin que esté en estado de locura, por 1 punto de vínculo.",
       :type         => "Activa"
     },
     {
       :id           => 22,
       :name         => "armadura del bosque",
       :description  => "Por 1PV los dados de defensa son verdes, por cada PV acumulado, +1 potencia defensiva.",
-      :type         => "Declarativa"
+      :type         => "Instintiva"
     },
     {
       :id           => 23,
@@ -154,8 +154,8 @@ def druidas
     {
       :id           => 25,
       :name         => "torsion de gaia",
-      :description  => "El espiritu puede hacer torsión con el aliado que tuviera Bendición de Gaia.",
-      :type         => "Activa"
+      :description  => "El espíritu puede hacer torsión con el aliado que tuviera Bendición de Gaia. Si tienes un espíritu en tu interior, podrás intercambiar tu posición con la del aliado Bendito. No se aplica al Dragón Verde.",
+      :type         => "Instintiva"
     },
     {
       :id           => 26,
