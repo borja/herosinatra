@@ -1,6 +1,13 @@
 # encoding: UTF-8
 def armas
   [
+    { :id           => 0,
+      :name         => "sin armas",
+      :categoria    => "puños",
+      :powa         => 1,
+      :ranuras      => 0,
+      :diagonal     => true
+    },
     { :id           => 1,
       :name         => "espada corta",
       :categoria    => "Filo",
@@ -138,7 +145,7 @@ def armas
 end
 
 def arma(id)
-  armas[id-1]
+  armas[id]
 end
 
 def encantada?(arma)

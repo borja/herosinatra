@@ -102,5 +102,8 @@ class App < Sinatra::Base
   end
   get '/tesoro' do
     erb :tesoro
-  end    
+  end
+  get '/criaturas/dragones' do
+    erb :'criaturas/dragones'
+  end
 end
