@@ -163,6 +163,12 @@ def druidas
       :description  => "Los hechizos que ejecutan los espíritus tienen +1 potencia, gastando 1 PV. La potencia no es acumulable.",
       :type         => "Activa"
     },
+    {
+      :id           => 27,
+      :name         => "consistencia",
+      :description  => "Cada espíritu tiene +1 PC.",
+      :type         => "Pasiva"
+    },
     
     
   ]
