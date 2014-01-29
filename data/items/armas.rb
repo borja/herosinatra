@@ -141,6 +141,13 @@ def armas
       :ranuras      => 2,
       :diagonal     => false
     },
+    { :id           => 20,
+      :name         => "orbe",
+      :categoria    => "Distancia",
+      :powa         => 0,
+      :ranuras      => 2,
+      :diagonal     => true
+    },
   ]
 end
 
