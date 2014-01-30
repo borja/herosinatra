@@ -69,9 +69,9 @@ def druidas
     },
     {
       :id           => 11,
-      :name         => "bendición de Gaia",
-      :description  => "1 aliado comparte Karma.",
-      :type         => "Declarativa"
+      :name         => "karma",
+      :description  => "Al recibir heridas, el héroe gana 1 punto de vinculo.",
+      :type         => "Reactiva"
     },
     {
       :id           => 12,
@@ -99,9 +99,9 @@ def druidas
     },
     {
       :id           => 16,
-      :name         => "karma",
-      :description  => "Al recibir heridas, el héroe gana 1 punto de vinculo.",
-      :type         => "Reactiva"
+      :name         => "bendición de Gaia",
+      :description  => "1 aliado comparte Karma.",
+      :type         => "Declarativa"
     },
     {
       :id           => 17,
