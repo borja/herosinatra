@@ -22,7 +22,7 @@ def vengadors
     {
       :id           => 3,
       :name         => "azufre y cenizas",
-      :description  => "El vengador dispone del set de magias de fuego y sombras completo.",
+      :description  => "El vengador puede secuestrar sombra también con las magias.",
       :type         => "pasiva"
     },
     {
