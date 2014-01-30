@@ -120,7 +120,12 @@ def enchants
       :name         => "armonía estacional",
       :descripcion  => "por definir",
       :tipo         => "natura",
-    }
+    },
+    { :id           => 25,
+      :name         => "enano ingeniero",
+      :descripcion  => "Al disparar, no se gasta una pieza si se renuncia al movimiento,",
+      :tipo         => "enano",
+    },
   ]
 end
 
