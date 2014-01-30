@@ -153,7 +153,7 @@ def druidas
     },
     {
       :id           => 25,
-      :name         => "torsion de gaia",
+      :name         => "torsión de gaia",
       :description  => "El espíritu puede hacer torsión con el aliado que tuviera Bendición de Gaia. Si tienes un espíritu en tu interior, podrás intercambiar tu posición con la del aliado Bendito. No se aplica al Dragón Verde.",
       :type         => "Instintiva"
     },
