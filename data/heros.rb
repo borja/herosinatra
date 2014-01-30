@@ -63,7 +63,7 @@ def heros
       :sex          => "male",
       :repu         => 6,
       :piezas       => [3],
-      :joyas        => [8,15,16,19],
+      :joyas        => [8],
       :gemas        => [2,3,5,13,14,14,20,20,21,28,40],
       :pociones     => [4,7],
       :pergaminos   => [{:id => 1, :spells  => [60]},
