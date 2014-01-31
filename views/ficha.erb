@@ -106,12 +106,21 @@
 						<tr>				
 							<% engarces.each do |engarce| %>
 								<td>
-									<% if @heroe[eval(":#{engarce}")] %>
-										<% @heroe[eval(":#{engarce}")].each do |e| %>
-											<% e_name = send(engarce.gsub('s',''),e)[:name] %>
-											<% img_path = "'../images/treasures/#{engarce}/#{e_name}.png'" %>
-											<img src=<%=img_path%> alt=<%= e_name %>, id='icon' />
-										<% end %>
+									<% if tesoros = @heroe[engarce.to_sym] %>
+										<table id='table-2'>
+											<tbody>
+												<tr>
+													<% tesoros.each do |t| %>
+	                                	    			<td>
+															<%= erb :'display/display', :locals => { 
+																	:title       => nombre = send(engarce.gsub('s',''),t)[:name], 
+																	:path        => "'../images/treasures/#{engarce}/#{nombre}.png'",
+																	:description => nombre } %>
+														</td>
+													<% end %>
+												</tr>
+											</tbody>
+										</table>
 									<% else %>
 										El héroe no tiene <%= engarce %>.
 									<% end %>
