@@ -24,14 +24,14 @@
 				<td><% if hero[:muerto] %>
 						<img src=../images/personajes/dead.png	alt="muerto" /, id='icon'>
 					<% else %>
-						<img src=../images/personajes/<%= genderize(personaje(hero[:personaje]), hero[:sex] ) %>.png 
+						<img src=../images/personajes/<%= genderize(personaje(hero[:personaje]), (hero[:sex] || "male") ) %>.png 
 						alt="personaje" /, id='icon'>
 					<% end%>
 				</td>
 				<td><a href=hero/<%= hero[:id] %>><%= hero[:name] %></a><br>
 					<i><%= hero[:jugador] %></i>
 				</td>
-				<td><%= genderize(personaje(hero[:personaje]),hero[:sex]).capitalize %><br>
+				<td><%= genderize(personaje(hero[:personaje]), (hero[:sex] || "male" )).capitalize %><br>
 					<i><%= hero[:personaje].capitalize.gsub('Lord','Señor') %></i>
 				</td>
 				<td style="font-size:28px;"><%= hero[:nivel] %></td>

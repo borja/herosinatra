@@ -30,7 +30,7 @@
 							<td><%= @heroe[:name   ].capitalize %><br>
 								<%= @heroe[:jugador].capitalize %></td>
 							<td><% raza = is_human?(@heroe[:personaje]) ? "humano" : personaje(@heroe[:personaje]) %>
-								<%= genderize(raza,@heroe[:sex]).capitalize %></td>
+								<%= genderize(raza, (@heroe[:sex] || "male") ).capitalize %></td>
 							<td><%= @heroe[:personaje].capitalize %></td>
 							<td><%= @heroe[:nivel  ] %></td>
 							<td style="background-image:url(../images/ficha/star.png); 
