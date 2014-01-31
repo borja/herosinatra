@@ -24,7 +24,7 @@
 						<tr>
 							<td><%= erb :'display/display', :locals => { 
 									:title       => @heroe[:name], 
-									:path        => "'../images/personajes/#{ genderize(personaje(@heroe[:personaje]), @heroe[:sex] ) }.png'",
+									:path        => "'../images/personajes/#{ genderize(personaje(@heroe[:personaje]), (@heroe[:sex] ||'male')) }.png'",
 									:description => @heroe[:story] || "" } %>
 							</td>
 							<td><%= @heroe[:name   ].capitalize %><br>
