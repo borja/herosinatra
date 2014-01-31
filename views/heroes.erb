@@ -45,8 +45,12 @@
 				<% ["armas", "armaduras", "proteccions", "miscelaneas"].each do |items| %>
 					<td><table id='table-2'>
 							<tbody>
-								<tr><% hero[items.to_sym].each do |a| %>
-										<td><%= erb :'display/item', :locals => { :a => a, :item => items[0..-2]} %></td>
+								<tr><% if hero[items.to_sym] %>
+										<% hero[items.to_sym].each do |a| %>
+											<td><%= erb :'display/item', :locals => { :a => a, :item => items[0..-2]} %></td>
+										<% end %>
+									<% else %>
+									<td></td>
 									<% end %>
 								</tr>
 							</tbody>
