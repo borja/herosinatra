@@ -19,7 +19,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% heros.each do |hero| %><% if (hero[:status] == @status) %>
+		<% heros.each do |hero| %><% if ((hero[:status] || "ausente") == @status) %>
 			<tr>
 				<td><% if hero[:muerto] %>
 						<img src=../images/personajes/dead.png	alt="muerto" /, id='icon'>
