@@ -148,7 +148,7 @@ def heros
       :personaje   => "berserker",
       :jugador     => "Daniel Acha",
       :sex         => "male",
-      :status      => "activo"
+      :status      => "activo",
       :nivel       => 9,
       :repu        => 2,
       :cuerpo      => 12,
