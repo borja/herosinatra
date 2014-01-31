@@ -79,6 +79,12 @@ def proteccions
       :powa         => 1,
       :ranuras      => 2,
     },
+    { :id           => 13,
+      :name         => "yelmo con visera",
+      :categoria    => "metal",
+      :powa         => 2,
+      :ranuras      => 1,
+    },
   ]
 end
 

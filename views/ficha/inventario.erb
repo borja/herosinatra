@@ -33,6 +33,8 @@
 							<td><%= erb :'display/item', :locals => { :a => a , :item => "proteccion"} %></td>
 						<% elsif a = @heroe[:proteccions].detect {|p| p[:id] == 2 } %>
 							<td><%= erb :'display/item', :locals => { :a => a , :item => "proteccion"} %></td>
+						<% elsif a = @heroe[:proteccions].detect {|p| p[:id] == 13 } %>
+							<td><%= erb :'display/item', :locals => { :a => a , :item => "proteccion"} %></td>
 						<% elsif a = @heroe[:proteccions].detect {|p| p[:id] == 12 } %>
 							<td><%= erb :'display/item', :locals => { :a => a , :item => "proteccion"} %></td>
 						<% else %>

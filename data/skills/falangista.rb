@@ -43,6 +43,18 @@ def falangistas
       :description  => "por 1 punto de honor aumenta en +1 potencia en la defensa",
       :type         => "Pasiva"
     },
+    {
+      :id           => 7,
+      :name         => "gloria del héroe",
+      :description  => "Ignora cualquier mal. Se debe declarar al inicio del turno del Malvado Brujo.",
+      :type         => "única"
+    },
+    {
+      :id           => 8,
+      :name         => "zona de combate",
+      :description  => "permite golpear a cualquier enemigo en 180º con escudos.",
+      :type         => "pasiva"
+    },
   ]
 end
 
