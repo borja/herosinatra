@@ -45,7 +45,7 @@ def asesinos
     },
     {
       :id           => 7,
-      :name         => "honor de ladrones",
+      :name         => "honor entre ladrones",
       :description  => "Por describir.",
       :type         => "Reactiva"
     },
@@ -63,7 +63,7 @@ def asesinos
     },
     {
       :id           => 10,
-      :name         => "golpe a la carotida",
+      :name         => "golpe a la carótida",
       :description  => "Por describir.",
       :type         => "Reactiva"
     },
