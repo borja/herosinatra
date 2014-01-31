@@ -575,8 +575,6 @@ def heros
       :hechizos  => [1,2,3,13,14,15],
       :armas     => [{:id => 2}],
       :armaduras => [{:id => 1}],
-      :proteccions     => [],
-      :miscelaneas     => [],
       :sex       => "female",
       :status    => "reserva",
     },

@@ -182,7 +182,7 @@ def gema_calidad(numero)
   when 5 then return "Piedras de Poder"
   when 6 then return "Gemas Legendarias"
   when 7 then return "Gemas Insolitas"
-  else return "Error!"
+  else return nil
   end
 end    
     
