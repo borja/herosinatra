@@ -33,7 +33,7 @@ def ingenieros
     },
     {
       :id           => 5,
-      :name         => "perforante",
+      :name         => "disparo perforante",
       :description  => "El exceso de daño que no se pueda parar un enemigo, le atravesará, yendo el disparo hacia otro enemigo que esté adyacente.",
       :type         => "pasiva"
     },
