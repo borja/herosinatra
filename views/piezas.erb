@@ -4,3 +4,25 @@
 <link rel="stylesheet" href="../../app.css" type="text/css" />
 
 <h1>Lista de piezas</h1><br><br>
+
+<table id='table-2'>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Icono</th>
+			<th>Nombre</th>
+		</tr>	
+	</thead>
+	<tbody>
+		<% piezas.each do |p| %>
+			<tr>
+				<td><%= p[:id] %></td>
+				<td>
+					<% img_path = "'../images/utiles/piezas/#{p[:name]}.png'" %>
+					<img src=<%=img_path%> alt=<%=p[:name]%>, id='icon' />
+				</td>
+				<td>Joya <%= p[:name] %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

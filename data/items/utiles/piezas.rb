@@ -8,10 +8,10 @@ def piezas
       :name         => "mapa",
     },
     { :id           => 2,
-      :name         => "documento",
+      :name         => "seta mágica",
     },
     { :id           => 3,
-      :name         => "herramientas vs trampas",
+      :name         => "herramientas",
     },
     { :id           => 4,
       :name         => "caja de gemas",
@@ -22,6 +22,9 @@ def piezas
     { :id           => 6,
       :name         => "estuche de pergaminos",
     },
+    { :id           => 7,
+      :name         => "mochila",
+    }
   ]
 end
 
