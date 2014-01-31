@@ -29,11 +29,10 @@
 						<table id = 'table-2'>
 							<tbody>
 								<tr><% d[:hechizos].each do |magia| %>
-										<td><% hechizo = (spell(magia))[:name] %>									
-											<% img_path   = "'../images/spells/#{hechizo}.png'"     %>
-											<img style="vertical-align:middle" 
-										 	src=<%=img_path%> alt=<%= hechizo %>, id='icon' />		
-										 	<%= hechizo.capitalize %>
+										<td><%= erb :'display/display', :locals => { 
+													:title       => (spell(magia))[:name], 
+													:path        => "'../images/spells/#{(spell(magia))[:name]}.png'",
+													:description => (spell(magia))[:descripcion] } %>
 										</td>
 									<% end %>	
 								</tr>
