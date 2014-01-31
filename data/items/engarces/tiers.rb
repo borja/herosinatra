@@ -42,6 +42,13 @@ def tiers
       :bono  => "control de las estaciones <por definir>",
       :mix   => {:joyas => [15,19,16] },
       :color => "#660033"
+    },
+    {
+      :id    => 6,
+      :name  => "maestría muertegélida",
+      :bono  => "+1 de ataque, conjura genios con diablura.",
+      :mix   => {:gemas => [10,14,42,10] },
+      :color => "#000099"
     }
   ]
 end

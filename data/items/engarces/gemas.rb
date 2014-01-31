@@ -161,10 +161,14 @@ def gemas
       :name         => "jacinto de sangre",
       :calidad      => 7,
    },
-    { :id          => 41,
+    { :id           => 41,
       :name         => "piedra de alma",
       :calidad      => 7,
-   },    
+   },  
+   { :id           => 42,
+     :name         => "felmar",
+     :calidad      => 7,
+  },    
   ]   
 
 end
