@@ -135,36 +135,42 @@ def druidas
     },
     {
       :id           => 22,
+      :name         => "gloria del héroe",
+      :description  => "Ignora cualquier mal. Se debe declarar al inicio del turno del Malvado Brujo.",
+      :type         => "única"
+    },
+    {
+      :id           => 23,
       :name         => "armadura del bosque",
       :description  => "Por 1PV los dados de defensa son verdes, por cada PV acumulado, +1 potencia defensiva.",
       :type         => "Instintiva"
     },
     {
-      :id           => 23,
+      :id           => 24,
       :name         => "invocar búho",
       :description  => "Invoca un espíritu místico de nivel 4 en forma de búho. Conoce todos los secretos y se le puede preguntar pistas.",
       :type         => "Activa"
     },
     {
-      :id           => 24,
+      :id           => 25,
       :name         => "fuerza espiritual",
       :description  => "Cada espíritu tiene habilidades extras.",
       :type         => "Pasiva"
     },
     {
-      :id           => 25,
+      :id           => 26,
       :name         => "torsión de gaia",
       :description  => "El espíritu puede hacer torsión con el aliado que tuviera Bendición de Gaia. Si tienes un espíritu en tu interior, podrás intercambiar tu posición con la del aliado Bendito. No se aplica al Dragón Verde.",
       :type         => "Instintiva"
     },
     {
-      :id           => 26,
+      :id           => 27,
       :name         => "imbuir arcano mejorado",
       :description  => "Los hechizos que ejecutan los espíritus tienen +1 potencia, gastando 1 PV. La potencia no es acumulable.",
       :type         => "Activa"
     },
     {
-      :id           => 27,
+      :id           => 28,
       :name         => "consistencia",
       :description  => "Cada espíritu tiene +1 PC.",
       :type         => "Pasiva"

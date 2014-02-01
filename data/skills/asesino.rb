@@ -112,8 +112,14 @@ def asesinos
     {
       :id           => 18,
       :name         => "transportar el alma sombría",
-      :description  => "En el turno del Malvado Brujo, el asesino podrá teletransportarse en la ubicación de algún monstruo que haya matado.",
+      :description  => "En el turno del Malvado Brujo, el asesino podrá teletransportarse en la espalda del aliado que haya sido bendito por Sombras Gemelas.",
       :type         => "Instintiva"
+    },
+    {
+      :id           => 19,
+      :name         => "gloria del héroe",
+      :description  => "Ignora cualquier mal. Se debe declarar al inicio del turno del Malvado Brujo.",
+      :type         => "única"
     },
   ]
 end
