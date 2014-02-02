@@ -86,7 +86,7 @@ def pets
       :lacra         => "Si muere el personaje, ella tambien muere.",
     },
     { :id           => 16,
-      :name         => "huron",
+      :name         => "hurón",
       :personajes   => ["barbaro","enano"],
       :bono         => "+1 movimiento"
     },
