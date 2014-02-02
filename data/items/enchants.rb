@@ -146,6 +146,16 @@ def enchants
       :descripcion  => "+1 PC.",
       :tipo         => "bendito",
     },
+    { :id           => 30,
+      :name         => "fuente de vida",
+      :descripcion  => "3 cargas/reto. (1): +1 PC/melee, (3): Agua que cura, Resistir veneno: (+1)",
+      :tipo         => "bendito",
+    },
+    { :id           => 31,
+      :name         => "antitoxinas",
+      :descripcion  => "+2 vs veneno",
+      :tipo         => "bendito",
+    },
   ]
 end
 

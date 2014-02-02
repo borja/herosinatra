@@ -14,6 +14,10 @@ class App < Sinatra::Base
     @status = "reserva"
     erb :heroes
   end
+  get '/extranjeros' do
+    @status = "extranjero"
+    erb :heroes
+  end
   get '/ausentes' do
     @status = "ausente"
     erb :heroes
@@ -23,11 +27,11 @@ class App < Sinatra::Base
     erb :heroes
   end  
   get '/hero/:id' do |id|
-    @heroe = heros[ (id.to_i - 1) ]
+    @heroe = heros[ id.to_i ]
     erb :ficha
   end
   get '/spells/:hero' do |hero_id|
-    @heroe = heros[ (hero_id.to_i - 1) ]
+    @heroe = heros[ hero_id.to_i ]
     erb :spells
   end
   get '/armaduras' do

@@ -1,6 +1,22 @@
 # encoding: UTF-8
 def heros
   [
+    { :id          => 0,
+      :name        => "Amru",
+      :personaje   => "hechicero",
+      :jugador     => "Borja",
+      :status      => "extranjero",
+      :nivel       => 1,
+      :cuerpo      => 4,
+      :mente       => 6,
+      :mov         => 7,
+      :pet         => 8,
+      :hechizos    => [1,2,3,4,5,6,7,8,9,10,11,12],
+      :armas       => [{:id => 3}],
+      :armaduras   => [{:id => 1}],
+      :miscelaneas => [{:id => 2, :enchants => [30,31], :ranuras => 1}],
+      :pergaminos  => [{:id => 1, :spells   => [11]}],
+    },
     { :id          => 1,
       :name        => "fuckencio",
       :personaje   => "asesino",
@@ -667,16 +683,48 @@ def heros
       :armaduras   => [{:id => 2}],
       :proteccions => [{:id => 5, :enchants => [5]}],
     },
+    { :id          => 36,
+      :name        => "Ïlóndel",
+      :sex         => "female",
+      :personaje   => "derviche",
+      :jugador     => "Iris",
+      :status      => "extranjero",
+      :nivel       => 2,
+      :cuerpo      => 6,
+      :mente       => 4,
+      :mov         => 8,
+      :hechizos    => [7,8,9],
+      :armas       => [{:id => 5, :gemas =>[14]},
+                       {:id => 7}],
+      :armaduras   => [{:id => 2}],
+    },
+    { :id          => 37,
+      :name        => "Vintor Steelengard",
+      :personaje   => "matador",
+      :jugador     => "Daniel Acha",
+      :status      => "extranjero",
+      :nivel       => 2,
+      :cuerpo      => 8,
+      :mente       => 3,
+      :mov         => 8,
+      :pet         => 16,
+      :armas       => [{:id => 11},
+                       {:id => 7}],
+      :armaduras   => [{:id => 2}],
+      :pergaminos  => [{:id => 3},
+                       {:id => 1, :spells => [8]},
+                       {:id => 1, :spells => [8]}],
+    },
   ]
 end
 
 def hero(id)
-  heros[id-1]
+  heros[id]
 end
 
 def ataque(id)
  total = 0
- heros[id-1][:armas].each do |a|
+ heros[id][:armas].each do |a|
    total += arma(a[:id])[:powa] unless a[:id] == 7 # Salvo que sea un escudo
  end
  return total
@@ -684,7 +732,7 @@ end
 
 def rango(id)
   total = 0
-  heros[id-1][:armas].each do |a|
+  heros[id][:armas].each do |a|
     total += arma(a[:id])[:powa] if arma(a[:id])[:name] == "arco"
   end
   return total
@@ -699,12 +747,5 @@ def mundano?(item)
 end
 
 def defensa(id)
- #total = heros[id-1][:armaduras].first[:powa]
- #heros[id-1][:proteccions].each do |p|
- #  total += proteccion(p[:id])[:powa]
- #end
- #heros[id-1][:armas].each do |a|
- #  total += arma(a[:id])[:powa] if a[:id] == 7 # Si es un escudo
- #end
-  return 1#total  
+  return 1  
 end
