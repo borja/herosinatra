@@ -36,10 +36,11 @@
 							<td style="background-image:url(../images/ficha/star.png); 
 								background-repeat: no-repeat; background-position:center;">
 								<%= @heroe[:repu   ] || 0 %></td>
-							<% if p = @heroe[:pet]%>						
+							<% if p = @heroe[:pet]%>
+							<% pet_name = "#{p[:name]}, #{pet(p[:id])[:sex] ? "la" : "el"} #{pet(p[:id])[:name].capitalize}" %>						
 								<td>
 									<%= erb :'display/display', :locals => { 
-										:title       => pet(p[:id])[:name].capitalize, 
+										:title       => pet_name, 
 										:path        => "'../../images/pets/#{ pet(p[:id])[:name] }.png'",
 										:description => pet(p[:id])[:bono] } %>
 								</td>

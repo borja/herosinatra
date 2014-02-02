@@ -36,8 +36,9 @@
 				</td>
 				<td style="font-size:28px;"><%= hero[:nivel] %></td>
 				<td><% if p = hero[:pet] %>
+					<% pet_name = "#{p[:name]}, #{pet(p[:id])[:sex] ? "la" : "el"} #{pet(p[:id])[:name].capitalize}" %>						
 						<%= erb :'display/display', :locals => { 
-							:title       => pet(p[:id])[:name], 
+							:title       => pet_name, 
 							:path        => "'images/pets/#{pet(p[:id])[:name]}.png'",
 							:description => pet(p[:id])[:bono] } %>
 					<% end %>						
