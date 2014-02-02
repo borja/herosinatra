@@ -35,11 +35,11 @@
 					<i><%= hero[:personaje].capitalize.gsub('Lord','Señor') %></i>
 				</td>
 				<td style="font-size:28px;"><%= hero[:nivel] %></td>
-				<td><% if hero[:pet] %>
+				<td><% if p = hero[:pet] %>
 						<%= erb :'display/display', :locals => { 
-							:title       => pet(hero[:pet])[:name], 
-							:path        => "'images/pets/#{pet(hero[:pet])[:name]}.png'",
-							:description => pet(hero[:pet])[:bono] } %>
+							:title       => pet(p[:id])[:name], 
+							:path        => "'images/pets/#{pet(p[:id])[:name]}.png'",
+							:description => pet(p[:id])[:bono] } %>
 					<% end %>						
 				</td>
 				<% ["armas", "armaduras", "proteccions", "miscelaneas"].each do |items| %>

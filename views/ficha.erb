@@ -36,12 +36,12 @@
 							<td style="background-image:url(../images/ficha/star.png); 
 								background-repeat: no-repeat; background-position:center;">
 								<%= @heroe[:repu   ] || 0 %></td>
-							<% if @heroe[:pet]%>						
+							<% if p = @heroe[:pet]%>						
 								<td>
 									<%= erb :'display/display', :locals => { 
-										:title       => pet(@heroe[:pet])[:name].capitalize, 
-										:path        => "'../../images/pets/#{ pet(@heroe[:pet])[:name]}.png'",
-										:description => pet(@heroe[:pet])[:bono] } %>
+										:title       => pet(p[:id])[:name].capitalize, 
+										:path        => "'../../images/pets/#{ pet(p[:id])[:name] }.png'",
+										:description => pet(p[:id])[:bono] } %>
 								</td>
 							<% end %>
 						</tr>
@@ -141,9 +141,7 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>				
-						<td>
-							<% if @heroe[:pociones] %>
+					<tr><td><% if @heroe[:pociones] %>
 								<table id='table-2'>
 									<tbody>
 										<tr>
@@ -165,11 +163,9 @@
 						<td>
 							<table id='table-2'>
 								<tbody>
-									<tr>
-										<% if @heroe[:pergaminos] %>
+									<tr><% if @heroe[:pergaminos] %>
 											<% @heroe[:pergaminos].each do |p| %>
-												<td>
-													<div class="information_popup_container">
+												<td><div class="information_popup_container">
 														<div class="information">
 															<% name = pergamino(p[:id])[:name] %>
 															<% img_path = "'../images/utiles/pergaminos/#{name}.png'" %>
@@ -202,14 +198,11 @@
 								</tbody>
 							</table>
 						</td>
-						<td>
-							<% if @heroe[:piezas] %>
+						<td><% if @heroe[:piezas] %>
 								<table id='table-2'>
 									<tbody>
-										<tr>
-											<% @heroe[:piezas].each do |p| %>
-                                    			<td>
-													<%= erb :'display/display', :locals => { 
+										<tr><% @heroe[:piezas].each do |p| %>
+                                    			<td><%= erb :'display/display', :locals => { 
 															:title       => pieza(p)[:name], 
 															:path        => "'../images/utiles/piezas/#{pieza(p)[:name]}.png'",
 															:description => "" } %>
