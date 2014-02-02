@@ -34,44 +34,17 @@ class App < Sinatra::Base
     @heroe = heros[ hero_id.to_i ]
     erb :spells
   end
-  get '/armaduras' do
-    erb :armaduras
-  end
-  get '/protecciones' do
-    erb :protecciones
-  end   
-  get '/miscelaneas' do
-    erb :miscelaneas
-  end
-  get '/armas' do
-    erb :armas
+  get '/items/:items' do |group|
+    erb :"items/#{group}"
   end       
   get '/familiares' do
     erb :familiares
-  end
-  get '/profesiones' do
-    erb :profesiones
-  end
-  get '/gemas' do
-    erb :gemas
-  end
-  get '/runas' do
-    erb :runas
-  end  
-  get '/joyas' do
-    erb :joyas
   end
   get '/tiers' do
     erb :tiers
   end
   get '/encantamientos' do
     erb :encantamientos
-  end
-  get '/pociones' do
-    erb :pociones
-  end
-  get '/pergaminos' do
-    erb :pergaminos
   end
   get '/habilidades' do
     erb :habilidades
@@ -86,15 +59,6 @@ class App < Sinatra::Base
   end
   get '/piezas' do
     erb :piezas
-  end
-  get '/objetosmagicos' do
-    erb :objetosmagicos
-  end
-  get '/artefactos' do
-    erb :artefactos
-  end
-  get '/supervivencia' do
-    erb :supervivencia
   end
   get '/habilidades/:char' do |clase|
     @char = clase
