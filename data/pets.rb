@@ -78,7 +78,6 @@ def pets
       :name         => "hada",
       :personajes   => ["elfo"],
       :bono         => "+1 hechizo élfico",
-      :sex          => "female",
     },
     { :id           => 14,
       :name         => "luciérnaga",
