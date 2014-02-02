@@ -46,6 +46,9 @@ class App < Sinatra::Base
   get '/encantamientos' do
     erb :encantamientos
   end
+  get '/profesiones' do
+    erb :profesiones
+  end
   get '/habilidades' do
     erb :habilidades
   end
@@ -56,9 +59,6 @@ class App < Sinatra::Base
   get '/hechizos/:level' do |level|
     @spelllevel = level
     erb :hechizos
-  end
-  get '/piezas' do
-    erb :piezas
   end
   get '/habilidades/:char' do |clase|
     @char = clase
@@ -71,12 +71,9 @@ class App < Sinatra::Base
   get '/tesoro' do
     erb :tesoro
   end
-  get '/criaturas/dragones' do
-    erb :'criaturas/dragones'
-  end
-  get '/criaturas/elementales' do
-    erb :'criaturas/elementales'
-  end
+  get '/criaturas/:monster' do |criature|
+    erb :"criaturas/#{criature}"
+  end 
   get '/magia/escuelas' do
     erb :'escuelas'
   end
