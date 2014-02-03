@@ -1,10 +1,10 @@
-# encoding: UTF-8
+﻿# encoding: UTF-8
 def druidas
   [
     {
       :id           => 0,
       :name         => "espíritu guardián menor",
-      :description  => "Invoca un espritu guardián de nivel 1 a cambio de 2 puntos de mente. Se invocará a elección una rata, murciélago o araña pequeña.",
+      :description  => "Invoca un espíritu guardián de nivel 1 a cambio de 2 puntos de mente. Se invocará a elección una rata, murciélago o araña pequeña.",
       :type         => "Activa"
     },
     {
@@ -111,20 +111,20 @@ def druidas
     },
     {
       :id           => 18,
-      :name         => "imbuir arcano mayor",
-      :description  => "El espíritu aprende 2 hechizos y los ejecuta (1/turno), a cambio de 1 punto de vínculo, en vez de atacar.",
-      :type         => "Activa"
-    },
-    {
-      :id           => 19,
       :name         => "dragón verde",
       :description  => "Invoca un gran dragón verde a cambio de 5 puntos de vínculo. Mantenerlo cada turno cuesta 4 PV.",
       :type         => "Activa"
     },
     {
-      :id           => 20,
+      :id           => 19,
       :name         => "estallido de saprolines",
       :description  => "Invoca con 1d6 seres que son el resultado de un hongo y una planta, a cambio de PV. Cada saprolin realizará habilidades únicas.",
+      :type         => "Activa"
+    },
+    {
+      :id           => 20,
+      :name         => "imbuir arcano mayor",
+      :description  => "El espíritu aprende 2 hechizos y los ejecuta (1/turno), a cambio de 1 punto de vínculo, en vez de atacar.",
       :type         => "Activa"
     },
     {
