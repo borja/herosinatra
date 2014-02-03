@@ -33,7 +33,7 @@ def miscelaneas
     },
     {
       :id           => 7,
-      :name         => "camafeo draconico",
+      :name         => "camafeo",
       :max          => 1
     },
     {

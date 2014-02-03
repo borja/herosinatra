@@ -156,6 +156,11 @@ def enchants
       :descripcion  => "+2 vs veneno",
       :tipo         => "bendito",
     },
+    { :id           => 32,
+      :name         => "dracónico",
+      :descripcion  => "1/reto: Permite convocar un draco verde con la capacidad de cerrar portales",
+      :tipo         => "élfico",
+    }
   ]
 end
 
