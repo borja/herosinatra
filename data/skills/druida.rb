@@ -117,14 +117,14 @@ def druidas
     },
     {
       :id           => 19,
-      :name         => "imbuir arcano mayor",
-      :description  => "El espíritu aprende 2 hechizos y los ejecuta (1/turno), a cambio de 1 punto de vínculo, en vez de atacar.",
+      :name         => "estallido de saprolines",
+      :description  => "Invoca con 1d6 seres que son el resultado de un hongo y una planta, a cambio de PV. Cada saprolin realizará habilidades únicas.",
       :type         => "Activa"
     },
     {
       :id           => 20,
-      :name         => "estallido de saprolines",
-      :description  => "Invoca con 1d6 seres que son el resultado de un hongo y una planta, a cambio de PV. Cada saprolin realizará habilidades únicas.",
+      :name         => "imbuir arcano mayor",
+      :description  => "El espíritu aprende 2 hechizos y los ejecuta (1/turno), a cambio de 1 punto de vínculo, en vez de atacar.",
       :type         => "Activa"
     },
     {
