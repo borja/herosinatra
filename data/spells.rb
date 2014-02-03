@@ -427,6 +427,61 @@ def spells
       :nivel        => 3,
       :descripcion  => "El lanzador tira 1d6 y lanzará el hechizo Tormenta a tantos objetivos como indique el dado. Luego, con 1d6, será la duración del hechizo. Si el número coincide, esos objetivos sufrirán un ataque defendible de aire de 1 dado/turno.",
     },
+    { :id           => 72,
+      :name         => "foco de abrasión vengativa",
+      :elemento     => "fuego",
+      :nivel        => 4,
+      :descripcion  => "El objetivo pierde su resistencia al fuego y todo el daño por fuego que reciba se triplicará. Si el lanzador invierte 1d6 PM, podrá recuperar Fuego de Ira, lanzándolo sin gastarlo hasta que muera el objetivo."
+    },
+    { :id           => 73,
+      :name         => "espiritismo ígneo",
+      :elemento     => "fuego",
+      :nivel        => 4,
+      :descripcion  => "El mago invoca decenas de ánimas de fuego. Tira 2d6. Comenzando por el hechicero, cada jugador elige un objetivo para que reciba el ataque de 2 espíritus de fuego. Los espíritus atacan con 2 dados defendibles por fuego y pueden realizar ataques en conjunto.."
+    },
+    { :id           => 74,
+      :name         => "bola de fuego descomunal",
+      :elemento     => "fuego",
+      :nivel        => 4,
+      :descripcion  => "Arrasa al objetivo que defenderá con 8 dados un golpe por fuego de 10. Todas las casillas a su alrededor sufren el impacto de una bola de fuego de nivel 1"
+    },
+    { :id           => 75,
+      :name         => "derretir la piedra",
+      :elemento     => "fuego",
+      :nivel        => 4,
+      :descripcion  => "El lanzador puede crear una puerta en una pared siempre que la otro lado haya casillas válidas. Puede gastar 3 PM o 1 magia para recuperar ésta."
+    },
+    { :id           => 76,
+      :name         => "aura de llamas",
+      :elemento     => "fuego",
+      :nivel        => 4,
+      :descripcion  => "Todos los turnos las casillas adyacentes al lanzador sufrirán un ataque de Fuego de Ira de nivel 1. Cualquier proyectil no-mágico, es destruido antes de provocar daños. El mago obtiene resistencia al frío de 5+."
+    },
+    { :id           => 77,
+      :name         => "sangre ígnea",
+      :elemento     => "fuego",
+      :nivel        => 4,
+      :descripcion  => "El objetivo perderá 1 PM si no obtiene un escudo negro con 1 dado. Atacará con 3 dados adicionales y siempre que pierda 1 PC hará un ataque no-defendible de 2 dados por fuego, a las casillas contiguas. Al comienzo del turno del Malvado Brujo, si no invierte 2 PC, el efecto cesará y le provocará 1 daño por fuego si no obtiene un escudo negro."
+    },
+    { :id           => 78,
+      :name         => "fisura",
+      :elemento     => "tierra",
+      :nivel        => 4,
+      :descripcion  => "En una casilla surge un pozo mágico. Cualquier miniatura que caiga en el foso perderá la mitad de sus PC redondeados hacia abajo y estará en posición inferior a los demás, duplicando esta desventaja. Para salir del pozo se superará una tirada de movimiento. Si no, las paredes se estrecharán y volverá a sufrir un ataque idéntico aumentando la dificultad de la tirada de escape en 4. Si la fisura mata a su víctima, se cerrará."
+    },
+    { :id           => 79,
+      :name         => "la boca del lobo",
+      :elemento     => "tierra",
+      :nivel        => 4,
+      :descripcion  => "Estalactitas y estalagmitas surgen del techo y el suelo y atrapan a las miniaturas en 5 casillas contiguas de la misma sala/pasillo que el hechicero. Las miniaturas pierden su próximo turno y sufren un ataque de 2 dados que no podrán defender."
+    },
+    { :id           => 80,
+      :name         => "cura definitiva",
+      :elemento     => "tierra",
+      :nivel        => 4,
+      :descripcion  => "Tanto tú como tu objetivo recuperáis todos los PC. El objetivo debe estar peana con peana contigo. Si la cantidad total no excede tus PM, podrás sanar a un tercer objetivo contiguo a ambos."
+    },
+    
   ]
 end
 
