@@ -111,14 +111,14 @@ def druidas
     },
     {
       :id           => 18,
-      :name         => "imbuir arcano mayor",
-      :description  => "El espíritu aprende 2 hechizos y los ejecuta (1/turno), a cambio de 1 punto de vínculo, en vez de atacar.",
+      :name         => "dragón verde",
+      :description  => "Invoca un gran dragón verde a cambio de 5 puntos de vínculo. Mantenerlo cada turno cuesta 4 PV.",
       :type         => "Activa"
     },
     {
       :id           => 19,
-      :name         => "dragón verde",
-      :description  => "Invoca un gran dragón verde a cambio de 5 puntos de vínculo. Mantenerlo cada turno cuesta 4 PV.",
+      :name         => "imbuir arcano mayor",
+      :description  => "El espíritu aprende 2 hechizos y los ejecuta (1/turno), a cambio de 1 punto de vínculo, en vez de atacar.",
       :type         => "Activa"
     },
     {
