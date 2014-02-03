@@ -154,7 +154,7 @@ def druidas
     {
       :id           => 25,
       :name         => "fuerza espiritual",
-      :description  => "Cada espíritu tiene habilidades extras.",
+      :description  => "Cada espíritu tiene habilidades extras y otorga también beneficios extras al druida cuando su espíritu queda imbuido con el invocado. Esto también permite que el coste del Dragón Verde sea 3 PV/turno. ",
       :type         => "Pasiva"
     },
     {
