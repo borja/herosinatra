@@ -73,8 +73,8 @@ class App < Sinatra::Base
   end
   get '/criaturas/:monster' do |criature|
     erb :"criaturas/#{criature}"
-  end 
-  get '/magia/escuelas' do
-    erb :'escuelas'
   end
+  get '/magia/:topic' do |tema|
+    erb :"magia/#{tema}"
+  end  
 end

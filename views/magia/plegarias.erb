@@ -1,0 +1,37 @@
+<%= erb :menu %><br><br><br<br>
+
+<link rel="stylesheet" href="../../css/main.css" type="text/css" />
+<link rel="stylesheet" href="../../app.css" type="text/css" />
+
+<h1>Plegarias Sagradas</h1><br><br>
+
+<table id='table-2'>
+<thead>
+	<th>Icono</th>
+	<% plegarias.first.keys.each do |key|%>
+		<th><%= key.capitalize %></th>
+	<% end %>
+</thead>
+<tbody>
+	<% plegarias.each do |p|%>
+		<tr style='yellow'>	
+			<td>
+				<%= erb :'display/display', :locals => { 
+						:title       => p[:name], 
+						:path        => "'../../images/magia/plegarias/#{ p[:name] }.png'",
+						:description => 'popop' } %>
+			</td>
+			<td><%= p[:id] %></td>			
+			<td><%= p[:name    ].capitalize %></td>
+			<td><%= p[:tipo    ].capitalize %></td>
+			<td><%= p[:duracion].to_s.capitalize %></td>
+			<td><%= p[:potencia].to_s.capitalize %></td>
+			<td><%= p[:alcance ].to_s.capitalize %></td>
+			<td><%= p[:efecto  ] %></td>
+			<td><%= p[:summun  ].to_s.capitalize %></td>	
+			<td><%= p[:chakra  ].to_s.capitalize %></td>		
+		</tr>
+	<% end %>
+</tbody>
+</table>
+<br>

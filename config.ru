@@ -31,6 +31,9 @@ require './data/items/protecciones'
 require './data/criaturas/dragones'
 require './data/criaturas/elementales'
 
+# Magic Data Base
+require './data/magia/plegarias'
+
 Bundler.require
 
 require './app.rb'
