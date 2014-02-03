@@ -40,9 +40,6 @@ class App < Sinatra::Base
   get '/familiares' do
     erb :familiares
   end
-  get '/tiers' do
-    erb :tiers
-  end
   get '/encantamientos' do
     erb :encantamientos
   end
@@ -76,5 +73,9 @@ class App < Sinatra::Base
   end
   get '/magia/:topic' do |tema|
     erb :"magia/#{tema}"
-  end  
+  end
+  get '/clase/:personaje' do |clase|
+    @clase = clase.to_s
+    erb :clase
+  end    
 end
