@@ -112,7 +112,7 @@ def druidas
     {
       :id           => 18,
       :name         => "dragón verde",
-      :description  => "Invoca un gran dragón verde a cambio de 5 puntos de vínculo. Mantenerlo cada turno cuesta 4 PV.",
+      :description  => "Invoca un gran Dragón Verde a cambio de 5 puntos de vínculo. Tendrá 4 ataques disponibles/turno y podrá realizar magias. Se autoregenera 1 PC/turno y por cada enemigo que mate el dragón, el druida gana 1 PV y 1 PM. Puede usarse como montura, pudiendo subirse a él hasta 2 elfos. Mantenerlo cada turno cuesta 4 PV.",
       :type         => "Activa"
     },
     {
