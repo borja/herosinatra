@@ -49,6 +49,13 @@ def tiers
       :bono  => "+1 de ataque, conjura genios con diablura.",
       :mix   => {:gemas => [10,14,42,10] },
       :color => "#000099"
+    },
+    {
+      :id    => 7,
+      :name  => "as de diamantes",
+      :bono  => "Solo puede ser atacado por un enemigo/turno",
+      :mix   => {:gemas => [30,24,29] },
+      :color => "#3366FF"
     }
   ]
 end
