@@ -29,7 +29,7 @@ def heros
       :mov         => 18,
       :hechizos    => [14],
       :armas       => [{:id => 6,  :joyas   => [11,11]},
-                       {:id => 3}],
+                       {:id => 3,   :gemas   => [25]}],
       :armaduras   => [{:id =>  2,  :gemas   => [24]}],
       :proteccions => [{:id => 12,  :gemas   => [40], :joyas => [4]},
                        {:id =>  1},
