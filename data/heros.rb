@@ -30,7 +30,7 @@ def heros
       :hechizos    => [14],
       :armas       => [{:id => 6,  :joyas   => [11,11]},
                        {:id => 3,   :gemas   => [25]}],
-      :armaduras   => [{:id =>  2,  :gemas   => [30,24,29]}],
+      :armaduras   => [{:id =>  2,  :gemas   => [30,24,29], :enchants => [33]}],
       :proteccions => [{:id => 12,  :gemas   => [40], :joyas => [4]},
                        {:id =>  1},
                        {:id =>  3,  :gemas   => [14,14]}, 
