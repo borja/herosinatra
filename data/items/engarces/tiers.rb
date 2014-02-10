@@ -56,6 +56,13 @@ def tiers
       :bono  => "Solo puede ser atacado por un enemigo/turno",
       :mix   => {:gemas => [30,24,29] },
       :color => "#3366FF"
+    },
+    {
+      :id    => 8,
+      :name  => "disformidad",
+      :bono  => "permite gobernar no-muertos",
+      :mix   => {:joyas => [2], :gemas => [19], :joyas => [2] },
+      :color => "#996699"
     }
   ]
 end
