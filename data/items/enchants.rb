@@ -160,6 +160,11 @@ def enchants
       :name         => "dracónico",
       :descripcion  => "1/reto: Permite convocar un draco verde con la capacidad de cerrar portales",
       :tipo         => "élfico",
+    },
+    { :id           => 33,
+      :name         => "valerosa",
+      :descripcion  => "el portador obtiene valentía al matar",
+      :tipo         => "ígneo",
     }
   ]
 end
