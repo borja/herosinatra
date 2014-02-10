@@ -41,7 +41,7 @@ def heros
       :miscelaneas => [{:id => 1,   :gemas   => [12]},
                        {:id => 6},
                        {:id => 8},
-                       {:id => 2,   :gemas   => [22]},
+                       {:id => 2,   :gemas   => [22], :enchants => [6] },
                        {:id => 1},
                        {:id => 6},
                        {:id => 4,   :gemas   => [31]}],
