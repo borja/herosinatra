@@ -37,7 +37,7 @@ def heros
                        {:id =>  3,  :gemas   => [14,14]}, 
                        {:id => 11,  :ranuras => 2},
                        {:id => 9,   :ranuras => 2},
-                       {:id => 8,   :gemas   => [19], :joyas => [2,2]}],
+                       {:id => 8,   :joyas   => [2], :gemas => [19], :joyas => [2] },
       :miscelaneas => [{:id => 1,   :gemas   => [12]},
                        {:id => 6},
                        {:id => 8},
