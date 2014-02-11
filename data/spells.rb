@@ -547,6 +547,12 @@ def spells
       :nivel        => 4,
       :descripcion  => "El lanzador volará hasta que reciba un daño, ignorando las penalizaciones por movimiento y los fosos trampa y recibirá x3 de bonificador por posición elevada. Todas las criaturas en posición inferior deberán obtener 3+ para impactarle con golpes cuerpo a cuerpo, y las criaturas de pequeño tamaño no le alcanzarán."
     },
+    { :id           => 91,
+      :name         => "invisibilidad mágica",
+      :elemento     => "aire",
+      :nivel        => 4,
+      :descripcion  => "El lanzador será invisible hasta que lance otro conjuro. No tendrá penalizadores, no atravesará enemigos y éstos no le atacarán. No podrá estar 2 turnos en la misma casilla. Puede golpear, pero si falla, perderá el conjuro."
+      },
   ]
 end
 
