@@ -547,6 +547,30 @@ def spells
       :nivel        => 4,
       :descripcion  => "El lanzador volará hasta que reciba un daño, ignorando las penalizaciones por movimiento y los fosos trampa y recibirá x3 de bonificador por posición elevada. Todas las criaturas en posición inferior deberán obtener 3+ para impactarle con golpes cuerpo a cuerpo, y las criaturas de pequeño tamaño no le alcanzarán."
     },
+    { :id           => 91,
+      :name         => "invisibilidad mágica",
+      :elemento     => "aire",
+      :nivel        => 4,
+      :descripcion  => "El lanzador será invisible hasta que lance otro conjuro. No tendrá penalizadores, no atravesará enemigos y éstos no le atacarán. No podrá estar 2 turnos en la misma casilla. Puede golpear, pero si falla, perderá el conjuro."
+      },
+      { :id         => 92,
+      :name         => "esfera de relámpagos",
+      :elemento     => "aire",
+      :nivel        => 4,
+      :descripcion  => "El conjurador creará un orbe que lanzará un conjuro de aire de nivel II/ turno. La esfera tiene 3 PC y 2 dados de defensa. Cualquiera que la golpee sufrirá un ataque de 2d6 dados por aire defendibles."
+      },
+      { :id         => 93,
+      :name         => "espada mágica inestable",
+      :elemento     => "aire",
+      :nivel        => 4,
+      :descripcion  => "La espada ancha invocada ocupará la casilla contigua del mago. Dura hasta que no haya alguna casilla donde colocarla o si saca un 1 al inicio de su turno. Entonces desaparece estallando y todas las miniaturas sufren 2d6 daños defendibles. Si el mago gasta una carta de espada ancha al invocarla, podrá recuperar el hechizo y evitar el daño del estallido."
+      },
+      { :id         => 94,
+      :name         => "ojo de la tormenta",
+      :elemento     => "aire",
+      :nivel        => 4,
+      :descripcion  => "Todas las miniaturas en la misma sala que el lanzador se moverá hasta la pared más cercana y sufrirán un daño igual a la distancia recorrida.  El mago elige el recorrido. Si el mago gasta 1PM, podrá mantener este efecto 1 turno adicional, tantas veces como desee. Se considerará que está hechizado."
+      },
   ]
 end
 
