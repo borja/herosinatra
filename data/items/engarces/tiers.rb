@@ -61,7 +61,7 @@ def tiers
       :id    => 8,
       :name  => "disformidad",
       :bono  => "permite gobernar no-muertos",
-      :mix   => {:joyas => [2], :gemas => [19], :joyas => [2] },
+      :mix   => {:gemas => [19], :joyas => [2,2]},
       :color => "#996699"
     }
   ]
