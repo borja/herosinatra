@@ -388,6 +388,30 @@
 					</tbody>
 				</table>
 			<% end %>
+			<br>
+			<table id='table-2'>
+				<thead>
+					<tr>
+						<% resistencias.each do |r| %>
+							<th>
+								<%= erb :'display/display', :locals => { 
+									:title       => r, 
+									:path        => "'../images/elements/#{r}.png'",
+									:description => "Resistencia: " + resistencia(@heroe[:id])[r.to_sym].to_s } %>
+							</th>
+						<% end%>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<% resistencias.each do |r| %>	
+							<td>
+								<%= resistencia(@heroe[:id])[r.to_sym] %>
+							</td>
+						<% end %>
+					</tr>
+				</tbody>
+			</table>
 		</td>
 	</tr>
 </table>

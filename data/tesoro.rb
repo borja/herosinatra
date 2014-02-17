@@ -84,10 +84,7 @@ def cofre(sigmar)
     when 'comet'  then 'artefacto'
   end
 end
-  
-  
-  
-
+2
 def tesoro(resultado,sigmar)
   valores = ['pifia','vacia','vacia','comida','perg','oro',"monstruo",'pot','trampa', "caja",'cofre']
   return send(valores[resultado-2],sigmar)
