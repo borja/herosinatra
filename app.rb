@@ -52,6 +52,9 @@ class App < Sinatra::Base
   get '/habilidades' do
     erb :habilidades
   end
+  get '/mapa' do
+    erb :mapa
+  end
   get '/hechizos' do
     @spelllevel = 1
     erb :hechizos
