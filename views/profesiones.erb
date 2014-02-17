@@ -13,11 +13,12 @@
 		</tr>	
 	</thead>
 	<tbody>
-		<tr>
-			<% profesions.each do |p| %>
-				<td>
-					<% img_path = "'../images/profesiones/#{p[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%= p[:name] %>, id='icon2' />
+		<tr><% profesions.each do |p| %>
+				<% nombre = p[:name] %>
+				<td><a href=<%="/profesiones/#{p[:name]}"%>>
+						<% img_path = "'../images/profesiones/#{nombre}.png'" %>
+						<img src=<%=img_path%> alt=<%= nombre %>, id='icon2' />
+					</a>
 				</td>
 			<% end %>
 		</tr>

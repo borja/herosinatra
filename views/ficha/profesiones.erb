@@ -1,0 +1,28 @@
+<%= erb :menu %><br><br><br<br>
+
+<link rel="stylesheet" href="../../css/main.css" type="text/css" />
+<link rel="stylesheet" href="../../app.css" type="text/css" />
+
+<% profesion = profesions.find { |p| p[:name] == params[:profesion] } %>
+<h1>Lista técnicas de <%= profesion[:name] %></h1><br><br>
+
+<table id='table-2'>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Nombre</th>
+			<th>Coste</th>
+			<th>Efecto</th>
+		</tr>	
+	</thead>
+	<tbody>
+		<% profesion[:aprendiz].each do |tecnica| %>
+			<tr>
+				<td><%= tecnica[:id]     %></td>
+				<td><%= tecnica[:name]   %></td>
+				<td><%= tecnica[:coste]  %></td>
+				<td><%= tecnica[:efecto] %></td>
+			</tr>
+		<% end %>
+	</tbody>
+</table>

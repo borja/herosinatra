@@ -1,23 +1,39 @@
 # encoding: UTF-8
 def profesions
   [
-    { :id           => 1,
-      :name         => "alquimia",
+    { :id        => 0,
+      :name      => "alquimia",
+      :aprendiz  => [
+        { :id      => 0,
+          :name    => "aprendiz de alquimista",
+          :coste   => 100,
+          :efecto  => "bleg"
+        },
+        {
+          :id      => 1,
+          :name    => "bubbis",
+          :coste   => 100,
+          :efecto  => "bleg",
+        }
+      ],
     },
-    { :id           => 2,
+    { :id           => 1,
       :name         => "inscripción",
     },
-    { :id           => 3,
+    { :id           => 2,
       :name         => "taxidermia",
     },
-    { :id           => 4,
+    { :id           => 3,
       :name         => "táctica",
     },
-    { :id           => 5,
+    { :id           => 4,
       :name         => "encantamiento",
     },
-    { :id           => 6,
+    { :id           => 5,
       :name         => "orfebrería",
+    },
+    { :id           => 6,
+      :name         => "carpintería",
     },
   ]
 end
