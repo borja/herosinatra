@@ -698,6 +698,7 @@ def heros
       :armas       => [{:id => 5, :gemas =>[14]},
                        {:id => 7}],
       :armaduras   => [{:id => 2}],
+      :miscelaneas => [{:id => 6, :ranuras => 2}],
       :skills      => [{0,1,2,3}],
     },
     { :id          => 37,
