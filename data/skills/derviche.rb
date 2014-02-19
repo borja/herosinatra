@@ -29,5 +29,5 @@ def derviches
 end
 
 def derviche(id)
-  derviches[id-1]
+  derviches[id]
 end
