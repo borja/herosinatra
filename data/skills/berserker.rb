@@ -10,12 +10,8 @@ def berserkers
     {
       :id           => 1,
       :name         => "furia",
-<<<<<<< HEAD
-      :description  => "+1 movimiento, +1 dado: potencia +1",
-=======
-      :description  => "A cambio de -1PM, el berserker tira +1 dado de ataque",
->>>>>>> 87ad3748194d142dd8a56c8070ba4fe8ac51ce19
-      :type         => "Pasiva"
+      :description  => "1 PM: +1 dado de ataque",
+      :type         => "activa"
     },
     {
       :id           => 2,

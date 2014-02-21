@@ -16,7 +16,7 @@ def heros
       :armas       => [{:id => 3}],
       :armaduras   => [{:id => 1}],
       :miscelaneas => [{:id => 2, :enchants => [30,31], :ranuras => 1}],
-      :skills      => [{0,1,2,4,5}],
+      :skills      => [0,1,2,4,5],
       :pergaminos  => [{:id => 1, :spells   => [11]}],
     },
     { :id          => 1,
@@ -700,7 +700,7 @@ def heros
                        {:id => 7}],
       :armaduras   => [{:id => 2}],
       :miscelaneas => [{:id => 6, :ranuras => 2}],
-      :skills      => [{0,1,2,3}],
+      :skills      => [0,1,2,3],
     },
     { :id          => 37,
       :name        => "Vintor Steelengard",
@@ -730,7 +730,7 @@ def heros
       :mente       => 3,
       :mov         => 7,
       :armas       => [{:id => 10, :gemas =>[30]}],
-      :skills      => [{0,1,14}],
+      :skills      => [0,1,14],
     },
   ]
 end
