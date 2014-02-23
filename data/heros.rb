@@ -733,6 +733,19 @@ def heros
       :armas       => [{:id => 10, :gemas =>[30]}],
       :skills      => [0,1,14],
     },
+    { :id          => 39,
+      :name        => "Leonard Umbradrack",
+      :personaje   => "conjurador",
+      :jugador     => "Javier",
+      :status      => "activo",
+      :nivel       => 3,
+      :cuerpo      => 4,
+      :mente       => 8,
+      :mov         => 7,
+      :hechizos    => [1,2,3,4,5,6,7,8,9,10,11,12],
+      :armas       => [{:id => 3}],
+      :armaduras   => [{:id => 1, :ranuras => 2}],
+    },
   ]
 end
 
