@@ -1,0 +1,26 @@
+<%= erb :menu %><br><br><br<br>
+
+<link rel="stylesheet" href="../../css/main.css" type="text/css" />
+<link rel="stylesheet" href="../../app.css" type="text/css" />
+
+<h1>Lista de Profesiones</h1><br><br>
+
+<table id='table-2'>
+	<thead>
+		<tr><% profesions.each do |p| %>
+				<th><%= p[:name].capitalize %></th>
+			<% end %>
+		</tr>	
+	</thead>
+	<tbody>
+		<tr><% profesions.each do |p| %>
+				<% nombre = p[:name] %>
+				<td><a href=<%="/profesiones/#{p[:name]}"%>>
+						<% img_path = "'../images/profesiones/#{nombre}.png'" %>
+						<img src=<%=img_path%> alt=<%= nombre %>, id='icon2' />
+					</a>
+				</td>
+			<% end %>
+		</tr>
+	</tbody>
+</table>

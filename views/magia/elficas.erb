@@ -1,0 +1,31 @@
+<%= erb :menu %><br><br><br<br>
+
+<link rel="stylesheet" href="../../css/main.css" type="text/css" />
+<link rel="stylesheet" href="../../app.css" type="text/css" />
+
+<h1>Magias Élficas</h1><br><br>
+
+<table id='table-2'>
+<thead>
+	<th>Icono</th>
+	<th>Elemento</th>
+	<th>Nombre</th>
+	<th>Descripción</th>
+</thead>
+<tbody>
+	<% spells.each do |s|%>
+		<% if s[:elemento] == 'elfico' %>
+			<% magic = spell(s[:id]) %>
+			<tr style=<%= color(magic[:elemento])%>>				
+				<td><% img_path = "'../../images/spells/#{magic[:name]}.png'" %>
+					<img src=<%=img_path%> alt=<%=magic[:name]%>, id='icon' />
+				</td>
+				<td><%= magic[:elemento].capitalize %></td>
+				<td><%= magic[:name].capitalize %></td>
+				<td><%= magic[:descripcion] %></td>
+			</tr>
+		<% end %>
+	<% end %>
+</tbody>
+</table>
+<br>

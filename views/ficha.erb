@@ -24,24 +24,25 @@
 						<tr>
 							<td><%= erb :'display/display', :locals => { 
 									:title       => @heroe[:name], 
-									:path        => "'../images/personajes/#{ genderize(personaje(@heroe[:personaje]), @heroe[:sex] ) }.png'",
+									:path        => "'../images/personajes/#{ genderize(personaje(@heroe[:personaje]), (@heroe[:sex] ||'male')) }.png'",
 									:description => @heroe[:story] || "" } %>
 							</td>
-							<td><%= @heroe[:name   ] %><br>
-								<%= @heroe[:jugador] %></td>
+							<td><%= @heroe[:name   ].capitalize %><br>
+								<%= @heroe[:jugador].capitalize %></td>
 							<td><% raza = is_human?(@heroe[:personaje]) ? "humano" : personaje(@heroe[:personaje]) %>
-								<%= genderize(raza,@heroe[:sex]).capitalize %></td>
+								<%= genderize(raza, (@heroe[:sex] || "male") ).capitalize %></td>
 							<td><%= @heroe[:personaje].capitalize %></td>
 							<td><%= @heroe[:nivel  ] %></td>
 							<td style="background-image:url(../images/ficha/star.png); 
 								background-repeat: no-repeat; background-position:center;">
 								<%= @heroe[:repu   ] || 0 %></td>
-							<% if @heroe[:pet]%>						
+							<% if p = @heroe[:pet]%>
+							<% pet_name = "#{p[:name]}, #{pet(p[:id])[:sex] ? "la" : "el"} #{pet(p[:id])[:name].capitalize}" %>						
 								<td>
 									<%= erb :'display/display', :locals => { 
-										:title       => pet(@heroe[:pet])[:name].capitalize, 
-										:path        => "'../../images/pets/#{ pet(@heroe[:pet])[:name]}.png'",
-										:description => pet(@heroe[:pet])[:bono] } %>
+										:title       => pet_name, 
+										:path        => "'../../images/pets/#{ pet(p[:id])[:name] }.png'",
+										:description => pet(p[:id])[:bono] } %>
 								</td>
 							<% end %>
 						</tr>
@@ -58,7 +59,7 @@
 	</theader>
 	<tbody>
 		<tr><td>
-			<table id='tlabel' width='50%'>
+			<table id='tlabel' width='30%'>
 				<tbody>
 					<tr>
 						<td><img src="../images/ficha/combat.png" alt=<%='combate' %> /, id='icon2'></td>
@@ -67,184 +68,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<table id='tlabel'>
-				<tr>
-					<td>
-						<table id='table-2'>
-							<thead>
-								<tr>
-									<th>Cuerpo</th>
-									<th>Mente</th>
-									<th>Movimiento</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><%= @heroe[:cuerpo] %></td>
-									<td><%= @heroe[:mente ] %></td>
-									<td><%= @heroe[:mov   ] %></td>
-								</tr>
-							</tbody>
-						</table>			
-					</td>
-					<td>
-						<table id='table-2'>
-							<thead>
-								<tr>
-									<th>Melee</th>
-									<th>Rango</th>
-									<th>Defensa</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td><%= ataque( @heroe[:id]) %></td>
-									<td><%= rango(  @heroe[:id]) %></td>
-									<td><%= defensa(@heroe[:id]) %></td>
-								</tr>
-							</tbody>
-						</table>
-					</td>
-				</tr>
-			</table>
-			<h3><center>Armamento</center></h3>
-			<table id='table-2'>
-				<thead>
-					<tr>
-						<th>Icono</th>
-						<th>Nombre</th>
-						<th>Poder</th>
-						<th><a href=/encantamientos>Encantamientos</a></th>
-						<th>Engarces</th>
-					</tr>
-				</thead>
-				<tbody>
-					<% @heroe[:armas].each do |a| %>
-						<tr>
-							<td><%= erb :'display/display', :locals => { 
-									:title       => arma(a[:id])[:name], 
-									:path        => enthralled(a),
-									:description => arma(a[:id])[:powa] } %>
-							</td>
-							<td><%= arma(a[:id])[:name].capitalize %></td>
-							<td><%= arma(a[:id])[:powa] %></td>				
-							<td><% if a[:enchants].nil? %>
-								Arma mundana
-								<% else %>
-									<table id='table-2'>
-										<tbody>
-											<tr>
-												<% a[:enchants].each do |e| %>
-													<td><%= enchant(e)[:name].capitalize %></td>
-												<% end %>
-											</tr>
-										</tbody>
-									</table>
-								<% end%>
-							</td>
-							<td>
-								<% if mundano?(a) %>
-									El arma no tiene engarces.
-								<% else %>
-									<% engarces.each do |engarce| %>
-										<% if a[eval(':' + engarce)] %>
-											<% a[eval(':' + engarce)].each do |e| %>
-												<% e_name = send(engarce.gsub('s',''),e)[:name] %>
-												<% img_path = "'../images/treasures/#{engarce}/#{e_name}.png'" %>
-												<img src=<%=img_path%> alt=<%= e_name %>, id='icon' />
-											<% end %>
-										<% end %>
-									<% end %>					
-								<% end %>
-							</td>
-						</tr>
-					<% end %>
-					<%= "El personaje no tiene ningun arma todavia." if @heroe[:armas].empty? %>
-				</tbody>
-			</table>
-			<br>
-			<table id='table-2'>
-				<thead>
-					<tr>
-						<th>Armadura</th>
-						<th>Protecciones</th>
-						<th>Miscelánea</th>
-						<% if @heroe[:hechizos] %>
-							<th><a href=../spells/<%=@heroe[:id]%>>Lista de hechizos conocidos</a></th>
-						<% end %>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>
-							<% @heroe[:armaduras].each do |a| %>
-								<%= erb :'display/display', :locals => { 
-									:title       => armadura(a[:id])[:name], 
-									:path        => "'../images/armaduras/#{armadura(a[:id])[:name]}.png'",
-									:description => armadura(a[:id])[:powa] } %>
-							<% end %>
-						</td>
-						<td>
-							<% if @heroe[:prots].empty? %>
-								El personaje no tiene ninguna protección aun.
-							<% else %>
-								<table id='table-2'>
-									<tbody>
-										<tr>
-											<% @heroe[:prots].each do |p|%>
-												<td>
-													<%= erb :'display/display', :locals => { 
-														:title       => proteccion(p[:id])[:name], 
-														:path        => "'../images/protecciones/#{proteccion(p[:id])[:name]}.png'",
-														:description => proteccion(p[:id])[:powa] } %>
-												</td>
-											<% end %>
-										</tr>
-									</tbody>
-								</table>
-							<% end%>
-						</td>
-						<td>
-							<% if @heroe[:miscs].empty? %>
-								El personaje no tiene misceláneas.
-							<% else %>
-								<table id='table-2'>
-									<tbody>
-										<tr>
-											<% @heroe[:miscs].each do |m|%>
-												<td>
-													<%= erb :'display/display', :locals => { 
-														:title       => miscelanea(m[:id])[:name], 
-														:path        => "'../images/miscelaneas/#{miscelanea(m[:id])[:name]}.png'",
-														:description => miscelanea(m[:id])[:name] } %>
-												</td>
-											<% end %>
-										</tr>
-									</tbody>
-								</table>
-							<% end%>
-						</td>
-						<% if @heroe[:hechizos] %>
-							<td><table id='table-2'>
-									<tbody>
-										<tr>
-											<% elements(@heroe[:hechizos]).each do |e| %>	
-												<td>
-													<%= erb :'display/display', :locals => { 
-														:title       => e, 
-														:path        => "'../images/elements/#{e}.png'",
-														:description => "" } %>
-												</td>
-											<% end %>
-										</tr>
-									</tbody>
-								</table>
-							</td>
-						<% end %>					
-					</tr>
-				</tbody>
-			</table>
-			
+			<%= erb :'ficha/inventario' %>			
 			<% if @heroe[:skills] %>
 				<h3><center>Habilidades</center></h3>
 				<table id='table-2'>
@@ -283,12 +107,21 @@
 						<tr>				
 							<% engarces.each do |engarce| %>
 								<td>
-									<% if @heroe[eval(":#{engarce}")] %>
-										<% @heroe[eval(":#{engarce}")].each do |e| %>
-											<% e_name = send(engarce.gsub('s',''),e)[:name] %>
-											<% img_path = "'../images/treasures/#{engarce}/#{e_name}.png'" %>
-											<img src=<%=img_path%> alt=<%= e_name %>, id='icon' />
-										<% end %>
+									<% if tesoros = @heroe[engarce.to_sym] %>
+										<table id='table-2'>
+											<tbody>
+												<tr>
+													<% tesoros.each do |t| %>
+	                                	    			<td>
+															<%= erb :'display/display', :locals => { 
+																	:title       => nombre = send(engarce.gsub('s',''),t)[:name], 
+																	:path        => "'../images/treasures/#{engarce}/#{nombre}.png'",
+																	:description => gema_calidad(send(engarce.gsub('s',''),t)[:calidad]) || "" } %>
+														</td>
+													<% end %>
+												</tr>
+											</tbody>
+										</table>
 									<% else %>
 										El héroe no tiene <%= engarce %>.
 									<% end %>
@@ -309,13 +142,21 @@
 					</tr>
 				</thead>
 				<tbody>
-					<tr>				
-						<td>
-							<% if @heroe[:pociones] %>
-								<% @heroe[:pociones].each do |p| %>
-									<% img_path = "'../images/utiles/pociones/#{pocion(p)[:name]}.png'" %>
-									<img src=<%=img_path%> alt=<%= pocion(p)[:name] %>, id='icon' />
-								<% end %>
+					<tr><td><% if @heroe[:pociones] %>
+								<table id='table-2'>
+									<tbody>
+										<tr>
+											<% @heroe[:pociones].each do |p| %>
+                                    			<td>
+													<%= erb :'display/display', :locals => { 
+															:title       => pocion(p)[:name], 
+															:path        => "'../images/utiles/pociones/#{pocion(p)[:name]}.png'",
+															:description => pocion(p)[:efecto] } %>
+												</td>
+											<% end %>
+										</tr>
+									</tbody>
+								</table>
 							<% else %>
 								El héroe no tiene pociones.
 							<% end %>
@@ -323,11 +164,9 @@
 						<td>
 							<table id='table-2'>
 								<tbody>
-									<tr>
-										<% if @heroe[:pergaminos] %>
+									<tr><% if @heroe[:pergaminos] %>
 											<% @heroe[:pergaminos].each do |p| %>
-												<td>
-													<div class="information_popup_container">
+												<td><div class="information_popup_container">
 														<div class="information">
 															<% name = pergamino(p[:id])[:name] %>
 															<% img_path = "'../images/utiles/pergaminos/#{name}.png'" %>
@@ -360,12 +199,19 @@
 								</tbody>
 							</table>
 						</td>
-						<td>
-							<% if @heroe[:piezas] %>
-								<% @heroe[:piezas].each do |p| %>
-									<% img_path = "'../images/utiles/piezas/#{pieza(p)[:name]}.png'" %>
-									<img src=<%=img_path%> alt=<%= pocion(p)[:name] %>, id='icon' />
-								<% end %>
+						<td><% if @heroe[:piezas] %>
+								<table id='table-2'>
+									<tbody>
+										<tr><% @heroe[:piezas].each do |p| %>
+                                    			<td><%= erb :'display/display', :locals => { 
+															:title       => pieza(p)[:name], 
+															:path        => "'../images/utiles/piezas/#{pieza(p)[:name]}.png'",
+															:description => "" } %>
+												</td>
+											<% end %>
+										</tr>
+									</tbody>
+								</table>
 							<% else %>
 								El héroe no tiene piezas.
 							<% end %>

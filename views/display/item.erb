@@ -1,21 +1,37 @@
 <div class="information_popup_container">
 	<div class="information">
-		<img src=<%= enthralled(a) %> alt=<%= arma(a[:id])[:name] %>, id='icon' />
+		<% if a[:enchants] %>
+			<% img_path = "'../images/#{item}s/magic/#{send(item,(a[:id]))[:name] + a[:enchants].size.to_s}.png'" %>
+		<% else %>
+			<% img_path = "'../images/#{item}s/#{send(item,(a[:id]))[:name]}.png'" %>
+		<% end %>
+		<img src=<%= img_path %> alt=<%= send(item,(a[:id]))[:name] %>, id='icon' />
 	</div>
 	<div class="popup_information">
 		<center><h3>
-			<%= arma(a[:id])[:name].capitalize %><br><br>
-			<img src=<%= enthralled(a) %> alt=<%= arma(a[:id])[:name] %>, id='icon3' />
+			<%= send(item,(a[:id]))[:name].capitalize %><br><br>
+			<img src=<%= img_path %> alt=<%= send(item,(a[:id]))[:name] %>, id='icon3' />
 		</h3></center>
-		<li>Valor de combate: <%= arma(a[:id])[:powa] %></li>
-		<%= "<li>Permite atacar en diagonal</li>" if arma(a[:id])[:diagonal] %>
-		<%= "<li>Arma mundana</li>"               if mundano?(a) %>
+		<%= "<li>Valor de combate: #{send(item,(a[:id]))[:powa]}</li>" if send(item,(a[:id]))[:powa] %>
+		<%= "<li>Permite atacar en diagonal</li>" if send(item,(a[:id]))[:diagonal] %>
+		<%= "<li>#{item.capitalize} mundana</li>" if mundano?(a) %>
+		<%= "<li>Tipo: #{armadura(a[:id])[:categoria]} </li>"   if item == 'armadura' %>
 		<% unless mundano?(a) %>
 			<br>
-			<table id='tier', style="background-color:<%= is_tier?({:gemas => a[:gemas]}) ? tier(is_tier?({:gemas => a[:gemas]}))[:color] : 'black' %>;">
+			<% if is_tier?({:gemas => a[:gemas]}) %>
+				<% color = tier(is_tier?({:gemas => a[:gemas]}))[:color] %>
+			<% elsif is_tier?({:joyas => a[:joyas]}) %>
+				<% color = tier(is_tier?({:joyas => a[:joyas]}))[:color] %>
+			<% else %>
+				<% color = 'black' %>
+			<% end %>
+			<table id='tier', style="background-color:<%= color %>;">
 				<tbody>
 					<tr>
 						<td>
+							<% if is_tier?({:joyas => a[:joyas]}) %>
+								<h3>Tier de <%= tier(is_tier?({:joyas => a[:joyas]}))[:name].capitalize %></h3>
+								<% end %>
 							<% if is_tier?({:gemas => a[:gemas]}) %>
 								<h3>Tier de <%= tier(is_tier?({:gemas => a[:gemas]}))[:name].capitalize %></h3>
 							<% else %>
@@ -51,6 +67,7 @@
 			</table>						
 		<% end %>
 		<% if a[:enchants] %>	
+			<br>
 			<h4>Propiedades mágicas</h4>
 			<% a[:enchants].each do |e| %>
 				<li><%= enchant(e)[:name].capitalize %>

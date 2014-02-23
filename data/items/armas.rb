@@ -1,5 +1,13 @@
+# encoding: UTF-8
 def armas
   [
+    { :id           => 0,
+      :name         => "sin armas",
+      :categoria    => "puños",
+      :powa         => 1,
+      :ranuras      => 0,
+      :diagonal     => true
+    },
     { :id           => 1,
       :name         => "espada corta",
       :categoria    => "Filo",
@@ -133,11 +141,18 @@ def armas
       :ranuras      => 2,
       :diagonal     => false
     },
+    { :id           => 20,
+      :name         => "orbe",
+      :categoria    => "Distancia",
+      :powa         => 0,
+      :ranuras      => 2,
+      :diagonal     => true
+    },
   ]
 end
 
 def arma(id)
-  armas[id-1]
+  armas[id]
 end
 
 def encantada?(arma)
@@ -148,7 +163,7 @@ def enthralled(a)
   if a[:enchants]
     return "'../images/armas/magic/#{arma(a[:id])[:name] + a[:enchants].size.to_s}.png'"
   else
-    return "../images/armas/#{arma(a[:id])[:name]}.png"
+    return "'../images/armas/#{arma(a[:id])[:name]}.png'"
   end
 end
   

@@ -1,3 +1,4 @@
+# encoding: UTF-8
 def gemas
   [
     { :id           => 1,
@@ -160,10 +161,14 @@ def gemas
       :name         => "jacinto de sangre",
       :calidad      => 7,
    },
-    { :id          => 41,
+    { :id           => 41,
       :name         => "piedra de alma",
       :calidad      => 7,
-   },    
+   },  
+   { :id           => 42,
+     :name         => "felmar",
+     :calidad      => 7,
+  },    
   ]   
 
 end
@@ -181,7 +186,7 @@ def gema_calidad(numero)
   when 5 then return "Piedras de Poder"
   when 6 then return "Gemas Legendarias"
   when 7 then return "Gemas Insolitas"
-  else return "Error!"
+  else return nil
   end
 end    
     
