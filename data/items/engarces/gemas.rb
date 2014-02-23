@@ -188,6 +188,15 @@ def gema_calidad(numero)
   when 7 then return "Gemas Insolitas"
   else return nil
   end
+end
+
+def gema_stats(id)
+  {
+    :arma     => "",
+    :armadura => "",
+    :anillo   => "",
+    :collar   => "",
+  }
 end    
     
     
