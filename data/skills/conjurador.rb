@@ -1,38 +1,45 @@
-def conjuradores
+# encoding: UTF-8
+def conjuradors
   [
+    {
+      :id           => 0,
+      :name         => "conjurar en letargo",
+      :description  => "permite lanzar hechizos de tipo conjuro en el turno del primer héroe.",
+      :type         => "pasiva"
+    },
     {
       :id           => 1,
       :name         => "biblioteca",
       :description  => "numero de hechizos que puede utilizar el conjurador en un reto. Aumentan a 1/nivel y empieza por 9 hechizos.",
-      :type         => "Activa"
+      :type         => "activa"
     },
     {
       :id           => 2,
       :name         => "levitar",
       :description  => "a cambio de 1 punto de mente, el conjurador levita",
-      :type         => "Activa"
+      :type         => "activa"
     },
     {
       :id           => 3,
       :name         => "tutor",
       :description  => "por definir.",
-      :type         => "Activa"
+      :type         => "activa"
     },
     {
       :id           => 4,
       :name         => "sadismo arcano",
       :description  => "al matar con magia, gana 1 punto de mente",
-      :type         => "Activa"
+      :type         => "activa"
     },
     {
       :id           => 5,
       :name         => "secreto ristico",
       :description  => "bono aliado mata-> conjuro gratis.",
-      :type         => "Activa"
+      :type         => "activa"
     },
     {
       :id           => 6,
-      :name         => "drenar/insuflar mana",
+      :name         => "insuflar mana",
       :description  => "el conjurador le puede ceder su mente a un aliado.",
       :type         => "Activa"
     },
@@ -69,12 +76,12 @@ def conjuradores
     {
       :id           => 12,
       :name         => "perseverancia",
-      :description  => "gloria del Heroe/mente",
+      :description  => "consumir toda su mente: gloria del Héroe",
       :type         => "Activa"
     },
   ]
 end
 
 def conjurador(id)
-  conjuradores[id-1]
+  conjuradors[id]
 end

@@ -1,3 +1,4 @@
+# encoding: UTF-8
 def joyas
   [
     { :id           => 1,
@@ -42,6 +43,21 @@ def joyas
     { :id           => 14,
       :name         => "demonio en tarro",
     },
+    { :id           => 15,
+      :name         => "del verano",
+    },
+    { :id           => 16,
+      :name         => "del invierno",
+    },
+    { :id           => 17,
+      :name         => "del otoño",
+    },
+    { :id           => 18,
+      :name         => "de la primavera",
+    },
+    { :id           => 19,
+      :name         => "atrapasueños élfico",
+    }
   ]
 end
 

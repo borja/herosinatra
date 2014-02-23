@@ -1,17 +1,17 @@
-h3 {
-	color: #FFFFFF;
-}
-h1 {
-	color: #FFFFFF;
-	text-align: center;
-}
-body{
-	background-color: #565656;
-}
+html {background-color:#878787;}
+h1 {text-align: center;
+	padding:10px 5px 15px 20px;}
+	
+h3 {text-align: center;
+	padding:15px 5px 15px 5px;
+	color: white;}
+
 #table-2 {
+    width: 96%;
+    margin-left:auto; 
+    margin-right:auto;
 	border: 1px solid #e3e3e3;
 	background-color: #f2f2f2;
-        width: 100%;
 	border-radius: 6px;
 	-webkit-border-radius: 6px;
 	-moz-border-radius: 6px;
@@ -65,6 +65,14 @@ body{
     width: 80%;
     margin-left:auto; 
     margin-right:auto;
+}
+#tier {
+	border: 0px solid #ffffff;
+    width: 100%;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+ 	vertical-align: middle;
 }
 
 #icon {
@@ -140,31 +148,3 @@ div.information_popup_container > div.information:hover + div.popup_information 
 	visibility: visible;
 	z-index:    200;
 }
-#tabs {
-	border-bottom: .5em solid #03c;
-	margin: 0;
-	padding: 0;
-}
-#tabs li { 
-	display:inline; 
-	background-color: #999;
-	border-top: .1em solid #FFF;
-	border-left: .1em solid #999;
-	border-right: .1em solid #fff;
-	border-radius: 6px;
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
-	padding: .6em 1em .1em 1em;
-}
-#tabs li a {
-	text-decoration: none;
-	padding: 0.25em 1em;
-	color: #232;
-	font-size: 18px;
-	text-shadow: white 1px 1px 1px;
-}
-#page1 #tabs li#tab1 a, #page2 #tabs li#tab2 a, #page3 #tabs li#tab3 a, .page4 #tab4 a{
-	padding: 0.25em 1em;
-	background-color: #03c;
-	color: #fff;
-} 

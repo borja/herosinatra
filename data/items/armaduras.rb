@@ -1,5 +1,11 @@
+# encoding: UTF-8
 def armaduras
   [
+    { :id           => 0,
+      :name         => "sin armadura",
+      :categoria    => "nada",
+      :powa         => 0,
+    },
     { :id           => 1,
       :name         => "armadura de tela",
       :categoria    => "tela",
@@ -34,5 +40,5 @@ def armaduras
 end
 
 def armadura(id)
-  armaduras[id-1]
+  armaduras[id]
 end

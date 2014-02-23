@@ -1,3 +1,4 @@
+# encoding: UTF-8
 def runas
   [
     { :id           => 1,

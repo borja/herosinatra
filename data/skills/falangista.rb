@@ -1,5 +1,12 @@
+# encoding: UTF-8
 def falangistas
   [
+    {
+      :id           => 0,
+      :name         => "empujar",
+      :description  => "Los enemigos suman un punto al multiplicador de proximidad del falangista cuando se desplacen a su alrededor.",
+      :type         => "pasiva"
+    },
     {
       :id           => 1,
       :name         => "doble escudo",
@@ -15,12 +22,12 @@ def falangistas
     {
       :id           => 3,
       :name         => "represalias",
-      :description  => "por definir.",
+      :description  => "El atacante recibe el exceso de defensa como ataque defendible.",
       :type         => "Pasiva"
     },
     {
       :id           => 4,
-      :name         => "a salvo!",
+      :name         => "¡A salvo!",
       :description  => "sacrificando el movimiento, el falangista le da su defensa a un aliado.",
       :type         => "Pasiva"
     },
@@ -32,13 +39,25 @@ def falangistas
     },
     {
       :id           => 6,
-      :name         => "bastion",
+      :name         => "bastión",
       :description  => "por 1 punto de honor aumenta en +1 potencia en la defensa",
       :type         => "Pasiva"
+    },
+    {
+      :id           => 7,
+      :name         => "gloria del héroe",
+      :description  => "Ignora cualquier mal. Se debe declarar al inicio del turno del Malvado Brujo.",
+      :type         => "única"
+    },
+    {
+      :id           => 8,
+      :name         => "zona de combate",
+      :description  => "permite golpear a cualquier enemigo en 180º con escudos.",
+      :type         => "pasiva"
     },
   ]
 end
 
 def falangista(id)
-  falangistas[id-1]
+  falangistas[id]
 end
