@@ -1,0 +1,86 @@
+<h3>Útiles</h3>
+<table id='table-2'>
+	<thead>
+		<tr><th>Pociones</th>
+			<th>Pergaminos</th>
+			<th>Piezas</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr><td><% if @heroe[:pociones] %>
+					<table id='table-2'>
+						<tbody>
+							<tr>
+								<% @heroe[:pociones].each do |p| %>
+                        			<td>
+										<%= erb :'display/display', :locals => { 
+												:title       => pocion(p)[:name], 
+												:path        => "'../images/utiles/pociones/#{pocion(p)[:name]}.png'",
+												:description => pocion(p)[:efecto] } %>
+									</td>
+								<% end %>
+							</tr>
+						</tbody>
+					</table>
+				<% else %>
+					El héroe no tiene pociones.
+				<% end %>
+			</td>
+			<td>
+				<table id='table-2'>
+					<tbody>
+						<tr><% if @heroe[:pergaminos] %>
+								<% @heroe[:pergaminos].each do |p| %>
+									<td><div class="information_popup_container">
+											<div class="information">
+												<% name = pergamino(p[:id])[:name] %>
+												<% img_path = "'../images/utiles/pergaminos/#{name}.png'" %>
+												<img src=<%=img_path%> alt=<%= name %>, id='icon' />
+											</div>
+											<div class="popup_information">
+												<center><h3>	
+													Pergamino <%= pergamino(p[:id])[:name] %><br><br>
+													<img src=<%=img_path%> alt=<%= name %>, id='icon3' />
+												</h3></center>
+												<% if p[:spells] %>
+													<% p[:spells].each do |magia| %>
+														<% hechizo = (spell(magia))[:name] %>									
+														<% img_path   = "'../images/spells/#{hechizo}.png'"     %>
+														<img style="vertical-align:middle" 
+															 src=<%=img_path%> alt=<%= hechizo %>, id='icon' />		
+														<%= hechizo.capitalize %><br>
+													<% end %>	
+												<% else %>
+													El pergamino no contiene hechizos.
+												<% end %>
+											</div>
+										</div>
+									</td>
+								<% end %>
+							<% else %>
+								El héroe no tiene pergaminos.
+							<% end %>
+						</tr>
+					</tbody>
+				</table>
+			</td>
+			<td><% if @heroe[:piezas] %>
+					<table id='table-2'>
+						<tbody>
+							<tr><% @heroe[:piezas].each do |p| %>
+                        			<td><%= erb :'display/display', :locals => { 
+												:title       => pieza(p)[:name], 
+												:path        => "'../images/utiles/piezas/#{pieza(p)[:name]}.png'",
+												:description => "" } %>
+									</td>
+								<% end %>
+							</tr>
+						</tbody>
+					</table>
+				<% else %>
+					El héroe no tiene piezas.
+				<% end %>
+			</td>
+		</tr>
+	</tbody>
+</table>
