@@ -192,10 +192,10 @@ end
 
 def gema_stats(id)
   {
-    :arma     => "",
-    :armadura => "",
-    :anillo   => "",
-    :collar   => "",
+    :arma     => "horror",
+    :armadura => "not bad",
+    :anillo   => "crap",
+    :collar   => "epic",
   }
 end    
     
