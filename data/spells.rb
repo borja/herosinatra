@@ -598,5 +598,13 @@ def color(elemento)
 end
 
 def escuelas
-  ["aire","fuego","agua","tierra","tenebro","sangre","luz"]
+ { "sombra"  => "" ,
+   "aire"    => "" ,
+   "fuego"   => "" ,
+   "agua"    => "" ,
+   "tierra"  => "" ,
+   "tenebro" => "" ,
+   "sangre"  => "" ,
+   "luz"     => "" 
+ }
 end
