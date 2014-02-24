@@ -3,66 +3,23 @@
 <link rel="stylesheet" href="../../css/main.css" type="text/css" />
 <link rel="stylesheet" href="../../app.css" type="text/css" />
 
-<h1>Lista de Gemas</h1><br><br>
-
-<table id='table-2'>
+<table id='tlabel'>
 	<tbody>
-		<tr>
-			<% 3.times do |i| %>
-				<td>
-					<center><h2><%= gema_calidad(i+1)%></h2></center>
+		<tr><% 6.times do |i| %>
+				<td width='15%'>
+					<h2><%= calidades[i] %></h2><br>
 					<table id='table-2'>
 						<thead>
-							<tr>
-								<th>ID</th>
+							<tr><th>ID</th>
 								<th>Icono</th>
 								<th>Nombre</th>
 							</tr>	
 						</thead>
 						<tbody>
 							<% gemas.each do |g| %>
-								<% if g[:calidad] == (i+1) %>
-									<tr>
-										<td><%= g[:id] %></td>
-										<td>
-											<% img_path = "'../images/treasures/gemas/#{g[:name]}.png'" %>
-											<img src=<%=img_path%> alt=<%=g[:name]%>, id='icon' />
-										</td>
-										<td><%= g[:name].capitalize %></td>
-									</tr>
-								<% end%>
-							<% end %>
-						</tbody>
-					</table>
-					<br>
-				</td>	
-			<% end%>
-		</tr>
-	</tbody>
-</table>
-<table id='table-2'>
-	<tbody>
-		<tr>
-			<% 3.times do |i| %>
-				<td>
-					<center><h2><%= gema_calidad(i+4)%></h2></center>
-					<table id='table-2'>
-						<thead>
-							<tr>
-								<th>ID</th>
-								<th>Icono</th>
-								<th>Nombre</th>
-							</tr>	
-						</thead>
-						<tbody>
-							<% gemas.each do |g| %>
-								<% if g[:calidad] == (i+4) %>
-									<tr>
-										<td><%= g[:id] %></td>
-										<td>
-											<% img_path = "'../images/treasures/gemas/#{g[:name]}.png'" %>
-											<img src=<%=img_path%> alt=<%=g[:name]%>, id='icon' />
-										</td>
+								<% if gema_calidad(g[:id]) == calidades[i] %>
+									<tr><td><%= g[:id] %></td>
+										<td><%= erb :'display/gema', :locals => { :gema => g } %></td>
 										<td><%= g[:name].capitalize %></td>
 									</tr>
 								<% end%>
