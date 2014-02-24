@@ -38,3 +38,9 @@ ul.notas li#nota2 {
 ul.notas li#nota3 {
   width: 60px; height: 60px; top: 200px; left: 150px;
 }
+ul.notas li#nota4 {
+  width: 60px; height: 60px; top: 300px; left: 350px;
+}
+ul.notas li#nota5 {
+  width: 60px; height: 60px; top: 280px; left: 240px;
+}
