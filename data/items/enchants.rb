@@ -170,7 +170,7 @@ def enchants
       :name         => "antiguos reyes",
       :descripcion  => "+1 reputación, +2 vs Tenebro, inmune a dormir, +1 ataque vs bestias, +1 potencia en hechizos de agua, +1 PM.",
       :tipo         => "legendaria",
-    },
+    }
   ]
 end
 
