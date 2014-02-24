@@ -40,7 +40,7 @@ def tiers
       :id    => 5,
       :name  => "armonía estacional",
       :bono  => "control de las estaciones <por definir>",
-      :mix   => {:joyas => [15,19,16] },
+      :mix   => {:joyas => [14,18,15] },
       :color => "#660033"
     },
     {
@@ -61,7 +61,7 @@ def tiers
       :id    => 8,
       :name  => "disformidad",
       :bono  => "permite gobernar no-muertos",
-      :mix   => {:gemas => [19], :joyas => [2,2]},
+      :mix   => {:gemas => [19], :joyas => [1,1]},
       :color => "#996699"
     }
   ]
