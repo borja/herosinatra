@@ -7,7 +7,7 @@
 	<tbody>
 		<tr><% 6.times do |i| %>
 				<td width='15%'>
-					<h2><%= gema_calidad(i+1)%></h2><br>
+					<h2><%= calidades[i] %></h2><br>
 					<table id='table-2'>
 						<thead>
 							<tr><th>ID</th>
@@ -17,7 +17,7 @@
 						</thead>
 						<tbody>
 							<% gemas.each do |g| %>
-								<% if g[:calidad] == (i+1) %>
+								<% if gema_calidad(g[:id]) == calidades[i] %>
 									<tr><td><%= g[:id] %></td>
 										<td><%= erb :'display/gema', :locals => { :gema => g } %></td>
 										<td><%= g[:name].capitalize %></td>

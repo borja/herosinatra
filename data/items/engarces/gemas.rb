@@ -107,10 +107,10 @@ def gemas
     
     # Piedras de poder
     { :id       => 32,
-      :name     => "craneo",
+      :name     => "cráneo",
     },
     { :id       => 33,
-      :name     => "lunar",
+      :name     => "piedra lunar",
     },
     { :id       => 34,
       :name     => "rama de olivo",
@@ -169,12 +169,12 @@ def gemas
     },
     { :id       => 51,
       :name     => "jacinto de sangre",
-   },
+    },
     { :id       => 52,
       :name     => "piedra de alma",
-   },  
-   { :id        => 53,
-     :name      => "felmar",
+    },  
+    { :id       => 53,
+      :name     => "felmar",
   },    
   ]   
 
@@ -184,17 +184,20 @@ def gema(id)
   gemas[id]
 end
 
+def calidades
+  [
+    "Gemas Comunes",
+    "Gemas Infrecuentes",
+    "Gemas Valiosas",
+    "Piedras Preciosas",
+    "Piedras de Poder",
+    "Gemas Legendarias",
+    "Gemas Insólitas"
+  ]
+end
+
 def gema_calidad(id)
-  case (id/8)
-  when 0 then return "Gemas Comunes"
-  when 1 then return "Gemas Infrecuentes"
-  when 2 then return "Gemas Valiosas"
-  when 3 then return "Piedras Preciosas"
-  when 4 then return "Piedras de Poder"
-  when 5 then return "Gemas Legendarias"
-  when 6 then return "Gemas Insolitas"
-  else return nil
-  end
+  calidades[id/8]
 end
 
 def gema_stats(id)
