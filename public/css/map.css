@@ -2,14 +2,16 @@
   weight: 500px;
   height: 500px;
 }
-
 div.mapa_imagen {
   position: relative;
+  text-align: center;
 }
 ul.notas li {
   list-style: none;
   display: none;
   position: absolute;
+  text-align: center;
+  
   border: medium solid white;
   background: url("esta_imagen_no_existe");
 }
@@ -40,7 +42,4 @@ ul.notas li#nota3 {
 }
 ul.notas li#nota4 {
   width: 60px; height: 60px; top: 300px; left: 350px;
-}
-ul.notas li#nota5 {
-  width: 60px; height: 60px; top: 280px; left: 240px;
 }
