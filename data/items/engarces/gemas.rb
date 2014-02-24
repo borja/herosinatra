@@ -159,7 +159,7 @@ def gemas
     
     # Gemas insólitas
     { :id       => 48,
-      :name     => "serpentina del dragon",
+      :name     => "serpentina del dragón",
     },
     { :id       => 49,
       :name     => "hierro antigravedad",
@@ -175,7 +175,10 @@ def gemas
     },  
     { :id       => 53,
       :name     => "felmar",
-  },    
+    },
+    { :id       => 54,
+      :name     => "trigema",
+    } 
   ]   
 
 end
