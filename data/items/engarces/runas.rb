@@ -1,45 +1,45 @@
 # encoding: UTF-8
 def runas
   [
-    { :id           => 1,
+    { :id           => 0,
       :name         => "tir",
     },
-    { :id           => 2,
+    { :id           => 1,
       :name         => "oth",
     },
-    { :id           => 3,
+    { :id           => 2,
       :name         => "feth",
     },
-    { :id           => 4,
+    { :id           => 3,
       :name         => "syr",
     },
-    { :id           => 5,
+    { :id           => 4,
       :name         => "bek",
     },
-    { :id           => 6,
+    { :id           => 5,
       :name         => "yom",
     },
-    { :id           => 7,
+    { :id           => 6,
       :name         => "sinq",
     },
-    { :id           => 8,
+    { :id           => 7,
       :name         => "rwon",
     },
-    { :id           => 9,
+    { :id           => 8,
       :name         => "phyth",
     },
-    { :id           => 10,
+    { :id           => 9,
       :name         => "gor",
     },
-    { :id           => 11,
+    { :id           => 10,
       :name         => "un",
     },
-    { :id           => 12,
+    { :id           => 11,
       :name         => "gar",
     },
   ]
 end
 
 def runa(id)
-  runas[id-1]
+  runas[id]
 end
