@@ -180,6 +180,11 @@ def enchants
       :name         => "de Melar",
       :descripcion  => "+2 PM.",
       :tipo         => "bendito",
+    },
+    { :id           => 37,
+      :name         => "aereo",
+      :descripcion  => "+1 vs aire.",
+      :tipo         => "bendito",
     }
   ]
 end
