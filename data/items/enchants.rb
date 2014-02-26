@@ -186,7 +186,7 @@ def enchants
       :descripcion  => "+1 vs aire.",
       :tipo         => "bendito",
     },
-    { :id           => 37,
+    { :id           => 38,
       :name         => "aereo mayor",
       :descripcion  => "5+ vs aire, si se invierte 1PM se obtiene +3 movimiento.",
       :tipo         => "bendito",
