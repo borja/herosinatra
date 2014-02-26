@@ -170,6 +170,16 @@ def enchants
       :name         => "antiguos reyes",
       :descripcion  => "+1 reputación, +2 vs Tenebro, inmune a dormir, +1 ataque vs bestias, +1 potencia en hechizos de agua, +1 PM.",
       :tipo         => "legendaria",
+    },
+    { :id           => 35,
+      :name         => "de los Deseos",
+      :descripcion  => "1/reto un Teleport, 1/reto se puede pedir un deseo cualquiera para el reto, +1 dado de fuego en las dagas.",
+      :tipo         => "legendaria",
+    },
+    { :id           => 36,
+      :name         => "de Melar",
+      :descripcion  => "+2 PM.",
+      :tipo         => "bendito",
     }
   ]
 end
