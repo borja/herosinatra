@@ -60,7 +60,7 @@ def heros
       :mov          => 10,
       :pet          => {:id  => 11, :name => "Basidio"},
       :hechizos     => [1,2,3,4,5,6,7,8,9,10,11,12,16,17,18,19,20,21,22,23],
-      :armas        => [{:id => 9,  :gemas    => [27,17,26], :enchants => [1,2,3,4,17,18]},
+      :armas        => [{:id => 9,  :gemas    => [25,17,26], :enchants => [1,2,3,4,17,18]},
                         {:id => 8,  :joyas    => [14,18,15], :enchants => [23,24]}],
       :armaduras    => [{:id => 6,  :gemas    => [34,32,34]}],
       :proteccions  => [{:id => 1,  :runas    => [2],
