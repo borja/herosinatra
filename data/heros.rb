@@ -221,7 +221,7 @@ def heros
       :piezas      => [3],
       :pet         => {:id  => 18, :name => "pendeja", :torpe => true},
       :skills      => [1,2,3,4,5,6,7,8],
-      :gemas       => [3,12,24,4,11],
+      :gemas       => [3,12,29,2,13],
     },
     { :id        => 9,
       :name      => "Steinberg",
