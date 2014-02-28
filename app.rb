@@ -47,7 +47,7 @@ class App < Sinatra::Base
     erb :profesiones
   end
   get '/profesiones/:profesion' do |prof|
-    erb :"ficha/profesiones"
+    erb :"ciudad/profesiones"
   end
   get '/habilidades' do
     erb :habilidades

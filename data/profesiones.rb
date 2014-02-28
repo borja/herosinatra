@@ -236,6 +236,12 @@ def profesions
           :name    => "Engarces I",
           :coste   => 300,
           :efecto  => "Añade 1 ranura gratuitamente a un objeto mundano.",
+        },
+        {
+          :id      => 4,
+          :name    => "Cabuchón I",
+          :coste   => 350,
+          :efecto  => "N+: Engasta gratuitamente una gema en una ranura. (N es el nivel de la gema)",
         }
       ],
       :artesano  => [

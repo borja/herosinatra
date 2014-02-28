@@ -41,13 +41,9 @@
 										:path        => "'../../images/pets/#{ pet(p[:id])[:name] }.png'",
 										:description => pet(p[:id])[:bono] } %>
 								</td>
-							<% end %><% if heroe[:profesion]%>
-								<td>
-									<%= erb :'display/display', :locals => { 
-										:title       => profesion(heroe[:profesion])[:name], 
-										:path        => "'../../images/profesiones/#{profesion(heroe[:profesion])[:name]}.png'",
-										:description => 'en construcción' } %>
-								</td>
+							<% end %>
+							<% if heroe[:profesion]%>
+								<td><%= erb :'ficha/profesion', :locals => { :prof => heroe[:profesion] } %></td>
 							<% end %>
 						</tr>
 					</tbody>
