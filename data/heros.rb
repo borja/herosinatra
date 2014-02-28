@@ -220,7 +220,7 @@ def heros
                        {:id => 2, :spells   => [14]}],
       :piezas      => [3],
       :pet         => {:id  => 18, :name => "pendeja", :torpe => true},
-      :skills      => [1,2,3,4,5,6,7,8],
+      :skills      => [0,1,2,3,4,5,6,7,8],
       :gemas       => [3,12,29,2,13],
     },
     { :id        => 9,

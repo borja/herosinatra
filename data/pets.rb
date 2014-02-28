@@ -25,10 +25,9 @@ def pets
     { :id           => 4,
       :name         => "rata",
       :personajes   => ["mago"],
-      :bono         => "+1 resistencia (peste)",
-      :lacra        => "Roba el primer tesoro de comida del reto, podrida o no.",
+      :bono         => "+1 PM",
+      :lacra        => "-1 vs Peste",
       :sex          => "female",
-      
     },
     { :id           => 5,
       :name         => "murciélago",
