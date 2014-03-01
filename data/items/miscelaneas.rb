@@ -44,7 +44,7 @@ def miscelaneas
     {
       :id           => 9,
       :name         => "gargantilla",  
-      :max          => 3 
+      :max          => 1 
     },
     {
       :id           => 10,
