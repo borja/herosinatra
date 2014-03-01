@@ -41,6 +41,16 @@ def miscelaneas
       :name         => "dado magiorco",
       :max          => 0
     },
+    {
+      :id           => 9,
+      :name         => "gargantilla",  
+      :max          => 3 
+    },
+    {
+      :id           => 10,
+      :name         => "gorjal",  
+      :max          => 1 
+    },
   ]
 end
 
