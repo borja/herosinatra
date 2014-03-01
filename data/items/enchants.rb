@@ -190,6 +190,11 @@ def enchants
       :name         => "aereo mayor",
       :descripcion  => "5+ vs aire, si se invierte 1PM se obtiene +3 movimiento.",
       :tipo         => "bendito",
+    },
+    { :id           => 39,
+      :name         => "de relampago",
+      :descripcion  => "1/reto puede lanzar un relámpago.",
+      :tipo         => "aire",
     }
   ]
 end

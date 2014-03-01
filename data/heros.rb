@@ -69,13 +69,19 @@ def heros
                         {:id => 2,  :gemas    => [21]},
                         {:id => 3,  :enchants => [8]}, 
                         {:id => 11, :joyas    => [12],       :gemas    => [48]}, 
-                        {:id => 5,  :enchants => [5]}],
+                        {:id => 5,  :enchants => [5]},
+                        {:id => 9}],
       :miscelaneas  => [{:id => 1,  :gemas    => [25], :enchants => [9]},
                         {:id => 1},
-                        {:id => 2,  :gemas    => [50], :enchants => [38]},
+                        {:id => 9,  :ranuras    => 3, :enchants => [39]},
                         {:id => 7, :enchants => [32]}],
       :skills       => [0,1,2,3,4,5,6,7,8,9,10,11,12,13,15,16,17,18,20,21,22,23,24,25,26],
+<<<<<<< HEAD
       :profesion    => {:id => 5, :aprendiz => [3,4]},
+=======
+      :profesion    => 5,
+      :resistencia  => [6,3,5,6,0,6,4,6],
+>>>>>>> 3f5f69df185525ec931d46c6ecf7b1b2d967577d
       :piezas       => [3],
       :gemas        => [51,25,25,1,17,17,35,2,4,26,16],
       :pociones     => [4,9,6,7],
