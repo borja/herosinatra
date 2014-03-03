@@ -70,7 +70,7 @@ def heros
                         {:id => 3,  :enchants => [8]}, 
                         {:id => 11, :joyas    => [12],       :gemas    => [48]}, 
                         {:id => 5,  :enchants => [5]},
-                        {:id => 9}],
+                        {:id => 14}],
       :miscelaneas  => [{:id => 1,  :gemas    => [25], :enchants => [9]},
                         {:id => 1},
                         {:id => 9,  :ranuras    => 3, :enchants => [39]},
