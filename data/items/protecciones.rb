@@ -85,6 +85,12 @@ def proteccions
       :powa         => 2,
       :ranuras      => 1,
     },
+    { :id           => 14,
+      :name         => "gambax",
+      :categoria    => "cuero",
+      :powa         => 1,
+      :ranuras      => 2,
+    },
   ]
 end
 
