@@ -94,7 +94,7 @@ def druidas
     {
       :id           => 15,
       :name         => "espinas",
-      :description  => "Por 1PV el elfo y espíritu obtienen +1 potencia defensiva y centinela. La defensa excedida será utilizada como ataque defendible al monstruo.",
+      :description  => "Por 1PV el elfo y espíritu obtienen +1 dado defensa y +1 potencia  defensiva. La defensa(no la potencia), excedida será utilizada como ataque defendible al monstruo. Las espinas pueden ser acumulativas, cada una por 1PV, aplicándose en el único dado de espinas la suma de la defensa (potencia acumulada).",
       :type         => "Instintiva"
     },
     {
@@ -142,7 +142,7 @@ def druidas
     {
       :id           => 23,
       :name         => "armadura del bosque",
-      :description  => "Por 1PV los dados de defensa son verdes, por cada PV acumulado, +1 potencia defensiva.",
+      :description  => "Por 1PV los dados de defensa son verdes, por cada PV acumulado extra, +1 potencia defensiva. No aplicable ni compartido con el espíritu.",
       :type         => "Instintiva"
     },
     {
