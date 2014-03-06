@@ -164,7 +164,6 @@ def heros
       :name        => "Domasuegras",
       :personaje   => "berserker",
       :jugador     => "Daniel Acha",
-      :status      => "activo",
       :nivel       => 9,
       :repu        => 2,
       :cuerpo      => 12,
