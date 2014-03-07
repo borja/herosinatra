@@ -137,6 +137,8 @@
 							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>	
 						<% elsif a = @heroe[:miscelaneas].detect {|p| p[:id] == 2 } %>
 							<td><%= erb :'display/item', :locals => { :a => a , :item => "miscelanea"} %></td>
+						<% elsif a = @heroe[:miscelaneas].detect {|p| p[:id] == 9 } %>
+							<td><%= erb :'display/item', :locals => { :a => a , :item => "miscelanea"} %></td>
 						<% else %>
 							<% img_path = "'../../images/treasures/socket.png'" %>
 							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
@@ -160,6 +162,8 @@
 							<% img_path = "'../../images/treasures/socket.png'" %>
 							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>	
 						<% elsif a = @heroe[:proteccions].detect {|p| p[:id] == 9 } %>
+							<td><%= erb :'display/item', :locals => { :a => a , :item => "proteccion"} %></td>
+						<% elsif a = @heroe[:proteccions].detect {|p| p[:id] == 14 } %>
 							<td><%= erb :'display/item', :locals => { :a => a , :item => "proteccion"} %></td>
 						<% else %>
 							<% img_path = "'../../images/treasures/socket.png'" %>
