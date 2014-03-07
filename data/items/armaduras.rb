@@ -36,6 +36,11 @@ def armaduras
       :categoria    => "mithril",
       :powa         => 4,
     },
+    { :id           => 7,
+      :name         => "armadura completa",
+      :categoria    => "metal",
+      :powa         => 4,
+    },
   ]
 end
 
