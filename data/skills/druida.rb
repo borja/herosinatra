@@ -175,6 +175,18 @@ def druidas
       :description  => "Cada espíritu tiene +1 PC.",
       :type         => "Pasiva"
     },
+    {
+      :id           => 29,
+      :name         => "espíritu ancestral mayor",
+      :description  => "Los espíritus tienen +1 Fuerza en el daño.",
+      :type         => "Pasiva"
+    },
+    {
+      :id           => 30,
+      :name         => "transformacion druídica",
+      :description  => "El druida puede convertirse en el espíritu que desee pagando el coste que le costaría invocarlo. Se respetarán el tipo/color de dados con el que el druida pega y defiende de forma normal, pero el número de dados se acoplarán a los que tiene el espíritu. Al final de su turno, el druida puede destransformarse gratuitamente.",
+      :type         => "Activa"
+    },
     
     
   ]
