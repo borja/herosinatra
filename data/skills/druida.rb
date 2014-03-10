@@ -183,7 +183,7 @@ def druidas
     },
     {
       :id           => 30,
-      :name         => "transformacion druídica",
+      :name         => "transformación druídica",
       :description  => "El druida puede convertirse en el espíritu que desee pagando el coste que le costaría invocarlo. Se respetarán el tipo/color de dados con el que el druida pega y defiende de forma normal, pero el número de dados se acoplarán a los que tiene el espíritu. Al final de su turno, el druida puede destransformarse gratuitamente.",
       :type         => "Activa"
     },
