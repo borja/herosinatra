@@ -152,8 +152,8 @@ def heros
                        {:id => 20, :enchants => 40}],
       :armaduras   => [{:id => 1,  :ranuras => 4, :enchants => [41]}],
       :proteccions => [{:id => 3,  :gemas   => [13]}, 
-                       {:id => 11}
-                       {:id => 1}
+                       {:id => 11},
+                       {:id => 1},
                        {:id => 8, :runas => [2]}],
       :miscelaneas => [{:id => 1, :runas => [7], :enchants => [8]},
                        {:id => 6, :enchants => [6]}],
