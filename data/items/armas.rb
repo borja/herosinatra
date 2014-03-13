@@ -148,6 +148,13 @@ def armas
       :ranuras      => 2,
       :diagonal     => true
     },
+    { :id           => 21,
+      :name         => "baculo de la disformidad",
+      :categoria    => "baston",
+      :powa         => 1,
+      :ranuras      => 4,
+      :diagonal     => true
+    }
   ]
 end
 
