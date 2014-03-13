@@ -54,7 +54,7 @@ def miscelaneas
     {
       :id           => 11,
       :name         => "anillo de los deseos",
-      :max          => 2
+      :max          => 1
     },
   ]
 end
