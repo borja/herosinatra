@@ -51,6 +51,11 @@ def miscelaneas
       :name         => "gorjal",  
       :max          => 1 
     },
+    {
+      :id           => 11,
+      :name         => "anillo de los deseos",
+      :max          => 2
+    },
   ]
 end
 
