@@ -43,7 +43,7 @@ def heros
                        {:id => 6,  :enchants => [36]},
                        {:id => 8},
                        {:id => 2,  :gemas    => [27], :enchants => [6] },
-                       {:id => 1,  :enchants => [35] },
+                       {:id => 11, :enchants => [35]},
                        {:id => 6,  :enchants => [37]}],
       :profesion    => {:id => 0,  :aprendiz => [1,2]},                 
       :skills    => [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
@@ -737,47 +737,4 @@ def heros
     { :id          => 39,
       :name        => "Leonard Umbradrack",
       :personaje   => "conjurador",
-      :jugador     => "Javier",
-      :status      => "activo",
-      :nivel       => 3,
-      :cuerpo      => 4,
-      :mente       => 8,
-      :mov         => 7,
-      :hechizos    => [1,2,3,4,5,6,7,8,9,10,11,12],
-      :armas       => [{:id => 3}],
-      :armaduras   => [{:id => 1, :ranuras => 2}],
-    },
-  ]
-end
-
-def hero(id)
-  heros[id]
-end
-
-def ataque(id)
- total = 0
- heros[id][:armas].each do |a|
-   total += arma(a[:id])[:powa] unless a[:id] == 7 # Salvo que sea un escudo
- end
- return total
-end
-
-def rango(id)
-  total = 0
-  heros[id][:armas].each do |a|
-    total += arma(a[:id])[:powa] if arma(a[:id])[:name] == "arco"
-  end
-  return total
-end
-
-def mundano?(item)
-  case
-    when (item.class != Hash ) then return "class error"
-    when (item[:gemas].nil? && item[:joyas].nil? && item[:runas].nil? && item[:ranuras].nil?) then return true
-    else return false
-  end 
-end
-
-def defensa(id)
-  return 1  
-end
+      :jugador   
