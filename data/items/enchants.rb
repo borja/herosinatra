@@ -195,6 +195,16 @@ def enchants
       :name         => "de relampago",
       :descripcion  => "1/reto puede lanzar un relámpago.",
       :tipo         => "aire",
+    },
+    { :id           => 40,
+      :name         => "fuego sagrado",
+      :descripcion  => "Cuando se lanza un hechizo de fuego, se puede ejecutar una plegaria. Además, ilumina.",
+      :tipo         => "fuego",
+    },
+    { :id           => 41,
+      :name         => "defensivo",
+      :descripcion  => "otorga +1 defensa.",
+      :tipo         => "bendito",
     }
   ]
 end
