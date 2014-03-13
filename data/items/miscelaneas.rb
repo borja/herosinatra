@@ -39,7 +39,7 @@ def miscelaneas
     {
       :id           => 8,
       :name         => "dado magiorco",
-      :max          => 0
+      :max          => 1
     },
     {
       :id           => 9,
