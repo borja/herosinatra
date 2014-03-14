@@ -219,7 +219,7 @@ def heros
       :mov         => 8,
       :armas       => [{:id => 7, :runas => [9]}, 
                        {:id => 7}],
-      :armaduras   => [{:id => 2}],
+      :armaduras   => [{:id => 7}],
       :proteccions => [{:id => 13}],
       :miscelaneas => [{:id => 1, :enchants => [10]}],
       :pergaminos  => [{:id => 3},
