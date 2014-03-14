@@ -148,7 +148,7 @@ def heros
       :mente       => 18,
       :mov         => 8,
       :pet          => {:id  => 6, :name => "Verruguitas"},
-      :armas       => [{:id => 8,  :ranuras => 3},
+      :armas       => [{:id => 21,  :ranuras => 3},
                        {:id => 20, :enchants => [40]}],
       :armaduras   => [{:id => 1,  :ranuras => 4, :enchants => [41]}],
       :proteccions => [{:id => 3,  :gemas   => [13]}, 
