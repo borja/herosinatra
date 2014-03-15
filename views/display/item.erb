@@ -70,7 +70,8 @@
 			<br>
 			<h4>Propiedades mágicas</h4>
 			<% a[:enchants].each do |e| %>
-				<li><%= enchant(e)[:name].capitalize %>
+				<li><b><%= enchant(e)[:name].capitalize %></b>:
+				 	<i><%= enchant(e)[:descripcion] %></i>
 			<% end %>
 		<% end %>	
 	</div>
