@@ -34,9 +34,15 @@ def hechiceros
     {
       :id           => 5,
       :name         => "diablura",
-      :description  => "El hechicero puede comprarse la diablura de un hechizo",
+      :description  => "El hechicero puede comprarse la diablura de un hechizo.",
       :type         => "pasiva",
     },
+    {
+      :id           => 6,
+      :name         => "magia intrépida",
+      :description  => "Enchisterar es una acción gratuita.",
+      :type         => "pasiva",
+    }
   ]
 end
 
