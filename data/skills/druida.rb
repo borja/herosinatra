@@ -94,7 +94,7 @@ def druidas
     {
       :id           => 15,
       :name         => "espinas",
-      :description  => "Por 1PV el elfo y espíritu obtienen +1 dado defensa y +1 potencia  defensiva. La defensa(no la potencia), excedida será utilizada como ataque defendible al monstruo. Las espinas pueden ser acumulativas, cada una por 1PV, aplicándose en el único dado de espinas la suma de la defensa (potencia acumulada).",
+      :description  => "Por 1PV el elfo y espíritu obtienen +1 potencia de ataque. El número de dados excedidos en defensa será utilizada como ataque defendible al monstruo, aplicándose la potencia de ataque. Las espinas pueden ser acumulativas, cada una por 1PV. Esta habilidad afecta también a los espíritus de otro druida que estuviera en activo.",
       :type         => "Instintiva"
     },
     {
