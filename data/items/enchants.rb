@@ -173,7 +173,7 @@ def enchants
     },
     { :id           => 35,
       :name         => "de los Deseos",
-      :descripcion  => "1/reto un Teleport, 1/reto se puede pedir un deseo cualquiera para el reto, +1 dado de fuego en las dagas.",
+      :descripcion  => "1/reto un deseo: Teleport, Resurreción, Hijo, Restaurar habilidad única.",
       :tipo         => "legendaria",
     },
     { :id           => 36,
@@ -205,6 +205,11 @@ def enchants
       :name         => "defensivo",
       :descripcion  => "otorga +1 defensa.",
       :tipo         => "bendito",
+    },
+    { :id           => 42,
+      :name         => "muerte ardiente",
+      :descripcion  => "+1 dado de fuego en ataques de daga.",
+      :tipo         => "fuego",
     }
   ]
 end

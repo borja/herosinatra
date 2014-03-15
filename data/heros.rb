@@ -43,7 +43,7 @@ def heros
                        {:id => 6,  :enchants => [36]},
                        {:id => 8},
                        {:id => 2,  :gemas    => [27], :enchants => [6] },
-                       {:id => 11,  :enchants => [35]},
+                       {:id => 11, :enchants => [35,42]},
                        {:id => 6,  :enchants => [37]}],
       :profesion    => {:id => 0,  :aprendiz => [1,2]},                 
       :skills    => [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
