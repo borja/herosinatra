@@ -27,7 +27,7 @@ def derviches
     },
     {
       :id           => 4,
-      :name         => "Baile de combate",
+      :name         => "baile de combate",
       :description  => "El personaje amplía su zona de combate, pudiendo atacar a 2 objetivos en un mismo turno. Nivel 1: Ataca hasta un ángulo de 45º (en diagonal).",
       :type         => "pasiva"
     },
