@@ -14,7 +14,7 @@ def heros
       :pet         => {:id  => 8, :name => "Peróculo", :torpe => true},
       :hechizos    => [1,2,3,4,5,6,7,8,9,10,11,12],
       :armas       => [{:id => 3}],
-      :armaduras   => [{:id => 6, :enchants => [19,27,18], :ranuras => 1}],
+      :armaduras   => [{:id => 1}],
       :miscelaneas => [{:id => 2, :enchants => [30,31],    :ranuras => 1}],
       :skills      => [0,1,2,4,5],
       :pergaminos  => [{:id => 1, :spells   => [11]}],
@@ -769,7 +769,7 @@ def heros
       :mov         => 8,
       :hechizos    => [10,11,12],
       :armas       => [{:id => 5, :runas    => [5]}],
-      :armaduras   => [{:id => 6, :enchants => [18,19,27] }],
+      :armaduras   => [{:id => 6, :enchants => [18,19,27], :ranuras => 1}],
     },
   ]
 end
