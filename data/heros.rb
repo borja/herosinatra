@@ -710,7 +710,7 @@ def heros
                        {:id => 1, :gemas =>[18]}],
       :armaduras   => [{:id => 2}],
       :miscelaneas => [{:id => 6, :ranuras => 2}],
-      :skills      => [0,1,2,3],
+      :skills      => [0,1,2,3,4],
     },
     { :id          => 37,
       :name        => "Vintor Steelengard",
