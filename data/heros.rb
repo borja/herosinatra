@@ -739,6 +739,7 @@ def heros
       :cuerpo      => 8,
       :mente       => 3,
       :mov         => 7,
+      :armaduras   => [{:id => 2}],
       :armas       => [{:id => 10, :gemas =>[37]}],
       :skills      => [0,1,14],
     },
