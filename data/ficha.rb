@@ -1,43 +1,11 @@
 # encoding: UTF-8
-def descripcion
-  [
-	  "rostro",
-    "héroe",
-	  "raza",
-	  "personaje",
-	  "nivel",
-	  "reputación"
-  ]
-end
+def descripcion ;["rostro", "héroe", "raza", "personaje", "nivel", "reputación"] end
+def disciplinas ;["id", "icono", "tipo", "nombre", "descripción", "nivel", "requisitos"] end
 
-def engarces
-  [
-    "gemas",
-    "joyas",
-    "runas"
-  ]
-end
-
-def disciplinas
-  [
-    "id",
-    "icono",
-    "tipo",
-    "nombre",
-    "descripción",
-    "nivel",
-    "requisitos"
-  ]  
-end
-
-def habs
-  [
-    "icono",
-    "tipo",
-    "nombre",
-    "descripción",
-  ]  
-end
+def engarces    ;["gemas","joyas","runas"]           end
+def habs ;["icono", "tipo", "nombre", "descripción"] end
+def desprotegido? hero; hero[:protecciones].nil?     end
+def pobre?        hero; hero[:miscelaneas ].nil?     end
 
 def desprovisto?(hero)
   case
