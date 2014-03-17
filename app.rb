@@ -52,6 +52,9 @@ class App < Sinatra::Base
   get '/habilidades' do
     erb :habilidades
   end
+  get '/maestrodearmas' do
+    erb :maestrodearmas
+  end
   get '/mapa' do
     erb :mapa
   end
