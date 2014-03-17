@@ -28,7 +28,7 @@ def miscelaneas
     },
     {
       :id           => 6,
-      :name         => "talisman",
+      :name         => "talismán",
       :max          => 3
     },
     {

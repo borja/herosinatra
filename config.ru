@@ -14,6 +14,7 @@ require './data/ficha'
 require './data/tesoro'
 
 # Items Data Base
+require './data/items/items'
 require './data/items/miscelaneas'
 require './data/items/enchants'
 require './data/items/engarces/gemas'

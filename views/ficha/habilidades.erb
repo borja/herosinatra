@@ -1,5 +1,4 @@
 <h3>Habilidades</h3>
-
 <table id='table-2'>
 	<thead>
 		<tr><% habs.each do |h| %>
@@ -14,9 +13,9 @@
 			<tr><td><% img_path = "'../images/skills/#{heroe[:personaje]}/#{habilidad[:name]}.png'" %>
 					<img src=<%=img_path%> alt=<%= habilidad[:name] %>, id='icon' />
 				</td>
-				<td>   <%= habilidad[:type].capitalize %></td>
-				<td>   <%= habilidad[:name].capitalize %></td>
-				<td><i><%= habilidad[:description] %></i></td>
+				<td><%=    habilidad[:type].capitalize  %></td>
+				<td><%=    habilidad[:name].capitalize  %></td>
+				<td><i><%= habilidad[:description]  %></i></td>
 			</tr>
 		<% end %>
 	</tbody>

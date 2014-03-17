@@ -24,9 +24,9 @@
 			</table><br>
 			<table id='table-2'>
 				<thead>
-					<tr><% helm_list = [2,6,12,13] %>
+					<tr>
 						<th width='80%'>Cabeza</th>
-						<% cascos = (@heroe[:proteccions] || []).find_all{ |casco| helm_list.include?(casco[:id])} %>
+						<% cascos = (@heroe[:proteccions] || []).find_all{ |casco| cabeza_lista.include?(casco[:id])} %>
 						<% if !cascos.empty? %>
 							<td><%= erb :'display/item', :locals => { :a => cascos.first , :item => "proteccion"} %></td>
 						<% else %>
@@ -34,9 +34,9 @@
 							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
 						<% end %>
 					</tr>
-					<tr><% shoulder_list = [5] %>
+					<tr>
 						<th width='80%'>Hombros</th>
-						<% hombreras = (@heroe[:proteccions] || []).find_all{ |hombrera| shoulder_list.include?(hombrera[:id])} %>
+						<% hombreras = (@heroe[:proteccions] || []).find_all{ |hombrera| hombros_lista.include?(hombrera[:id])} %>
 						<% if !hombreras.empty? %>
 							<td><%= erb :'display/item', :locals => { :a => hombreras.first , :item => "proteccion"} %></td>
 						<% else %>
@@ -48,9 +48,9 @@
 						<th width='80%'>Armadura</th>
 						<td><%= erb :'display/item', :locals => { :a => @heroe[:armaduras].first , :item => "armadura"} %></td>
 					</tr>
-					<tr><% muñequeras_list = [8] %>
+					<tr>
 						<th width='80%'>Muñecas</th>
-						<% muñequeras = (@heroe[:proteccions] || []).find_all{ |muñequera| muñequeras_list.include?(muñequera[:id])} %>
+						<% muñequeras = (@heroe[:proteccions] || []).find_all{ |muñequera| muñecas_lista.include?(muñequera[:id])} %>
 						<% if !muñequeras.empty? %>
 							<td><%= erb :'display/item', :locals => { :a => muñequeras.first , :item => "proteccion"} %></td>
 						<% else %>
@@ -58,9 +58,9 @@
 							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
 						<% end %>
 					</tr>
-					<tr><% belt_list = [4,11] %>
+					<tr>
 						<th width='80%'>Cintura</th>
-						<% cinturones = (@heroe[:proteccions] || []).find_all{ |cinturon| belt_list.include?(cinturon[:id])} %>
+						<% cinturones = (@heroe[:proteccions] || []).find_all{ |cinturon| cintura_lista.include?(cinturon[:id])} %>
 						<% if !cinturones.empty? %>
 							<td><%= erb :'display/item', :locals => { :a => cinturones.first , :item => "proteccion"} %></td>
 						<% else %>
@@ -68,9 +68,9 @@
 							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
 						<% end %>
 					</tr>
-					<tr><% boots_list = [3] %>
+					<tr>
 						<th width='80%'>Pies</th>
-						<% botas = (@heroe[:proteccions] || []).find_all{ |bota| boots_list.include?(bota[:id])} %>
+						<% botas = (@heroe[:proteccions] || []).find_all{ |bota| pies_lista.include?(bota[:id])} %>
 						<% if !botas.empty? %>
 							<td><%= erb :'display/item', :locals => { :a => botas.first , :item => "proteccion"} %></td>
 						<% else %>
@@ -84,9 +84,9 @@
 		<td width='20%'>
 			<table id='table-2'>
 				<thead>
-					<tr><% ring_list = [1,11] %>
+					<tr>
 						<th width='80%'>Anillo Izquierdo</th>
-						<% anillos = (@heroe[:miscelaneas] || []).find_all{ |anillo| ring_list.include?(anillo[:id])} %>
+						<% anillos = (@heroe[:miscelaneas] || []).find_all{ |anillo| anillo_lista.include?(anillo[:id])} %>
 						<% if !anillos.empty? %>
 							<td><%= erb :'display/item', :locals => { :a => anillos.first , :item => "miscelanea"} %></td>
 						<% else %>
@@ -96,7 +96,7 @@
 					</tr>
 					<tr>
 						<th width='80%'>Anillo Derecho</th>
-						<% anillos = (@heroe[:miscelaneas] || []).find_all{ |anillo| ring_list.include?(anillo[:id])} %>
+						<% anillos = (@heroe[:miscelaneas] || []).find_all{ |anillo| anillo_lista.include?(anillo[:id])} %>
 						<% if anillos[1] %>
 							<td><%= erb :'display/item', :locals => { :a => anillos[1] , :item => "miscelanea"} %></td>
 						<% else %>
@@ -108,9 +108,9 @@
 			</table><br>
 			<table id='table-2'>
 				<thead>
-					<tr><% collar_list = [2,9] %>
+					<tr>
 						<th width='80%'>Cuello</th>
-						<% collares = (@heroe[:miscelaneas] || []).find_all{ |collar| collar_list.include?(collar[:id])} %>
+						<% collares = (@heroe[:miscelaneas] || []).find_all{ |collar| cuello_lista.include?(collar[:id])} %>
 						<% if !collares.empty? %>
 							<td><%= erb :'display/item', :locals => { :a => collares.first , :item => "miscelanea"} %></td>
 						<% else %>
@@ -118,9 +118,9 @@
 							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
 						<% end %>
 					</tr>
-					<tr><% capas_list = [1] %>
+					<tr>
 						<th width='80%'>Espalda</th>
-						<% capas = (@heroe[:proteccions] || []).find_all{ |capa| capas_list.include?(capa[:id])} %>
+						<% capas = (@heroe[:proteccions] || []).find_all{ |capa| espalda_lista.include?(capa[:id])} %>
 						<% if !capas.empty? %>
 							<td><%= erb :'display/item', :locals => { :a => capas.first , :item => "proteccion"} %></td>
 						<% else %>
@@ -288,106 +288,9 @@
 			</table>
 		</td>
 		<td width='40%'>
-			<table id='table-2'>
-				<thead>
-					<tr>
-						<th width='33%'>Cuerpo</th>
-						<th width='33%'>Mente</th>
-						<th width='33%'>Movimiento</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><%= @heroe[:cuerpo] %></td>
-						<td><%= @heroe[:mente ] %></td>
-						<td><%= @heroe[:mov   ] %></td>
-					</tr>
-				</tbody>
-			</table><br>	
-			<table id='table-2'>
-				<thead>
-					<tr>
-						<th width='33%'>Melee</th>
-						<th width='33%'>Rango</th>
-						<th width='33%'>Defensa</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><%= ataque( @heroe[:id]) %></td>
-						<td><%= rango(  @heroe[:id]) %></td>
-						<td><%= defensa(@heroe[:id]) %></td>
-					</tr>
-				</tbody>
-			</table><br>
-			<table id='table-2'>
-				<thead>
-					<tr>
-						<th width='33%'>Pociones</th>
-						<th width='33%'>Pergaminos</th>
-						<th width='33%'>Oro</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>3</td>
-						<td>3</td>
-						<td><%= @heroe[:oro] || 0 %></td>
-					</tr>
-				</tbody>
-			</table>
-			<% if @heroe[:hechizos] %>
-				<br>
-				<table id='table-2'>
-					<thead>
-						<tr><th><a href=../spells/<%=@heroe[:id]%>>Lista de hechizos conocidos</a></th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><table id='table-2'>
-									<tbody>
-										<tr>
-											<% elements(@heroe[:hechizos]).each do |e| %>	
-												<td>
-													<%= erb :'display/display', :locals => { 
-														:title       => e, 
-														:path        => "'../images/elements/#{e}.png'",
-														:description => "" } %>
-												</td>
-											<% end %>
-										</tr>
-									</tbody>
-								</table>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			<% end %>
-			<br>
-			<table id='table-2'>
-				<thead>
-					<tr>
-						<% resistencias.each do |r| %>
-							<th>
-								<%= erb :'display/display', :locals => { 
-									:title       => r, 
-									:path        => "'../images/elements/#{r}.png'",
-									:description => "Resistencia: " + resistencia(@heroe[:id])[r.to_sym].to_s } %>
-							</th>
-						<% end%>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<% resistencias.each do |r| %>	
-							<td>
-								<%= resistencia(@heroe[:id])[r.to_sym] %>
-							</td>
-						<% end %>
-					</tr>
-				</tbody>
-			</table>
+			<%= erb :'ficha/stats' %>
+			<%= erb :'ficha/hechizos' if @heroe[:hechizos] %>
+			<%= erb :'ficha/resistencias' %>
 		</td>
 	</tr>
 </table>
