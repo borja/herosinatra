@@ -5,12 +5,15 @@
 	<link rel="stylesheet" href="../../app.css"      type="text/css" />	
 	<br>
 
+<h1>Lista de habilidades del maestro de armas</h1><br><br>
+
 
 <table id='table-2'>
 <thead>
+	<th>ID</th>
 	<th>Icono</th>
 	<th>Nombre</th>
-	<th>Descripción</th>
+	<th>Descripcion</th>
 	<th>Coste</th>
 </thead>
 <tbody>
@@ -22,6 +25,8 @@
 					<img src=<%=img_path%> alt=<%=m[:name]%>, id='icon' />
 				</td>
 				<td><%= m[:name].capitalize %></td>
+				<td><%= m[:descripcion] %></td>
+				<td><%= m[:coste].capitalize %></td>
 			</tr>
 		<% end %>
 </tbody>
