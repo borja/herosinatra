@@ -20,6 +20,7 @@ require './data/skills/matador'
 require './data/skills/asesino'
 require './data/skills/ladron'
 require './data/skills/nigromante'
+require './data/skills/maestrodearmas'
 
 def skills
   [
