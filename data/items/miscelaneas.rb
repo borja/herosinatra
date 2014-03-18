@@ -56,6 +56,11 @@ def miscelaneas
       :name         => "anillo de los deseos",
       :max          => 1
     },
+    {
+      :id           => 12,
+      :name         => "saco garrapato",
+      :max          => 1
+    },
   ]
 end
 
