@@ -154,6 +154,13 @@ def armas
       :powa         => 1,
       :ranuras      => 4,
       :diagonal     => true
+    },
+    { :id           => 22,
+      :name         => "estandarte de la noche",
+      :categoria    => "estandarte",
+      :powa         => 1,
+      :ranuras      => 0,
+      :diagonal     => true
     }
   ]
 end
