@@ -91,6 +91,13 @@ def proteccions
       :powa         => 1,
       :ranuras      => 2,
     },
+    { :id           => 15,
+      :name         => "corona de antiguos reyes",
+      :categoria    => "metal",
+      :powa         => 1,
+      :ranuras      => 6,
+    },
+    
   ]
 end
 
