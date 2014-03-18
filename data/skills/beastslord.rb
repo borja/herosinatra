@@ -82,7 +82,7 @@ def lords
     {
       :id           => 13,
       :name         => "gloria del héroe",
-      :description  => "Ignora cualquier mal. Se debe declarar al inicio del turno del Malvado Brujo.",
+      :description  => "Ignora cualquier mal. El efecto cesa al finalizar el turno del malvado brujo. Debe utilizarse antes de la tirada de ataque.",
       :type         => "única"
     },
   ]
