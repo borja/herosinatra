@@ -1,0 +1,10 @@
+<tr>
+	<th width='80%'><%= field.capitalize %></th>
+	<% cascos = (@heroe[:proteccions] || []).find_all{ |casco| send(field+'_lista').include?(casco[:id])} %>
+	<% if !cascos.empty? %>
+		<td><%= erb :'display/item', :locals => { :a => cascos.first , :item => "proteccion"} %></td>
+	<% else %>
+		<% img_path = "'../../images/treasures/socket.png'" %>
+		<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
+	<% end %>
+</tr>

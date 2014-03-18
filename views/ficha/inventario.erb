@@ -24,6 +24,7 @@
 			</table><br>
 			<table id='table-2'>
 				<thead>
+					<%= erb :'ficha/inventario/field', :locals => {:field => 'cabeza'} %>
 					<tr>
 						<th width='80%'>Cabeza</th>
 						<% cascos = (@heroe[:proteccions] || []).find_all{ |casco| cabeza_lista.include?(casco[:id])} %>
