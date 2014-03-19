@@ -2,6 +2,11 @@
 def miscelaneas
   [
     {
+      :id           => 0,
+      :name         => "hebilla",
+      :max          => 1
+    },
+    {
       :id           => 1,
       :name         => "anillo",
       :max          => 2
@@ -64,11 +69,21 @@ def miscelaneas
     {
       :id           => 13,
       :name         => "talismán de melar",
-      :max          => 1
+      :max          => 1,
     },
+    {
+      :id           => 14,
+      :name         => "tobilleras",
+      :max          => 1,
+    },
+    {
+      :id           => 15,
+      :name         => "tatuajes",
+      :max          => 0,
+    }
   ]
 end
 
 def miscelanea(id)
-  miscelaneas[id-1]
+  miscelaneas[id]
 end
