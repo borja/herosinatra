@@ -21,6 +21,7 @@ require './data/skills/asesino'
 require './data/skills/ladron'
 require './data/skills/nigromante'
 require './data/skills/maestrodearmas'
+require './data/skills/especializaciones'
 
 def skills
   [
