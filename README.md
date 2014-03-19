@@ -1,27 +1,18 @@
-Herosheet Dashboard 2
+Herosheet Dashboard
 ===================
-
 [![wercker status](https://app.wercker.com/status/4c38ae43c4609f479aedf505f70c6395/m "wercker status")](https://app.wercker.com/project/bykey/4c38ae43c4609f479aedf505f70c6395)
 
-This git repository will help you get up and running quickly with Sinatra on OpenShift.
-
 Running on OpenShift
-----------------------------
-
+--------------------
 Create an account at http://openshift.redhat.com/
-
 Create a ruby-1.9 application
-
     rhc app create -a sinatra -t ruby-1.9 --from-code https://github.com/openshift/sinatra-example.git
-
 That's it, you can now checkout your application at
-
     http://sinatra-$yournamespace.rhcloud.com
 
-
-Configuring the Modular/Object, Views, or Mustache example code to run on OpenShift
+Modular/Object, Views, or Mustache
 ----------------------------------
-
+Configuring the Modular/Object, Views, or Mustache example code to run on OpenShift
 If you would like to run any of the other examples included here on OpenShift just follow the below instructions:
 
 1. git clone your application onto your local machine
@@ -33,7 +24,6 @@ Then you just need to commit your changes and git push them to your OpenShift ge
 
 Running this application locally
 ----------------------------------
-
 Before running any of these examples, you should run the below command to make sure that you have the correct ruby gems installed
 
 		bundle install
@@ -55,13 +45,8 @@ Just cd into the appropriate directory and run the following commands:
 		bundle exec ruby -S rackup -w config.ru
 		
 
-Thanks to:
-
-Sinatra Mustache example based on: https://github.com/defunkt/mustache-sinatra-example
-
 License
 -------
-
 This code is dedicated to the public domain to the maximum extent
 permitted by applicable law, pursuant to CC0
 http://creativecommons.org/publicdomain/zero/1.0/
