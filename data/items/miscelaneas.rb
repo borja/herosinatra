@@ -63,7 +63,7 @@ def miscelaneas
     },
     {
       :id           => 13,
-      :name         => "amuleto de melar",
+      :name         => "talismán de melar",
       :max          => 1
     },
   ]
