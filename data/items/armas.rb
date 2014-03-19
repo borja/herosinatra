@@ -161,6 +161,13 @@ def armas
       :powa         => 1,
       :ranuras      => 0,
       :diagonal     => true
+    },
+    { :id           => 23,
+      :name         => "báculo de las estaciones",
+      :categoria    => "baston",
+      :powa         => 2,
+      :ranuras      => 4,
+      :diagonal     => true
     }
   ]
 end
