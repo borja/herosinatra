@@ -15,15 +15,15 @@
 			<th>Coste</th>
 		</thead>
 		<tbody>
-			<% especializaciones.each do |e| %>
+			<% especializacions.each do |e| %>
 					<tr>
 						<td><%= e[:id] %></td>
 						<td><% img_path = "'../images/skills/especializaciones/#{e[:name]}.png'" %>
-							<img src=<%=img_path%> alt=<%=e[:name]%>, id='icon' />
+							<img src=<%=img_path%> alt=<%= e[:name] %>, id='icon' />
 						</td>
 						<td><%= e[:name].capitalize %></td>
-						<td><%= e[:descripcion] %></td>
-						<td><%= e[:coste].capitalize %></td>
+						<td><%= e[:description] %></td>
+						<td><%= e[:coste] %></td>
 					</tr>
 				<% end %>
 		</tbody>
