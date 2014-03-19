@@ -18,7 +18,7 @@
 			<% especializaciones.each do |e| %>
 					<tr>
 						<td><%= e[:id] %></td>
-						<td><% img_path = "'../images/habilidades/especializaciones/#{e[:name]}.png'" %>
+						<td><% img_path = "'../images/skills/especializaciones/#{e[:name]}.png'" %>
 							<img src=<%=img_path%> alt=<%=e[:name]%>, id='icon' />
 						</td>
 						<td><%= e[:name].capitalize %></td>

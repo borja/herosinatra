@@ -18,7 +18,7 @@
 			<% maestrodearmas.each do |m| %>
 					<tr>
 						<td><%= m[:id] %></td>
-						<td><% img_path = "'../images/habilidades/maestrodearmas/#{m[:name]}.png'" %>
+						<td><% img_path = "'../images/skills/maestrodearmas/#{m[:name]}.png'" %>
 							<img src=<%=img_path%> alt=<%=m[:name]%>, id='icon' />
 						</td>
 						<td><%= m[:name].capitalize %></td>
