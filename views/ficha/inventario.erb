@@ -32,16 +32,6 @@
 					<%= erb :'ficha/inventario/field', :locals => {:field => 'muñecas', :objeto => 'proteccions'} %>
 					<%= erb :'ficha/inventario/field', :locals => {:field => 'cintura', :objeto => 'proteccions'} %>
 					<%= erb :'ficha/inventario/field', :locals => {:field => 'pies',    :objeto => 'proteccions'} %>
-					<tr>
-						<th width='80%'>Pies</th>
-						<% botas = (@heroe[:proteccions] || []).find_all{ |bota| pies_lista.include?(bota[:id])} %>
-						<% if !botas.empty? %>
-							<td><%= erb :'display/item', :locals => { :a => botas.first , :item => "proteccion"} %></td>
-						<% else %>
-							<% img_path = "'../../images/treasures/socket.png'" %>
-							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
-						<% end %>
-					</tr>
 				</thead>
 			</table>
 		</td>
