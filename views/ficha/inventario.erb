@@ -24,51 +24,14 @@
 			</table><br>
 			<table id='table-2'>
 				<thead>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'cabeza'} %>
-					<tr>
-						<th width='80%'>Cabeza</th>
-						<% cascos = (@heroe[:proteccions] || []).find_all{ |casco| cabeza_lista.include?(casco[:id])} %>
-						<% if !cascos.empty? %>
-							<td><%= erb :'display/item', :locals => { :a => cascos.first , :item => "proteccion"} %></td>
-						<% else %>
-							<% img_path = "'../../images/treasures/socket.png'" %>
-							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
-						<% end %>
-					</tr>
-					<tr>
-						<th width='80%'>Hombros</th>
-						<% hombreras = (@heroe[:proteccions] || []).find_all{ |hombrera| hombros_lista.include?(hombrera[:id])} %>
-						<% if !hombreras.empty? %>
-							<td><%= erb :'display/item', :locals => { :a => hombreras.first , :item => "proteccion"} %></td>
-						<% else %>
-							<% img_path = "'../../images/treasures/socket.png'" %>
-							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
-						<% end %>
-					</tr>
-					<tr>
-						<th width='80%'>Armadura</th>
+					<%= erb :'ficha/inventario/field', :locals => {:field => 'cabeza' , :objeto => 'proteccions'} %>
+					<%= erb :'ficha/inventario/field', :locals => {:field => 'hombros', :objeto => 'proteccions'} %>
+					<tr><th width='80%'>Armadura</th>
 						<td><%= erb :'display/item', :locals => { :a => @heroe[:armaduras].first , :item => "armadura"} %></td>
 					</tr>
-					<tr>
-						<th width='80%'>Muñecas</th>
-						<% muñequeras = (@heroe[:proteccions] || []).find_all{ |muñequera| muñecas_lista.include?(muñequera[:id])} %>
-						<% if !muñequeras.empty? %>
-							<td><%= erb :'display/item', :locals => { :a => muñequeras.first , :item => "proteccion"} %></td>
-						<% else %>
-							<% img_path = "'../../images/treasures/socket.png'" %>
-							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
-						<% end %>
-					</tr>
-					<tr>
-						<th width='80%'>Cintura</th>
-						<% cinturones = (@heroe[:proteccions] || []).find_all{ |cinturon| cintura_lista.include?(cinturon[:id])} %>
-						<% if !cinturones.empty? %>
-							<td><%= erb :'display/item', :locals => { :a => cinturones.first , :item => "proteccion"} %></td>
-						<% else %>
-							<% img_path = "'../../images/treasures/socket.png'" %>
-							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
-						<% end %>
-					</tr>
+					<%= erb :'ficha/inventario/field', :locals => {:field => 'muñecas', :objeto => 'proteccions'} %>
+					<%= erb :'ficha/inventario/field', :locals => {:field => 'cintura', :objeto => 'proteccions'} %>
+					<%= erb :'ficha/inventario/field', :locals => {:field => 'pies',    :objeto => 'proteccions'} %>
 					<tr>
 						<th width='80%'>Pies</th>
 						<% botas = (@heroe[:proteccions] || []).find_all{ |bota| pies_lista.include?(bota[:id])} %>
