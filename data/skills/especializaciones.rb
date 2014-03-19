@@ -1,5 +1,5 @@
 # encoding: UTF-8
-def especialistas
+def especializacione
   [
     {
       :id => 0,
@@ -10,6 +10,6 @@ def especialistas
   ]
 end
 
-def especialista(id)
-  especialistas[id]
+def especializacione(id)
+  especializaciones[id]
 end
