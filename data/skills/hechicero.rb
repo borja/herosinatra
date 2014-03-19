@@ -27,18 +27,6 @@ def hechiceros
     },
     {
       :id           => 4,
-      :name         => "especialista",
-      :description  => "El hechicero se especializa en 1 elemento, obteniendo +1POT en los hechizos de ese elemento. A cambio, tendrá una penalización en 2 elementos de -1 POT en sus hechizos.",
-      :type         => "pasiva",
-    },
-    {
-      :id           => 5,
-      :name         => "diablura",
-      :description  => "El hechicero puede comprarse la diablura de un hechizo.",
-      :type         => "pasiva",
-    },
-    {
-      :id           => 6,
       :name         => "magia intrépida",
       :description  => "Enchisterar es una acción gratuita.",
       :type         => "pasiva",

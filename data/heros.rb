@@ -16,7 +16,7 @@ def heros
       :armas       => [{:id => 3}],
       :armaduras   => [{:id => 1}],
       :miscelaneas => [{:id => 2, :enchants => [30,31],    :ranuras => 1}],
-      :skills      => [0,1,2,4,5],
+      :skills      => [0,1,2,3,4],
       :pergaminos  => [{:id => 1, :spells   => [11]}],
     },
     { :id          => 1,
