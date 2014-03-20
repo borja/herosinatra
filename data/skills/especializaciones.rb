@@ -8,6 +8,28 @@ def especializacions
       :type        => "pasiva",
       :coste       => 100,
     },
+     {
+      :id          => 1,
+      :name        => "diablura fuego de ira",
+      :description => "Si el hechizo fuego de ira falla a la hora de hacer daño, se recupera.",
+      :type        => "pasiva",
+      :coste       => 100,
+    },
+    {
+      :id          => 2,
+      :name        => "diablura valentía",
+      :description => "El objetivo al que se le aplique el hechizo valentía, será inmune al estado de Miedo de ciertos enemigos.",
+      :type        => "pasiva",
+      :coste       => 100,
+    },
+     {
+      :id          => 3,
+      :name        => "diablura agua que cura",
+      :description => "El hechizo no sólo cura PC, sino también PM.",
+      :type        => "pasiva",
+      :coste       => 100,
+    },
+     
   ]
 end
 
