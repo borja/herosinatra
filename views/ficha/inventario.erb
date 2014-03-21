@@ -24,11 +24,11 @@
 			</table><br>
 			<table id='table-2'>
 				<thead>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'cabeza' , :objeto => 'proteccions'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'hombros', :objeto => 'proteccions'} %>
 					<tr><th width='80%'>Armadura</th>
 						<td><%= erb :'display/item', :locals => { :a => @heroe[:armaduras].first , :item => "armadura"} %></td>
 					</tr>
+					<%= erb :'ficha/inventario/field', :locals => {:field => 'cabeza' , :objeto => 'proteccions'} %>
+					<%= erb :'ficha/inventario/field', :locals => {:field => 'hombros', :objeto => 'proteccions'} %>
 					<%= erb :'ficha/inventario/field', :locals => {:field => 'muñecas', :objeto => 'proteccions'} %>
 					<%= erb :'ficha/inventario/field', :locals => {:field => 'cintura', :objeto => 'proteccions'} %>
 					<%= erb :'ficha/inventario/field', :locals => {:field => 'pies',    :objeto => 'proteccions'} %>
