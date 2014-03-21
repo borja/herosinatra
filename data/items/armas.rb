@@ -58,8 +58,8 @@ def armas
       :diagonal     => false
     },
     { :id           => 8,
-      :name         => "baston",
-      :categoria    => "baston",
+      :name         => "bastón",
+      :categoria    => "bastón",
       :powa         => 1,
       :ranuras      => 4,
       :diagonal     => true
@@ -114,7 +114,7 @@ def armas
       :diagonal     => true
     },
     { :id           => 16,
-      :name         => "caliz",
+      :name         => "cáliz",
       :categoria    => "copa",
       :powa         => 1,
       :ranuras      => 6,
