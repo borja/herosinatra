@@ -3,28 +3,25 @@
 <link rel="stylesheet" href="../../css/main.css" type="text/css" />
 <link rel="stylesheet" href="../../app.css" type="text/css" />
 
-<h1>Lista de Armas</h1><br><br>
+<h1>Lista de Armas</h1>
 
 <table id='table-2'>
 	<thead>
-		<tr>
-			<th>ID</th>
-			<th>Icono</th>
-			<th>Nombre</th>
-			<th>Ataque</th>
+		<tr><th>Icono</th>
+			<% armas.first.keys.each do |columna| %>
+				<th><%= columna.capitalize %></th>
+			<% end %>
 		</tr>	
 	</thead>
 	<tbody>
 		<% armas.each do |a| %>
 			<tr>
-				<td><%= a[:id] %></td>
-				<td>
-					<% img_path = "'../images/armas/#{a[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=a[:name]%>, id='icon' />
-				</td>
-				<td><%= a[:name].capitalize %></td>
-				<td><%= a[:powa] %></td>
+				<td><img src=<%= "'../images/armas/#{a[:name]}.png'" %> alt=<%=a[:name]%>, id='icon' /></td>
+				<% armas.first.keys.each do |columna| %> 
+					<td><%= a[columna.to_sym].to_s.capitalize %></td>
+				<% end %>
 			</tr>
 		<% end %>
 	</tbody>
 </table>
+<br>
