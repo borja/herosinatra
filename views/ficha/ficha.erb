@@ -1,0 +1,19 @@
+<title>Hero Sheet: Ficha de <%= @heroe[:name] %></title>
+<body>
+	<%= erb :menu %>
+	<%= erb :'ficha/heroe', :locals => { :heroe => @heroe } %>		
+	<table id='tficha'>
+		<tbody>
+			<tr>
+				<td>
+					<%= erb :'ficha/label' %>
+					<%= erb :'ficha/inventario' %>			
+					<%= erb :'ficha/habilidades', :locals => { :heroe => @heroe } if @heroe[:skills]%>	
+					<%= erb :'ficha/tesoros',     :locals => { :heroe => @heroe } unless mundano?(@heroe)%>	
+					<%= erb :'ficha/utiles',      :locals => { :heroe => @heroe } unless desprovisto?(@heroe)%>	
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<br>
+</body>

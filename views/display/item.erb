@@ -9,7 +9,12 @@
 	</div>
 	<div class="popup_information">
 		<center><h3>
-			<%= send(item,(a[:id]))[:name].capitalize %><br><br>
+			<% if a[:enchants] %>
+				<%= send(item,(a[:id]))[:name].capitalize %>
+				<%= enchant(a[:enchants].first)[:name] %><br><br>
+			<% else %>
+				<%= send(item,(a[:id]))[:name].capitalize %><br><br>
+			<% end %>
 			<img src=<%= img_path %> alt=<%= send(item,(a[:id]))[:name] %>, id='icon3' />
 		</h3></center>
 		<%= "<li>Valor de combate: #{send(item,(a[:id]))[:powa]}</li>" if send(item,(a[:id]))[:powa] %>
