@@ -46,7 +46,7 @@ def asesinos
     {
       :id           => 7,
       :name         => "honor entre ladrones",
-      :description  => "El asesino y sus aliados cercanos duplican sus bonificaciones de daño por la espalda. Alcance: Sala-Pasillo ",
+      :description  => "El asesino y sus aliados cercanos duplican sus bonificaciones de daño por la espalda. Alcance: Sala-Pasillo. Rango II: triplica bonificadores por la espalda.",
       :type         => "Pasiva"
     },
     {
@@ -58,7 +58,7 @@ def asesinos
     {
       :id           => 9,
       :name         => "paso de sombras",
-      :description  => "añade +1 rango de sigilo al asesino. Rango I: coste 2PM. Rango II: coste 1PM",
+      :description  => "añade +1 rango de sigilo al asesino. Rango I: coste 2PM. Rango II: coste 1PM.",
       :type         => "Activa"
     },
     {
@@ -120,6 +120,12 @@ def asesinos
       :name         => "gloria del héroe",
       :description  => "Ignora cualquier daño que le fuera a ser realizado al héroe. El efecto cesa al finalizar el turno del Malvado Brujo. Debe utilizarse ANTES de la tirada de ataque.",
       :type         => "Única"
+    },
+    {
+      :id           => 20,
+      :name         => "acribillar",
+      :description  => "Esta habilidad no se puede utilizar si ya se ha lanzado alguna daga voladora. Permite al asesino lanzar 3 dagas en conjunto. Si se emplea esta habilidad, no se podrán lanzar más dagas el resto del turno.",
+      :type         => "Activa"
     },
   ]
 end
