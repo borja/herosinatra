@@ -1,25 +1,18 @@
 <title>Hero Sheet: Ficha de <%= @heroe[:name] %></title>
 <body>
 	<%= erb :menu %>
-	<link rel="stylesheet" href="../../css/main.css" type="text/css" />
-	<link rel="stylesheet" href="../../app.css"      type="text/css" />	
-	<%= erb :'ficha/heroe', :locals => { :heroe => @heroe } %>	
+	<%= erb :'ficha/heroe', :locals => { :heroe => @heroe } %>		
 	<table id='tficha'>
 		<tbody>
-			<tr><td>
-				<table id='tlabel' width='30%'>
-					<tbody>
-						<tr><td><img src="../images/ficha/combat.png" alt=<%='combate' %> /, id='icon2'></td>
-							<td><h3>Combate</h3></td>
-							<td><img src="../images/ficha/combat.png" alt=<%='combate' %> /, id='icon2'></td>
-						</tr>
-					</tbody>
-				</table>
-				<%= erb :'ficha/inventario' %>			
-				<%= erb :'ficha/habilidades', :locals => { :heroe => @heroe } if @heroe[:skills]%>	
-				<%= erb :'ficha/tesoros',     :locals => { :heroe => @heroe } unless mundano?(@heroe)%>	
-				<%= erb :'ficha/utiles',      :locals => { :heroe => @heroe } unless desprovisto?(@heroe)%>	
-			</td></tr>
+			<tr>
+				<td>
+					<%= erb :'ficha/label' %>
+					<%= erb :'ficha/inventario' %>			
+					<%= erb :'ficha/habilidades', :locals => { :heroe => @heroe } if @heroe[:skills]%>	
+					<%= erb :'ficha/tesoros',     :locals => { :heroe => @heroe } unless mundano?(@heroe)%>	
+					<%= erb :'ficha/utiles',      :locals => { :heroe => @heroe } unless desprovisto?(@heroe)%>	
+				</td>
+			</tr>
 		</tbody>
 	</table>
 	<br>
