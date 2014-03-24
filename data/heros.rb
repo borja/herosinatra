@@ -760,7 +760,7 @@ def heros
       :hechizos    => [1,2,3,4,5,6,7,8,9,10,11,12],
       :armas       => [{:id => 3}],
       :armaduras   => [{:id => 1, :ranuras => 2}],
-      :miscelaneas => [{:id => 3, :enchants =>[19]}],
+      :miscelaneas => [{:id => 3, :enchants =>[44,53]}],
       :gemas       => [2,2,18],
       :skills      => [1,3,5,8],
     },
