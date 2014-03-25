@@ -14,14 +14,14 @@
 </thead>
 <tbody>
 	<% plegarias.each do |p|%>
-		<tr style='yellow'>	
+		<tr style='yellow'>
+			<td><%= p[:id] %></td>
 			<td>
 				<%= erb :'display/display', :locals => { 
 						:title       => p[:name], 
-						:path        => "'../../images/magia/plegarias/#{ p[:name] }.png'",
+						:path        => "'../../images/magia/plegarias1/#{ p[:name] }.png'",
 						:description => 'popop' } %>
-			</td>
-			<td><%= p[:id] %></td>			
+			</td>			
 			<td><%= p[:name    ].capitalize %></td>
 			<td><%= p[:tipo    ].capitalize %></td>
 			<td><%= p[:duracion].to_s.capitalize %></td>
@@ -49,13 +49,13 @@
 <tbody>
 	<% plegarias.each do |p|%>
 		<tr style='yellow'>	
+			<td><%= p[:id] %></td>
 			<td>
 				<%= erb :'display/display', :locals => { 
 						:title       => p[:name], 
-						:path        => "'../../images/magia/plegarias/#{ p[:name] }.png'",
+						:path        => "'../../images/magia/plegarias2/#{ p[:name] }.png'",
 						:description => 'popop' } %>
-			</td>
-			<td><%= p[:id] %></td>			
+			</td>			
 			<td><%= p[:name    ].capitalize %></td>
 			<td><%= p[:tipo    ].capitalize %></td>
 			<td><%= p[:duracion].to_s.capitalize %></td>
