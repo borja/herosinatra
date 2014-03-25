@@ -261,6 +261,11 @@ def enchants
       :descripcion  => "otorga +1 PM al personaje.",
       :tipo         => "bendito",
     },
+    { :id           => 53,
+      :name         => "favor divino",
+      :descripcion  => "1/reto puede lanzar una plegaria de nivel 2",
+      :tipo         => "bendito",
+    },
   ]
 end
 

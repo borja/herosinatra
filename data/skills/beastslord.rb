@@ -21,60 +21,48 @@ def lords
     },
     {
       :id           => 3,
-      :name         => "Esgrima",
-      :description  => "Por describir.",
-      :type         => "Pasiva"
-    },
-    {
-      :id           => 4,
       :name         => "moverse entre bestias",
       :description  => "Permite a los otros jugadores poder moverse a través de los animales invocados.",
       :type         => "Pasiva"
     },
     {
-      :id           => 5,
+      :id           => 4,
       :name         => "poderío de la naturaleza",
       :description  => "Por describir.",
       :type         => "Pasiva"
     },
     {
-      :id           => 6,
+      :id           => 5,
       :name         => "salto poderoso",
       :description  => "No hay penalización a la hora de bajar desde una posición elevada.",
       :type         => "Pasiva"
     },
     {
-      :id           => 7,
+      :id           => 6,
       :name         => "grito de batalla",
       :description  => "+1 Potencia en la tirada de ataque.",
       :type         => "Activa"
     },
     {
-      :id           => 8,
+      :id           => 7,
       :name         => "búsqueda exhaustiva",
       :description  => "Permite buscar tesoros en pasillos.",
       :type         => "Pasiva"
     },
     {
-      :id           => 9,
+      :id           => 8,
       :name         => "rituales",
       :description  => "Por describir.",
       :type         => "Pasiva"
     },
     {
-      :id           => 10,
+      :id           => 9,
       :name         => "sangre de la naturaleza",
       :description  => "Permite que el señor de las bestias reciba daño en lugar de sus animales (ritual).",
       :type         => "Pasiva"
     },
     {
-      :id           => 11,
-      :name         => "ataque poderoso",
-      :description  => "Por describir.",
-      :type         => "Pasiva"
-    },
-    {
-      :id           => 12,
+      :id           => 10,
       :name         => "gloria del héroe",
       :description  => "Ignora cualquier mal. El efecto cesa al finalizar el turno del malvado brujo. Debe utilizarse antes de la tirada de ataque.",
       :type         => "única"
