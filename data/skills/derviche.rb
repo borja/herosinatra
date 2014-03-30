@@ -16,7 +16,7 @@ def derviches
     {
       :id           => 2,
       :name         => "dos armas",
-      :description  => "El derviche puede llevar un arma en la mano torpe, pudiendo llevar así dos armas a la vez. Nivel I: Puede llevar una daga. Nivel II: Puede llevar una espada corta.",
+      :description  => "El derviche puede llevar un arma en la mano torpe, pudiendo llevar así dos armas a la vez. Nivel I: Puede llevar una daga. Nivel II: Puede llevar espadas cortas. Nivel III: Puede llevar lanzas.",
       :type         => "pasiva"
     },
     {
@@ -28,7 +28,7 @@ def derviches
     {
       :id           => 4,
       :name         => "baile de combate",
-      :description  => "El personaje amplía su zona de combate, pudiendo atacar a 2 objetivos en un mismo turno. Nivel 1: Ataca hasta un ángulo de 45º (en diagonal).",
+      :description  => "El personaje amplía su zona de combate, pudiendo atacar a 2 objetivos en un mismo turno. Nivel I: Ataca hasta un ángulo de 45º (en diagonal). Nivel II: Ataca hasta un ángulo de 90º.",
       :type         => "pasiva"
     },
   ]
