@@ -11,7 +11,7 @@ def menu
     ],
     "tesoro" => [
       "engarces"          => ["gemas", "joyas", "runas", "tiers"],
-      "objetos mágicos"   => ["artefactos", "encantamientos", "objetos mágicos", "objetos legendarios"],
+      "objetos mágicos"   => ["artefactos", "encantamientos", "objetos únicos", "objetos legendarios"],
     ],
     "magia" => [
       "hechizos"          => ["nivel 1", "nivel 2", "nivel 3"],
