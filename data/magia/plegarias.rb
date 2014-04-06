@@ -80,10 +80,24 @@ def plegarias
       :efecto   => "",
       :summun   => "",
       :chakra   => "",      
+    },
+    { :id       => 8,
+      :name     => "fons vitae, fons mortis",
+      :tipo     => "evocación",
+      :duracion => 'E',
+      :potencia => 2,
+      :alcance  => 19,
+      :efecto   => "Efecto",
+      :summun   => "Summun",
+      :chakra   => "Chakra",      
     }
   ]
 end
 
 def plegaria(id)
   plegarias[id]
+end
+
+def nivel_plegaria(id)
+  ( id / 8  +1 ).to_i
 end
