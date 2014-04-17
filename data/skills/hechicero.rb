@@ -30,6 +30,12 @@ def hechiceros
       :name         => "magia intrépida",
       :description  => "Enchisterar es una acción gratuita.",
       :type         => "pasiva",
+    },
+    {
+      :id           => 5,
+      :name         => "escudo de maná",
+      :description  => "la próxima fuente de daño dañará la mente, en lugar del cuerpo. Añade un dado azul de defensa.",
+      :type         => "reactiva",
     }
   ]
 end
