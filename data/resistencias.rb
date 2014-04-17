@@ -1,7 +1,6 @@
 # encoding: UTF-8
 
 def resistencia(id)
-  heroe = hero(id)
   total = {
     :fuego   => 0,
     :aire    => 0,

@@ -99,5 +99,5 @@ def plegaria(id)
 end
 
 def nivel_plegaria(id)
-  ( id / 8  +1 ).to_i
+  ( (id/8) + 1 ).to_i
 end
