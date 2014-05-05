@@ -58,6 +58,9 @@ class App < Sinatra::Base
   get '/mapa' do
     erb :mapa
   end
+  get '/caminos' do
+    erb :caminos
+  end
   get '/hechizos' do
     @spelllevel = 1
     erb :hechizos
