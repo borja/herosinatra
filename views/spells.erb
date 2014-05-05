@@ -1,30 +1,31 @@
-<%= erb :menu %><br><br><br<br>
-
-<link rel="stylesheet" href="../../css/main.css" type="text/css" />
-<link rel="stylesheet" href="../../app.css" type="text/css" />
-
-<h1>Hechizos de <%= @heroe[:name]%></h1><br><br>
+<%= erb :menu %><br>
+<h1>Hechizos de <%= @heroe[:name]%></h1>
 
 <% unless @heroe[:hechizos].empty? %>
 	<table id='table-2'>
-	<thead>
-		<th>Icono</th>
-		<th>Elemento</th>
-		<th>Nombre</th>
-		<th>Descripción</th>
-	</thead>
-	<tbody>
-		<% @heroe[:hechizos].each do |magia|%>		
-			<tr style=<%= color(spell(magia)[:elemento])%>>				
-				<td><% img_path = "'../../images/spells/#{spell(magia)[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=spell(magia)[:name]%>, id='icon' />
-				</td>
-				<td><%= spell(magia)[:elemento].capitalize %></td>
-				<td><%= spell(magia)[:name].capitalize %></td>
-				<td><%= spell(magia)[:descripcion] %></td>
-			</tr>
-		<% end %>
-	</tbody>
+		<thead>
+			<th>Icono</th>
+			<th>Elemento</th>
+			<th>Nivel</th>
+			<th>Nombre</th>
+			<th>Descripción</th>
+		</thead>
+		<tbody>
+			<% @heroe[:hechizos].each do |magia|%>	
+				<% m = spell(magia) %>
+				<tr style=<%= color(elemento_magia(magia)) %>>				
+					<td><% img_path = "'../../images/spells/#{m[:name]}.png'" %>
+						<img src=<%=img_path%> alt=<%=m[:name]%>, id='icon' />
+					</td>
+					<td><%= elemento_magia(magia).capitalize %></td>
+					<td><%= nivel_magia(magia) %></td>
+					<td><%= m[:name].capitalize %></td>
+					<td><%= m[:descripcion] %></td>
+				</tr>
+			<% end %>
+		</tbody>
 	</table>
-<% else %>El personaje no conoce ningun hechizo
+<% else %>
+	El personaje no conoce ningun hechizo.
 <% end %>
+<br>

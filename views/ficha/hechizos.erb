@@ -8,7 +8,7 @@
 		<tr><td><table id='table-2'>
 					<tbody>
 						<tr>
-							<% elements(@heroe[:hechizos]).each do |e| %>	
+							<% hero_elements(@heroe[:hechizos]).each do |e| %>	
 								<td>
 									<%= erb :'display/display', :locals => { 
 										:title       => e, 

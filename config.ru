@@ -36,9 +36,6 @@ require './data/criaturas/caos'
 require './data/criaturas/pielesverdes'
 require './data/criaturas/bestias'
 
-# Magic Data Base
-require './data/magia/plegarias'
-
 Bundler.require
 
 require './app.rb'

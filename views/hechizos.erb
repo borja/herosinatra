@@ -1,30 +1,31 @@
-<%= erb :menu %><br><br><br<br>
-
-<link rel="stylesheet" href="../../css/main.css" type="text/css" />
-<link rel="stylesheet" href="../../app.css" type="text/css" />
-
-<h1>Hechizos de nivel <%= @spelllevel %></h1><br><br>
-
+<%= erb :menu %><br>
+<h1>Hechizos de nivel <%= @spelllevel %></h1>
 <table id='table-2'>
-<thead>
-	<th>Icono</th>
-	<th>Elemento</th>
-	<th>Nombre</th>
-	<th>Descripción</th>
-</thead>
-<tbody>
-	<% spells.each do |s|%>
-		<% if @spelllevel.to_i == s[:nivel] %>
-			<% magic = spell(s[:id]) %>
-			<tr style=<%= color(magic[:elemento])%>>				
-				<td><% img_path = "'../../images/spells/#{magic[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=magic[:name]%>, id='icon' />
-				</td>
-				<td><%= magic[:elemento].capitalize %></td>
-				<td><%= magic[:name].capitalize %></td>
-				<td><%= magic[:descripcion] %></td>
-			</tr>
+	<thead>
+		<th>Icono</th>
+		<th>Elemento</th>
+		<th>Nombre</th>
+		<th>Descripción</th>
+		<% if @spelllevel == 1 %>
+			<th>Diablura</th>
 		<% end %>
-	<% end %>
-</tbody>
-</table>
+	</thead>
+	<tbody>
+		<% spells.each do |s|%>
+			<% if @spelllevel.to_i == nivel_magia(s[:id]) %>
+				<% magic = spell(s[:id]) %>
+				<tr style=<%= color(elemento_magia(s[:id]))%>>				
+					<td><% img_path = "'../../images/spells/#{magic[:name]}.png'" %>
+						<img src=<%=img_path%> alt=<%=magic[:name]%>, id='icon' />
+					</td>
+					<td><%= elemento_magia(s[:id]).capitalize %></td>
+					<td><%= magic[:name].capitalize %></td>
+					<td><%= magic[:descripcion] %></td>
+					<% if @spelllevel == 1 %>
+						<td><%= magic[:diablura] %></td>
+					<% end %>				
+				</tr>
+			<% end %>
+		<% end %>
+	</tbody>
+</table><br>

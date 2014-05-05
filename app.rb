@@ -63,7 +63,7 @@ class App < Sinatra::Base
     erb :hechizos
   end
   get '/hechizos/:level' do |level|
-    @spelllevel = level
+    @spelllevel = level.to_i
     erb :hechizos
   end
   get '/habilidades/:char' do |clase|
