@@ -1,7 +1,5 @@
-<%= erb :menu %><br><br><br<br>
-
-<link rel="stylesheet" href="../../css/main.css" type="text/css" />
-<link rel="stylesheet" href="../../app.css" type="text/css" />
+<title>Herosheet: Profesiones</title>
+<%= erb :menu %><br>
 
 <% profesion = profesions.find { |p| p[:name] == params[:profesion] } %>
 <h1>Lista técnicas de <%= profesion[:name] %></h1>

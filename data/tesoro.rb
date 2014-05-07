@@ -1,4 +1,9 @@
 # encoding: UTF-8
+
+def dado_amarillo 
+  ['hammer','comet','plus','blank','eagle','eagle']
+end
+
 def pifia(sigmar)
   sigmar == 'eagle' ? 'pifia ligera' : 'pifia' 
 end
