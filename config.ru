@@ -12,6 +12,7 @@ require './data/pets'
 require './data/resistencias'
 require './data/ficha'
 require './data/tesoro'
+require './data/items'
 require './data/criaturas/'
 
 Bundler.require
