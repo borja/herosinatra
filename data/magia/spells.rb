@@ -180,6 +180,7 @@ def spells
     { :id           => 28,
       :name         => "lluvia de fuego",
       :descripcion  => "En una sala, ataque de 1 dado de fuego. Todo objeto es destruido. Los enemigos se defienden con 1 solo dado.",
+      :potencia     => "+1 fuerza del atauqe",
     },
     { :id           => 29,
       :name         => "infierno",
