@@ -9,6 +9,7 @@
 		<% if @spelllevel == 1 %>
 			<th>Diablura</th>
 		<% end %>
+		<th>Potencia</th>
 	</thead>
 	<tbody>
 		<% spells.each do |s|%>
@@ -23,7 +24,8 @@
 					<td><%= magic[:descripcion] %></td>
 					<% if @spelllevel == 1 %>
 						<td><%= magic[:diablura] %></td>
-					<% end %>				
+					<% end %>	
+					<td><%= magic[:potencia] %></td>			
 				</tr>
 			<% end %>
 		<% end %>
