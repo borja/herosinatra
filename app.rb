@@ -31,7 +31,7 @@ class App < Sinatra::Base
   end
   get '/spells/:hero' do |hero_id|
     @heroe = heros[ hero_id.to_i ]
-    erb :spells
+    erb :'magia/spells'
   end
   get '/items/:items' do |group|
     erb :"items/#{group}"
