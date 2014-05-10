@@ -10,13 +10,13 @@
 	</thead>
 	<tbody>
 		<% sangres.each do |s|%>
-			<tr style=<%= color('sangre')%>>				
-				<td><% img_path = "'../../images/spells/#{s[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=s[:name]%>, id='icon' />
+			<tr style=<%= color('sangre') %>>				
+				<td><% img_path = "'../../images/spells/#{ s.name }.png'" %>
+					<img src=<%=img_path%> alt=<%= s.name %>, id='icon' />
 				</td>
-				<td><%= s[:name].capitalize %></td>
-				<td><%= s[:descripcion] %></td>
-				<td><%= s[:diablura] %></td>
+				<td><%= s.name.capitalize %></td>
+				<td><%= s.descripcion %></td>
+				<td><%= s.diablura %></td>
 			</tr>
 		<% end %>
 	</tbody>
