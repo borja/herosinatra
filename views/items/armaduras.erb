@@ -4,9 +4,7 @@
 
 <table id='table-2'>
 	<thead>
-		<tr>
-			<th>ID</th>
-			<th>Icono</th>
+		<tr><th>Icono</th>
 			<th>Nombre</th>
 			<th>Categoría</th>
 			<th>Defensa</th>
@@ -15,15 +13,13 @@
 	<tbody>
 		<% armaduras.each do |a| %>
 			<tr>
-				<td><%= a[:id] %></td>
-				<td>
-					<% img_path = "'../images/armaduras/#{a[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=a[:name]%>, id='icon' />
+				<td><% img_path = "'../images/armaduras/#{a.name}.png'" %>
+					<img src=<%=img_path%> alt=<%=a.name%>, id='icon' />
 				</td>
-				<td><%= a[:name].capitalize %></td>
-				<td><%= a[:categoria].capitalize %></td>
-				<td><%= a[:powa] %></td>
+				<td><%= a.name.capitalize %></td>
+				<td><%= a.categoria.capitalize %></td>
+				<td><%= a.defensa.to_s %></td>
 			</tr>
 		<% end %>
 	</tbody>
-</table>
+</table><br>

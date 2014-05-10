@@ -2,8 +2,9 @@
 # encoding: UTF-8
 
 class Item < Hash
-  attr_accessor :id, :name, :ranuras, :enchants, :categoria,
-                :diagonal, :ataque # Only armas
+  attr_accessor :id, :name, :ranuras, :enchants, :categoria, :max,
+                :diagonal, :ataque, # Only armas
+                :defensa            # Only armaduras
   
   def initialize args
     args.each do |k,v|
@@ -16,10 +17,10 @@ end
 
 class Arma < Item
   def img_path
-    if self.enchanted?
-      return "'../images/armas/magic/#{self.name + self.enchants.size.to_s}.png'"
-    else
-      return "'../images/armas/#{self.name}.png'"
-    end
+    self.enchanted? ? "'../images/armas/magic/#{self.name + self.enchants.size.to_s}.png'" : "'../images/armas/#{self.name}.png'"
   end
 end
+
+class Armadura   < Item ; end
+class Proteccion < Item ; end
+class Miscelanea < Item ; end
