@@ -2,37 +2,38 @@
 # encoding: UTF-8
 
 class Hero < Hash
+  attr_accessor :id,         
+    :name,       
+    :personaje,  
+    :jugador,   
+    :status,     
+    :repu,       
+    :nivel,      
+    :cuerpo,     
+    :mente,      
+    :mov,        
+    :pet,        
+    :hechizos,   
+    :armas,                     
+    :armaduras,  
+    :proteccions,           
+    :miscelaneas,           
+    :skills,     
+    :profesion,  
+    :piezas,     
+    :gemas,      
+    :pociones,   
+    :pergaminos,
+    :muerto,
+    :gender               
 
-  def initialize ( hero )
-    
-    @attributes = { 
-      :id           => hero[:id]            || nil,
-      :nombre       => hero[:name]          || nil,
-      :personaje    => hero[:personaje]     || nil,    
-      :jugador      => hero[:jugador]       || nil,
-      :status       => hero[:status]        || 'active',
-      :sex          => hero[:sex]           || "male",
-      :repu         => hero[:repu]          || 0,
-      :nivel        => hero[:nivel]         || 1,
-      :pet          => hero[:pet]           || {},
-      :profesion    => hero[:profesion]     || {},
-      :hechizos     => hero[:hechizos]      || [],
-      :armas        => hero[:armas]         || [],
-      :proteccions  => hero[:proteccions]   || [],
-      :miscelaneas  => hero[:miscelaneas]   || [],
-      :skills       => hero[:skills]        || [],
-      :piezas       => hero[:piezas]        || [],
-      :gemas        => hero[:gemas]         || [],
-      :pociones     => hero[:pociones]      || [],
-      :pergaminos   => hero[:pergaminos]    || [],
-    }
-    
-    @attributes.each do |k,v|
-      self.class.send :define_method, k do v end
+  def initialize args
+    args.each do |k,v|
+      instance_variable_set("@#{k}".to_sym, v) unless v.nil?
     end
   end
   
-  def cuerpo
+  def cuerpo_base
     case self.clase
       when 'mago'     then return 4
       when 'elfo'     then return 6
@@ -43,7 +44,7 @@ class Hero < Hash
     end
   end
   
-  def mente
+  def mente_base
     case self.clase
       when 'mago'     then return 6
       when 'elfo'     then return 4
@@ -54,7 +55,7 @@ class Hero < Hash
     end
   end
   
-  def movimiento
+  def movimiento_base
     case self.clase
       when 'elfo'     then return 8
       when 'enano'    then return 6
@@ -88,9 +89,9 @@ class Hero < Hash
   def female? ; self.sex == 'female' end
   def male?   ; self.sex == 'male' end  
   
-  def genderize( raza , gender )
-    if gender == "female" 
-      case raza
+  def genderize
+    if self.gender == "female" 
+      case self.raza
         when "elfo"     then return "elfa"
         when "humano"   then return "humana"
         when "mago"     then return "maga"
@@ -98,9 +99,9 @@ class Hero < Hash
         when "clérigo"  then return "clériga"
         when "ladrón"   then return "ladrona"
         when "tiefling" then return "tiefling-female"
-        else return raza
+        else return self.raza
       end
-    else return raza
+    else return self.raza
     end
   end
   

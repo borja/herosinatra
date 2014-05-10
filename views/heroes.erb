@@ -17,23 +17,23 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% heros.each do |hero| %><% if ((hero[:status] || "ausente") == @status) %>
+		<% heros.each do |hero| %><% if ((hero.status || "ausente") == @status) %>
 			<tr>
-				<td><% if hero[:muerto] %>
+				<td><% if hero.muerto %>
 						<img src=../images/personajes/dead.png	alt="muerto" /, id='icon'>
 					<% else %>
-						<img src=../images/personajes/<%= genderize(personaje(hero[:personaje]), (hero[:sex] || "male") ) %>.png 
+						<img src=../images/personajes/<%= hero.genderize %>.png 
 						alt="personaje" /, id='icon'>
 					<% end%>
 				</td>
-				<td><a href=hero/<%= hero[:id] %>><%= hero[:name] %></a><br>
-					<i><%= hero[:jugador] %></i>
+				<td><a href=hero/<%= hero.id %>><%= hero.name %></a><br>
+					<i><%= hero.jugador %></i>
 				</td>
-				<td><%= genderize(personaje(hero[:personaje]), (hero[:sex] || "male" )).capitalize %><br>
-					<i><%= hero[:personaje].capitalize.gsub('Lord','Señor') %></i>
+				<td><%= hero.genderize %><br>
+					<i><%= hero.personaje %></i>
 				</td>
-				<td style="font-size:28px;"><%= hero[:nivel] %></td>
-				<td><% if p = hero[:pet] %>
+				<td style="font-size:28px;"><%= hero.nivel %></td>
+				<td><% if p = hero.pet %>
 					<% pet_name = "#{p[:name]}, #{pet(p[:id])[:sex] ? "la" : "el"} #{pet(p[:id])[:name].capitalize}" %>						
 						<%= erb :'display/display', :locals => { 
 							:title       => pet_name, 

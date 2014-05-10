@@ -3,3 +3,4 @@
 
 require './model/magia/magia'
 require './model/item/item'
+require './model/hero'
