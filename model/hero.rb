@@ -91,17 +91,16 @@ class Hero < Hash
   
   def genderize
     if self.gender == "female" 
-      case self.raza
+      case self.clase
         when "elfo"     then return "elfa"
-        when "humano"   then return "humana"
         when "mago"     then return "maga"
         when "bárbaro"  then return "bárbara"
         when "clérigo"  then return "clériga"
         when "ladrón"   then return "ladrona"
         when "tiefling" then return "tiefling-female"
-        else return self.raza
+        else return self.clase
       end
-    else return self.raza
+    else return self.clase
     end
   end
   

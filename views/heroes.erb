@@ -23,14 +23,14 @@
 						<img src=../images/personajes/dead.png	alt="muerto" /, id='icon'>
 					<% else %>
 						<img src=../images/personajes/<%= hero.genderize %>.png 
-						alt="personaje" /, id='icon'>
+						alt="<%= hero.genderize %>" /, id='icon'>
 					<% end%>
 				</td>
 				<td><a href=hero/<%= hero.id %>><%= hero.name %></a><br>
 					<i><%= hero.jugador %></i>
 				</td>
-				<td><%= hero.genderize %><br>
-					<i><%= hero.personaje %></i>
+				<td><%= hero.genderize.capitalize %><br>
+					<i><%= hero.personaje.capitalize %></i>
 				</td>
 				<td style="font-size:28px;"><%= hero.nivel %></td>
 				<td><% if p = hero.pet %>
