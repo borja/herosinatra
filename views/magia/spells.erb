@@ -1,5 +1,5 @@
 <%= erb :menu %><br>
-<h1>Hechizos de <%= @heroe[:name]%></h1>
+<h1>Hechizos de <%= @heroe[:name] %></h1>
 
 <% unless @heroe[:hechizos].empty? %>
 	<table id='table-2'>
@@ -14,13 +14,13 @@
 			<% @heroe[:hechizos].each do |magia|%>	
 				<% m = spell(magia) %>
 				<tr style=<%= color(elemento_magia(magia)) %>>				
-					<td><% img_path = "'../../images/spells/#{m[:name]}.png'" %>
-						<img src=<%=img_path%> alt=<%=m[:name]%>, id='icon' />
+					<td><% img_path = "'../../images/spells/#{m.name}.png'" %>
+						<img src=<%=img_path%> alt=<%= m.name %>, id='icon' />
 					</td>
 					<td><%= elemento_magia(magia).capitalize %></td>
 					<td><%= nivel_magia(magia) %></td>
-					<td><%= m[:name].capitalize %></td>
-					<td><%= m[:descripcion] %></td>
+					<td><%= m.name.capitalize %></td>
+					<td><%= m.efecto %></td>
 				</tr>
 			<% end %>
 		</tbody>

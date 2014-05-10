@@ -1,0 +1,33 @@
+<%= erb :menu %><br>
+<h1>Hechizos elementales de nivel <%= @spelllevel %></h1>
+<table id='table-2'>
+	<thead>
+		<th>Icono</th>
+		<th>Elemento</th>
+		<th>Nombre</th>
+		<th>Descripción</th>
+		<% if @spelllevel == 1 %>
+			<th>Diablura</th>
+		<% end %>
+		<th>Potencia</th>
+	</thead>
+	<tbody>
+		<% spells.each do |s|%>
+			<% if @spelllevel.to_i == nivel_magia(s.id) %>
+				<% magic = spell(s.id) %>
+				<tr style=<%= color(elemento_magia(s.id))%>>				
+					<td><% img_path = "'../../images/spells/#{magic.name}.png'" %>
+						<img src=<%=img_path%> alt=<%=magic.name%>, id='icon' />
+					</td>
+					<td><%= elemento_magia(s.id).capitalize %></td>
+					<td><%= magic.name.capitalize %></td>
+					<td><%= magic.efecto %></td>
+					<% if @spelllevel == 1 %>
+						<td><%= magic.diablura %></td>
+					<% end %>	
+					<td><%= magic.potencia %></td>			
+				</tr>
+			<% end %>
+		<% end %>
+	</tbody>
+</table><br>
