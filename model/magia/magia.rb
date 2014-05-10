@@ -4,7 +4,7 @@
 class Magia < Hash
   attr_accessor :id, :name, :efecto, :potencia,  # Basic Stats
     :diablura,                                   # Only in lvl 1
-    :tipo, :duracion, :alcance, :tipo,           # Spell descriptors
+    :duracion, :alcance, :tipo,                  # Spell descriptors
     :summun, :chakra                             # Only in plegarias
   
   def initialize args
