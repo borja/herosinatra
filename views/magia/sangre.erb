@@ -10,7 +10,7 @@
 	</thead>
 	<tbody>
 		<% sangres.each do |s|%>
-			<tr style=<%= color('sangre') %>>				
+			<tr style=<%= s.color %>>				
 				<td><% img_path = "'../../images/spells/#{ s.name }.png'" %>
 					<img src=<%=img_path%> alt=<%= s.name %>, id='icon' />
 				</td>

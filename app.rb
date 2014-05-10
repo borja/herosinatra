@@ -29,10 +29,6 @@ class App < Sinatra::Base
     @heroe = heros[ id.to_i ]
     erb :'ficha/ficha'
   end
-  get '/spells/:hero' do |hero_id|
-    @heroe = heros[ hero_id.to_i ]
-    erb :'magia/spells'
-  end
   get '/items/:items' do |group|
     erb :"items/#{group}"
   end       
@@ -60,14 +56,6 @@ class App < Sinatra::Base
   get '/caminos' do
     erb :caminos
   end
-  get '/magia/hechizos' do
-    @spelllevel = 1
-    erb :hechizos
-  end
-  get '/magia/hechizos/:level' do |level|
-    @spelllevel = level.to_i
-    erb :'magia/hechizos'
-  end
   get '/habilidades/:char' do |clase|
     @char = clase
     erb :disciplinas
@@ -82,11 +70,25 @@ class App < Sinatra::Base
   get '/criaturas/:monster' do |criature|
     erb :"criaturas/#{criature}"
   end
-  get '/magia/:topic' do |tema|
-    erb :"magia/#{tema}"
-  end
   get '/clase/:personaje' do |clase|
     @clase = clase.to_s
     erb :clase
+  end
+  
+  # Sección de magia
+  get '/magia/hechizos' do
+    @spelllevel = 1
+    erb :'magia/hechizos'
+  end
+  get '/magia/spells/:hero' do |hero_id|
+    @heroe = heros[ hero_id.to_i ]
+    erb :'magia/spells'
+  end
+  get '/magia/hechizos/:level' do |level|
+    @spelllevel = level.to_i
+    erb :'magia/hechizos'
+  end
+  get '/magia/:topic' do |tema|
+    erb :"magia/#{tema}"
   end    
 end

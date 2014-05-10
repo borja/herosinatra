@@ -9,7 +9,7 @@
 	</thead>
 	<tbody>
 		<% elficas.each do |e| %>
-			<tr style=<%= color('elfico')%>>				
+			<tr style=<%= e.color %>>				
 				<td><% img_path = "'../../images/spells/#{ e.name }.png'" %>
 					<img src=<%=img_path%> alt=<%= e.name %>, id='icon' />
 				</td>

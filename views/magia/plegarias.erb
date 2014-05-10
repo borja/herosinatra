@@ -18,14 +18,14 @@
 	</thead>
 	<tbody>
 		<% plegarias.each do |p|%>
-			<tr style='yellow'>
+			<tr style=<%= p.color %>>
 				<td>
 					<%= erb :'display/display', :locals => { 
 							:title       => p.name , 
 							:path        => "'../../images/magia/plegarias1/#{ p.name }.png'",
 							:description => 'popop' } %>
 				</td>
-				<td><%= p.nivel_plegaria %></td>	
+				<td><%= p.nivel %></td>	
 				<td><%= p.name.capitalize %></td>
 				<td><%= p.tipo.capitalize %></td>
 				<td><%= p.duracion.to_s.capitalize %></td>

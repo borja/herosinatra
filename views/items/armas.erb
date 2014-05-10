@@ -4,19 +4,24 @@
 
 <table id='table-2'>
 	<thead>
-		<tr><th>Icono</th>
-			<% armas.first.keys.each do |columna| %>
-				<th><%= columna.capitalize %></th>
-			<% end %>
+		<tr>
+			<th>Icono</th>
+			<th>Nombre</th>
+			<th>Categoría</th>
+			<th>Ataque</th>
+			<th>Diagonal</th>
+			<th>Ranuras</th>
 		</tr>	
 	</thead>
 	<tbody>
 		<% armas.each do |a| %>
 			<tr>
-				<td><img src=<%= "'../images/armas/#{a[:name]}.png'" %> alt=<%=a[:name]%>, id='icon' /></td>
-				<% armas.first.keys.each do |columna| %> 
-					<td><%= a[columna.to_sym].to_s.capitalize %></td>
-				<% end %>
+				<td><img src=<%= "'../images/armas/#{a.name}.png'" %> alt=<%=a.name%>, id='icon' /></td>
+				<td><%= a.name.capitalize %></td>
+				<td><%= a.categoria.capitalize %></td>
+				<td><%= a.ataque %></td>
+				<td><%= a.diagonal %></td>
+				<td><%= a.ranuras %></td>
 			</tr>
 		<% end %>
 	</tbody>

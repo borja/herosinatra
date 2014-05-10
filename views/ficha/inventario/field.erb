@@ -1,5 +1,6 @@
 <tr>
 	<th width='80%'><%= field.capitalize %></th>
+	<% puts @heroe[objeto.to_sym] %>
 	<% listado = (@heroe[objeto.to_sym] || []).find_all{ |x| send(field+'_lista').include?(x[:id])} %>
 	<% if !listado.empty? %>
 		<td><%= erb :'display/item', :locals => { :a => listado[0] , :item => objeto[0..-2]} %></td>
