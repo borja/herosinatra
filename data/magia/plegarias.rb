@@ -1,7 +1,7 @@
 # encoding: UTF-8
 def plegarias
   [
-    Magia.new({ 
+    Plegaria.new({ 
       :id       => 0,
       :name     => "imposición de manos",
       :tipo     => "sanación",
@@ -12,7 +12,7 @@ def plegarias
       :summun   => "realiza ambas sanaciones.",
       :chakra   => "puede restaurar PM en lugar de PC.",      
     }),
-    Magia.new({ 
+    Plegaria.new({ 
       :id       => 1,
       :name     => "luz solar",
       :tipo     => "conjuro",
@@ -23,7 +23,7 @@ def plegarias
       :summun   => "Los éxitos imperiales no pueden ser defendidos por no-muertos/demonios.",
       :chakra   => "Los aliados pueden girarse como acción gratuita.",      
     }),
-    Magia.new({ 
+    Plegaria.new({ 
       :id       => 2,
       :name     => "círculo de protección",
       :tipo     => "evocación",
@@ -34,7 +34,7 @@ def plegarias
       :summun   => "el lanzador podrá moverse y hechizar durante la duración del efecto.",
       :chakra   => "el hechizo pasa a ser un aura en lugar de un área y la duración <M>.",      
     }),
-    Magia.new({ 
+    Plegaria.new({ 
       :id       => 3,
       :name     => "bendición de los justos",
       :tipo     => "bendición",
@@ -45,7 +45,7 @@ def plegarias
       :summun   => "",
       :chakra   => "",      
     }),
-    Magia.new({ 
+    Plegaria.new({ 
       :id       => 4,
       :name     => "ángel guardián",
       :tipo     => "invocación",
@@ -56,7 +56,7 @@ def plegarias
       :summun   => "",
       :chakra   => "",      
     }),
-    Magia.new({ 
+    Plegaria.new({ 
       :id       => 5,
       :name     => "espadas en guadañas",
       :tipo     => "maldición",
@@ -67,7 +67,7 @@ def plegarias
       :summun   => "",
       :chakra   => "",      
     }),
-    Magia.new({ 
+    Plegaria.new({ 
       :id       => 6,
       :name     => "lágrimas del mártir",
       :tipo     => "aura",
@@ -78,7 +78,7 @@ def plegarias
       :summun   => "",
       :chakra   => "",      
     }),
-    Magia.new({ 
+    Plegaria.new({ 
       :id       => 7,
       :name     => "himno celestial",
       :tipo     => "aura",
@@ -89,7 +89,7 @@ def plegarias
       :summun   => "",
       :chakra   => "",      
     }),
-    Magia.new({ 
+    Plegaria.new({ 
       :id       => 8,
       :name     => "fons vitae, fons mortis",
       :tipo     => "evocación",
@@ -105,8 +105,4 @@ end
 
 def plegaria(id)
   plegarias[id]
-end
-
-def nivel_plegaria(id)
-  ( (id/8) + 1 ).to_i
 end

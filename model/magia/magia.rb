@@ -12,5 +12,10 @@ class Magia < Hash
       instance_variable_set("@#{k}".to_sym, v) unless v.nil?
     end
   end
-  
+end
+
+class Plegaria < Magia
+  def nivel_plegaria
+    ( (self.id / 8) + 1 ).to_i
+  end
 end

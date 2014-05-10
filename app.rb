@@ -60,13 +60,13 @@ class App < Sinatra::Base
   get '/caminos' do
     erb :caminos
   end
-  get '/hechizos' do
+  get '/magia/hechizos' do
     @spelllevel = 1
     erb :hechizos
   end
-  get '/hechizos/:level' do |level|
+  get '/magia/hechizos/:level' do |level|
     @spelllevel = level.to_i
-    erb :hechizos
+    erb :'magia/hechizos'
   end
   get '/habilidades/:char' do |clase|
     @char = clase
