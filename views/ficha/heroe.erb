@@ -1,7 +1,7 @@
 <table id='tlabel'>
 	<tbody>
 		<tr>
-			<td><img src="../images/clases/<%= heroe[:personaje] %>.png" alt=<%= heroe[:personaje] %> /, id='box'></td>
+			<td><img src="../images/clases/<%= heroe.personaje %>.png" alt=<%= heroe.personaje %> /, id='box'></td>
 			<td>
 				<table id='table-2'>
 					<thead>
@@ -9,10 +9,10 @@
 							<% descripcion.each do |f| %>
 								<th><%= f.capitalize %></th>
 							<% end%>
-							<% if heroe[:pet]%>
+							<% if heroe.pet %>
 								<th>Familiar</th>
 							<% end %>
-							<% if heroe[:profesion]%>
+							<% if heroe.profesion %>
 								<th>Profesión</th>
 							<% end %>
 						</tr>
@@ -20,20 +20,19 @@
 					<tbody>
 						<tr>
 							<td><%= erb :'display/display', :locals => { 
-									:title       => heroe[:name], 
-									:path        => "'../images/personajes/#{ genderize(personaje(heroe[:personaje]), (heroe[:sex] ||'male')) }.png'",
-									:description => heroe[:story] || "" } %>
+									:title       => heroe.name, 
+									:path        => "'../images/personajes/#{ heroe.genderize }.png'",
+									:description => "" } %>
 							</td>
-							<td><%= heroe[:name   ].capitalize %><br>
-								<%= heroe[:jugador].capitalize %></td>
-							<td><% raza = is_human?(heroe[:personaje]) ? "humano" : personaje(heroe[:personaje]) %>
-								<%= genderize(raza, (heroe[:sex] || "male") ).capitalize %></td>
-							<td><%= heroe[:personaje].capitalize %></td>
-							<td><%= heroe[:nivel  ] %></td>
+							<td><%= heroe.name.capitalize %><br>
+								<%= heroe.jugador.capitalize %></td>
+							<td><%= heroe.clase %></td>
+							<td><%= heroe.personaje %></td>
+							<td><%= heroe.nivel %></td>
 							<td style="background-image:url(../images/ficha/star.png); 
 								background-repeat: no-repeat; background-position:center;">
-								<%= heroe[:repu   ] || 0 %></td>
-							<% if p = heroe[:pet]%>
+								<%= heroe.repu || 0 %></td>
+							<% if p = heroe.pet %>
 							<% pet_name = "#{p[:name]}, #{pet(p[:id])[:sex] ? "la" : "el"} #{pet(p[:id])[:name].capitalize}" %>						
 								<td>
 									<%= erb :'display/display', :locals => { 
@@ -42,14 +41,14 @@
 										:description => pet(p[:id])[:bono] } %>
 								</td>
 							<% end %>
-							<% if heroe[:profesion]%>
-								<td><%= erb :'ficha/profesion', :locals => { :prof => heroe[:profesion] } %></td>
+							<% if heroe.profesion %>
+								<td><%= erb :'ficha/profesion', :locals => { :prof => heroe.profesion } %></td>
 							<% end %>
 						</tr>
 					</tbody>
 				</table>				
 			</td>
-			<td><img src="../images/clases/<%= @heroe[:personaje] %>.png" alt=<%=  @heroe[:personaje] %> /, id='box'></td>
+			<td><img src="../images/clases/<%= @heroe.personaje %>.png" alt=<%=  @heroe.personaje %> /, id='box'></td>
 		</tr>
 	</tbody>
 </table>

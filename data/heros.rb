@@ -433,7 +433,7 @@ def heros
       :personaje    => "vengador",
       :jugador      => "Daniel Cabañas",
       :status       => "retirado",
-      :muerto       => true,
+      :status       => true,
       :nivel        => 3,
       :repu         => -1,
       :cuerpo       => 7,

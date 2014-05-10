@@ -9,9 +9,9 @@
 	</div>
 	<div class="popup_information">
 		<center><h3>
-			<% if a[:enchants] %>
+			<% if a.enchants %>
 				<%= send(item,(a[:id]))[:name].capitalize %>
-				<%= enchant(a[:enchants].first)[:name] %><br><br>
+				<%= enchant(a.enchants.first)[:name] %><br><br>
 			<% else %>
 				<%= send(item,(a[:id]))[:name].capitalize %><br><br>
 			<% end %>
@@ -71,10 +71,10 @@
 				</tbody>
 			</table>						
 		<% end %>
-		<% if a[:enchants] %>	
+		<% if a.enchants %>	
 			<br>
 			<h4>Propiedades mágicas</h4>
-			<% a[:enchants].each do |e| %>
+			<% a.enchants.each do |e| %>
 				<li><b><%= enchant(e)[:name].capitalize %></b>:
 				 	<i><%= enchant(e)[:descripcion] %></i>
 			<% end %>
