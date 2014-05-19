@@ -15,22 +15,31 @@ class Hero < Hash
     :pet,        
     :hechizos,   
     :armas,                     
-    :armaduras,  
+    :armadura,  
     :proteccions,           
     :miscelaneas,           
     :skills,     
     :profesion,  
-    :piezas,     
-    :gemas,      
-    :pociones,   
-    :pergaminos,
+    :piezas, :pociones, :pergaminos,
     :muerto,
-    :gender               
+    :gender,
+    :oro,:gemas,:joyas,:runas             
 
   def initialize args
     args.each do |k,v|
       instance_variable_set("@#{k}".to_sym, v) unless v.nil?
     end
+  end
+  
+  def reputacion ; self.repu || 0 end
+  def movimiento ; self.mov       end
+  
+  def potis # this must be refactored!
+    potis = []
+    self.pociones.each do |p|
+      potis << Pocion.new(p)
+    end
+    potis
   end
   
   def cuerpo_base
@@ -43,7 +52,7 @@ class Hero < Hash
       else                 return 5
     end
   end
-  
+    
   def mente_base
     case self.clase
       when 'mago'     then return 6
@@ -84,10 +93,14 @@ class Hero < Hash
     end
   end
   
-  def human?  ; ['clérigo', 'ladrón', 'bárbaro', 'mago'].include?(self.clase) end  
-  def raza    ; self.human? ? 'humano' : self.clase end
-  def female? ; self.sex == 'female' end
-  def male?   ; self.sex == 'male' end  
+  def human?        ; ['clérigo', 'ladrón', 'bárbaro', 'mago'].include?(self.clase) end  
+  def raza          ; self.human? ? 'humano' : self.clase end
+  def female?       ; self.sex == 'female' end
+  def male?         ; self.sex == 'male' end  
+  def desprotegido? ; self.protecciones.nil? end
+  def pobre?        ; self.miscelaneas.nil? end
+  def desprovisto?  ; self.pergaminos.nil? && self.pociones.nil? && self.piezas.nil?     end
+  def sin_recursos  ; self.gemas.nil? && self.joyas.nil? && self.runas.nil? && self.nil? end
   
   def genderize
     if self.gender == "female" 
@@ -102,6 +115,26 @@ class Hero < Hash
       end
     else return self.clase
     end
+  end
+  
+  def ataque
+   total = 0
+   self.armas.each do |a|
+     total += 1 # Salvo que sea un escudo
+   end
+   return total
+  end
+
+  def rango
+    total = 0
+    self.armas.each do |a|
+      total += 1 # Buscando arcos
+    end
+    return total
+  end
+
+  def defensa
+    1  
   end
   
 end

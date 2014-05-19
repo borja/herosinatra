@@ -1,14 +1,11 @@
-<%= erb :menu %><br><br><br<br>
-
-<link rel="stylesheet" href="../../css/main.css" type="text/css" />
-<link rel="stylesheet" href="../../app.css" type="text/css" />
-
-<h1>Lista de Runas</h1><br><br>
+<title>Herosheet: Runas</title>
+<%= erb :menu %><br>
+<h1>Lista de Runas</h1>
 
 <table id='table-2'>
 	<thead>
 		<tr>
-			<th>ID</th>
+			<th>1D12</th>
 			<th>Icono</th>
 			<th>Nombre</th>
 		</tr>	
@@ -16,7 +13,7 @@
 	<tbody>
 		<% runas.each do |r| %>
 			<tr>
-				<td><%= r[:id] %></td>
+				<td><%= r[:id] + 1 %></td>
 				<td>
 					<% img_path = "'../images/treasures/runas/#{r[:name]}.png'" %>
 					<img src=<%=img_path%> alt=<%=r[:name]%>, id='icon' />
@@ -26,3 +23,4 @@
 		<% end %>
 	</tbody>
 </table>
+<br>

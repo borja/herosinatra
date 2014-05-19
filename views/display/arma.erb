@@ -5,18 +5,18 @@
 	<div class="popup_information">
 		<center><h3>
 			<% if a.enchants %>
-				<%= send(item,(a.id))[:name].capitalize %>
+				<%= a.name.capitalize %>
 				<%= enchant(a.enchants.first)[:name] %><br><br>
 			<% else %>
-				<%= send(item,(a.id)) %><br><br>
+				<%= a.name %><br>
 			<% end %>
-			<img src=<%= a.img_path %> alt=<%= send(item,(a.id))[:name] %>, id='icon3' />
+			<img src=<%= a.img_path %> alt=<%= a.name %>, id='icon3' />
 		</h3></center>
-		<%= "<li>Valor de combate: #{send(item,(a[:id]))[:powa]}</li>" if send(item,(a[:id]))[:powa] %>
-		<%= "<li>Permite atacar en diagonal</li>" if send(item,(a[:id]))[:diagonal] %>
-		<%= "<li>#{item.capitalize} mundana</li>" if mundano?(a) %>
-		<%= "<li>Tipo: #{armadura(a[:id])[:categoria]} </li>"   if item == 'armadura' %>
-		<% unless mundano?(a) %>
+		<li>Valor de combate: <%= a.ataque %></li>
+		<%= "<li>Permite atacar en diagonal</li>" if a.diagonal %>
+		<% if a.mundano? %>
+			<li>Arma mundana</li>
+		<% else %>
 			<br>
 			<% if is_tier?({:gemas => a[:gemas]}) %>
 				<% color = tier(is_tier?({:gemas => a[:gemas]}))[:color] %>

@@ -13,7 +13,8 @@
 		</tr>	
 	</thead>
 	<tbody>
-		<% proteccions.each do |p| %>
+		<% proteccions.each do |prot| %>
+		<% p = Proteccion.new(prot) %>
 			<tr>
 				<td>
 					<% img_path = "'../images/proteccions/#{p.name}.png'" %>

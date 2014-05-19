@@ -11,7 +11,8 @@
 		</tr>	
 	</thead>
 	<tbody>
-		<% armaduras.each do |a| %>
+		<% armaduras.each do |item| %>
+		<% a = Armadura.new(item) %>
 			<tr>
 				<td><% img_path = "'../images/armaduras/#{a.name}.png'" %>
 					<img src=<%=img_path%> alt=<%=a.name%>, id='icon' />

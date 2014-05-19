@@ -1,7 +1,8 @@
-<title>Herosheet: Elementales nivel <%= @spelllevel %></title>
-<%= erb :menu %><br>
+<title>HeroSheet: Hechizos</title>
 
-<h1>Hechizos elementales de nivel <%= @spelllevel %></h1>
+<%= erb :menu %><br>
+<h1>Hechizos elementales de nivel <%= @spelllevel || 1 %></h1>
+
 <table id='table-2'>
 	<thead>
 		<th>Icono</th>

@@ -4,13 +4,3 @@ def disciplinas ;["id", "icono", "tipo", "nombre", "descripción", "nivel", "req
 
 def engarces    ;["gemas","joyas","runas"]           end
 def habs ;["icono", "tipo", "nombre", "descripción"] end
-def desprotegido? hero; hero[:protecciones].nil?     end
-def pobre?        hero; hero[:miscelaneas ].nil?     end
-
-def desprovisto?(hero)
-  case
-    when (hero.class != Hash ) then return "class error"
-    when (hero[:pergaminos].nil? && hero[:pociones].nil? && hero[:piezas].nil?) then return true
-    else return false
-  end 
-end

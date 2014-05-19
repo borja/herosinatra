@@ -10,9 +10,9 @@
 			<th>Nivel</th>
 			<th><a href=/familiares>Familiares</a></th>
 			<th><a href=/items/armas>Armas</a></th>
-			<th><a href=/items/armaduras>Armaduras</a></th>
+			<th><a href=/items/armaduras>Armadura</a></th>		
 			<th><a href=/items/protecciones>Protecciones</a></th>	
-			<th><a href=/items/miscelaneas>Miscelaneas</a></th>		
+			<th><a href=/items/miscelaneas>Miscelaneas</a></th>
 			<th>Reputación</th>
 		</tr>
 	</thead>
@@ -33,32 +33,61 @@
 					<i><%= hero.personaje.capitalize %></i>
 				</td>
 				<td style="font-size:28px;"><%= hero.nivel %></td>
-				<td><% if p = hero.pet %>
-					<% pet_name = "#{p[:name]}, #{pet(p[:id])[:sex] ? "la" : "el"} #{pet(p[:id])[:name].capitalize}" %>						
-						<%= erb :'display/display', :locals => { 
-							:title       => pet_name, 
-							:path        => "'images/pets/#{pet(p[:id])[:name]}.png'",
-							:description => pet(p[:id])[:bono] } %>
+				<td><% if p = hero.pet %><%= erb :'display/display', :locals => { 
+						:title       => p.nombre, 
+						:path        => "'images/pets/#{p.bicho}.png'",
+						:description => p.bono } %>
 					<% end %>						
 				</td>
-				<% ["armas", "armaduras", "proteccions", "miscelaneas"].each do |items| %>
-					<td><table id='table-2'>
-							<tbody>
-								<tr><% if hero[items.to_sym] %>
-										<% hero[items.to_sym].each do |a| %>
-											<td><%= erb :'display/item', :locals => { :a => a, :item => items[0..-2]} %></td>
-										<% end %>
-									<% else %>
-									<td></td>
-									<% end %>
-								</tr>
-							</tbody>
-						</table>
-					</td>
-				<% end %>
+				<td><table id='table-2'>
+						<tbody>
+							<tr><% hero.armas.each do |a| %>
+								<td><%= erb :'display/arma', :locals => { :a => a} %></td>
+							<% end %></tr>
+						</tbody>
+					</table>
+				</td>
+				<td>
+					<table id='table-2'>
+ 					  <tbody>
+					    <tr><td>
+							<%= erb :'display/display', :locals => { 
+								:title       => hero.armadura.name, 
+								:path        => hero.armadura.img_path,
+								:description => hero.armadura.defensa } %>
+						</td></tr>
+					  </tbody>
+					</table>
+				</td>
+				<td><% if hero.proteccions %>
+					<table id='table-2'>
+ 					  <tbody>
+					    <tr><% hero.proteccions.each do |p| %>
+								<td><%= erb :'display/display', :locals => { 
+										:title       => p.name, 
+										:path        => p.img_path,
+										:description => p.defensa } %></td>
+							<% end %>
+						</tr>
+					  </tbody>
+					</table><% end %>
+				</td>
+				<td><% if hero.miscelaneas %>
+					<table id='table-2'>
+ 					  <tbody>
+					    <tr><% hero.miscelaneas.each do |m| %>
+								<td><%= erb :'display/display', :locals => { 
+									:title       => m.name, 
+									:path        => m.img_path,
+									:description => "no hay ninguna aún" } %></td>
+						<% end %></tr>
+					  </tbody>
+					</table>
+				<% end %></td>
 				<td style="background-image:url(../images/ficha/star.png); 
 					background-repeat: no-repeat; background-position:center;">
-					<%= hero.repu || 0 %></td>
+					<%= hero.reputacion %>
+				</td>
 			</tr>
 		<% end %><% end %>
 	</tbody>

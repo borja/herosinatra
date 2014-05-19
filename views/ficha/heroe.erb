@@ -33,12 +33,10 @@
 								background-repeat: no-repeat; background-position:center;">
 								<%= heroe.repu || 0 %></td>
 							<% if p = heroe.pet %>
-							<% pet_name = "#{p[:name]}, #{pet(p[:id])[:sex] ? "la" : "el"} #{pet(p[:id])[:name].capitalize}" %>						
-								<td>
-									<%= erb :'display/display', :locals => { 
-										:title       => pet_name, 
-										:path        => "'../../images/pets/#{ pet(p[:id])[:name] }.png'",
-										:description => pet(p[:id])[:bono] } %>
+								<td><%= erb :'display/display', :locals => { 
+										:title       => p.nombre, 
+										:path        => p.img_path,
+										:description => p.bono } %>
 								</td>
 							<% end %>
 							<% if heroe.profesion %>

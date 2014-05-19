@@ -1,14 +1,10 @@
-<%= erb :menu %><br><br><br<br>
+<title>HeroSheet: Tiers</title>
+<%= erb :menu %><br>
 
-<link rel="stylesheet" href="../../css/main.css" type="text/css" />
-<link rel="stylesheet" href="../../app.css" type="text/css" />
-
-<h1>Lista de Tiers</h1><br><br>
-
+<h1>Lista de Tiers</h1>
 <table id='table-2'>
 	<thead>
 		<tr>
-			<th>ID</th>
 			<th>Combo</th>
 			<th>Nombre</th>
 			<th>Bonificador</th>
@@ -17,7 +13,6 @@
 	<tbody>
 		<% tiers.each do |t| %>
 			<tr>
-				<td><%= t[:id] %></td>
 				<td><table id='table-2'>
 						<tbody>
 							<tr>

@@ -8,9 +8,9 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td><%= @heroe[:cuerpo] %></td>
-			<td><%= @heroe[:mente ] %></td>
-			<td><%= @heroe[:mov   ] %></td>
+			<td><%= @heroe.cuerpo %></td>
+			<td><%= @heroe.mente  %></td>
+			<td><%= @heroe.movimiento %></td>
 		</tr>
 	</tbody>
 </table><br>	
@@ -24,9 +24,9 @@
 	</thead>
 	<tbody>
 		<tr>
-			<td><%= ataque( @heroe[:id]) %></td>
-			<td><%= rango(  @heroe[:id]) %></td>
-			<td><%= defensa(@heroe[:id]) %></td>
+			<td><%= @heroe.ataque %></td>
+			<td><%= @heroe.rango %></td>
+			<td><%= @heroe.defensa %></td>
 		</tr>
 	</tbody>
 </table><br>
@@ -42,7 +42,7 @@
 		<tr>
 			<td>3</td>
 			<td>3</td>
-			<td><%= @heroe[:oro] || 0 %></td>
+			<td><%= @heroe.oro || 0 %></td>
 		</tr>
 	</tbody>
 </table>

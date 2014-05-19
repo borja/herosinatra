@@ -1,3 +1,4 @@
+<title>HeroSheet: Magia sombría</title>
 <%= erb :menu %><br>
 <h1>Magia de Sombras</h1>
 
@@ -10,7 +11,7 @@
 	</thead>
 	<tbody>
 		<% sombras.each do |s|%>
-			<tr style=<%= color('sombra') %>>				
+			<tr style=<%= s.color %>>				
 				<td><% img_path = "'../../images/spells/#{ s.name }.png'" %>
 					<img src=<%=img_path%> alt=<%= s.name %>, id='icon' />
 				</td>

@@ -1,19 +1,15 @@
-<% p       = profesion(prof[:id]) %>
-<% nombre  = profesion(prof[:id])[:name] %> 
-<% path    = "'../../images/profesiones/#{nombre}.png'" %>
-
 <div class="information_popup_container">
 	<div class="information">
-		<img src=<%= path %> alt=<%= nombre %>, id='icon' />
+		<img src=<%= prof.img_path %> alt=<%= prof.name %>, id='icon' />
 	</div>
 	<div class="popup_information">
-		<h3><%= nombre.capitalize %>
+		<h3><%= prof.name.capitalize %>
 			<br><br>
-			<img src=<%= path %> alt=<%= nombre %>, id='icon3' />
+			<img src=<%= prof.img_path %> alt=<%= prof.name %>, id='icon3' />
 		</h3>
 		<h3>Aprendizajes</h3>
-		<% prof[:aprendiz].each do |aprendizaje| %>
-			<li><%= p[:aprendiz][aprendizaje][:name] %></li>
+		<% prof.aprendiz.each do |a| %>
+			<li><%= a %></li>
 		<% end %>
 	</div>
 </div>
