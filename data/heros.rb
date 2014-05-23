@@ -178,7 +178,7 @@ def heros
     Hero.new({ 
       :id           => 6,
       :name         => "Domasuegras",
-      :personaje    => "berserker",
+      :personaje    => "bersérker",
       :jugador      => "Daniel Acha",
       :nivel        => 9,
       :repu         => 2,
