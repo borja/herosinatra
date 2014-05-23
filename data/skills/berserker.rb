@@ -1,5 +1,5 @@
 # encoding: UTF-8
-def berserkers
+def bersérkers
   [
     {
       :id           => 0,
@@ -95,6 +95,6 @@ def berserkers
   ]
 end
 
-def berserker(id)
-  berserkers[id]
+def bersérker(id)
+  bersérkers[id]
 end

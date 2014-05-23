@@ -1,5 +1,5 @@
 # encoding: UTF-8
-def lords
+def beastlords
   [
     {
       :id           => 0,
@@ -70,6 +70,6 @@ def lords
   ]
 end
 
-def lord(id)
-  lords[id]
+def beastlord(id)
+  beastlords[id]
 end

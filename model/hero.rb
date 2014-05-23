@@ -73,22 +73,14 @@ class Hero < Hash
   end
   
   def clase
-    bárbaro    = ["señor de las bestias","bersérker","hoplita"]
-    enano      = ["falangista","matador","ingeniero"]          
-    mago       = ["invocador", "conjurador", "hechicero"]      
-    elfo       = ["derviche", "druida", "arquero"]             
-    ladrón     = ["nigromante", "asesino", "ladrón"]           
-    clérigo    = ["clérigo", "paladín", "sacerdote"]           
-    tiefling   = ["vengador", "caminante", "brujo"]            
-    
     case
-      when    enano.include?(self.personaje) then return 'enano'
-      when     elfo.include?(self.personaje) then return 'elfo'
-      when tiefling.include?(self.personaje) then return 'tiefling'
-      when     mago.include?(self.personaje) then return 'mago'
-      when  bárbaro.include?(self.personaje) then return 'bárbaro'
-      when  clérigo.include?(self.personaje) then return 'clérigo'
-      when   ladrón.include?(self.personaje) then return 'ladrón'
+      when    clase_enano.include?(self.personaje) then return 'enano'
+      when     clase_elfo.include?(self.personaje) then return 'elfo'
+      when clase_tiefling.include?(self.personaje) then return 'tiefling'
+      when     clase_mago.include?(self.personaje) then return 'mago'
+      when  clase_bárbaro.include?(self.personaje) then return 'bárbaro'
+      when  clase_clérigo.include?(self.personaje) then return 'clérigo'
+      when   clase_ladrón.include?(self.personaje) then return 'ladrón'
       else return "unknown"
     end
   end

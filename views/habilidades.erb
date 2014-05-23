@@ -1,34 +1,28 @@
 <title>Hero Sheet: Habilidades %></title>
-
 <%= erb :menu %><br>
 
-<h1>Árbol de Habilidades</h1><br><br>
-
+<h1>Árbol de Habilidades</h1>
 <table id='table-2'>
 	<thead>
 		<tr>
-			<% personajes.each do |pj| %>
+			<% clases.each do |pj| %>
 				<td><%= pj.capitalize %></td>
 			<% end %>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<% personajes.each do |pj| %>
-				<td><img src=../images/personajes/<%= pj %>.png alt="personaje" /, id='icon2'>
-					<% unless pj=="enano" %>
-						<img src=../images/personajes/<%= genderize(pj,"female") %>.png alt="personaje" /, id='icon2'>
-					<% end %>
-				</td>
+			<% clases.each do |clase| %>
+				<td><img src=../images/personajes/<%= clase %>.png alt="<%= clase %>" /, id='icon2'></td>
 			<% end %>
 		</tr>
 		<% 3.times do |i| %>
 			<tr>
-				<% personajes.each do |pj| %>
+				<% clases.each do |clase| %>
 					<td>
-						<% h = send(pj)[i] %>
-						<a href="/habilidades/<%= h %>">
-						<%= h.gsub('lord','señor').capitalize %><br>
+						<% h = send("clase_#{clase}")[i] %>
+						<a href="/habilidades/<%= h.gsub('señor de las bestias', 'beastlord') %>">
+						<%= h.capitalize %><br>
 						<img src="../images/clases/<%= h %>.png" alt=<%= h %> /, id='icon4'></a>
 					</td>
 				<% end %>

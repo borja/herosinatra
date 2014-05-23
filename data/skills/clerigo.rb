@@ -1,5 +1,5 @@
 # encoding: UTF-8
-def clerigos
+def clérigos
   [
     {
       :id           => 0,
@@ -76,6 +76,6 @@ def clerigos
   ]
 end
 
-def clerigo(id)
-  clerigo[id]
+def clérigo(id)
+  clérigo[id]
 end
