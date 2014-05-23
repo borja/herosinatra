@@ -88,7 +88,7 @@ class Hero < Hash
   def habilidades # TODO: Mejorar este código.
     habilidades = []
     self.skills.each do |id|
-      habilidades << send(self.personaje.gsub('señor de las bestias', 'beastlord'), id )
+      habilidades << Habilidad.new(send(self.personaje.gsub('señor de las bestias', 'beastlord'), id ))
     end
     return habilidades
   end
