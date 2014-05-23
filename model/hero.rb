@@ -85,6 +85,14 @@ class Hero < Hash
     end
   end
   
+  def habilidades # TODO: Mejorar este código.
+    habilidades = []
+    self.skills.each do |id|
+      habilidades << send(self.personaje.gsub('señor de las bestias', 'beastlord'), id )
+    end
+    return habilidades
+  end
+  
   def human?        ; ['clérigo', 'ladrón', 'bárbaro', 'mago'].include?(self.clase) end  
   def raza          ; self.human? ? 'humano' : self.clase end
   def female?       ; self.sex == 'female' end

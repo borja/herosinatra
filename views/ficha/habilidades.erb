@@ -7,8 +7,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% heroe.skills.each do |id| %>
-			<% habilidad = send(heroe.personaje.gsub('señor de las bestias','beastlord'),id) %>
+		<% heroe.habilidades.each do |habilidad| %>
 			<tr><td><% img_path = "'../images/skills/#{heroe.personaje.gsub('señor de las bestias','beastlord')}/#{habilidad[:name]}.png'" %>
 					<img src=<%=img_path%> alt=<%= habilidad[:name] %>, id='icon' />
 				</td>
