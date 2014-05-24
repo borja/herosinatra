@@ -286,6 +286,11 @@ def enchants
       :descripcion  => "+2 PM.",
       :tipo         => "arcano",
     },
+    { :id           => 58,
+      :name         => "poderosa",
+      :descripcion  => "+1 potencia",
+      :tipo         => "bendito",
+    },
   ]
 end
 

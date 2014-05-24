@@ -209,7 +209,7 @@ def heros
       :cuerpo       => 8,
       :mente        => 3,
       :mov          => 8,
-      :armas        => [Arma.new({:id => 12})],
+      :armas        => [Arma.new({:id => 12, :enchants => [58]})],
       :armadura     => Armadura.new({:id => 3}),
       :proteccions  => [Proteccion.new({:id => 2}),
                         Proteccion.new({:id => 5, :ranuras => 1, :enchants => [7]}),
