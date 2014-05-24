@@ -7,7 +7,12 @@
 						<td><%= erb :'display/arma', :locals => { :a => @heroe.armas.first} %></td>
 					</tr>
 					<tr><th width='80%'>Mano secundaria</th>
-						<td><%= erb :'display/arma', :locals => { :a => @heroe.armas[1]} %></td>
+						<% if a = @heroe.armas[1] %>
+							<td><%= erb :'display/arma', :locals => { :a => a} %></td>
+						<% else %>
+							<% img_path = "'../../images/treasures/socket.png'" %>
+							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
+						<% end %>
 					</tr>
 				</thead>
 			</table><br>
