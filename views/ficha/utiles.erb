@@ -30,17 +30,17 @@
 				<table id='table-2'>
 					<tbody>
 						<tr><% if @heroe.pergaminos %>
-								<% @heroe.pergaminos.each do |p| %>
+								<% @heroe.pergaminos.each do |s| %>
 									<td><div class="information_popup_container">
 											<div class="information">
-												<img src=<%= p.img_path %> alt=<%= p.name %>, id='icon' />
+												<img src=<%= s.img_path %> alt=<%= s.name %>, id='icon' />
 											</div>
 											<div class="popup_information">
 												<center><h3>	
-													Pergamino <%= p.name %><br><br>
-													<img src=<%= p.img_path %> alt=<%= p.name %>, id='icon3' />
+													Pergamino <%= s.name %><br><br>
+													<img src=<%= s.img_path %> alt=<%= s.name %>, id='icon3' />
 												</h3></center>
-												<%= p.hechizos %>
+												<%= s.hechizos %>
 											</div>
 										</div>
 									</td>
@@ -52,14 +52,14 @@
 					</tbody>
 				</table>
 			</td>
-			<td><% if @heroe.piezas %>
+			<td><% if @heroe.cacharros %>
 					<table id='table-2'>
 						<tbody>
-							<tr><% @heroe.piezas.each do |p| %>
+							<tr><% @heroe.cacharros.each do |c| %>
                         			<td><%= erb :'display/display', :locals => { 
-												:title       => p.name, 
-												:path        => p.img_path,
-												:description => p.uso } %>
+												:title       => c.name, 
+												:path        => c.img_path,
+												:description => c.uso } %>
 									</td>
 								<% end %>
 							</tr>

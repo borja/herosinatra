@@ -47,7 +47,8 @@ class Armadura < Item
 end
 
 class Util < Hash
-  attr_accessor :id, :spells # Only for pergaminos
+  attr_accessor :id,
+    :spells # Only for pergaminos
   
   def initialize args
     args.each do |k,v|

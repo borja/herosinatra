@@ -93,6 +93,16 @@ class Hero < Hash
     return habilidades
   end
   
+  def cacharros
+    c = []
+      if self.piezas
+        self.piezas.each do |p|
+          c << Pieza.new(:id => p)
+        end
+      end
+    return c
+  end
+  
   def human?        ; ['clérigo', 'ladrón', 'bárbaro', 'mago'].include?(self.clase) end  
   def raza          ; self.human? ? 'humano' : self.clase end
   def female?       ; self.sex == 'female' end
