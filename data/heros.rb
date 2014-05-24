@@ -646,7 +646,7 @@ def heros
     }),
     Hero.new({ 
       :id           => 32,
-      :name         => "Trag'al",
+      :name         => "Trag al",
       :personaje    => "señor de las bestias",
       :jugador      => "Alberto",
       :status       => "retirado",

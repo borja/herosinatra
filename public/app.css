@@ -95,6 +95,11 @@ h3 {text-align: center;
 	weight: 130px;
 	height: 130px;
 }
+#portrait {
+	padding: 2px;
+	weight: 204px;
+	height: 321px;
+}
 #box {
 	padding: 2px;
 	weight: 245px;
