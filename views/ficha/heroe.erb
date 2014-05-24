@@ -19,11 +19,7 @@
 					</thead>
 					<tbody>
 						<tr>
-							<td><%= erb :'display/display', :locals => { 
-									:title       => heroe.name, 
-									:path        => "'../images/personajes/#{ heroe.genderize }.png'",
-									:description => "" } %>
-							</td>
+							<td><%= erb :'display/portrait', :locals => { :h => heroe } %></td>
 							<td><%= heroe.name.capitalize %><br>
 								<%= heroe.jugador.capitalize %></td>
 							<td><%= heroe.clase %></td>

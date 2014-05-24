@@ -22,8 +22,7 @@
 				<td><% if hero.muerto %>
 						<img src=../images/personajes/dead.png	alt="muerto" /, id='icon'>
 					<% else %>
-						<img src=../images/personajes/<%= hero.genderize %>.png 
-						alt="<%= hero.genderize %>" /, id='icon'>
+						<%= erb :'display/portrait', :locals => { :h => hero } %>
 					<% end%>
 				</td>
 				<td><a href=hero/<%= hero.id %>><%= hero.name %></a><br>

@@ -133,8 +133,9 @@ class Hero < Hash
     return total
   end
 
-  def defensa
-    1  
-  end
+  def defensa  ; 1 end
+  
+  def img_path ; "'../images/personajes/#{self.genderize}.png'" end
+  def big_path ; "'../images/portraits/#{ self.name}.png'"      end
   
 end
