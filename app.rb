@@ -90,5 +90,9 @@ class App < Sinatra::Base
   end
   get '/magia/:topic' do |tema|
     erb :"magia/#{tema}"
-  end    
+  end
+  
+  get '/combate/:topic' do |tema|
+    erb :"combate/#{tema}"
+  end      
 end
