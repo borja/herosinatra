@@ -36,10 +36,38 @@ def sangres
       :name         => "anemia",
       :efecto       => "El objetivo recibe un daño defendible igual a tus heridas.",
       :diablura     => "Puedes perder tantos PC como heridas para recuperar anemia.",
+    }),
+    Sangre.new({ 
+      :id           => 6,
+      :name         => "tablilla de sangre",
+      :efecto       => "Una tablilla de sangre goteante rodea al lanzador. Añade un contador de sangre cada vez que se reciba daño. Los hechizos de sangre aumentan su potencia por cada contador. Dura hasta recibir daño mental.",
+    }),
+    Sangre.new({
+      :id           => 7,
+      :name         => "explosión sanguinolenta",
+      :efecto       => "El cadáver objetivo lanza <anemia> a las casillas colindantes.",
+    }),
+    Sangre.new({
+      :id           => 8,
+      :name         => "sanguinis",
+      :efecto       => "Aura. Obtienes +1 fuerza por cada aliado herido en tu línea de visión, hasta recibir un daño.",
+    }),
+    Sangre.new({
+      :id           => 9,
+      :name         => "hemorragia",
+      :efecto       => "El objetivo obtiene 4 efectos de sangrado.",
+    }),
+    Sangre.new({
+      :id           => 10,
+      :name         => "rosae",
+      :efecto       => "Dura mientras hayas provocado heridas durante tu turno. Todos los aliados heridos recuperan 1PC.",
+    }),
+    Sangre.new({
+      :id           => 11,
+      :name         => "necrullea",
+      :efecto       => "Causas miedo verdadero 6+. Además tus ataques desangran y no puedes ser objetivos de hechizos de sangre o efectos de sangrado.",
     })
   ]
 end
 
-def sangre(id)
-  sangres[id]
-end
+def sangre id ; sangres[id] end
