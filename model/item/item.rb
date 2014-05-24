@@ -4,7 +4,7 @@
 class Item < Hash
   attr_accessor :id, :enchants, :categoria, :max,
                 :gemas, :runas, :joyas, :ranuras
-  
+                  
   def initialize args
     args.each do |k,v|
       instance_variable_set("@#{k}".to_sym, v) unless v.nil?
@@ -32,6 +32,7 @@ end
 
 class Miscelanea < Item
   def name     ; miscelanea(self.id)[:name] end
+  def fits     ; miscelanea(self.id)[:fits] end
 end
 
 class Arma < Item

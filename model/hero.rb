@@ -102,6 +102,9 @@ class Hero < Hash
   def desprovisto?  ; self.pergaminos.nil? && self.pociones.nil? && self.piezas.nil?     end
   def sin_recursos  ; self.gemas.nil? && self.joyas.nil? && self.runas.nil? && self.nil? end
   
+  def anillos       ; self.miscelaneas.select { |m| m.fits == "anillo"  } end
+  def amuletos      ; self.miscelaneas.select { |m| m.fits == "amuleto" } end 
+  
   def genderize
     if self.gender == "female" 
       case self.clase
