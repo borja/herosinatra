@@ -1,4 +1,4 @@
-<title>Hero Sheet: Habilidades del <%= @char %></title>
+<title>Hero Sheet: <%= @char.gsub('beastlord','señor de las bestias').capitalize %></title>
 <%= erb :menu %><br>
 
 <h1>Habilidades del <%= @char.gsub('beastlord','señor de las bestias').capitalize %></h1>
@@ -10,8 +10,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% plural = ((@char == "lord de las bestias") ? "lords" : (@char+"s")) %>
-		<% send(plural).each do |c| %>
+		<% send(@char+"s").each do |c| %>
 			<tr><td><%= c[:id] %></td>
 				<td><% img_path = "'../images/skills/#{@char}/#{c[:name]}.png'" %>
 					<img src=<%=img_path%> alt=<%= c[:name] %>, id='icon' />
