@@ -1,0 +1,22 @@
+<table id='table-2'>
+	<thead>
+		<tr>
+			<th width='80%'>Amuleto Izquierdo</th>
+			<% if a = @heroe.amuletos.first %>
+				<td><%= erb :'display/display', :locals => {:title => a.name, :path => a.img_path, :description => ""} %></td>
+			<% else %>
+				<% img_path = "'../../images/treasures/socket.png'" %>
+				<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
+			<% end %>
+		</tr>
+		<tr>
+			<th width='80%'>Amuleto Derecho</th>
+			<% if a = @heroe.amuletos[1] %>
+				<td><%= erb :'display/display', :locals => {:title => a.name, :path => a.img_path, :description => ""} %></td>
+			<% else %>
+				<% img_path = "'../../images/treasures/socket.png'" %>
+				<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
+			<% end %>
+		</tr>
+	</thead>
+</table>

@@ -1,11 +1,8 @@
 <tr>
-	<th width='80%'><%= field.capitalize %></th>
-	<% puts @heroe[objeto.to_sym] %>
-	<% listado = (@heroe[objeto.to_sym] || []).find_all{ |x| send(field+'_lista').include?(x[:id])} %>
-	<% if !listado.empty? %>
-		<td><%= erb :'display/item', :locals => { :a => listado[0] , :item => objeto[0..-2]} %></td>
+	<th width='80%'><%= fits.capitalize %></th>
+	<% if @heroe.send(fits) %>
+		<td><%= erb :'ficha/inventario/objeto', :locals => {:objeto => @heroe.send(fits)} %></td>
 	<% else %>
-		<% img_path = "'../../images/treasures/socket.png'" %>
-		<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
+		<td><%= erb :'display/ranura' %></td>
 	<% end %>
 </tr>

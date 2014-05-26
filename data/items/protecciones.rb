@@ -7,6 +7,7 @@ def proteccions
       :categoria    => "metal",
       :defensa      => 0,
       :ranuras      => 1,
+      :fits         => "entrepierna",
     },
     { 
       :id           => 1,
@@ -14,6 +15,7 @@ def proteccions
       :categoria    => "tela",
       :defensa      => 1,
       :ranuras      => 4,
+      :fits         => "espalda",
     },
     { 
       :id           => 2,
@@ -21,6 +23,7 @@ def proteccions
       :categoria    => "metal",
       :defensa      => 1,
       :ranuras      => 1,
+      :fits         => "cabeza",
     },
     { 
       :id           => 3,
@@ -28,6 +31,7 @@ def proteccions
       :categoria    => "cuero",
       :defensa      => 1,
       :ranuras      => 2,
+      :fits         => "piés",
     },
     { 
       :id           => 4,
@@ -35,6 +39,7 @@ def proteccions
       :categoria    => "cuero",
       :defensa      => 1,
       :ranuras      => 1,
+      :fits         => "cintura",
     },
     { 
       :id           => 5,
@@ -42,6 +47,7 @@ def proteccions
       :categoria    => "metal",
       :defensa      => 1,
       :ranuras      => 2,
+      :fits         => "hombros",
     },
     { 
       :id           => 6,
@@ -49,6 +55,7 @@ def proteccions
       :categoria    => "metal",
       :defensa      => 1,
       :ranuras      => 6,
+      :fits         => "cabeza",
     },
     { 
       :id           => 7,
@@ -56,6 +63,7 @@ def proteccions
       :categoria    => "tela",
       :defensa      => 0,
       :ranuras      => 1,
+      :fits         => "cabeza",
     },
     { 
       :id           => 8,
@@ -63,6 +71,7 @@ def proteccions
       :categoria    => "tela",
       :defensa      => 1,
       :ranuras      => 2,
+      :fits         => "muñecas",
     },
     { 
       :id           => 9,
@@ -70,6 +79,7 @@ def proteccions
       :categoria    => "cuero",
       :defensa      => 1,
       :ranuras      => 2,
+      :fits         => "pechera",
     },
     { 
       :id           => 10,
@@ -77,6 +87,7 @@ def proteccions
       :categoria    => "cuero",
       :defensa      => 0,
       :ranuras      => 2,
+      :fits         => "manos",
     },
     { 
       :id           => 11,
@@ -84,6 +95,7 @@ def proteccions
       :categoria    => "cuero",
       :defensa      => 1,
       :ranuras      => 1,
+      :fits         => "cintura",
     },
     { 
       :id           => 12,
@@ -91,6 +103,7 @@ def proteccions
       :categoria    => "cuero",
       :defensa      => 1,
       :ranuras      => 2,
+      :fits         => "cabeza",
     },
     { 
       :id           => 13,
@@ -98,6 +111,7 @@ def proteccions
       :categoria    => "metal",
       :defensa      => 2,
       :ranuras      => 1,
+      :fits         => "cabeza",
     },
     { 
       :id           => 14,
@@ -105,6 +119,7 @@ def proteccions
       :categoria    => "cuero",
       :defensa      => 1,
       :ranuras      => 2,
+      :fits         => "pechera",
     },
     { 
       :id           => 15,
@@ -112,6 +127,7 @@ def proteccions
       :categoria    => "metal",
       :defensa      => 1,
       :ranuras      => 6,
+      :fits         => "cabeza",
     },
   ]
 end

@@ -1,21 +1,8 @@
 <table id='tlabel'>
 	<tr>
 		<td width='20%'>
-			<table id='table-2'>
-				<thead>
-					<tr><th width='80%'>Mano principal</th>
-						<td><%= erb :'display/arma', :locals => { :a => @heroe.armas.first} %></td>
-					</tr>
-					<tr><th width='80%'>Mano secundaria</th>
-						<% if a = @heroe.armas[1] %>
-							<td><%= erb :'display/arma', :locals => { :a => a} %></td>
-						<% else %>
-							<% img_path = "'../../images/treasures/socket.png'" %>
-							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
-						<% end %>
-					</tr>
-				</thead>
-			</table><br>
+			<%= erb :'ficha/inventario/armas' %>
+			<br>
 			<table id='table-2'>
 				<thead>
 					<tr><th width='80%'>Armadura</th>
@@ -25,86 +12,38 @@
 							:description => @heroe.armadura.defensa } %>
 						</td>
 					</tr>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'cabeza' , :objeto => 'proteccions'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'hombros', :objeto => 'proteccions'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'muñecas', :objeto => 'proteccions'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'cintura', :objeto => 'proteccions'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'pies',    :objeto => 'proteccions'} %>
+					<% fields[1].each do |field| %>
+						<%= erb :'ficha/inventario/field', :locals => {:fits => field } %>
+					<% end %>
 				</thead>
 			</table>
 		</td>
 		<td width='20%'>
+			<%= erb :'ficha/inventario/anillos' %>
+			<br>
 			<table id='table-2'>
 				<thead>
-					<tr>
-						<th width='80%'>Anillo Izquierdo</th>
-						<% if a = @heroe.anillos.first %>
-							<td><%= erb :'display/display', :locals => {:title => a.name, :path => a.img_path, :description => ""} %></td>
-						<% else %>
-							<% img_path = "'../../images/treasures/socket.png'" %>
-							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
-						<% end %>
-					</tr>
-					<tr>
-						<th width='80%'>Anillo Derecho</th>
-						<% if a = @heroe.anillos[1] %>
-							<td><%= erb :'display/display', :locals => {:title => a.name, :path => a.img_path, :description => ""} %></td>
-						<% else %>
-							<% img_path = "'../../images/treasures/socket.png'" %>
-							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
-						<% end %>
-					</tr>
-				</thead>
-			</table><br>
-			<table id='table-2'>
-				<thead>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'cuello'   , :objeto => 'miscelaneas'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'espalda'  , :objeto => 'proteccions'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'pechera'  , :objeto => 'proteccions'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'guantes'  , :objeto => 'proteccions'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'hebilla'  , :objeto => 'miscelaneas'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'tobillos' , :objeto => 'miscelaneas'} %>
+					<% fields[2].each do |field| %>
+						<%= erb :'ficha/inventario/field', :locals => {:fits => field } %>
+					<% end %>
 					</tr>
 				</thead>
 			</table>
 		</td>
 		<td width='20%'>
+			<%= erb :'ficha/inventario/amuletos' %>
+			<br>
 			<table id='table-2'>
 				<thead>
-					<tr>
-						<th width='80%'>Amuleto Izquierdo</th>
-						<% if a = @heroe.amuletos.first %>
-							<td><%= erb :'display/display', :locals => {:title => a.name, :path => a.img_path, :description => ""} %></td>
-						<% else %>
-							<% img_path = "'../../images/treasures/socket.png'" %>
-							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
-						<% end %>
-					</tr>
-					<tr>
-						<th width='80%'>Amuleto Derecho</th>
-						<% if a = @heroe.amuletos[1] %>
-							<td><%= erb :'display/display', :locals => {:title => a.name, :path => a.img_path, :description => ""} %></td>
-						<% else %>
-							<% img_path = "'../../images/treasures/socket.png'" %>
-							<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
-						<% end %>
-					</tr>
-				</thead>
-			</table><br>
-			<table id='table-2'>
-				<thead>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'argolla'     , :objeto => 'miscelaneas'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'pendientes'  , :objeto => 'miscelaneas'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'tatuajes'    , :objeto => 'miscelaneas'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'cadena'      , :objeto => 'miscelaneas'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'broche'      , :objeto => 'miscelaneas'} %>
-					<%= erb :'ficha/inventario/field', :locals => {:field => 'entrepierna' , :objeto => 'proteccions'} %>
+					<% fields[3].each do |field| %>
+						<%= erb :'ficha/inventario/field', :locals => {:fits => field } %>
+					<% end %>
 				</thead>
 			</table>
 		</td>
 		<td width='40%'>
 			<%= erb :'ficha/stats' %>
-			<%= erb :'ficha/hechizos' if @heroe[:hechizos] %>
+			<%= erb :'ficha/hechizos' if @heroe.magias %>
 			<%= erb :'ficha/resistencias' %>
 		</td>
 	</tr>

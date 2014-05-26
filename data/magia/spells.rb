@@ -634,17 +634,7 @@ def spells
   ]
 end
 
-def spell(id)
-  spells[id]
-end
-
-def hero_elements(spell_list)
-  founded = []
-  spell_list.each do |magia_id|
-      founded << elemento_magia(magia_id) unless founded.include?(elemento_magia(magia_id))
-  end
-  return founded
-end
+def spell id ; spells[id] end
 
 def escuelas # TODO: Complete this.
  { "sombra"  => "" ,

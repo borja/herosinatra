@@ -26,8 +26,9 @@ class Item < Hash
 end
 
 class Proteccion < Item
-  def name     ; proteccion(self.id)[:name] end
+  def name     ; proteccion(self.id)[:name]    end
   def defensa  ; proteccion(self.id)[:defensa] end
+  def fits     ; proteccion(self.id)[:fits]    end
 end
 
 class Miscelanea < Item

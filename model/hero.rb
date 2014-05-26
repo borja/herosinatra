@@ -3,26 +3,13 @@
 
 class Hero < Hash
   attr_accessor :id,         
-    :name,       
-    :personaje,  
-    :jugador,   
-    :status,     
-    :repu,       
-    :nivel,      
-    :cuerpo,     
-    :mente,      
-    :mov,        
+    :name, :personaje, :jugador, :status, :muerto, :gender,
+    :repu, :nivel, :cuerpo, :mente, :mov,        
     :pet,        
-    :hechizos,   
-    :armas,                     
-    :armadura,  
-    :proteccions,           
-    :miscelaneas,           
-    :skills,     
+    :hechizos, :skills,   
+    :armas, :armadura, :proteccions, :miscelaneas,           
     :profesion,  
     :piezas, :pociones, :pergaminos,
-    :muerto,
-    :gender,
     :oro,:gemas,:joyas,:runas             
 
   def initialize args
@@ -31,8 +18,12 @@ class Hero < Hash
     end
   end
   
-  def reputacion ; self.repu || 0 end
-  def movimiento ; self.mov       end
+  # Custom meta-methods created by each item:
+  (fields[1]+fields[2]+fields[3]).each do |f|
+    define_method(f) do
+  		(self.proteccions + self.miscelaneas).detect { |item| item.fits == f }
+    end
+  end
   
   def potis # this must be refactored!
     potis = []
@@ -103,6 +94,22 @@ class Hero < Hash
     return c
   end
   
+  def magias
+    m = []
+    self.hechizos.each do |id|
+      m << spell(id)
+    end
+    return m
+  end
+  
+  def elementos
+    e = []
+    self.magias.each do |m|
+      e << m.elemento unless e.include?(m.elemento)
+    end 
+    return e
+  end
+  
   def human?        ; ['clérigo', 'ladrón', 'bárbaro', 'mago'].include?(self.clase) end  
   def raza          ; self.human? ? 'humano' : self.clase end
   def female?       ; self.sex == 'female' end
@@ -111,10 +118,14 @@ class Hero < Hash
   def pobre?        ; self.miscelaneas.nil? end
   def desprovisto?  ; self.pergaminos.nil? && self.pociones.nil? && self.piezas.nil?     end
   def sin_recursos  ; self.gemas.nil? && self.joyas.nil? && self.runas.nil? && self.nil? end
-  
   def anillos       ; self.miscelaneas.select { |m| m.fits == "anillo"  } end
   def amuletos      ; self.miscelaneas.select { |m| m.fits == "amuleto" } end 
-  
+  def defensa       ; 1 end  
+  def img_path      ; "'../images/personajes/#{self.genderize}.png'" end
+  def big_path      ; "'../images/portraits/#{ self.name     }.png'" end
+  def reputacion    ; self.repu || 0 end
+  def movimiento    ; self.mov       end
+    
   def genderize
     if self.gender == "female" 
       case self.clase
@@ -145,10 +156,5 @@ class Hero < Hash
     end
     return total
   end
-
-  def defensa  ; 1 end
-  
-  def img_path ; "'../images/personajes/#{self.genderize}.png'" end
-  def big_path ; "'../images/portraits/#{ self.name}.png'"      end
   
 end
