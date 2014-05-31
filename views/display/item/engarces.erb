@@ -1,0 +1,24 @@
+<table id='tier', style="background-color:<%= item.tier_color %>;">
+<tbody>
+	<tr><td>
+		<% if item.tier %>
+			<h3>Tier de <%= "ola ke ase" %></h3>
+		<% end %>
+		<h3>Engarces</h3>
+		<% (item.piedras || []).each do |g| %>
+			<img src=<%= g.img_path %> alt=<%= g.name %>, id='icon' />
+		<% end %>
+		<% (item.joyas || []).each do |j| %>
+			<% img_path = "'../../images/treasures/joyas/#{joya(j)[:name]}.png'" %>
+			<img src=<%=img_path%> alt=<%=joya(j)[:name]%>, id='icon' />
+		<% end %>
+		<% (item.runas || []).each do |r| %>
+			<% img_path = "'../../images/treasures/runas/#{runa(r)[:name]}.png'" %>
+			<img src=<%=img_path%> alt=<%=runa(r)[:name]%>, id='icon' />
+		<% end %>
+		<% (item.ranuras || 0).times do %>
+			<%= erb :'display/ranura' %>
+		<% end %>
+	</td></tr>
+</tbody>
+</table>	

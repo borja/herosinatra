@@ -10,7 +10,7 @@ class Hero < Hash
     :armas, :armadura, :proteccions, :miscelaneas,           
     :profesion,  
     :piezas, :pociones, :pergaminos,
-    :oro,:gemas,:joyas,:runas             
+    :oro,:joyas,:runas, :gemas             
 
   def initialize args
     args.each do |k,v|
@@ -31,6 +31,13 @@ class Hero < Hash
       potis << Pocion.new(p)
     end
     potis
+  end
+  
+  def tesoros
+    self.gemas.each do |gem|
+      puts gema(gem)
+    end
+    return 4
   end
   
   def cuerpo_base

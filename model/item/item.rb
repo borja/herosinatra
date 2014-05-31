@@ -2,8 +2,8 @@
 # encoding: UTF-8
 
 class Item < Hash
-  attr_accessor :id, :enchants, :categoria, :max,
-                :gemas, :runas, :joyas, :ranuras
+  attr_accessor :id, :enchants, :max,
+                :runas, :joyas, :ranuras, :gemas
                   
   def initialize args
     args.each do |k,v|
@@ -11,24 +11,43 @@ class Item < Hash
     end
   end 
   
+  def tier_color ; 'blue' end
   def enchanted? ; self.enchants            end
   def item       ; self.class.to_s.downcase end
+  def engarzado? ; self.gemas or self.joyas or self.runas end
   
   def mundano?
     self.gemas.nil? && self.joyas.nil? && self.runas.nil? && self.ranuras.nil?
   end
   
+  def piedras
+    p = []
+    self.gemas.each do |g|
+      p << gema(g)
+    end
+    return p
+  end
+  
   def img_path
-    puts self.name
     carpeta = self.enchanted? ? "magic/#{self.name + self.enchants.size.to_s}" : self.name
     "'../images/#{self.item}s/#{carpeta}.png'"
   end
+  
+  def tier
+    combo = nil
+    mix = {:gemas => self.gemas, :runas => self.runas, :joyas => self.joyas }
+    tiers.each do |t|
+      combo = tier(t[:id]) if t[:mix] == mix
+    end
+    return combo 
+  end  
 end
 
 class Proteccion < Item
-  def name     ; proteccion(self.id)[:name]    end
-  def defensa  ; proteccion(self.id)[:defensa] end
-  def fits     ; proteccion(self.id)[:fits]    end
+  def name      ; proteccion(self.id)[:name]      end
+  def defensa   ; proteccion(self.id)[:defensa]   end
+  def fits      ; proteccion(self.id)[:fits]      end
+  def categoria ; proteccion(self.id)[:categoria] end
 end
 
 class Miscelanea < Item
@@ -57,9 +76,7 @@ class Util < Hash
     end
   end
   
-  def img_path
-    "'../images/utiles/#{self.class}s/#{self.name}.png'"
-  end
+  def img_path ; "'../images/utiles/#{self.class}s/#{self.name}.png'"  end
     
 end
 

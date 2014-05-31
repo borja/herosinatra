@@ -20,10 +20,11 @@
 					<tbody>
 						<tr>
 							<td><%= erb :'display/portrait', :locals => { :h => heroe } %></td>
-							<td><%= heroe.name.capitalize %><br>
-								<%= heroe.jugador.capitalize %></td>
-							<td><%= heroe.clase %></td>
-							<td><%= heroe.personaje %></td>
+							<td><%= heroe.name %><br>
+								<%= heroe.jugador %></td>
+							<td><%= heroe.raza.capitalize %></td>
+							<td><%= heroe.clase.capitalize %><br>
+								<%= heroe.personaje.capitalize %></td>
 							<td><%= heroe.nivel %></td>
 							<td style="background-image:url(../images/ficha/star.png); 
 								background-repeat: no-repeat; background-position:center;">

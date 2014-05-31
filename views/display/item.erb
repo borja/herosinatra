@@ -1,75 +1,34 @@
 <div class="information_popup_container">
 	<div class="information">
-		<img src=<%= a.img_path %> alt=<%= a.name %>, id='icon' />
+		<img src=<%= item.img_path %> alt=<%= item.name %>, id='icon' />
 	</div>
 	<div class="popup_information">
 		<center><h3>
-			<% if a.enchants %>
-				<%= send(item,(a.id))[:name].capitalize %>
-				<%= enchant(a.enchants.first)[:name] %><br><br>
+			<% if item.enchanted? %>
+				<%= item.name.capitalize %>
+				<%= enchant(item.enchants.first)[:name] %><br><br>
 			<% else %>
-				<%= send(item,(a.id)) %><br><br>
+				<%= item.name %>
+				<br><br>
 			<% end %>
-			<img src=<%= a.img_path %> alt=<%= send(item,(a.id))[:name] %>, id='icon3' />
+			<img src=<%= item.img_path %> alt=<%= item.name %>, id='icon3' />
 		</h3></center>
-		<%= "<li>Valor de combate: #{send(item,(a[:id]))[:powa]}</li>" if send(item,(a[:id]))[:powa] %>
-		<%= "<li>Permite atacar en diagonal</li>" if send(item,(a[:id]))[:diagonal] %>
-		<%= "<li>#{item.capitalize} mundana</li>" if mundano?(a) %>
-		<%= "<li>Tipo: #{armadura(a[:id])[:categoria]} </li>"   if item == 'armadura' %>
-		<% unless mundano?(a) %>
-			<br>
-			<% if is_tier?({:gemas => a[:gemas]}) %>
-				<% color = tier(is_tier?({:gemas => a[:gemas]}))[:color] %>
-			<% elsif is_tier?({:joyas => a[:joyas]}) %>
-				<% color = tier(is_tier?({:joyas => a[:joyas]}))[:color] %>
-			<% else %>
-				<% color = 'black' %>
-			<% end %>
-			<table id='tier', style="background-color:<%= color %>;">
-				<tbody>
-					<tr>
-						<td>
-							<% if is_tier?({:joyas => a[:joyas]}) %>
-								<h3>Tier de <%= tier(is_tier?({:joyas => a[:joyas]}))[:name].capitalize %></h3>
-								<% end %>
-							<% if is_tier?({:gemas => a[:gemas]}) %>
-								<h3>Tier de <%= tier(is_tier?({:gemas => a[:gemas]}))[:name].capitalize %></h3>
-							<% else %>
-							<h3>Engarces</h3>
-							<% end %>
-							<% if a[:gemas] %>
-								<% a[:gemas].each do |g| %>
-									<% img_path = "'../../images/treasures/gemas/#{gema(g)[:name]}.png'" %>
-									<img src=<%=img_path%> alt=<%=gema(g)[:name]%>, id='icon' />
-								<% end %>
-							<% end %>
-							<% if a[:joyas] %>						
-								<% a[:joyas].each do |j| %>
-									<% img_path = "'../../images/treasures/joyas/#{joya(j)[:name]}.png'" %>
-									<img src=<%=img_path%> alt=<%=joya(j)[:name]%>, id='icon' />
-								<% end %>
-							<% end%>
-							<% if a[:runas] %>
-								<% a[:runas].each do |r| %>
-									<% img_path = "'../../images/treasures/runas/#{runa(r)[:name]}.png'" %>
-									<img src=<%=img_path%> alt=<%=runa(r)[:name]%>, id='icon' />
-								<% end %>
-							<% end %>
-							<% if a[:ranuras] %>
-								<% a[:ranuras].times do %>
-									<% img_path = "'../../images/treasures/socket.png'" %>
-									<img src=<%=img_path%> alt='ranura-hueca', id='icon' />
-									<% end %>						
-							<% end %>
-						</td>
-					</tr>
-				</tbody>
-			</table>						
+		<h4>Características</h4>
+		<% if item.item == "proteccion" %>
+			<li>Protección: <i>+<%= item.defensa %> potencia.</i></li>
+			<li>Categoría: <i><%= item.categoria %></i></li>
 		<% end %>
-		<% if a.enchants %>	
+			<li>Se equipa en: <i><%= item.fits %></i></li>
+		<% if item.mundano? %>
+			<li>No ha sido engarzado.</li>       
+		<% else %>
+			<br>
+			<%= erb :'display/item/engarces', :locals => {:item => item } %>
+		<% end %>
+		<% if item.enchants %>	
 			<br>
 			<h4>Propiedades mágicas</h4>
-			<% a.enchants.each do |e| %>
+			<% item.enchants.each do |e| %>
 				<li><b><%= enchant(e)[:name].capitalize %></b>:
 				 	<i><%= enchant(e)[:descripcion] %></i>
 			<% end %>

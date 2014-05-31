@@ -67,14 +67,4 @@ def tiers
   ]
 end
 
-def tier(id)
-  tiers[id]
-end
-
-def is_tier?(combo)
-  output = nil
-  tiers.each do |t|
-    output = t[:id] if t[:mix] == combo
-  end
-  return output
-end
+def tier id ; tiers[id] end
