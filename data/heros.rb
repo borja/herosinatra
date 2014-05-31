@@ -838,6 +838,19 @@ def heros
       :miscelaneas  => [Miscelanea.new({:id => 12, :enchants => [43,44,45]})],
       :skills       => [0,1,2,3,4,5,6,7,8,9,10,11],
     }),
+    Hero.new({ 
+      :id           => 42,
+      :name         => "Klaussius",
+      :personaje    => "paladín",
+      :jugador      => "Iván",
+      :nivel        => 1,
+      :cuerpo       => 6,
+      :mente        => 4,
+      :mov          => 7,
+      :armas        => [Arma.new({:id => 2})],
+      :armadura     => Armadura.new({:id => 2}),
+      :proteccions  => [Proteccion.new({:id => 0})],
+    }),
   ]
 end
 
