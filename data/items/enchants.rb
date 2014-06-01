@@ -291,6 +291,16 @@ def enchants
       :descripcion  => "+1 potencia",
       :tipo         => "bendito",
     },
+    { :id           => 59,
+      :name         => "de los misterios",
+      :descripcion  => "Renunciar al movimiento al hechizar: diablura con 5+",
+      :tipo         => "bendito",
+    },
+    { :id           => 60,
+      :name         => "domesticador",
+      :descripcion  => "1/reto : permite controlar 1d6 bestias.",
+      :tipo         => "natura",
+    },
   ]
 end
 

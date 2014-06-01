@@ -96,6 +96,12 @@ def miscelaneas
       :name => "tatuajes",
       :max  => 0,
       :fits => "tatuajes",
+    },
+    {
+      :id   => 16,
+      :name => "silbato",
+      :max  => 2,
+      :fits => "amuleto",
     }
   ]
 end

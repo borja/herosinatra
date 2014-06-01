@@ -21,7 +21,7 @@ class Hero < Hash
   # Custom meta-methods created by each item:
   (fields[1]+fields[2]+fields[3]).each do |f|
     define_method(f) do
-  		(self.proteccions + self.miscelaneas).detect { |item| item.fits == f }
+  		((self.proteccions || []) + (self.miscelaneas || [])).detect { |item| item.fits == f }
     end
   end
   
@@ -103,8 +103,10 @@ class Hero < Hash
   
   def magias
     m = []
-    self.hechizos.each do |id|
-      m << spell(id)
+    if self.hechizos
+      self.hechizos.each do |id|
+        m << spell(id)
+      end
     end
     return m
   end
@@ -125,8 +127,8 @@ class Hero < Hash
   def pobre?        ; self.miscelaneas.nil? end
   def desprovisto?  ; self.pergaminos.nil? && self.pociones.nil? && self.piezas.nil?     end
   def sin_recursos  ; self.gemas.nil? && self.joyas.nil? && self.runas.nil? && self.nil? end
-  def anillos       ; self.miscelaneas.select { |m| m.fits == "anillo"  } end
-  def amuletos      ; self.miscelaneas.select { |m| m.fits == "amuleto" } end 
+  def anillos       ; (self.miscelaneas || []).select { |m| m.fits == "anillo"  } end
+  def amuletos      ; (self.miscelaneas || []).select { |m| m.fits == "amuleto" } end 
   def defensa       ; 1 end  
   def img_path      ; "'../images/personajes/#{self.genderize}.png'" end
   def big_path      ; "'../images/portraits/#{ self.name     }.png'" end
