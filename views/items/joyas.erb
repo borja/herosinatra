@@ -8,17 +8,16 @@
 			<th>ID</th>
 			<th>Icono</th>
 			<th>Nombre</th>
+			<th>Bonificadores</th>
 		</tr>	
 	</thead>
 	<tbody>
 		<% joyas.each do |j| %>
 			<tr>
-				<td><%= j[:id] %></td>
-				<td>
-					<% img_path = "'../images/treasures/joyas/#{j[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=j[:name]%>, id='icon' />
-				</td>
-				<td>Joya <%= j[:name] %></td>
+				<td><%= j.id %></td>
+				<td><img src=<%= j.img_path %> alt=<%= j.name %>, id='icon' /></td>
+				<td>Joya <%= j.name %></td>
+				<td><%= j.fits %>
 			</tr>
 		<% end %>
 	</tbody>

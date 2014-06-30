@@ -23,7 +23,7 @@
 							<td><%= heroe.name %><br>
 								<%= heroe.jugador %></td>
 							<td><%= heroe.raza.capitalize %></td>
-							<td><%= heroe.clase.capitalize %><br>
+							<td><%if heroe.human? %><%= heroe.clase.capitalize%><br><%end%>
 								<%= heroe.personaje.capitalize %></td>
 							<td><%= heroe.nivel %></td>
 							<td style="background-image:url(../images/ficha/star.png); 

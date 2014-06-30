@@ -32,30 +32,10 @@ class App < Sinatra::Base
   get '/items/:items' do |group|
     erb :"items/#{group}"
   end       
-  get '/familiares' do
-    erb :familiares
-  end
-  get '/encantamientos' do
-    erb :encantamientos
-  end
-  get '/profesiones' do
-    erb :profesiones
-  end
   get '/profesiones/:profesion' do |prof|
     erb :"ciudad/profesiones"
   end
-  get '/habilidades' do
-    erb :habilidades
-  end
-  get '/maestrodearmas' do
-    erb :maestrodearmas
-  end
-  get '/mapa' do
-    erb :mapa
-  end
-  get '/caminos' do
-    erb :caminos
-  end
+
   get '/habilidades/:char' do |clase|
     @char = clase
     erb :disciplinas
@@ -64,9 +44,7 @@ class App < Sinatra::Base
     @dados = veces
     erb :dado
   end
-  get '/tesoro' do
-    erb :tesoro
-  end
+
   get '/criaturas/:monster' do |criature|
     erb :"criaturas/#{criature}"
   end
@@ -94,5 +72,15 @@ class App < Sinatra::Base
   
   get '/combate/:topic' do |tema|
     erb :"combate/#{tema}"
-  end      
+  end  
+  
+  # Sección de la ciudad
+  get '/ciudad/:topic' do |tema|
+    erb :"ciudad/#{tema}"
+  end
+  
+  # Try root-view
+  get '/:view' do |view|
+    erb :"#{view}"
+  end
 end

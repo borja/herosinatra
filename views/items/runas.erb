@@ -8,17 +8,16 @@
 			<th>1D12</th>
 			<th>Icono</th>
 			<th>Nombre</th>
+			<th>Bonificadores</th>
 		</tr>	
 	</thead>
 	<tbody>
 		<% runas.each do |r| %>
 			<tr>
-				<td><%= r[:id] + 1 %></td>
-				<td>
-					<% img_path = "'../images/treasures/runas/#{r[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=r[:name]%>, id='icon' />
-				</td>
-				<td><%= r[:name].upcase %></td>
+				<td><%= r.id + 1 %></td>
+				<td><img src=<%= r.img_path %> alt=<%=r.name%>, id='icon' /></td>
+				<td><%= r.name.upcase %></td>
+				<td><%= r.fits %></td>
 			</tr>
 		<% end %>
 	</tbody>
