@@ -196,10 +196,5 @@ def armas
   ]
 end
 
-def arma(id)
-  armas[id]
-end
-
-def categorías
-  armas.map{ |a| a[:categoria] }.uniq
-end
+def arma id ; armas[id] end
+def categorías ; armas.map{ |a| a[:categoria] }.uniq end

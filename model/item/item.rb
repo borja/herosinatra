@@ -56,14 +56,16 @@ class Miscelanea < Item
 end
 
 class Arma < Item
-  def name     ; arma(self.id)[:name]     end
-  def ataque   ; arma(self.id)[:ataque]   end
-  def diagonal ; arma(self.id)[:diagonal] end
+  def name     ; arma(self.id)[:name]      end
+  def ataque   ; arma(self.id)[:ataque]    end
+  def diagonal ; arma(self.id)[:diagonal]  end
+  def categoria; arma(self.id)[:categoria] end
 end
 
 class Armadura < Item  
   def name     ; armadura(self.id)[:name] end
   def defensa  ; armadura(self.id)[:defensa] end
+  def categoria; armadura(self.id)[:categoria] end
 end
 
 class Util < Hash

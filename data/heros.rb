@@ -341,7 +341,7 @@ def heros
       :id           => 14,
       :name         => "Lindele",
       :personaje    => "derviche",
-      :jugador      => "cristina",
+      :jugador      => "Cristina",
       :gender       => "female",
       :nivel        => 6,
       :cuerpo       => 8,
