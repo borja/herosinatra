@@ -301,6 +301,21 @@ def enchants
       :descripcion  => "1/reto : permite controlar 1d6 bestias.",
       :tipo         => "natura",
     },
+    { :id           => 61,
+      :name         => "del Alba",
+      :descripcion  => "Lanzar un hechizo no-dañino: Todas las miniaturas (V) recuperan 1PM.",
+      :tipo         => "luz",
+    },
+    { :id           => 62,
+      :name         => "cegadora",
+      :descripcion  => "Exceso: Obtienes un ataque extra de fuerza +1, por cada PM excedido durante el alba.",
+      :tipo         => "luz",
+    },
+    { :id           => 63,
+      :name         => "armonizada",
+      :descripcion  => "Reto completado: los encantamientos tienen efecto. Desaparecerán al pronunciar los 3 miedos del portador.",
+      :tipo         => "arcano",
+    }
   ]
 end
 
