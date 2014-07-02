@@ -83,4 +83,9 @@ class App < Sinatra::Base
   get '/:view' do |view|
     erb :"#{view}"
   end
+  
+  get '/cool/:id' do |hero|
+    @heroe = heros[hero.to_i]
+    erb :'cool'
+  end
 end

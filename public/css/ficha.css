@@ -1,0 +1,130 @@
+.fichalista {
+    width: 85%;
+    height: 500px;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+	
+	border : 12px ;
+	border-left : none;
+	border-right : none;
+	text-align : center;
+	
+	color: #CBCBCB;
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	background-color: #222;
+	padding: .1em 1em 1em 1em;
+	
+}.fichalista div {
+	display : inline-block;
+	border-left : 2px dotted #ccc;
+	vertical-align : middle;
+	line-height : 100px;
+}
+
+.description { 
+	float: left;
+	width: 20%;  
+	height:100px;
+}
+.bodymenu { 
+	float: right;
+	width: 20%;
+	height:100px; 
+	border-right: 2px dotted #ccc;
+}
+.mainbody { 
+	display: inline-block;
+	width: 56%; 
+	height:100px;
+}
+
+#portraitbig {
+	padding: 10px 10px;
+	weight: 306px;
+	height: 482px;
+}
+
+#fstats, #fresistencias, #fscrolls,
+#fmagias, #fhabilidades, #ftesoros {
+	padding: 10px 10px;
+	weight: 306px;
+	height: 482px;
+	display: none;
+}
+
+#combat {
+	padding: 2px;
+	weight: 100px;
+	height: 100px;
+	border: solid 10px transparent;
+}
+#combat:hover {
+    border-color: yellow;
+}
+
+#habilidades {
+	padding: 2px;
+	weight: 100px;
+	height: 100px;
+	border: solid 10px transparent;
+}
+#habilidades:hover {
+    border-color: blue;
+}
+
+#resistencias {
+	padding: 2px;
+	weight: 100px;
+	height: 100px;
+	border: solid 10px transparent;
+}
+#resistencias:hover {
+    border-color: silver;
+}
+
+#tesoros {
+	padding: 2px;
+	weight: 100px;
+	height: 100px;
+	border: solid 10px transparent;
+}
+#tesoros:hover {
+    border-color: purple;
+}
+
+#rostro {
+	padding: 2px;
+	weight: 100px;
+	height: 100px;
+	border: solid 10px transparent;
+}
+#rostro:hover {
+    border-color: white;
+}
+
+#hechizos {
+	padding: 2px;
+	weight: 100px;
+	height: 100px;
+	border: solid 10px transparent;
+}
+#hechizos:hover {
+    border-color: orange;
+}
+
+#scrolls {
+	padding: 2px;
+	weight: 100px;
+	height: 100px;
+	border: solid 10px transparent;
+}
+#scrolls:hover {
+    border-color: red;
+}
