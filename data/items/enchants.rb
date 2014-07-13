@@ -286,6 +286,11 @@ def enchants
       :descripcion  => "+2 PM.",
       :tipo         => "arcano",
     },
+    { :id           => 58,
+      :name         => "de escapista",
+      :descripcion  => "+2 a movimiento, al esprintar entra en niebla.",
+      :tipo         => "agua",
+    },  
   ]
 end
 
