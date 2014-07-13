@@ -97,6 +97,12 @@ def proteccions
       :powa         => 1,
       :ranuras      => 6,
     },
+    { :id           => 16,
+      :name         => "gorjal"
+      :categoria    => "metal"
+      :powa         => 1,
+      :ranuras      => 1,
+    },  
     
   ]
 end
