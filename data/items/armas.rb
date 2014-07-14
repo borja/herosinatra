@@ -79,7 +79,8 @@ def armas
       :categoria    => "filo",
       :ataque       => 4,
       :ranuras      => 3,
-      :diagonal     => true
+      :diagonal     => true,
+      :unico        => true,
     },
     { 
       :id           => 10,
@@ -143,7 +144,8 @@ def armas
       :categoria    => "filo",
       :ataque       => 4,
       :ranuras      => 4,
-      :diagonal     => true
+      :diagonal     => true,
+      :artefacto    => true,
     },
     { 
       :id           => 18,
@@ -175,7 +177,8 @@ def armas
       :categoria    => "bastón",
       :ataque       => 1,
       :ranuras      => 4,
-      :diagonal     => true
+      :diagonal     => true,
+      :legendario   => true,
     },
     { 
       :id           => 22,
@@ -183,7 +186,8 @@ def armas
       :categoria    => "bastón",
       :ataque       => 1,
       :ranuras      => 0,
-      :diagonal     => true
+      :diagonal     => true,
+      :artefacto    => true,
     },
     { 
       :id           => 23,
@@ -191,7 +195,8 @@ def armas
       :categoria    => "bastón",
       :ataque       => 2,
       :ranuras      => 4,
-      :diagonal     => true
+      :diagonal     => true,
+      :legendario   => true,
     }
   ]
 end

@@ -54,6 +54,7 @@ def miscelaneas
       :name => "dado magiorco",
       :max  => 1,
       :fits => "amuleto",
+      :artefacto => true,
     },
     {
       :id   => 9,
@@ -72,18 +73,21 @@ def miscelaneas
       :name => "anillo de los deseos",
       :max  => 1,
       :fits => "anillo",
+      :legendario => true,
     },
     {
       :id   => 12,
       :name => "saco garrapato",
       :max  => 1,
       :fits => "amuleto",
+      :artefacto => true,
     },
     {
       :id   => 13,
       :name => "talismán de melar",
       :max  => 1,
       :fits => "amuleto",
+      :legendario => true,
     },
     {
       :id   => 14,

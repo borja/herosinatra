@@ -128,6 +128,7 @@ def proteccions
       :defensa      => 1,
       :ranuras      => 6,
       :fits         => "cabeza",
+      :legendario   => true,
     },
   ]
 end
