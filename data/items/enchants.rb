@@ -1,6 +1,12 @@
 # encoding: UTF-8
 def enchants
   [
+    {
+      :id           => 0,
+      :name         => "de escapista",
+      :descripcion  => "+2 a movimiento, al esprintar entra en niebla.",
+      :tipo         => "agua",
+    },  
     { :id           => 1,
       :name         => "de suturación",
       :descripcion  => "Al atacar enemigos con mas PC que defensa, obtiene potencia +1.",
@@ -319,6 +325,4 @@ def enchants
   ]
 end
 
-def enchant(id)
-  enchants[id-1]
-end
+def enchant id ;  enchants[id] end

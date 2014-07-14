@@ -129,10 +129,8 @@ def proteccions
       :ranuras      => 6,
       :fits         => "cabeza",
       :legendario   => true,
-    },
+    }
   ]
 end
 
-def proteccion(id)
-  proteccions[id]
-end
+def proteccion id ;  proteccions[id] end

@@ -16,7 +16,7 @@ def falangistas
     {
       :id           => 2,
       :name         => "tortuga",
-      :description  => "por cada aliado que este a su lado cuerpo a cuerpo, tiene +1 potencia en la defensa",
+      :description  => "por cada aliado que este a su lado cuerpo a cuerpo, salvo delante de detras, tiene +1 potencia en la defensa",
       :type         => "Pasiva"
     },
     {
@@ -55,9 +55,20 @@ def falangistas
       :description  => "permite golpear a cualquier enemigo en 180º con escudos.",
       :type         => "pasiva"
     },
+    {
+      :id           => 9,
+      :name         => "provocar",
+      :descripcion  => "incita a un enemigo en concreto a atacarle",
+      :type         => "activa"
+    },
+    {
+      :id           => 10,
+      :name         => "bandeja",
+      :descripcion  => "porta sobre si a un aliado que adquiere su defensa",
+      :type         => "activa"
+    },  
+    
   ]
 end
 
-def falangista(id)
-  falangistas[id]
-end
+def falangista id ; falangistas[id] end
