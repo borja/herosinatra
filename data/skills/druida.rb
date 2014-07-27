@@ -134,31 +134,90 @@ def druidas
       :type         => "Única"
     },
     {
-      :id           => 5,
-      :name         => "bellotas mágicas",
-      :description  => "1PV: creas 1 bellota que cura 1 PC y 1 PM.",
+      :id           => 22,
+      :name         => "Druidismo",
+      :description  => "Un espíritu guardián puede ejecutar magias imbuidas por tí.",
+      :type         => "Declarativa"
+    },
+    {
+      :id           => 23,
+      :name         => "Bosque tranquilo",
+      :description  => "Al sanar con magia, si el objetivo recupera el total de sus puntos de cuerpo, obtienes un punto de sol.",
+      :type         => "Pasiva"
+    },
+    {
+      :id           => 24,
+      :name         => "Llanto del sauce",
+      :description  => "Si sufres daño durante la armadura del roble, en eclipse, recuperas la armadura del roble.",
+      :type         => "Reactiva"
+    },
+    {
+      :id           => 25,
+      :name         => "Karma",
+      :description  => "Recuperas 1 punto de (Fuerza de Taal, Ú) al recibir daño.",
+      :type         => "Pasiva"
+    },
+    {
+      :id           => 26,
+      :name         => "Oso Furioso",
+      :description  => "4PM: Invoca a un oso furioso.",
       :type         => "Activa"
     },
     {
-      :id           => 5,
-      :name         => "bellotas mágicas",
-      :description  => "1PV: creas 1 bellota que cura 1 PC y 1 PM.",
+      :id           => 27,
+      :name         => "Transmutación",
+      :description  => "A cambio de consumir 1 magia: Cambia el espíritu invocado por otro igual o inferior.",
       :type         => "Activa"
     },
     {
-      :id           => 5,
-      :name         => "bellotas mágicas",
-      :description  => "1PV: creas 1 bellota que cura 1 PC y 1 PM.",
+      :id           => 28,
+      :name         => "Espinas y Zarcillos",
+      :description  => "Iguala a tu eclipse la potencia defensiva/ofensiva  de tus espinas. Por cada punto de daño causado invoca un saprolín.",
       :type         => "Activa"
     },
     {
-      :id           => 5,
-      :name         => "bellotas mágicas",
-      :description  => "1PV: creas 1 bellota que cura 1 PC y 1 PM.",
+      :id           => 29,
+      :name         => "Espíritu ancestral",
+      :description  => "+1 Fuerza a todos los espíritus invocados.",
+      :type         => "Pasiva"
+    },
+    {
+      :id           => 30,
+      :name         => "Vergel",
+      :description  => "Las bellotas restauran tu puntuación de eclipse en PM y PC. Al consumir una bellota puedes en su lugar, recuperar vergel.",
+      :type         => "Única"
+    },
+    {
+      :id           => 31,
+      :name         => "Torsión de Gaia",
+      :description  => "(Torsión Espiritual, Ú): Aliado con dádiva de Gaia intercambia su posición con tu espíritu.",
       :type         => "Activa"
     },
-    
-    
+    {
+      :id           => 32,
+      :name         => "El Dragón Verde",
+      :description  => "A cambio de 5PV: Invoca a un dragón verde (mantenimiento/turno: 4PV).",
+      :type         => "Activa"
+    },
+    {
+      :id           => 33,
+      :name         => "Transformación Druídica",
+      :description  => "Puedes cambiar una habilidad de invocación de espíritu guardián, oso furioso o dragón para transformarte en él.",
+      :type         => "Activa"
+    },
+    {
+      :id           => 34,
+      :name         => "Sabiduría espiritual",
+      :description  => "Los espíritus invocados disponen de habilidades especiales: Araña (Incubar/Tela de araña y gran veneno); Oso (Desplazar/Aullar y Empujar); Búho (vista nocturna / Ojos de búho 5+ y huevo de oro); Lobo (Cargar/ Mordisco y manada); Elemental de agua (Fuente / Riada y escudo de agua); Dragón (mantenimiento de 3PV-turno / Estallido de saprolines).",
+      :type         => "Pasiva"
+    },
+    {
+      :id           => 35,
+      :name         => "Unión espiritual",
+      :description  => "El espíritu guardián puede ofrecer sus habilidades especiales al objetivo poseído por él, o al propio druida.",
+      :type         => "Activa"
+    },
+   
   ]
 end
 
