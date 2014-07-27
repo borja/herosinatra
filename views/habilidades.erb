@@ -22,7 +22,7 @@
 					<td>
 						<% h = send("clase_#{clase}")[i] %>
 						<a href="/habilidades/<%= h.gsub('señor de las bestias', 'beastlord') %>">
-						<%= h.capitalize %><br>
+						<%= h %><br>
 						<img src="../images/clases/<%= h %>.png" alt=<%= h %> /, id='icon4'></a>
 					</td>
 				<% end %>
