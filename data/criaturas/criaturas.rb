@@ -7,3 +7,7 @@ require './data/criaturas/nomuertos'
 require './data/criaturas/caos'
 require './data/criaturas/pielesverdes'
 require './data/criaturas/bestias'
+
+def criaturas
+  ["Bestias","Pieles Verdes","No-muertos","Dragones","Elementales","Caos"]
+end
