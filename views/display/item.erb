@@ -6,13 +6,15 @@
 		<center><h3>
 			<% if item.enchanted? %>
 				<%= item.name.capitalize %>
-				<%= enchant(item.enchants.first)[:name] %><br><br>
+				<%= enchant(item.enchants.first)[:name] %>
 			<% else %>
 				<%= item.name %>
-				<br><br>
 			<% end %>
+			<br><br>
+			
 			<img src=<%= item.img_path %> alt=<%= item.name %>, id='icon3' />
 		</h3></center>
+		
 		<h4>Características</h4>
 		<% if item.item == "proteccion" %>
 			<li>Protección: <i>+<%= item.defensa %> potencia.</i></li>
@@ -25,6 +27,7 @@
 			<br>
 			<%= erb :'display/item/engarces', :locals => {:item => item } %>
 		<% end %>
+		
 		<% if item.enchants %>	
 			<br>
 			<h4>Propiedades mágicas</h4>

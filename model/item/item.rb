@@ -21,6 +21,15 @@ class Item < Hash
     self.gemas.nil? && self.joyas.nil? && self.runas.nil? && self.ranuras.nil?
   end
   
+  def ranuras_libres
+    total = 0
+    total += self.ranuras if self.ranuras
+    total -= self.gemas.size if self.gemas
+    total -= self.runas.size if self.runas
+    total -= self.joyas.size if self.joyas
+    return total
+  end
+  
   def piedras
     p = []
     self.gemas.each do |g|

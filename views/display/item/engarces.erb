@@ -5,7 +5,31 @@
 			<h3>Tier de <%= "ola ke ase" %></h3>
 		<% end %>
 		<h3>Engarces</h3>
-			xxx
+			<% if item.gemas %>
+				<% item.gemas.each do |g| %>
+					<% gema = gema(g) %>
+					<% path = "'../images/treasures/gemas/#{gema.name}.png'" %>
+					<img src=<%= path %> alt=<%= gema.name %>, id='icon' />
+				<% end %>
+			<% end %>
+			<% if item.joyas %>
+				<% item.joyas.each do |j| %>
+					<% joya = joya(j) %>
+					<% path = "'../images/treasures/joyas/#{joya.name}.png'" %>
+					<img src=<%= path %> alt=<%= joya.name %>, id='icon' />
+				<% end %>
+			<% end %>
+			<% if item.runas %>
+				<% item.runas.each do |r| %>
+					<% runa = runa(r) %>
+					<% path = "'../images/treasures/runas/#{runa.name}.png'" %>
+					<img src=<%= path %> alt=<%= runa.name %>, id='icon' />
+				<% end %>
+			<% end %>
+			
+			<% item.ranuras_libres.times do %>
+				<%= erb :'display/ranura' %>
+			<% end %>
 	</td></tr>
 </tbody>
 </table>	
