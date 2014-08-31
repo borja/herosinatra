@@ -46,6 +46,4 @@ def hechiceros
   ]
 end
 
-def hechicero(id)
-  hechiceros[id]
-end
+def hechicero id ; hechiceros[id] end

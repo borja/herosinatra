@@ -20,7 +20,7 @@ def heros
                         Miscelanea.new({:id => 16, :enchants => [60] })],
       :proteccions  => [Proteccion.new({:id => 8})],
       :pergaminos   => [Pergamino.new({:id => 1, :spells   => [11] })],
-      :skills       => [1,2,3,4,5,6,7,8,9,10,11],
+      :skills       => [1,2,3,4,5,6],
       :hechizos     => [0,1,2,6,7,8,12,13,14,18,19,20,29,39],
     }),
     Hero.new({ 
