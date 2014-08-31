@@ -15,28 +15,34 @@ def hechiceros
     },
     {
       :id           => 2,
-      :name         => "risticismo",
-      :description  => "al recuperar con hechicería se recupera chistera mágica",
+      :name         => "Risticismo",
+      :description  => "Al recuperar con hechicería se recupera chistera mágica",
       :type         => "disparada",
     },
     {
       :id           => 3,
-      :name         => "diabolismo arcano",
+      :name         => "Diabolismo arcano",
       :description  => "al recuperar con hechicería el hechizo ejecutado se lanza con diablura.",
       :type         => "disparada",
     },
     {
       :id           => 4,
-      :name         => "magia intrépida",
+      :name         => "Magia intrépida",
       :description  => "Enchisterar es una acción gratuita.",
       :type         => "pasiva",
     },
     {
       :id           => 5,
-      :name         => "escudo de maná",
+      :name         => "Escudo de Maná",
       :description  => "la próxima fuente de daño dañará la mente, en lugar del cuerpo. Añade un dado azul de defensa.",
       :type         => "reactiva",
-    }
+    },
+    {
+      :id           => 6,
+      :name         => "Recuperar II",
+      :description  => "la próxima fuente de daño dañará la mente, en lugar del cuerpo. Añade un dado azul de defensa.",
+      :type         => "reactiva",
+    },
   ]
 end
 
