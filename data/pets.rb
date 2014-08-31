@@ -159,6 +159,4 @@ def pets
   ]
 end
 
-def pet(id)
-  pets[id]
-end
+def pet id ; pets[id] end

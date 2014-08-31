@@ -67,6 +67,7 @@ def heros
       :mente        => 11,
       :mov          => 10,
       :pet          => Pet.new({:id  => 11, :name => "Basidio"}),
+      :montura      => Montura.new({:id => 1}),
       :hechizos     => [1,2,3,4,5,6,7,8,9,10,11,12,16,17,18,19,20,21,22,23],
       :armas        => [Arma.new({      :id => 9,  :gemas    => [25,17,26], :enchants => [18,1,2,3,4,17]}),
                         Arma.new({      :id => 23, :joyas    => [14,18,15], :enchants => [23,24]})],
