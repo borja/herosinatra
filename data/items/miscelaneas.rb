@@ -113,6 +113,12 @@ def miscelaneas
       :max  => 1,
       :fits => "broche", 
     },
+    {
+      :id   => 18,
+      :name => "lámpara",  
+      :max  => 3,
+      :fits => "amuleto", 
+    },
   ]
 end
 
