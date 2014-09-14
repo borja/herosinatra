@@ -871,6 +871,7 @@ def heros
       :mov          => 7,
       :armas        => [Arma.new({:id => 8})],
       :armadura     => Armadura.new({:id => 1}),
+      :miscelaneas  => [Miscelanea.new({:id => 2 })],
       :spells       => [1,2,3,4,5,6,7,8,9,10,11,12]
     })
   ]
