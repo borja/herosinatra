@@ -327,6 +327,21 @@ def enchants
       :descripcion  => "+2 vs aire.",
       :tipo         => "aire",
     },
+    { :id           => 65,
+      :name         => "maestra aérea",
+      :descripcion  => "+1 maestría del aire.",
+      :tipo         => "aire",
+    },
+    { :id           => 66,
+      :name         => "genial",
+      :descripcion  => "invoca 2 genios 1/reto cada uno.",
+      :tipo         => "aire",
+    },
+    { :id           => 67,
+      :name         => "iluminadora",
+      :descripcion  => "ilumina.",
+      :tipo         => "luz",
+    },
   ]
 end
 
