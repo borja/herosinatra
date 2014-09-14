@@ -106,7 +106,13 @@ def miscelaneas
       :name => "silbato",
       :max  => 2,
       :fits => "amuleto",
-    }
+    },
+    {
+      :id   => 17,
+      :name => "pluma",  
+      :max  => 1,
+      :fits => "broche", 
+    },
   ]
 end
 
