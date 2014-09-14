@@ -321,7 +321,12 @@ def enchants
       :name         => "armonizada",
       :descripcion  => "Reto completado: los encantamientos tienen efecto. Desaparecerán al pronunciar los 3 miedos del portador.",
       :tipo         => "arcano",
-    }
+    },
+    { :id           => 64,
+      :name         => "ligera",
+      :descripcion  => "+2 vs aire.",
+      :tipo         => "aire",
+    },
   ]
 end
 
