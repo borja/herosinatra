@@ -4,13 +4,13 @@ def vengadors
     {
       :id           => 0,
       :name         => "venganza",
-      :description  => "Al recibir 1 herida, recibe 1 punto de sombra",
+      :description  => "Al recibir 1 herida, recibe 1 punto de sombra (PS)",
       :type         => "reactiva"
     },
     {
       :id           => 1,
       :name         => "secuestrar sombra",
-      :description  => "El tiefling se convierte en la sombra de su enemigo permitiendo un ataque a distancia. Si consigue matar al enemigo, se teletransporta a su lugar. Gasta 1PS.",
+      :description  => "A cambio de 1 PS el tiefling se convierte en la sombra de su enemigo permitiendo un ataque a distancia. Si consigue matar al enemigo, se teletransporta a su lugar.",
       :type         => "Activa"
     },
     {
@@ -30,6 +30,12 @@ def vengadors
       :name         => "juramento sombrío",
       :description  => "Un aliado hace un pacto con el tiefling, recibiendo Agravio cada vez que un enemigo le haga daño al aliado.",
       :type         => "pasiva"
+    },
+    {
+      :id           => 5,
+      :name         => "ataque sombrío",
+      :description  => "A cambio de 1 PS, al atacar, los dados de combate son dados negros.",
+      :type         => "activa"
     },
   ]
 end
