@@ -53,7 +53,7 @@ def heros
                         Miscelanea.new({:id => 6,  :enchants => [37]})],
       :profesion    => Profesion.new({:id => 0,  :aprendiz => [1,2]}),                 
       :skills       => [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
-      :hechizos     => [14],
+      :sombras      => [4],
     }),
     Hero.new({ 
       :id           => 2,
@@ -62,10 +62,10 @@ def heros
       :jugador      => "Iris",
       :status       => "activo",
       :repu         => 8,
-      :nivel        => 15,
-      :cuerpo       => 13,
+      :nivel        => 17,
+      :cuerpo       => 14,
       :mente        => 11,
-      :mov          => 10,
+      :mov          => 11,
       :pet          => Pet.new({:id  => 11, :name => "Basidio"}),
       :montura      => Montura.new({:id => 1}),
       :hechizos     => [1,2,3,4,5,6,7,8,9,10,11,12,16,17,18,19,20,21,22,23],
@@ -858,6 +858,20 @@ def heros
       :armas        => [Arma.new({:id => 2})],
       :armadura     => Armadura.new({:id => 2}),
       :proteccions  => [Proteccion.new({:id => 0})],
+    }),
+    Hero.new({ 
+      :id           => 43,
+      :name         => "Ylaidyl",
+      :personaje    => "hechicero",
+      :jugador      => "Eva",
+      :gender       => "female",
+      :nivel        => 1,
+      :cuerpo       => 4,
+      :mente        => 6,
+      :mov          => 7,
+      :armas        => [Arma.new({:id => 8})],
+      :armadura     => Armadura.new({:id => 1}),
+      :spells       => [1,2,3,4,5,6,7,8,9,10,11,12]
     })
   ]
 end

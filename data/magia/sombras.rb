@@ -39,6 +39,4 @@ def sombras
   ]
 end
 
-def sombra(id)
-  sombras[id]
-end
+def sombra id ; sombras[id] end

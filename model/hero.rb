@@ -6,7 +6,7 @@ class Hero < Hash
     :name, :personaje, :jugador, :status, :muerto, :gender,
     :repu, :nivel, :cuerpo, :mente, :mov,        
     :pet,:montura,        
-    :hechizos, :skills,   
+    :hechizos, :sombras, :sangres, :skills,   
     :armas, :armadura, :proteccions, :miscelaneas,           
     :profesion,  
     :piezas, :pociones, :pergaminos,
@@ -108,6 +108,16 @@ class Hero < Hash
         m << spell(id)
       end
     end
+    if self.sombras
+      self.sombras.each do |id|
+        m << sombra(id)
+      end
+    end
+    if self.sangres
+      self.sangres.each do |id|
+        m << sangre(id)
+      end
+    end
     return m
   end
   
@@ -122,7 +132,8 @@ class Hero < Hash
   def human?        ; ['clérigo', 'ladrón', 'bárbaro', 'mago'].include?(self.clase) end  
   def raza          ; self.human? ? 'humano' : self.clase end
   def female?       ; self.sex == 'female' end
-  def male?         ; self.sex == 'male' end  
+  def male?         ; self.sex == 'male' end
+  def muggle?       ; self.magias.empty? end
   def desprotegido? ; self.protecciones.nil? end
   def pobre?        ; self.miscelaneas.nil? end
   def desprovisto?  ; self.pergaminos.nil? && self.pociones.nil? && self.piezas.nil?     end
