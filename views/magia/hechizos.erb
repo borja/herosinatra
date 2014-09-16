@@ -11,6 +11,8 @@
 		<th>Descripción</th>
 		<% if @spelllevel == 1 %>
 			<th>Diablura</th>
+			<th>Ardid</th>
+			<th>Maestría</th>
 		<% end %>
 		<th>Potencia</th>
 	</thead>
@@ -27,6 +29,8 @@
 					<td><%= magic.efecto %></td>
 					<% if @spelllevel == 1 %>
 						<td><%= magic.diablura %></td>
+						<td><%= magic.ardid %></td>
+						<td><%= magic.maestría %></td>
 					<% end %>	
 					<td><%= magic.potencia %></td>			
 				</tr>
