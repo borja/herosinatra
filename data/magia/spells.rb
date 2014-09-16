@@ -15,6 +15,8 @@ def spells
       :efecto       => "Causa 2 dados de ataque por fuego.",
       :diablura     => "Dados de ataque negros.",
       :potencia     => "+1 dado de ataque.",
+      :maestría     => "+1 efecto de área.",
+      :ardid        => "Miniaturas colindantes a las víctimas sufren Fuego de Ira.",
     }),
     Elemental.new({ 
       :id           => 1,
@@ -22,6 +24,8 @@ def spells
       :efecto       => "Causa 1 dado de ataque directo a un enemigo del tablero.",
       :diablura     => "Se recupera si falla.",
       :potencia     => "+1 Fuerza de ataque",
+      :maestría     => "+1 objetivo de efecto",
+      :ardid        => "Si el objetivo está en línea de visión el daño es físico y mental.",      
     }),
     Elemental.new({ 
       :id           => 2,
@@ -29,6 +33,8 @@ def spells
       :efecto       => "+1 ataque de un aliado.",
       :diablura     => "Resistencia al miedo 2+",
       :potencia     => "+1 dado de bonificador.",
+      :maestría     => "+1 objetivo aliado",
+      :ardid        => "Si se lanza como aura, los dados de ataque son negros.",
     }),
     Elemental.new({ 
       :id           => 3,
@@ -36,6 +42,8 @@ def spells
       :efecto       => "El objetivo queda envuelto en llamas.",
       :diablura     => "El objetivo pierde su resistencia al fuego.",
       :potencia     => "+1 penetración mágica.",
+      :maestría     => "+1 dado de fuego",
+      :ardid        => "Duplica el daño de efectos de fuego sobre el objetivo.",
     }),
     Elemental.new({ 
       :id           => 4,
@@ -43,6 +51,8 @@ def spells
       :efecto       => "El arma objetivo añade un dado de fuego al atacar.",
       :diablura     => "El arma puede quemar puertas.",
       :potencia     => "+1 dado de fuego al atacar.",
+      :maestría     => "+1 fuerza en daños ígneos",
+      :ardid        => "Las calaveras en los dados de fuego, recuperan este hechizo.",
     }),
     Elemental.new({ 
       :id           => 5,
@@ -50,6 +60,8 @@ def spells
       :efecto       => "La casilla frontal recibe un daño de 3 dados de combate.",
       :diablura     => "El lanzador causa miedo dracónico 6+ durante el efecto.",
       :potencia     => "+1 dado de daño.",
+      :maestría     => "+1 área de efecto (cono)",
+      :ardid        => "Si no ha habido víctimas por el efecto, persiste un turno extra.",
     }),
     # Aire, nivel 1
     Elemental.new({ 
@@ -57,7 +69,9 @@ def spells
       :name         => "genio",
       :efecto       => "Causa 4 dados de ataque por aire, o abre una puerta revelando la sala.",
       :diablura     => "Si el genio mata, tu siguiente magia será diablura.",
-      :potencia     => "+1 potencia de combate del genio",
+      :potencia     => "+1 potencia de ataque del genio",
+      :maestría     => "+1 turno de invocación.",
+      :ardid        => "Al utilizarse para abrir puertas, se recupera con X+ (X son los enemigos tras la puerta)",
     }),
     Elemental.new({ 
       :id           => 7,
@@ -65,6 +79,8 @@ def spells
       :efecto       => "Aturde a un enemigo un turno.",
       :diablura     => "Cada turno que dure el efecto causa un dado de daño eléctrico.",
       :potencia     => "+1 turno aturdido",
+      :maestría     => "+1 objetivo (debe ser colindante)",
+      :ardid        => "Cada turno que dure el efecto causa un dado de daño eléctrico a los adyacentes.",
     }),
     Elemental.new({ 
       :id           => 8,
@@ -72,6 +88,8 @@ def spells
       :efecto       => "+5 puntos de movimiento.",
       :diablura     => "Además el objetivo podrá volar.",
       :potencia     => "+2 puntos de movimiento",
+      :maestría     => "+1 turno de efecto.",
+      :ardid        => "Si el movimiento es linear, las miniaturas adyacentes son empujadas perpendicularmente 1 casilla.",
     }),
     Elemental.new({ 
       :id           => 9,
@@ -79,6 +97,8 @@ def spells
       :efecto       => "Un objetivo entra un turno en locura",
       :diablura     => "Todos los aliados recuperan 1PM.",
       :potencia     => "El lanzador puede sumar/restar 1 a la tirada de locura.",
+      :maestría     => "+1 objetivo.",
+      :ardid        => "Si el resultado de la locura es 7, puedes elegir que la víctima ejecute flauta mágica, silbando.",
     }),
     Elemental.new({ 
       :id           => 10,
@@ -86,6 +106,8 @@ def spells
       :efecto       => "+3 movimiento de todos los aliados",
       :diablura     => "En su lugar puedes reducir en 3 el movimiento enemigo.",
       :potencia     => "+1 al modificador de movimiento",
+      :maestría     => "+1 turno de efecto.",
+      :ardid        => "Los aliados no pueden ser empujados.",
     }),
     Elemental.new({ 
       :id           => 11,
@@ -93,14 +115,18 @@ def spells
       :efecto       => "+2 de potencia al siguiente ataque de proyectil del objetivo.",
       :diablura     => "Añade además un dado eléctrico al ataque.",
       :potencia     => "+1 potencia extra",
+      :maestría     => "El efecto dura un ataque extra.",
+      :ardid        => "El disparo es aullante. (Retrocede 1 casilla por herida causada)",
     }),
     # Tierra, nivel 1
     Elemental.new({ 
       :id           => 12,
       :name         => "piel de piedra",
-      :efecto       => "+1 defensa.",
+      :efecto       => "+1 dado de defensa.",
       :diablura     => "Permite defender con un escudo negro por dado adicional.",
-      :potencia     => "+1 de defensa extra.",
+      :potencia     => "+1 dado de defensa extra.",
+      :maestría     => "+1 al número de veces necesario para que el efecto cese.",
+      :ardid        => "Los dados son azules.",
     }),
     Elemental.new({ 
       :id           => 13,
@@ -108,6 +134,8 @@ def spells
       :efecto       => "Permite atravesar muros.",
       :diablura     => "Permite atravesar enemigos también.",
       :potencia     => "+1 turno de duración",
+      :maestría     => "+1 objetivo",
+      :ardid        => "Los enemigos atravesados reciben un golpe imparable sin armas igual a la potencia.",
     }),
     Elemental.new({ 
       :id           => 14,
@@ -115,6 +143,8 @@ def spells
       :efecto       => "Restaura 4 PC.",
       :diablura     => "Permite curar PM en lugar de cuerpo.",
       :potencia     => "+1 PC extra",
+      :maestría     => "+1 objetivo",
+      :ardid        => "Se recupera con X+ (X es la sanación sobrante)",
     }),
     Elemental.new({ 
       :id           => 15,
@@ -122,6 +152,8 @@ def spells
       :efecto       => "Durante 1 turno, el objetivo es inmovilizado por dos grandes manos de piedra que surgen del suelo. Se puede resistir si obtiene menos de su movimiento con 2d6.",
       :diablura     => "Si falla la tirada recibe el exceso como daño defendible.",
       :potencia     => "+1 a la tirada del objetivo.",
+      :maestría     => "+1 turno",
+      :ardid        => "Si el objetivo obtiene el mismo número con ambos dados, la potencia de hechizos de piedra aumenta dicha cantidad contra él.",
     }),
     Elemental.new({ 
       :id           => 16,
@@ -129,6 +161,8 @@ def spells
       :efecto       => "El objetivo amistoso queda convertido en un obelisco (no podrá combatir ni moverse) cuya defensa es igual a la mente del conjurador.",
       :diablura     => "Obelisco puede ser lanzado como maldición.",
       :potencia     => "El lanzador puede incrementar en 1 la potencia defensiva del objetivo.",
+      :maestría     => "+1 muro de piedra alrededor del objetivo durante el efecto.",
+      :ardid        => "5+: Los hechizos dirigidos contra el objetivo pueden ser redireccionados por el lanzador.",
     }),
     Elemental.new({ 
       :id           => 17,
@@ -136,6 +170,8 @@ def spells
       :efecto       => "El objetivo restaura 1PC por turno.",
       :diablura     => "- 1 al empuje de los enemigos sobre el objetivo.",
       :potencia     => "+1 turno de duración",
+      :maestría     => "+ 1PC por turno",
+      :ardid        => "Cuando el objetivo restaura su último PC, obtiene Piel de Piedra (del lanzador).",
     }),
     # Agua, nivel 1 
     Elemental.new({ 
@@ -143,7 +179,9 @@ def spells
       :name         => "niebla",
       :efecto       => "Permite moverse sin ser visto.",
       :diablura     => "Los enemigos colindantes reciben un ataque de frío", 
-      :potencia     => "+1 turno de duración",       
+      :potencia     => "+1 turno de duración",     
+      :maestría     => "+1 objetivo (colindante)",
+      :ardid        => "El objetivo obtiene +2 vs Magia, Veneno y Peste.",  
     }),
     Elemental.new({ 
       :id           => 19,
@@ -151,6 +189,8 @@ def spells
       :efecto       => "Restaura 4 PC.",
       :diablura     => "La sanación se puede repartir entre objetivos",
       :potencia     => "+1 PC",
+      :maestría     => "+ turno extra de efecto.",
+      :ardid        => "Durante el efecto el objetivo es inmune a veneno y peste.",
     }),
     Elemental.new({ 
       :id           => 20,
@@ -158,13 +198,17 @@ def spells
       :efecto       => "Duerme al objetivo.",
       :diablura     => "El objetivo queda envenenado. (No despertará por este daño)",
       :potencia     => "+1 a la tirada del objetivo para despertarse.",
+      :maestría     => "+1 objetivo",
+      :ardid        => "En caso de despertar, el objetivo despertará en locura.",
     }),
     Elemental.new({ 
       :id           => 21,
       :name         => "choque de agua",
       :efecto       => "Un golpe de agua proyecta 2 casillas hacia atrás a un enemigo.",
       :diablura     => "El objetivo queda desarmado.",
-      :potencia     => "+1 casilla",      
+      :potencia     => "+1 casilla",   
+      :maestría     => "+1 dado de daño sin armas (no defendible)",
+      :ardid        => "El objetivo puede ser proyectado diagonalmente.",   
     }),
     Elemental.new({ 
       :id           => 22,
@@ -172,6 +216,8 @@ def spells
       :efecto       => "Una daga de hielo mágico que puede ser empleada como arma de empuñadura. Tirada un dado de hielo cuya potencia es el nivel del hechicero.",
       :diablura     => "Se puede lanzar como una daga, y recuperar con 1 PM.",
       :potencia     => "+1 dado de hielo.",
+      :maestría     => "+1 fuerza de la daga",
+      :ardid        => "Matar con la daga recupera una magia de agua aleatoria.",
     }),
     Elemental.new({ 
       :id           => 23,
@@ -179,6 +225,8 @@ def spells
       :efecto       => "Todos aliados del lanzador recuperan a su elección un punto de cuerpo ó mente.",
       :diablura     => "Todos los aliados recuperan ambos puntos.",
       :potencia     => "+1 punto del mismo tipo escogido.",
+      :maestría     => "+1 turno de efecto.",
+      :ardid        => "Todos los aliados eliminan venenos, peste y enfermedades.",
     }),
     # Fuego, nivel 2
     Elemental.new({ 
