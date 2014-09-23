@@ -73,6 +73,66 @@ def arqueros
       :description  => "Renuncia a su ataque para ganar el doble de potencia en su siguiente disparo",
       :type         => "Activa"
     },
+    {
+      :id           => 13,
+      :name         => "tiro certero",
+      :description  => "Por describir",
+      :type         => "Activa"
+    },
+    {
+      :id           => 14,
+      :name         => "arcanismo",
+      :description  => "Si fallas, recuperas",
+      :type         => "Activa"
+    },
+    {
+      :id           => 15,
+      :name         => "temple",
+      :description  => "Ganas puntos de sosiego (PS) al matar",
+      :type         => "Activa"
+    },
+    {
+      :id           => 16,
+      :name         => "salvavidas",
+      :description  => "Ganas PS al matar si hay un aliado a melé",
+      :type         => "Activa"
+    },
+    {
+      :id           => 17,
+      :name         => "tiro desesperado",
+      :description  => "Gastar X PS otorga X armadura",
+      :type         => "Activa"
+    },
+    {
+      :id           => 18,
+      :name         => "enfocar",
+      :description  => "Ganas puntos de enfoque (PE) al renunciar al movimiento cuando hay enemigos en línea de visión.",
+      :type         => "Activa"
+    },
+    {
+      :id           => 19,
+      :name         => "tiro al corazón",
+      :description  => "A cambio de 1 PE ganas +1 a la fuerza por cada PS que tengas.",
+      :type         => "Activa"
+    },
+    {
+      :id           => 20,
+      :name         => "retroceso",
+      :description  => "Por cada exceso de daño al matar un enemigo, puede golpear hacia atrás.",
+      :type         => "Activa"
+    },
+    {
+      :id           => 21,
+      :name         => "retroceder",
+      :description  => "Recuperas retroceso al esquivar.",
+      :type         => "Activa"
+    },
+    {
+      :id           => 22,
+      :name         => "quemarropa",
+      :description  => "Ganas 1 PE al matar a melé.",
+      :type         => "Activa"
+    },
   ]
 end
 
