@@ -37,6 +37,30 @@ def ingenieros
       :description  => "El exceso de daño que no se pueda parar un enemigo, le atravesará, yendo el disparo hacia otro enemigo que esté adyacente.",
       :type         => "pasiva"
     },
+    {
+      :id           => 6,
+      :name         => "éter",
+      :description  => "Por describir.",
+      :type         => "activa"
+    },
+    {
+      :id           => 7,
+      :name         => "cachivache",
+      :description  => "A cambio de 3 piezas de éter creas un cachivache que puede hacer las siguientes funciones: autodestrucción, +1 a buscar si se coloca en el casco,  permite disparo oblicuo si se coloca en la mirilla.",
+      :type         => "pasiva"
+    },
+    {
+      :id           => 8,
+      :name         => "diógenes",
+      :description  => "Si tienes éxito, no gastas piezas.",
+      :type         => "pasiva"
+    },
+    {
+      :id           => 9,
+      :name         => "disparo doble",
+      :description  => "Permite disparar 2 veces.",
+      :type         => "pasiva"
+    },
   ]
 end
 
