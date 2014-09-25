@@ -25,21 +25,6 @@ class Hero < Hash
     end
   end
   
-  def potis # this must be refactored!
-    potis = []
-    self.pociones.each do |p|
-      potis << Pocion.new(p)
-    end
-    potis
-  end
-  
-  def tesoros
-    self.gemas.each do |gem|
-      puts gema(gem)
-    end
-    return 4
-  end
-  
   def cuerpo_base
     case self.clase
       when 'mago'     then return 4
@@ -70,6 +55,21 @@ class Hero < Hash
     end
   end
   
+  def genderize
+    if self.gender == "female" 
+      case self.clase
+        when "elfo"     then return "elfa"
+        when "mago"     then return "maga"
+        when "bárbaro"  then return "bárbara"
+        when "clérigo"  then return "clériga"
+        when "ladrón"   then return "ladrona"
+        when "tiefling" then return "tiefling-female"
+        else return self.clase
+      end
+    else return self.clase
+    end
+  end
+  
   def clase
     case
       when    clase_enano.include?(self.personaje) then return 'enano'
@@ -83,24 +83,7 @@ class Hero < Hash
     end
   end
   
-  def habilidades # TODO: Mejorar este código.
-    habilidades = []
-    self.skills.each do |id|
-      habilidades << Habilidad.new(send(self.personaje.gsub('señor de las bestias', 'beastlord'), id ))
-    end
-    return habilidades
-  end
-  
-  def cacharros
-    c = []
-      if self.piezas
-        self.piezas.each do |p|
-          c << Pieza.new(:id => p)
-        end
-      end
-    return c
-  end
-  
+  # TODO: Refactor this code
   def magias
     m = []
     if self.hechizos
@@ -120,15 +103,8 @@ class Hero < Hash
     end
     return m
   end
-  
-  def elementos
-    e = []
-    self.magias.each do |m|
-      e << m.elemento unless e.include?(m.elemento)
-    end 
-    return e
-  end
-  
+
+# Complex methods  
   def human?        ; ['clérigo', 'ladrón', 'bárbaro', 'mago'].include?(self.clase) end  
   def raza          ; self.human? ? 'humano' : self.clase end
   def female?       ; self.sex == 'female' end
@@ -145,36 +121,12 @@ class Hero < Hash
   def big_path      ; "'../images/portraits/#{ self.name     }.png'" end
   def reputacion    ; self.repu || 0 end
   def movimiento    ; self.mov       end
-    
-  def genderize
-    if self.gender == "female" 
-      case self.clase
-        when "elfo"     then return "elfa"
-        when "mago"     then return "maga"
-        when "bárbaro"  then return "bárbara"
-        when "clérigo"  then return "clériga"
-        when "ladrón"   then return "ladrona"
-        when "tiefling" then return "tiefling-female"
-        else return self.clase
-      end
-    else return self.clase
-    end
-  end
-  
-  def ataque
-   total = 0
-   self.armas.each do |a|
-     total += 1 # Salvo que sea un escudo
-   end
-   return total
-  end
-
-  def rango
-    total = 0
-    self.armas.each do |a|
-      total += 1 # Buscando arcos
-    end
-    return total
-  end
+  def elementos     ; self.magias.map{ |m| m.elemento }.uniq  end  
+  def ataque        ; self.armas.count * 2 end
+  def habilidades   ; self.skills.map { |id| Habilidad.new(send(self.personaje.gsub('señor de las bestias', 'beastlord'), id )) } end
+  def cacharros     ; self.piezas.map { |p| Pieza.new(:id => p) } end
+  def rango         ; 0 end  
+  def potis         ; self.pociones.map { |p|  Pocion.new(p) } end 
+  def tesoros       ; self.gemas.map { |id| gema(id) } end
   
 end
