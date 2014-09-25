@@ -2,18 +2,17 @@
 
 def resistencia(id)
   total = {
-    :fuego   => 0,
-    :aire    => 0,
-    :agua    => 0,
-    :tierra  => 0,
-    :luz     => 0,
-    :tenebro => 0,
-    :peste   => 0,
-    :natura  => 0,
+    :calor    => 0,
+    :psionico => 0,
+    :escarcha => 0,
+    :miedo    => 0,
+    :tenebro  => 0,
+    :peste    => 0,
+    :rayos    => 0,
   }
   return total
 end
 
 def resistencias
-  ["agua", "fuego", "aire", "tierra", "peste", "natura","tenebro", "luz"]
+  ["psionico", "calor", "escarcha", "miedo", "peste", "rayos","tenebro"]
 end
