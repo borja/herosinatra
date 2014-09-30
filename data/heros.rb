@@ -392,7 +392,7 @@ def heros
       :cuerpo       => 9,
       :mente        => 3,
       :mov          => 6,
-      :armas        => [Arma.new({:id => 7, :enchants => [9]}), 
+      :armas        => [Arma.new({:id => 7, :enchants => [9]})], 
       :skills       => [1,2,3,4,5,6],
     }),
     Hero.new({ 
