@@ -29,15 +29,48 @@ def runas
       :cabeza   => "+1 dado de defensa, potencia 3",
       :espada   => "Evenena, 2 escudos negros: dormir",
       :hacha    => "Eléctrica, 2 escudos negros: obtienes ráfaga.",
-      :daga     => "+2 de potencia en los ataques por la espalda"
+      :daga     => "+2 de potencia en los ataques por la espalda",
     } }),
-    Runa.new({ :id => 5,  :name => "yom"  , :fits => {} }),
-    Runa.new({ :id => 6,  :name => "sinq" , :fits => {} }),
-    Runa.new({ :id => 7,  :name => "rwon" , :fits => {} }),
-    Runa.new({ :id => 8,  :name => "phyth", :fits => {} }),
-    Runa.new({ :id => 9,  :name => "gor"  , :fits => {} }),
-    Runa.new({ :id => 10, :name => "un"   , :fits => {} }),
-    Runa.new({ :id => 11, :name => "gar"  , :fits => {} }),
+    Runa.new({ :id => 5,  :name => "yom"  , :fits => {
+      :casco    => "Durante la defensa vs hechizos añade +1d6 a la Mente.",
+      :arma     => "Eléctrica",
+      :capa     => "Se tiran dados morados al saltar fosos.",
+      :anillo   => "El fuego de Ira contra no-muertos dobla el daño",
+    } }),  
+    Runa.new({ :id => 6,  :name => "sinq" , :fits => {
+      :espada   => "Resistencia +3 vs magia tenebro.",
+      :hacha    => "+ 2 potencia vs Fimires y Momias.",
+      :anillo   => "Al matar un no-muerto con un hechizo, recupera 1PM",
+      :colgante	=> "Al matar un orco con un hechizo, recupera 1PC",
+    } }),  
+    Runa.new({ :id => 7,  :name => "rwon" , :fits => {
+      :hacha	  => "Regresa al ser arrojada y su daño es congeladora",
+      :cabeza  	=> "El daño por frío puede reducir mente en su lugar.",
+      :anillo	  => "Los hechizos tipo bola no colisionan en aliados",
+      :daga	    => "Al dañar por la espalda, la víctima entra en locura.",
+    } }),  
+    Runa.new({ :id => 8,  :name => "phyth", :fits => {
+      :armadura => "Los esqueletos reciben un daño al causar un daño.",
+      :lanza  	=> "Tira un dado verde adicional al atacar.",
+      :Arco     => "Al fallar un disparo, recupera un hechizo",
+    } }),
+    Runa.new({ :id => 9,  :name => "gor"  , :fits => {
+      :2 manos	=> "Puede usarse en una sola mano.",
+      :torso    => "Recibir daño, aumenta +1 potencia defensiva 1 turno.",
+      :Escudo	  => "Tira un dado azul extra de defensa.",
+      :ballesta	=> "Eléctrica",
+    } }),
+    Runa.new({ :id => 10, :name => "un"   , :fits => {
+      :daga     => "+ 1 potencia",
+      :espada	  => "+ 1 dado verde de ataque",
+      :cinturón	=> "+ 2 al número de pociones y pergaminos portables.",
+      :capa	    => "1 vez / foso: Saltar satisfactoriamente recupera 1PC.",
+    } }),  
+    Runa.new({ :id => 11, :name => "gar"  , :fits => {
+      :anillo 	=> "Duplica el oro de las tiradas de tesoro",
+      :botas	  => "+ 1 movimiento",
+      :colgante	=> "Correr: Suma 1d6 extra al movimiento.",
+    } }),  
   ]
 end
 
