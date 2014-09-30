@@ -3,9 +3,9 @@ def beastlords
   [
     {
       :id           => 0,
-      :name         => "sin armas",
-      :description  => "Por describir.",
-      :type         => "Pasiva"
+      :name         => "Furia",
+      :description  => "Un punto de mente: +1 ataque.",
+      :type         => "Activa"
     },
     {
       :id           => 1,
