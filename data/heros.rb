@@ -432,6 +432,7 @@ def heros
       :armadura     => Armadura.new({:id => 2}),
       :proteccions  => [Proteccion.new({:id => 2}), 
                         Proteccion.new({:id => 8, :ranuras => 4})],
+      :skills       => [0],
     }),    
     Hero.new({ 
       :id           => 19,
