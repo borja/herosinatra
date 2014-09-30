@@ -23,7 +23,7 @@ def runas
       :arma     => "+1 dado de potencia 2",
       :colgante => "+1 resistencia mágica general",
       :anillo   => "Inmune al hechizo tempestad",
-      :baston   => "+1 magia aleatoria de aire, nivel 2"
+      :bastón   => "+1 magia aleatoria de aire, nivel 2"
     } }),
     Runa.new({ :id => 4,  :name => "bek"  , :fits => {
       :cabeza   => "+1 dado de defensa, potencia 3",
@@ -32,7 +32,7 @@ def runas
       :daga     => "+2 de potencia en los ataques por la espalda",
     } }),
     Runa.new({ :id => 5,  :name => "yom"  , :fits => {
-      :casco    => "Durante la defensa vs hechizos añade +1d6 a la Mente.",
+      :cabeza   => "Durante la defensa vs hechizos añade +1d6 a la Mente.",
       :arma     => "Eléctrica",
       :capa     => "Se tiran dados morados al saltar fosos.",
       :anillo   => "El fuego de Ira contra no-muertos dobla el daño",
@@ -52,18 +52,18 @@ def runas
     Runa.new({ :id => 8,  :name => "phyth", :fits => {
       :armadura => "Los esqueletos reciben un daño al causar un daño.",
       :lanza  	=> "Tira un dado verde adicional al atacar.",
-      :Arco     => "Al fallar un disparo, recupera un hechizo",
+      :arco     => "Al fallar un disparo, recupera un hechizo",
     } }),
     Runa.new({ :id => 9,  :name => "gor"  , :fits => {
       :arma   	=> "Puede usarse en una sola mano.",
       :torso    => "Recibir daño, aumenta +1 potencia defensiva 1 turno.",
-      :Escudo	  => "Tira un dado azul extra de defensa.",
+      :escudo	  => "Tira un dado azul extra de defensa.",
       :ballesta	=> "Eléctrica",
     } }),
     Runa.new({ :id => 10, :name => "un"   , :fits => {
       :daga     => "+ 1 potencia",
       :espada	  => "+ 1 dado verde de ataque",
-      :cinturón	=> "+ 2 al número de pociones y pergaminos portables.",
+      :cintura	=> "+ 2 al número de pociones y pergaminos portables.",
       :capa	    => "1 vez / foso: Saltar satisfactoriamente recupera 1PC.",
     } }),  
     Runa.new({ :id => 11, :name => "gar"  , :fits => {
@@ -75,4 +75,4 @@ def runas
 end
 
 def runa id ; runas[id] end
-def runa_ranuras ; runas.map{|r| r.fits.keys}.flatten.uniq end
+def runa_ranuras ; runas.map{|r| r.fits.keys}.flatten.map{|word| word.downcase}.uniq end
