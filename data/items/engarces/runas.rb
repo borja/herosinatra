@@ -75,4 +75,4 @@ def runas
 end
 
 def runa id ; runas[id] end
-def runa_ranuras ; runas.map{|r| r.fits.keys}.flatten.map{|word| word.downcase}.uniq end
+def runa_ranuras ; runas.map{|r| r.fits.keys}.flatten.uniq end

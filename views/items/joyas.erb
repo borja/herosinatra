@@ -1,4 +1,4 @@
-<title>HeroSheet: Joyas</title>
+<title>Herosheet: Joyas</title>
 <%= erb :menu %><br>
 <h1>Lista de Joyas</h1>
 
@@ -6,18 +6,27 @@
 	<thead>
 		<tr>
 			<th>ID</th>
-			<th>Icono</th>
 			<th>Nombre</th>
-			<th>Bonificadores</th>
+			<% joya_ranuras.each do |ranura| %>
+				<th><%= ranura %></th>
+			<% end %>
 		</tr>	
 	</thead>
 	<tbody>
 		<% joyas.each do |j| %>
 			<tr>
 				<td><%= j.id %></td>
-				<td><img src=<%= j.img_path %> alt=<%= j.name %>, id='icon' /></td>
-				<td>Joya <%= j.name %></td>
-				<td><%= j.fits %>
+				<td><%= "Joya " + j.name %></td>
+				<% joya_ranuras.each do |ranura| %>
+					<% if j.fits[ranura.to_sym] %>
+						<td><%= erb :'display/display', :locals => { 
+								:title       => "Joya " + j.name, 
+								:path        => j.img_path,
+								:description => j.fits[ranura.to_sym] } %></td>
+					<% else %>
+						<td><%= "x" %></td>
+					<% end %>
+				<% end %>
 			</tr>
 		<% end %>
 	</tbody>
