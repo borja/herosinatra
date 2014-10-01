@@ -1,7 +1,14 @@
 # encoding: UTF-8
 def joyas
   [
-    Joya.new({ :id => 0,  :name => "del toro",           :fits => { } }),
+    Joya.new({ :id => 0,  :name => "del toro", :fits => {
+      :armadura => "armadura",
+      :cabeza   => "cabeza",
+      :arma     => "arma",
+      :anillo   => "anillo",
+      :colgante => "colgante",
+      :escudo   => "escudo",
+    } }),
     Joya.new({ :id => 1,  :name => "del caos",           :fits => { } }),
     Joya.new({ :id => 2,  :name => "multicolor",         :fits => { } }),
     Joya.new({ :id => 3,  :name => "simbionte",          :fits => { } }),
@@ -24,3 +31,4 @@ def joyas
 end
 
 def joya id ; joyas[id] end
+def joya_ranuras ; joyas.map{|r| r.fits.keys}.flatten.uniq end
