@@ -77,16 +77,16 @@ def joyas
     } }),
     Joya.new({ :id => 13, :name => "demonio en tarro",   :fits => { } }),
     Joya.new({ :id => 14, :name => "del verano",         :fits => {
-      :bastón   => "permite usar 3 magias del verano (si se usa 1, se desactivan las demás)",
+      :bastón   => "permite usar 3 magias del verano (si se usa 1, se desactivan las demás, salvo que sea gratuita)",
     } }),
     Joya.new({ :id => 15, :name => "del invierno",       :fits => {
-      :bastón   => "permite usar 3 magias del invierno (si se usa 1, se desactivan las demás)",
+      :bastón   => "permite usar 3 magias del invierno (si se usa 1, se desactivan las demás, salvo que sea gratuita)",
     } }),
     Joya.new({ :id => 16, :name => "del otoño",          :fits => {
-      :bastón   => "permite usar 3 magias del otoño (si se usa 1, se desactivan las demás)",
+      :bastón   => "permite usar 3 magias del otoño (si se usa 1, se desactivan las demás, salvo que sea gratuita)",
     } }),
     Joya.new({ :id => 17, :name => "de la primavera",    :fits => {
-      :bastón   => "permite usar 3 magias de la primavera (si se usa 1, se desactivan las demás)",
+      :bastón   => "permite usar 3 magias de la primavera (si se usa 1, se desactivan las demás, salvo que sea gratuita)",
     } }),
     Joya.new({ :id => 18, :name => "atrapasueños élfico",:fits => { } }),
   ]
