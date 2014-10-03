@@ -81,7 +81,7 @@ def druidas
     },
     {
       :id           => 13,
-      :name         => "Imbuir Arcano",
+      :name         => "Imbuir arcano",
       :description  => "1 magia: El espíritu guardián puede ejecutar la magia por 1 PV.",
       :type         => "Activa"
     },
