@@ -51,7 +51,7 @@ def druidas
     },
     {
       :id           => 8,
-      :name         => "Magia Elemental II",
+      :name         => "Magia elemental II",
       :description  => "+1 set de magia elemental.",
       :type         => "Pasiva"
     },
@@ -99,7 +99,7 @@ def druidas
     },
     {
       :id           => 16,
-      :name         => "Espíritu Guardián II",
+      :name         => "Espíritu guardián II",
       :description  => "A cambio de 3PM se invoca a elección: un lobo(rabia), una araña(luna), búho (magia), elemental de agua(sol).",
       :type         => "Activa"
     },
@@ -111,7 +111,7 @@ def druidas
     },
     {
       :id           => 18,
-      :name         => "Magia Elemental III",
+      :name         => "Magia elemental III",
       :description  => "+1 set de magia elemental.",
       :type         => "Pasiva"
     },
@@ -159,7 +159,7 @@ def druidas
     },
     {
       :id           => 26,
-      :name         => "Oso Furioso",
+      :name         => "Oso furioso",
       :description  => "4PM: Invoca a un oso furioso.",
       :type         => "Activa"
     },
@@ -195,13 +195,13 @@ def druidas
     },
     {
       :id           => 32,
-      :name         => "El Dragón Verde",
+      :name         => "El dragón verde",
       :description  => "A cambio de 5PV: Invoca a un dragón verde (mantenimiento/turno: 4PV).",
       :type         => "Activa"
     },
     {
       :id           => 33,
-      :name         => "Transformación Druídica",
+      :name         => "Transformación druídica",
       :description  => "Puedes cambiar una habilidad de invocación de espíritu guardián, oso furioso o dragón para transformarte en él.",
       :type         => "Activa"
     },
