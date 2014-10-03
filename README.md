@@ -3,7 +3,7 @@ Herosheet Dashboard
 
 [![Dependency Status](https://gemnasium.com/Borja/herosinatra.svg)](https://gemnasium.com/Borja/herosinatra)
 
-[![wercker status](https://app.wercker.com/status/4c38ae43c4609f479aedf505f70c6395/m "wercker status")](https://app.wercker.com/project/bykey/4c38ae43c4609f479aedf505f70c6395)
+[![wercker status](https://app.wercker.com/status/e2e287bac0b48ca35dfecc4461e8278d/m "wercker status")](https://app.wercker.com/project/bykey/e2e287bac0b48ca35dfecc4461e8278d)
 
 Running on OpenShift
 --------------------
