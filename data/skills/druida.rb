@@ -171,7 +171,7 @@ def druidas
     },
     {
       :id           => 28,
-      :name         => "Espinas y Zarcillos",
+      :name         => "Espinas y zarcillos",
       :description  => "Iguala a tu eclipse la potencia defensiva/ofensiva  de tus espinas. Por cada punto de daño causado invoca un saprolín.",
       :type         => "Activa"
     },
