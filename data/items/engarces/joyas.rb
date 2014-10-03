@@ -21,7 +21,7 @@ def joyas
     } }),
     Joya.new({ :id => 3,  :name => "simbionte",   :fits => {
       :hacha    => "(solo enano) +1 punto de cuerpo al matar",
-      :casco    => "+2 puntos de cuerpo",
+      :cabeza   => "+2 puntos de cuerpo",
       :espada   => "+1 furia al recibir daños el turno anterior.",
       :lanza    => "+ 1 punto de mente al matar.",
     } }),
@@ -29,7 +29,7 @@ def joyas
       :anillo   => "Los monstruos errantes pueden repetirse 1 vez",
       :colgante => "Las trampas de tesoro pueden repetirse 1 vez",
       :cabeza   => "Duplica el oro del tesoro",
-      :torso    => "Triplica el oro del tesoro",
+      :armadura => "Triplica el oro del tesoro",
     } }),
     Joya.new({ :id => 5,  :name => "amorfa",        :fits => {
       :bastón   => "+ 3 resistencia al rayo",
@@ -39,13 +39,13 @@ def joyas
     } }),
     Joya.new({ :id => 6,  :name => "antimagia",     :fits => {
       :todos    => "+1 resistencia vs magia",
-      :casco    => "4+ resistencia vs magia",
+      :cabeza   => "4+ resistencia vs magia",
       :arma     => "El objetivo queda silenciado si es dañado",
       :colgante => "1/reto: Puede repetir una tirada de defensa mágica",
     } }),
     Joya.new({ :id => 7,  :name => "del artesano",  :fits => {
       :hacha    => "+2 ranuras engarzables",
-      :casco    => "(salvo enano): +2 Desactivar trampas",
+      :cabeza   => "(salvo enano): +2 Desactivar trampas",
       :anillo   => "+2 ranuras engarzables",
       :colgante => "+1 ranura engarzable, que añadiría el efecto en anillo",
     } }),
