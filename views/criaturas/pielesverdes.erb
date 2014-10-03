@@ -1,35 +1,28 @@
-<title>Hero Sheet: Pieles Verdes</title>
-<body>
-	<%= erb :menu %>
-	<link rel="stylesheet" href="../../css/main.css" type="text/css" />
-	<link rel="stylesheet" href="../../app.css"      type="text/css" />	
-	<br>
-	<h1>Pieles Verdes</h1>
-	
-	<table id='table-2'>
-		<thead>
-			<tr><th>Icono</th>
-				<th>Nombre</th>
-				<th>Ataque</th>
-				<th>Defensa</th>
-				<th>Movimiento</th>
-				<th>Cuerpo</th>
-				<th>Mente</th>
-			</tr>	
-		</thead>
-		<tbody>
-			<tr><td>
-					<img>
-				</td>
-				<td>Orco</td>
-			</tr>
+<title>Hero Sheet: Piel Verdes</title>
+<%= erb :menu %>
+<br><h1>Piel Verdes</h1>
+
+<table id='table-2'>
+	<thead>
+		<tr><th>Icono</th>
+			<th>Nombre</th>
+			<th>Ataque</th>
+			<th>Defensa</th>
+			<th>Movimiento</th>
+			<th>Cuerpo</th>
+			<th>Mente</th>
+		</tr>	
+	</thead>
+	<tbody>
+		<% pielverdes.each do |pv| %>
 			<tr>
-				<td>
-					<img>
-				</td>
-				<td>Goblin</td>
+				<td><%= "X" %></td>
+				<% pv.keys.each do |att| %>
+					<% if att != :id %>
+						<td><%= pv[att] %></td>
+					<% end %>
+				<% end %>
 			</tr>
-		</tbody>
-	</table>
-	<br>
-</body>
+		<% end %>
+	</tbody>
+</table>
