@@ -8,8 +8,8 @@ def guardians
       :defensa          => 1,
       :movimiento       => 6,
       :nivel            => 1,
-      :especial         => 'Rabia: gana 1 PM al matar'
-      :unión            => 'Por describir'
+      :especial         => 'Rabia: gana 1 PM al matar',
+      :unión            => 'Por describir',
     },
     { :id               => 1,
       :nombre           => 'murciélago',
@@ -18,8 +18,8 @@ def guardians
       :defensa          => 1,
       :movimiento       => 6,
       :nivel            => 1,
-      :especial         => 'Volar, robo de vida: gana 1 PC al matar'
-      :unión            => 'Por describir'
+      :especial         => 'Volar, robo de vida: gana 1 PC al matar',
+      :unión            => 'Por describir',
     },
     { :id               => 2,
       :nombre           => 'araña',
@@ -28,7 +28,7 @@ def guardians
       :defensa          => 2,
       :movimiento       => 6,
       :nivel            => 1,
-      :especial         => 'Veneno y gana 1 Punto de Luna (PL) al matar'
+      :especial         => 'Veneno y gana 1 Punto de Luna (PL) al matar',
       :unión            => 'Por describir'
     },
     { :id               => 3,
@@ -38,8 +38,8 @@ def guardians
       :defensa          => 1,
       :movimiento       => 6,
       :nivel            => 1,
-      :especial         => 'Seta, no le empujan, explota (R:1) y gana 1 PV al matar'
-      :unión            => 'Por describir'
+      :especial         => 'Seta, no le empujan, explota (R:1) y gana 1 PV al matar',
+      :unión            => 'Por describir',
     },
     { :id               => 4,
       :nombre           => 'lobo',
@@ -48,8 +48,8 @@ def guardians
       :defensa          => 2,
       :movimiento       => 8,
       :nivel            => 2,
-      :especial         => 'Rabia II: gana 2 PM al matar'
-      :unión            => 'Por describir'
+      :especial         => 'Rabia II: gana 2 PM al matar',
+      :unión            => 'Por describir',
     },
     { :id               => 5,
       :nombre           => 'araña gigante',
@@ -58,8 +58,8 @@ def guardians
       :defensa          => 5,
       :movimiento       => 6,
       :nivel            => 2,
-      :especial         => 'Veneneno y gana 2 PL al matar'
-      :unión            => 'Por describir'
+      :especial         => 'Veneneno y gana 2 PL al matar',
+      :unión            => 'Por describir',
     },
     { :id               => 6,
       :nombre           => 'elemental de agua',
@@ -68,8 +68,8 @@ def guardians
       :defensa          => 5,
       :movimiento       => 6,
       :nivel            => 2,
-      :especial         => 'Ataca a todo su alrededor, gana 1 Punto de Sol(PS) al matar'
-      :unión            => 'Por describir'
+      :especial         => 'Ataca a todo su alrededor, gana 1 Punto de Sol(PS) al matar',
+      :unión            => 'Por describir',
     },
     { :id               => 7,
       :nombre           => 'búho',
@@ -78,8 +78,8 @@ def guardians
       :defensa          => 3,
       :movimiento       => 8,
       :nivel            => 2,
-      :especial         => 'Vuela, recupera 1 magia al matar'
-      :unión            => 'Por describir'
+      :especial         => 'Vuela, recupera 1 magia al matar',
+      :unión            => 'Por describir',
     },
     { :id               => 8,
       :nombre           => 'oso furioso',
@@ -88,8 +88,8 @@ def guardians
       :defensa          => 4,
       :movimiento       => 6,
       :nivel            => 3,
-      :especial         => 'Grande, rabia III: gana 3PM al matar'
-      :unión            => 'Por describir'
+      :especial         => 'Grande, rabia III: gana 3PM al matar',
+      :unión            => 'Por describir',
     },
     { :id               => 9,
       :nombre           => 'dragón verde',
@@ -98,9 +98,9 @@ def guardians
       :defensa          => 10,
       :movimiento       => 10,
       :nivel            => 4,
-      :especial         => 'Piel escamosa, resistencia antimagia, miedo leve, vuelo, magias, tamaño gigantesco, regenerar, raíces, esporas'
-      :unión            => 'Por describir'
-    },
+      :especial         => 'Piel escamosa, resistencia antimagia, miedo leve, vuelo, magias, tamaño gigantesco, regenerar, raíces, esporas',
+      :unión            => 'Por describir',
+    }
   ]
 end
 
