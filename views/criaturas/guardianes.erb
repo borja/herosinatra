@@ -19,7 +19,7 @@
 	<tbody>
 		<% guardians.each do |g| %>
 			<tr>
-				<td><%= "X" %></td>
+				<td><img src="../images/criaturas/guardianes/<%= g[:nombre] %>.png" alt='guardian' /, id='icon'></td>
 				<% g.keys.each do |att| %>
 					<% if att != :id %>
 						<td><%= g[att] %></td>
