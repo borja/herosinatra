@@ -92,7 +92,7 @@ def guardians
       :defensa          => 3,
       :movimiento       => 8,
       :nivel            => 2,
-      :especial         => 'Vuela, recupera 1 magia al matar',
+      :especial         => 'Vuela, recupera 1 magia al matar o 2 PV',
       :unión            => 'El poseído obtiene Ojos de búho, Vista nocturna y Huevo de Oro',
       :sabiduría        => 'Ojos de búho (recupera magias de sus compañeros con 5+)/ Vista nocturna (facilidad para ver seres ocultos, sombras, niebla) y Huevo de Oro (al morir, se convierte en un huevo de oro de 1PC)',
       :transformación   => 'El druida tiene el ataque, defensa y movimiento base del búho, además de todas sus habilidades especiales',
