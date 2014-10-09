@@ -37,4 +37,4 @@ def nomuertos
   ]
 end
 
-def nomuertos id ; nomuertos [id] end
+def nomuerto id ; nomuertos[id] end
