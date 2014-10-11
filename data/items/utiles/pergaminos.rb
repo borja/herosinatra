@@ -29,9 +29,11 @@ def pergaminos
       :name      => "arcano",
       :hechizos  => 1
     },
+    { :id        => 7,
+      :name      => "receta",
+      :hechizos  => 0
+    }
   ]
 end
 
-def pergamino(id)
-  pergaminos[id]
-end
+def pergamino id pergaminos[id] end
