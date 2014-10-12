@@ -3,15 +3,21 @@ def caminantes
   [
     {
       :id           => 0,
-      :name         => "recorrer la umbra",
-      :description  => "por definir",
-      :type         => "única"
+      :name         => "golpe sombrío",
+      :description  => "A cambio de 1 PS, realizas una trapera a un enemigo a melé",
+      :type         => "activa"
     },
     {
       :id           => 1,
       :name         => "sendero oscuro",
-      :description  => "por definir",
-      :type         => "pasiva"
+      :description  => "A cambio de 7 de movimiento, ganas 1 PS",
+      :type         => "activa"
+    },
+    {
+      :id           => 2,
+      :name         => "recorrer la umbra",
+      :description  => "Acambio de 1 PS, ganas +7 movimiento",
+      :type         => "activa"
     }
   ]
 end
