@@ -600,7 +600,7 @@ def heros
     Hero.new({ 
       :id           => 31,
       :name         => "Eleazar",
-      :personaje    => "vengador",
+      :personaje    => "caminante",
       :jugador      => "Celia",
       :nivel        => 2,
       :cuerpo       => 6,
