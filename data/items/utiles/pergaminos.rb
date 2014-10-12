@@ -36,4 +36,4 @@ def pergaminos
   ]
 end
 
-def pergamino id pergaminos[id] end
+def pergamino id;  pergaminos[id] end
