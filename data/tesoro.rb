@@ -4,16 +4,16 @@
 def dado_sigmar ; ['hammer','comet','plus','blank','eagle','eagle'][rand(6)] end
 def dado_tesoro ; rand(6) +1 end
 
-def tesoro(resultado,sigmar)
+def tesoro(sigmar, dado1, dado2)
   valores = ['pifia','vacia','vacia','comida','perg','oro',"monstruo",'pot','trampa', "caja",'cofre']
-  return send(valores[resultado-2],sigmar)
+  return send(valores[dado1+dado2-2],sigmar, dado1, dado2)
 end
 
 # Resultados según sigmar
-def pifia sigmar ; sigmar == 'eagle' ? 'pifia ligera' : 'pifia'         end
-def vacia sigmar ; sigmar == 'hammer' ? 'desconcentrado' : 'sala vacia' end
+def pifia sigmar, dado1, dado2 ; sigmar == 'eagle' ? 'pifia ligera' : 'pifia'         end
+def vacia sigmar, dado1, dado2 ; sigmar == 'hammer' ? 'desconcentrado' : 'sala vacia' end
 
-def comida(sigmar)
+def comida(sigmar, dado1, dado2)
   case sigmar
     when 'eagle'  then 'comida : asado'
     when 'plus'   then 'comida : manzanas'
@@ -33,7 +33,7 @@ def perg(sigmar, dado1, dado2)
   end
 end
 
-def oro(sigmar)
+def oro(sigmar, dado1, dado2)
   case sigmar
     when 'eagle'  then 'oro : 50'
     when 'plus'   then 'oro : 35'
@@ -43,7 +43,7 @@ def oro(sigmar)
   end
 end
 
-def monstruo(sigmar)
+def monstruo(sigmar, dado1, dado2)
   case sigmar
     when 'eagle'  then 'monstruo errante lento'
     when 'plus'   then 'monstruo errante rapido'
@@ -51,7 +51,7 @@ def monstruo(sigmar)
   end
 end
 
-def pot(sigmar)
+def pot(sigmar, dado1, dado2)
   case sigmar
     when 'eagle'  then "pocion de curacion"
     when 'plus'   then "pocion de resistencia"
@@ -61,7 +61,7 @@ def pot(sigmar)
   end
 end
 
-def trampa(sigmar)
+def trampa(sigmar, dado1, dado2)
   case sigmar
     when 'eagle'  then 'trampa de flecha'
     when 'plus'   then 'trampa de foso'
@@ -71,7 +71,7 @@ def trampa(sigmar)
   end
 end
 
-def caja(sigmar)
+def caja(sigmar, dado1, dado2)
   case sigmar
     when 'eagle'  then 'gema: ' + gema(rand(1..41)).name
     when 'plus'   then 'runa: ' + joya(rand(1..12)).name
@@ -81,7 +81,7 @@ def caja(sigmar)
   end
 end
 
-def cofre(sigmar)
+def cofre(sigmar, dado1, dado2)
   case sigmar
     when 'eagle'  then gema(rand(1..41)).nombre + " + " + gema(rand(1..41)).nombre
     when 'plus'   then joya(rand(1..14)).nombre + " + " + joya(rand(1..14)).nombre
