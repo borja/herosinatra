@@ -88,4 +88,11 @@ class App < Sinatra::Base
     @heroe = heros[hero.to_i]
     erb :'cool'
   end
+  
+  # Our cool pj-test
+  get '/test/:question' do |x|
+    @respuestas   = x
+    @num_pregunta = x.length
+    erb :'test/test'
+  end
 end
