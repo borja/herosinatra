@@ -6,7 +6,7 @@
 	<thead>
 		<tr>
 			<th>Tirada</th>
-			<th>Resultado</th>
+			<th colspan=2>Resultado</th>
 			<th>Calaveras</th>
 			<th>Defensas</th>
 			<th>Negros</th>
@@ -28,7 +28,9 @@
 					<img src=<%=img_path%> alt=<%= resultado %>, id='icon' />
 				<% end %>
 			</td>
-			
+			<td width="10%"><a href="/dado/4">
+				<img style="vertical-align:middle" src="/images/refresh.png" alt="reload", id='icon'/></a>
+			</td>
 			<td><%= calaveras %></td>
 			<td><%= defensas  %></td>
 			<td><%= negros    %></td>
