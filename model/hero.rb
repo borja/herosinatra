@@ -24,15 +24,7 @@ class Hero < Hash
   		((self.proteccions || []) + (self.miscelaneas || [])).detect { |item| item.fits == f }
     end
   end
-  
-  def potis # this must be refactored!
-    potis = []
-    self.pociones.each do |p|
-      potis << Pocion.new(p)
-    end
-    potis
-  end
-  
+    
   def tesoros
     self.gemas.each do |gem|
       puts gema(gem)
@@ -83,21 +75,11 @@ class Hero < Hash
     end
   end
   
-  def habilidades # TODO: Mejorar este código.
-    habilidades = []
-    self.skills.each do |id|
-      habilidades << Habilidad.new(send(self.personaje.gsub('señor de las bestias', 'beastlord'), id ))
-    end
-    return habilidades
-  end
+  def potis ; self.pociones.map { |pot| Pocion.new(p) }  end
   
-  def cacharros
-    self.piezas.map { |num| Pieza.new(:id => num) } if self.piezas
+  def habilidades
+    self.skills.map { |id| Habilidad.new(send(self.personaje.gsub('señor de las bestias', 'beastlord'), id )) }
   end
-  
-  def magias       ;  self.hechizos.map { |num| spell(num) } if self.hechizos  end
-  def blood_magic  ;  self.sangres.map { |num| sangre(num) } if self.sangres  end
-  def shadow_magic ;  self.sombras.map { |num| sombra(num) } if self.sombras  end
   
   def elementos
     elementos = []
@@ -118,11 +100,17 @@ class Hero < Hash
   def sin_recursos  ; self.gemas.nil? && self.joyas.nil? && self.runas.nil? && self.nil? end
   def anillos       ; (self.miscelaneas || []).select { |m| m.fits == "anillo"  } end
   def amuletos      ; (self.miscelaneas || []).select { |m| m.fits == "amuleto" } end 
-  def defensa       ; 1 end  
   def img_path      ; "'../images/personajes/#{self.genderize}.png'" end
   def big_path      ; "'../images/portraits/#{ self.name     }.png'" end
   def reputacion    ; self.repu || 0 end
   def movimiento    ; self.mov       end
+  def ataque        ; self.armas.first.categoria != 'distancia' ? self.armas.first.ataque : 0 end
+  def rango         ; self.armas.first.categoria == 'distancia' ? self.armas.first.ataque : 0 end
+  def defensa       ; self.armadura.defensa end
+  def cacharros     ; self.piezas.map   { |num| Pieza.new(:id => num) } if self.piezas end
+  def magias        ; self.hechizos.map { |num| spell(num)}  if self.hechizos end
+  def blood_magic   ; self.sangres.map  { |num| sangre(num)} if self.sangres  end
+  def shadow_magic  ; self.sombras.map  { |num| sombra(num)} if self.sombras  end  
     
   def genderize
     if self.gender == "female" 
@@ -137,22 +125,5 @@ class Hero < Hash
       end
     else return self.clase
     end
-  end
-  
-  def ataque
-   total = 0
-   self.armas.each do |a|
-     total += 1 # Salvo que sea un escudo
-   end
-   return total
-  end
-
-  def rango
-    total = 0
-    self.armas.each do |a|
-      total += 1 # Buscando arcos
-    end
-    return total
-  end
-  
+  end  
 end
