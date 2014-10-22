@@ -16,7 +16,10 @@
 	<tbody>
 		<% pielverdes.each do |pv| %>
 			<tr>
-				<td><%= "X" %></td>
+				<td>
+					<% img_path = "'../images/criaturas/pieles verdes/#{pv[:nombre]}.png'" %>
+					<img src=<%=img_path%> alt='icono', id='icon' />
+				</td>
 				<% pv.keys.each do |att| %>
 					<% if att != :id %>
 						<td><%= pv[att] %></td>
