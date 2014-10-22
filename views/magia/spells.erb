@@ -1,7 +1,7 @@
 <%= erb :menu %><br>
 <h1>Hechizos de <%= @heroe.name %></h1>
 
-<% unless @heroe.hechizos.empty? %>
+<% if @heroe.hechizos %>
 	<table id='table-2'>
 		<thead>
 			<th>Icono</th>

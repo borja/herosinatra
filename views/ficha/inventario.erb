@@ -43,7 +43,7 @@
 		</td>
 		<td width='40%'>
 			<%= erb :'ficha/stats' %>
-			<%= erb :'ficha/hechizos' unless @heroe.muggle? %>
+			<%= erb :'ficha/hechizos' unless @heroe.elementos.empty? %>
 			<%= erb :'ficha/resistencias' %>
 		</td>
 	</tr>

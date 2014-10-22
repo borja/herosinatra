@@ -92,48 +92,26 @@ class Hero < Hash
   end
   
   def cacharros
-    c = []
-      if self.piezas
-        self.piezas.each do |p|
-          c << Pieza.new(:id => p)
-        end
-      end
-    return c
+    self.piezas.map { |num| Pieza.new(:id => num) } if self.piezas
   end
   
-  def magias
-    m = []
-    if self.hechizos
-      self.hechizos.each do |id|
-        m << spell(id)
-      end
-    end
-    if self.sombras
-      self.sombras.each do |id|
-        m << sombra(id)
-      end
-    end
-    if self.sangres
-      self.sangres.each do |id|
-        m << sangre(id)
-      end
-    end
-    return m
-  end
+  def magias       ;  self.hechizos.map { |num| spell(num) } if self.hechizos  end
+  def blood_magic  ;  self.sangres.map { |num| sangre(num) } if self.sangres  end
+  def shadow_magic ;  self.sombras.map { |num| sombra(num) } if self.sombras  end
   
   def elementos
-    e = []
-    self.magias.each do |m|
-      e << m.elemento unless e.include?(m.elemento)
-    end 
-    return e
+    elementos = []
+    elementos = self.magias.map { |magia|  magia.elemento }.uniq if self.magias
+    elementos << "sombras" if self.sombras
+    elementos << "sangre" if self.sangres
+    return elementos
   end
   
   def human?        ; ['clérigo', 'ladrón', 'bárbaro', 'mago'].include?(self.clase) end  
   def raza          ; self.human? ? 'humano' : self.clase end
   def female?       ; self.sex == 'female' end
   def male?         ; self.sex == 'male' end
-  def muggle?       ; self.magias.empty? end
+  def muggle?       ; self.magias.nil? || self.magias.empty? end
   def desprotegido? ; self.protecciones.nil? end
   def pobre?        ; self.miscelaneas.nil? end
   def desprovisto?  ; self.pergaminos.nil? && self.pociones.nil? && self.piezas.nil?     end
