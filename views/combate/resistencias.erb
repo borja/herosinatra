@@ -5,12 +5,17 @@
 <table id='table-2'>
 	<thead>
 		<tr>
-			<th>Título</th>
+			<th colspan=2>Resistencia</th>
+			<th>Descripción</th>
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<td>Cuerpo</td>
-		</tr>
+		<% resistencias.each do |r| %>
+			<tr>
+				<td>X</td>
+				<td><%= r %></td>
+				<td><%= resistencia(r) %>
+			</tr>
+		<% end %>
 	</tbody>
 </table>
