@@ -342,6 +342,16 @@ def enchants
       :descripcion  => "ilumina.",
       :tipo         => "luz",
     },
+    { :id           => 68,
+      :name         => "de fuego de ira absoluta",
+      :descripcion  => "al matar con fuego de ira, gana tantos PM como PC totales tuviera la victima.",
+      :tipo         => "fuego",
+    },
+    { :id           => 69,
+      :name         => "iracundo",
+      :descripcion  => "lanza 1 fuego de ira 1 vez por reto.",
+      :tipo         => "fuego",
+    },
   ]
 end
 
