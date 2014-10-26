@@ -352,6 +352,16 @@ def enchants
       :descripcion  => "lanza 1 fuego de ira 1 vez por reto.",
       :tipo         => "fuego",
     },
+    { :id           => 70,
+      :name         => "protector de no-muertos",
+      :descripcion  => "ganas +1 potencia defensiva cuando te pega un no-muerto.",
+      :tipo         => "tenebro",
+    },
+    { :id           => 71,
+      :name         => "incorrompible II",
+      :descripcion  => "+3 vs Tenebro.",
+      :tipo         => "tenebro",
+    },
   ]
 end
 
