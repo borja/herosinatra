@@ -28,10 +28,28 @@ def derviches
     {
       :id           => 4,
       :name         => "baile de combate",
-      :description  => "El personaje amplía su zona de combate, pudiendo atacar a 2 objetivos en un mismo turno. Nivel I: Ataca hasta un ángulo de 45º (en diagonal). Nivel II: Ataca hasta un ángulo de 90º.",
+      :description  => "El personaje amplía su zona de combate, pudiendo atacar a 2 objetivos en un mismo turno. Nivel I: Ataca hasta un ángulo de 90º (en diagonal). Nivel II: Ataca hasta un ángulo de 275º. Nivel III: Hasta un ángulo de 360º.",
       :type         => "pasiva"
     },
-  ]
+    {
+      :id           => 5,
+      :name         => "acrobacias",
+      :description  => "Puedes pasar a través de un enemigo, aún sin su consentimiento",
+      :type         => "única"
+    },
+    {
+      :id           => 6,
+      :name         => "paso de combate",
+      :description  => "Permite dar 1 paso extra a cambio de 2 moviento",
+      :type         => "activa"
+    },
+    {
+      :id           => 7,
+      :name         => "danza de la muerte",
+      :description  => "1/reto puedes atacar con tu arma principal a todo tu alrededor",
+      :type         => "única"
+    }
+    ]
 end
 
 def derviche(id)
