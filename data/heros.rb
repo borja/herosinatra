@@ -288,7 +288,7 @@ def heros
       :miscelaneas  => [Miscelanea.new({:id => 1, :enchants => [29]}), 
                         Miscelanea.new({:id => 2, :gemas    => [42], :enchants => [26]}), 
                         Miscelanea.new({:id => 3, :enchants => [28]})],
-      :skills       => [0,1,2,3,4], 
+      :skills       => [0,1,2,3,4,5,6,7], 
       :pociones     => [7],
       :gemas        => [2,2],
     }),
