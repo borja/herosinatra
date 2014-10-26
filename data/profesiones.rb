@@ -32,14 +32,19 @@ def profesions
         { :id      => 0,
           :name    => "Artesano alquimista",
           :coste   => 500,
-          :efecto  => "TBD",
+          :efecto  => "Permite consumir hasta 2 pociones por turno, siempre que sean distintas.",
+        },
+        { :id      => 1,
+          :name    => "Piedra filosofal",
+          :coste   => 600,
+          :efecto  => "1 piedra pómez, 1 aguamarina, 1 cráneo + 200 piezas de oro: La piedra filosofal.",
         }
       ],
       :maestro   => [
         { :id      => 0,
           :name    => "Maestro de alquimia",
           :coste   => 1000,
-          :efecto  => "TBD"
+          :efecto  => "Permite repartir entre diferentes personajes los beneficios unitarios de una poción."
         }
       ],
     },
@@ -74,14 +79,14 @@ def profesions
         { :id      => 0,
           :name    => "Artesano inscriptor",
           :coste   => 500,
-          :efecto  => "TBD",
+          :efecto  => "Permite consumir hasta dos pergaminos diferentes por turno.",
         }
       ],
       :maestro   => [
         { :id      => 0,
           :name    => "Maestro de inscripción",
           :coste   => 1000,
-          :efecto  => "TBD"
+          :efecto  => "Permite combinar dos runas en una runa única."
         }
       ],
     },
@@ -116,14 +121,14 @@ def profesions
         { :id      => 0,
           :name    => "Artesano taxidermista",
           :coste   => 500,
-          :efecto  => "TBD",
+          :efecto  => "Permite extraer pieles de criaturas mágicas. (Éxito: 8+) ",
         }
       ],
       :maestro   => [
         { :id      => 0,
           :name    => "Maestro de taxidermia",
           :coste   => 1000,
-          :efecto  => "TBD"
+          :efecto  => "(Éxito 5+) al extraer pieles de cualquier criatura."
         }
       ],
     },
@@ -153,19 +158,25 @@ def profesions
           :coste   => 250,
           :efecto  => "Las trampas descubiertas mediante búsquedas, también se aplican a los enemigos.",
         },
+        {
+          :id      => 4,
+          :name    => "Camuflaje de guerra",
+          :coste   => 150,
+          :efecto  => "1 Polvo de ceniza: Entras en sigilo de nivel 1",
+        },
       ],
       :artesano  => [
         { :id      => 0,
           :name    => "Artesano táctico",
           :coste   => 500,
-          :efecto  => "TBD",
+          :efecto  => "Al atraversarle, sus aliados ignorar la casilla de movimiento.",
         }
       ],
       :maestro   => [
         { :id      => 0,
           :name    => "Maestro de táctica",
           :coste   => 1000,
-          :efecto  => "TBD"
+          :efecto  => "Ninguna criatura con menor empuje puede empujarle."
         }
       ],
     },
@@ -181,13 +192,13 @@ def profesions
           :id      => 1,
           :name    => "Encantar",
           :coste   => 250,
-          :efecto  => "Utilizas polvos para encantar hasta que finaliza el reto objetos sin encantamiento, incluso de 2 jugadores.",
+          :efecto  => "Utilizas polvos para encantar hasta que finaliza el reto: objetos sin encantamientos previos.",
         },
         {
           :id      => 2,
           :name    => "Desencantar",
           :coste   => 250,
-          :efecto  => "Puedes utilizar polvos de manera equivalente a la maldición.",
+          :efecto  => "Puedes utilizar polvos de calidad equivalente a una maldición para anularla.",
         },
         {
           :id      => 3,
@@ -200,14 +211,14 @@ def profesions
         { :id      => 0,
           :name    => "Artesano encantador",
           :coste   => 500,
-          :efecto  => "TBD",
+          :efecto  => "Puedes usar dos polvos de un nivel inferior para obtener uno superior.",
         }
       ],
       :maestro   => [
         { :id      => 0,
           :name    => "Maestro de encantamiento",
           :coste   => 1000,
-          :efecto  => "TBD"
+          :efecto  => "Al final del reto puedes convertir en polvo de encantamiento, los hechizos sobrantes, según su nivel."
         }
       ],
     },
@@ -248,7 +259,17 @@ def profesions
         { :id      => 0,
           :name    => "Artesano orfebre",
           :coste   => 500,
-          :efecto  => "TBD"
+          :efecto  => ""
+        },
+        { :id      => 1,
+          :name    => "Piedra filosofal",
+          :coste   => 350,
+          :efecto  => "Require piedra filosofal: 1 hematites + 1 polvo onírico + 200 piezas de oro: Lingote de mithril",
+        },
+        { :id      => 2,
+          :name    => "Eslabón de Mithril",
+          :coste   => 150,
+          :efecto  => "1 Lingote de mthril + hechizo (aliento de dragón): 4 eslabones de mithril.",
         }
       ],
       :maestro   => [
@@ -290,14 +311,26 @@ def profesions
         { :id      => 0,
           :name    => "Artesano carpintero",
           :coste   => 500,
-          :efecto  => "TBD"
+          :efecto  => "Permite usar 3 piezas de madera para crear una talla exquisita."
+        },
+        {
+          :id      => 1,
+          :name    => "Báculo",
+          :coste   => 300,
+          :efecto  => "3 tallas exquisitas: bastón que ataca con 2 dados y en diagonal. Se vende por 150g.",
+        },
+        {
+          :id      => 2,
+          :name    => "Varita mágica",
+          :coste   => 100,
+          :efecto  => "1 talla exquisita + 20 Polvos Dorados + Diamante + 200 oro: Varita (1 mano) que permite lanzar 2 hechizos/turno.",
         }
       ],
       :maestro   => [
         { :id      => 0,
           :name    => "Maestro de carpintería",
           :coste   => 1000,
-          :efecto  => "TBD"
+          :efecto  => "Permite usar 3 tallas exquisitas para crear una obra maestra."
         }
       ],
     },
