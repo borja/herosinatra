@@ -2,23 +2,21 @@
 <table id='table-2'>
 	<thead>
 		<tr>
-			<% resistencias.each do |r| %>
-				<th>
-					<%= erb :'display/display', :locals => { 
-						:title       => r, 
-						:path        => "'../images/elements/#{r}.png'",
-						:description => "Resistencia: " + resistencia(@heroe[:id])[r.to_sym].to_s } %>
-				</th>
-			<% end%>
+			<% resistencias.each do |r| %>	
+				<th><%= r %></th>
+			<% end %>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
-			<% resistencias.each do |r| %>	
+			<% resistencias.each do |r| %>
 				<td>
-					<%= resistencia(@heroe[:id])[r.to_sym] %>
+					<%= erb :'display/display', :locals => { 
+						:title       => r, 
+						:path        => "'../images/elements/#{r}.png'",
+						:description => "Resistencia"} %>
 				</td>
-			<% end %>
+			<% end%>
 		</tr>
 	</tbody>
 </table>
