@@ -5,37 +5,37 @@ def conjuradors
       :id           => 0,
       :name         => "Conjurar en letargo",
       :description  => "Permite lanzar hechizos de tipo conjuro en el turno del primer héroe.",
-      :type         => "pasiva"
+      :type         => "Pasiva"
     },
     {
       :id           => 1,
       :name         => "Biblioteca",
       :description  => "Número de hechizos que puede utilizar el conjurador en un reto. Aumentan a 1/nivel y empieza por 9 hechizos.",
-      :type         => "activa"
+      :type         => "Activa"
     },
     {
       :id           => 2,
       :name         => "Levitar",
       :description  => "A cambio de 1 punto de mente, el conjurador levita.",
-      :type         => "activa"
+      :type         => "Activa"
     },
     {
       :id           => 3,
       :name         => "Tutor",
-      :description  => "por definir.",
-      :type         => "activa"
+      :description  => "A cambio de una magia, el conjurador puede hacer un hechizo aleatorio del nivel máximo de hechizos +1 que puede ejecutar normalmente.",
+      :type         => "Activa"
     },
     {
       :id           => 4,
       :name         => "Sadismo arcano",
       :description  => "Al matar con magia, gana 1 punto de mente.",
-      :type         => "activa"
+      :type         => "Activa"
     },
     {
       :id           => 5,
       :name         => "Secreto rístico",
-      :description  => "Bono aliado mata-> conjuro gratis.",
-      :type         => "activa"
+      :description  => "El conjurador le otorga esta habilidad a un aliado, provocando que éste cuando mate, el conjurador pueda realizar un hechizo gratuito/muerte en el mismo turno del aliado.",
+      :type         => "Activa"
     },
     {
       :id           => 6,
@@ -46,7 +46,7 @@ def conjuradors
     {
       :id           => 7,
       :name         => "Explosión arcana",
-      :description  => "por definir.",
+      :description  => "Alrededor del del conjurador hay X daños peana con peana, por cada X PM invertidos.",
       :type         => "Activa"
     },
     {
