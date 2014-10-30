@@ -34,7 +34,7 @@ def conjuradors
     {
       :id           => 5,
       :name         => "Secreto rístico",
-      :description  => "Bono aliado mata-> conjuro gratis.",
+      :description  => "El conjurador le otorga esta habilidad a un aliado, provocando que éste cuando mate, el conjurador pueda realizar un hechizo gratuito/muerte en el mismo turno del aliado.",
       :type         => "activa"
     },
     {
