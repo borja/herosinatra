@@ -22,7 +22,7 @@ def druidas
     {
       :id           => 3,
       :name         => "Espinas",
-      :description  => "1 Punto de Vínculo (PV): +1 dado verde de defensa. El agresor recibe el exceso como daño defendible. Se aplica al druida y al espíritu.",
+      :description  => "1 Punto de Vínculo (PV): +1 dado verde de defensa. El agresor recibe el exceso como daño defendible. Se aplica al druida y al espíritu. Debe declararse en la fase de Instintos.",
       :type         => "Reactiva"
     },
     {
@@ -215,6 +215,12 @@ def druidas
       :id           => 35,
       :name         => "Unión espiritual",
       :description  => "El espíritu guardián puede ofrecer sus habilidades especiales al objetivo poseído por él, o al propio druida.",
+      :type         => "Activa"
+    },
+    {
+      :id           => 36,
+      :name         => "Defensa elemental",
+      :description  => "El espíritu guardián tiene una potencia defensiva igual al número de sets de magia elemental que el druida tenga en ese momento. No afecta al druida aunque se transforme en espíritu guardián. Debe declararse en la fase de Instintos y consume 1 PS.",
       :type         => "Activa"
     },
    
