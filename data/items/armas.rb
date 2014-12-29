@@ -197,7 +197,16 @@ def armas
       :ranuras      => 4,
       :diagonal     => true,
       :legendario   => true,
-    }
+    },
+    { 
+      :id           => 24,
+      :name         => "Mandoble de Justicia",
+      :categoria    => "bastón",
+      :ataque       => 4,
+      :ranuras      => 4,
+      :diagonal     => true,
+      :unico        => true,
+    },
   ]
 end
 
