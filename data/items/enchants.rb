@@ -362,6 +362,21 @@ def enchants
       :descripcion  => "+3 vs Tenebro.",
       :tipo         => "tenebro",
     },
+    { :id           => 72,
+      :name         => "valeroso",
+      :descripcion  => "+1 fuerza si el ataque es frontal.",
+      :tipo         => "físico",
+    },
+    { :id           => 73,
+      :name         => "defensivo",
+      :descripcion  => "+1 dado azul de defensa.",
+      :tipo         => "físico",
+    },
+    { :id           => 74,
+      :name         => "defensa Psiónica",
+      :descripcion  => "+2 vs magia Psiónica.",
+      :tipo         => "Psiónica",
+    },
   ]
 end
 
