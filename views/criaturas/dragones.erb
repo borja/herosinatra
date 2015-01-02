@@ -2,9 +2,6 @@
 <body>
 <%= erb :menu %>
 
-<link rel="stylesheet" href="../../css/main.css" type="text/css" />
-<link rel="stylesheet" href="../../app.css" type="text/css" />
-
 <br><h1>Dragones</h1><br><br>
 
 <table id='table-2'>
@@ -30,9 +27,9 @@
 							<tbody>
 								<tr><% d[:hechizos].each do |magia| %>
 										<td><%= erb :'display/display', :locals => { 
-													:title       => (spell(magia))[:name], 
-													:path        => "'../images/spells/#{(spell(magia))[:name]}.png'",
-													:description => (spell(magia))[:descripcion] } %>
+													:title       => nombre = (spell(magia)).name, 
+													:path        => "'../images/spells/#{nombre}.png'",
+													:description => (spell(magia)).efecto } %>
 										</td>
 									<% end %>	
 								</tr>
