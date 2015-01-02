@@ -34,12 +34,9 @@ def piezas
       :uso   => "ocupa dos espacios de inventario y permite almacenar 5 objetos pequeños.",
     },
     { :id    => 8,
-      :name  => "saco de papá noel",
-      :uso   => "ocupa un espacio de inventario y permite almacenar 5 objetos.",
+      :name  => "saco roto del Padre del Invierno",
+      :uso   => "ocupa un espacio de inventario y permite almacenar 4 objetos. Feliz no-Navidad",
     }
   ]
 end
-
-def pieza(id)
-  piezas[id]
-end
+def pieza id ; piezas[id] end

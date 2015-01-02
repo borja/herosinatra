@@ -61,7 +61,8 @@ def gemas
     Gema.new({ :id => 51, :name => "jacinto de sangre"}),
     Gema.new({ :id => 52, :name => "piedra de alma"}),  
     Gema.new({ :id => 53, :name => "felmar"}),
-    Gema.new({ :id => 54, :name => "trigema"}) 
+    Gema.new({ :id => 54, :name => "trigema"}), 
+    Gema.new({ :id => 55, :name => "rubí encantado"}) 
   ]   
 end
 

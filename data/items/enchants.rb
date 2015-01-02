@@ -382,6 +382,11 @@ def enchants
       :descripcion  => "Añade un dado de fuego al atacar",
       :tipo         => "fuego",
     },
+    { :id           => 76,
+      :name         => "del Aire",
+      :descripcion  => "+1 Potencia de las magias de aire.",
+      :tipo         => "aire",
+    },
   ]
 end
 def enchant id ;  enchants[id] end
