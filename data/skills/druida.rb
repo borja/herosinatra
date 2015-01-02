@@ -226,7 +226,4 @@ def druidas
    
   ]
 end
-
-def druida(id)
-  druidas[id]
-end
+def druida id ; druidas[id] end

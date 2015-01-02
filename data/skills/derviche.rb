@@ -40,7 +40,7 @@ def derviches
     {
       :id           => 6,
       :name         => "paso de combate",
-      :description  => "Permite dar 1 paso extra a cambio de 2 moviento",
+      :description  => "Permite dar 1 paso extra a cambio de 3 moviento",
       :type         => "activa"
     },
     {
@@ -48,10 +48,13 @@ def derviches
       :name         => "danza de la muerte",
       :description  => "1/reto puedes atacar con tu arma principal a todo tu alrededor",
       :type         => "única"
-    }
+    },
+    {
+      :id           => 8,
+      :name         => "gloria del héroe",
+      :description  => "Ignora cualquier daño que le fuera a ser realizado al héroe. El efecto cesa al finalizar el turno del Malvado Brujo. Debe utilizarse ANTES de la tirada de ataque.",
+      :type         => "única"
+    },
     ]
 end
-
-def derviche(id)
-  derviches[id]
-end
+def derviche id; derviches[id] end
