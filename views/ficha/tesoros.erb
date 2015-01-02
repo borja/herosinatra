@@ -10,16 +10,16 @@
 		<tr>				
 			<% engarces.each do |engarce| %>
 				<td>
-					<% if tesoros = heroe[engarce.to_sym] %>
+					<% if tesoros = heroe.send(engarce) %>
 						<table id='table-2'>
 							<tbody>
 								<tr>
 									<% tesoros.each do |t| %>
                     	    			<td>
 											<%= erb :'display/display', :locals => { 
-													:title       => nombre = send(engarce.gsub('s',''),t)[:name], 
+													:title       => nombre = send(engarce.gsub('s',''),t).name, 
 													:path        => "'../images/treasures/#{engarce}/#{nombre}.png'",
-													:description => "" } %>
+													:description => engarce == 'gemas' ? send(engarce.gsub('s',''),t).calidad : ""} %>
 										</td>
 									<% end %>
 								</tr>
