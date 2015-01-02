@@ -60,4 +60,4 @@ def dragons
   ]
 end
 
-def dargon id ; dragons[id]mend
+def dargon id ; dragons[id] end

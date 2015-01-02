@@ -358,6 +358,7 @@ def heros
       :name         => "Tim el mago",
       :personaje    => "hechicero",
       :jugador      => "Luis",
+      :status       => "activo",
       :nivel        => 5,
       :cuerpo       => 5,
       :mente        => 8,
