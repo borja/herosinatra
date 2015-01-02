@@ -88,7 +88,7 @@ class Util < Hash
     end
   end
   
-  def img_path ; "'../images/utiles/#{self.class}s/#{self.name}.png'"  end
+  def img_path ; "'../images/utiles/#{self.class.to_s.downcase}s/#{self.name}.png'"  end
     
 end
 
