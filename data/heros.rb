@@ -85,7 +85,7 @@ def heros
                         Miscelanea.new({:id => 1}),
                         Miscelanea.new({:id => 18,  :enchants => [66,65,67]})],
       :skills       => [0,1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19,20,22,25,26,27,28,29,30,32,33,34,35,36],
-      :profesion    => Profesion.new({:id => 5, :aprendiz => [3]}),
+      :profesion    => Profesion.new({:id => 5, :aprendiz => [3,4]}),
       :piezas       => [3],
       :pociones     => [4,9,6,7],
       :pergaminos   => [Pergamino.new({:id => 1, :spells  => [60]}),
@@ -256,7 +256,7 @@ def heros
       :name         => "El Kolo",
       :personaje    => "bersérker",
       :jugador      => "Daniel Cabañas",
-      :status       => "reserva",
+      :status       => "retirado",
       :nivel        => 2,
       :cuerpo       => 8,
       :mente        => 3,
@@ -267,6 +267,7 @@ def heros
       :skills       => [1,4,7],
       :joyas        => [2],
       :runas        => [2],
+      :muerto       => true,
     }),
     Hero.new({ 
       :id           => 11,
@@ -751,6 +752,7 @@ def heros
                         Miscelanea.new({:id => 2, :enchants =>[68,69]})],
       :skills       => [1,2,3,4,5,6,8,9,10],
       :pergaminos   => [Pergamino.new({:id => 1, :spells  => [51]})],
+      :muerto       => true,
     }),
     Hero.new({ 
       :id           => 40,

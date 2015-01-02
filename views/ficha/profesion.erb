@@ -9,7 +9,7 @@
 		</h3>
 		<h3>Aprendizajes</h3>
 		<% prof.aprendiz.each do |a| %>
-			<li><%= a %></li>
+			<li><%= profesions[prof.id][:aprendiz][a][:name] %></li>
 		<% end %>
 	</div>
 </div>

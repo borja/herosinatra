@@ -337,10 +337,7 @@ def profesions
   ]
 end
 
-def profesion(id)
-  profesions[id]
-end
-
+def profesion id ; profesions[id] end
 def grados
   ['aprendiz', 'artesano', 'maestro']
 end
