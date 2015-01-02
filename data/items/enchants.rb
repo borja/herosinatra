@@ -44,7 +44,7 @@ def enchants
     },
     { :id           => 8,
       :name         => "de velocidad",
-      :descripcion  => "+1 movimiento",
+      :descripcion  => "+2 movimiento",
       :tipo         => "viento",
     },
     { :id           => 9,
@@ -377,7 +377,11 @@ def enchants
       :descripcion  => "+2 vs magia Psiónica.",
       :tipo         => "Psiónica",
     },
+    { :id           => 75,
+      :name         => "flamígera",
+      :descripcion  => "Añade un dado de fuego al atacar",
+      :tipo         => "fuego",
+    },
   ]
 end
-
 def enchant id ;  enchants[id] end

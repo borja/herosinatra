@@ -1,6 +1,11 @@
 # encoding: UTF-8
 def pociones
   [
+    { :id           => 0,
+      :name         => "agua bendita",
+      :efecto       => "Provoca daños graves a los no-muertos de la sala.",
+      :precio       => 50,
+    },
     { :id           => 1,
       :name         => "curacion menor",
       :efecto       => "recupera 2 PC.",
@@ -48,7 +53,4 @@ def pociones
     }
   ]
 end
-
-def pocion(id)
-  pociones[id-1]
-end
+def pocion id ; pociones[id] end
