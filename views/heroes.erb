@@ -7,10 +7,10 @@
 			<th colspan=3>Héroe</th>
 			<th>Nivel</th>
 			<th><a href=/familiares>Familiar</a></th>
+			<th><a href=/profesiones>Profesión</a></th>
 			<th><a href=/items/armas>Armas</a></th>
 			<th><a href=/items/armaduras>Armadura</a></th>		
 			<th><a href=/items/protecciones>Protecciones</a></th>	
-			<th><a href=/items/miscelaneas>Miscelaneas</a></th>
 			<th>Reputación</th>
 		</tr>
 	</thead>
@@ -35,6 +35,11 @@
 						:path        => "'images/pets/#{p.bicho}.png'",
 						:description => p.bono } %>
 					<% end %>						
+				</td>
+				<td>
+					<% if p = hero.profesion %>
+						<%= erb :'ficha/profesion', :locals => { :prof => p } %>
+					<% end %>
 				</td>
 				<td><table id='table-2'>
 						<tbody>
@@ -69,18 +74,6 @@
 					  </tbody>
 					</table><% end %>
 				</td>
-				<td><% if hero.miscelaneas %>
-					<table id='table-2'>
- 					  <tbody>
-					    <tr><% hero.miscelaneas.each do |m| %>
-								<td><%= erb :'display/display', :locals => { 
-									:title       => m.name, 
-									:path        => m.img_path,
-									:description => "no hay ninguna aún" } %></td>
-						<% end %></tr>
-					  </tbody>
-					</table>
-				<% end %></td>
 				<td style="background-image:url(../images/ficha/star.png); 
 					background-repeat: no-repeat; background-position:center;">
 					<%= hero.reputacion %>
