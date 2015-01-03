@@ -354,6 +354,7 @@ def heros
                         Proteccion.new({:id => 14})],
       :miscelaneas  => [Miscelanea.new({:id => 11})],
       :skills       => [0,1,2,4,5,6,8],
+      :profesion    => Profesion.new({:id => 2,  :aprendiz => [1]}),  
       :pociones     => [6,0],
       :piezas       => [0,4],
       :pergaminos   => [Pergamino.new({:id => 1, :spells   => [11] })],
