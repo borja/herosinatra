@@ -22,6 +22,7 @@ def heros
       :pergaminos   => [Pergamino.new({:id => 1, :spells   => [11] })],
       :skills       => [0,1,2,3,4,5,6],
       :hechizos     => [0,1,2,6,7,8,12,13,14,18,19,20,29,39],
+      :historia     => "Amru es en verdad el Dios Absoluto. Creó este universo, un día que tuvo dolor de cabeza.",
     }),
     Hero.new({ 
       :id           => 1,
@@ -357,6 +358,7 @@ def heros
       :miscelaneas  => [Miscelanea.new({:id => 11})],
       :skills       => [0,1,2,4,5,6,8],
       :profesion    => Profesion.new({:id => 2,  :aprendiz => [0,1]}),  
+      :pet          => Pet.new({:id  => 19, :name => "Limoncito", :torpe => true}),
       :pociones     => [6,0],
       :piezas       => [0,4],
       :pergaminos   => [Pergamino.new({:id => 1, :spells   => [11] })],
