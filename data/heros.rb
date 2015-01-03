@@ -378,7 +378,8 @@ def heros
       :gemas        => [55],
       :piezas       => [8],
       :pociones     => [1,3,3],
-      :profesion    => Profesion.new({:id => 1,  :aprendiz => [3]}),                 
+      :profesion    => Profesion.new({:id => 1,  :aprendiz => [3]}),  
+      :pet          => Pet.new({:id  => 8, :name => "Naussyca", :torpe => true}),               
     }),
     Hero.new({ 
       :id           => 16,
