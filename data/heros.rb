@@ -828,7 +828,7 @@ def heros
       :armas        => [Arma.new({:id => 8})],
       :armadura     => Armadura.new({:id => 1}),
       :miscelaneas  => [Miscelanea.new({:id => 2 })],
-      :spells       => [1,2,3,4,5,6,7,8,9,10,11,12]
+      :hechizos     => [1,2,3,4,5,6,7,8,9,10,11,12]
     }),
     Hero.new({
       :id           => 44,
@@ -862,6 +862,19 @@ def heros
       :gemas        => [3,4,8,22],
       :joyas        => [13],
     }),
+    Hero.new({ 
+      :id           => 45,
+      :name         => "Moorp",
+      :personaje    => "conjurador",
+      :jugador      => "Arturo Salcedo",
+      :nivel        => 1,
+      :cuerpo       => 4,
+      :mente        => 6,
+      :mov          => 7,
+      :armas        => [Arma.new({:id => 3})],
+      :armadura     => Armadura.new({:id => 1}),
+      :hechizos     => [0,1,2,12,13,14,18,19,20],
+    })
   ]
 end
 
