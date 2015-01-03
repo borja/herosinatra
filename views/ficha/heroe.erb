@@ -18,7 +18,9 @@
 							<% if heroe.profesion %>
 								<th>Profesión</th>
 							<% end %>
-							<th>Historia</th>
+							<% if heroe.historia %>
+								<th>Historia</th>
+							<% end %>
 						</tr>
 					</thead>
 					<tbody>
@@ -50,7 +52,12 @@
 							<% if heroe.profesion %>
 								<td><%= erb :'ficha/profesion', :locals => { :prof => heroe.profesion } %></td>
 							<% end %>
-							<td><%= heroe.historia %></td>
+							<% if heroe.historia %>
+							<td><%= erb :'display/display', :locals => { 
+										:title       => "Historia", 
+										:path        => "/images/ficha/historia.png",
+										:description => heroe.historia } %></td>
+							<% end %>
 						</tr>
 					</tbody>
 				</table>				

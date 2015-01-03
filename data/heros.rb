@@ -57,6 +57,7 @@ def heros
       :skills       => [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
       :sombras      => [4],
       :sangres      => [1],
+      :historia     => "Inscrito en el concurso",
     }),
     Hero.new({ 
       :id           => 2,
@@ -168,6 +169,7 @@ def heros
       :joyas        => [10,11],
       :pergaminos   => [Pergamino.new({:id => 1, :spells  => [94]}),
                         Pergamino.new({:id => 1, :spells  => [9] }) ],
+      :historia     => "Inscrito en el concurso",
     }),
     Hero.new({ 
       :id           => 6,
@@ -212,7 +214,8 @@ def heros
       :pergaminos   => [Pergamino.new({:id => 2, :spells  => [8,10]}),
                         Pergamino.new({:id => 1, :spells  => [32]})],
       :skills       => [0,1,2,3,4,5,6,7,8,9],
-      :profesion    => Profesion.new({:id => 2,  :aprendiz => [0]}),  
+      :profesion    => Profesion.new({:id => 2,  :aprendiz => [0]}),
+      :historia     => "Inscrito en el concurso",
     }),
     Hero.new({ 
       :id           => 8,
@@ -363,6 +366,7 @@ def heros
       :piezas       => [0,4],
       :pergaminos   => [Pergamino.new({:id => 1, :spells   => [11] })],
       :gemas        => [1],
+      :historia     => "Inscrito en el concurso",
     }),
     Hero.new({ 
       :id           => 15,
@@ -385,7 +389,8 @@ def heros
       :piezas       => [8],
       :pociones     => [1,3,3],
       :profesion    => Profesion.new({:id => 1,  :aprendiz => [0,3]}),  
-      :pet          => Pet.new({:id  => 8, :name => "Naussyca", :torpe => true}),               
+      :pet          => Pet.new({:id  => 8, :name => "Naussyca", :torpe => true}),
+      :historia     => "Inscrito en el concurso",               
     }),
     Hero.new({ 
       :id           => 16,
@@ -772,6 +777,7 @@ def heros
       :skills       => [1,2,3,4,5,6,8,9,10],
       :pergaminos   => [Pergamino.new({:id => 1, :spells  => [51]})],
       :muerto       => true,
+      :historia     => "Inscrito en el concurso",
     }),
     Hero.new({ 
       :id           => 40,
