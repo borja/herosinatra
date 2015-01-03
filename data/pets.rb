@@ -109,7 +109,7 @@ def pets
       :name         => "hurón",
       :personajes   => ["bárbaro","enano"],
       :bono         => "+1 movimiento",
-      :lacra        => "Mordisquear los piés: -1 PC al iniciar el reto",
+      :lacra        => "Mordisquear los pies: -1 PC al iniciar el reto",
     },
     { :id           => 17,
       :name         => "ardilla",
