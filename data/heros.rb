@@ -23,6 +23,7 @@ def heros
       :skills       => [0,1,2,3,4,5,6],
       :hechizos     => [0,1,2,6,7,8,12,13,14,18,19,20,29,39],
       :historia     => "Amru es en verdad el Dios Absoluto. Creó este universo, un día que tuvo dolor de cabeza.",
+      :descendencia => true,
     }),
     Hero.new({ 
       :id           => 1,
@@ -53,7 +54,8 @@ def heros
                         Miscelanea.new({:id => 11, :enchants => [35,42]}),
                         Miscelanea.new({:id => 6,  :enchants => [37]})],
       :profesion    => Profesion.new({:id => 0,  :aprendiz => [0,1,2]}), 
-      :pet          => Pet.new({:id  => 17, :name => "Scumbag"}),                
+      :pet          => Pet.new({:id  => 17, :name => "Scumbag"}),
+      :montura      => Montura.new({:id => 2}),                
       :skills       => [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],
       :sombras      => [4],
       :sangres      => [1],

@@ -3,66 +3,12 @@
 		<tr>
 			<td><img src="../images/clases/<%= heroe.personaje %>.png" alt=<%= heroe.personaje %> /, id='box'></td>
 			<td>
-				<table id='table-2'>
-					<thead>
-						<tr>
-							<% descripcion.each do |f| %>
-								<th><%= f.capitalize %></th>
-							<% end%>
-							<% if heroe.montura %>
-								<th>Montura</th>
-							<% end %>
-							<% if heroe.pet %>
-								<th>Familiar</th>
-							<% end %>
-							<% if heroe.profesion %>
-								<th>Profesión</th>
-							<% end %>
-							<% if heroe.historia %>
-								<th>Historia</th>
-							<% end %>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td><%= erb :'display/portrait', :locals => { :h => heroe } %></td>
-							<td><%= heroe.name %><br>
-								<%= heroe.jugador %></td>
-							<td><%= heroe.raza.capitalize %></td>
-							<td><%if heroe.human? %><%= heroe.clase.capitalize%><br><%end%>
-								<%= heroe.personaje.capitalize %></td>
-							<td><%= heroe.nivel %></td>
-							<td style="background-image:url(../images/ficha/star.png); 
-								background-repeat: no-repeat; background-position:center;">
-								<%= heroe.repu || 0 %></td>
-							<% if m = heroe.montura %>
-								<td><%= erb :'display/display', :locals => { 
-										:title       => m.name, 
-										:path        => m.img_path,
-										:description => m.bono } %>
-								</td>
-							<% end %>	
-							<% if p = heroe.pet %>
-								<td><%= erb :'display/display', :locals => { 
-										:title       => p.nombre, 
-										:path        => p.img_path,
-										:description => p.bono } %>
-								</td>
-							<% end %>
-							<% if heroe.profesion %>
-								<td><%= erb :'ficha/profesion', :locals => { :prof => heroe.profesion } %></td>
-							<% end %>
-							<% if heroe.historia %>
-							<td><%= erb :'display/display', :locals => { 
-										:title       => "Historia", 
-										:path        => "/images/ficha/historia.png",
-										:description => heroe.historia } %></td>
-							<% end %>
-						</tr>
-					</tbody>
-				</table>				
+				<table id='tlabel'>
+					<tr><td><%= erb :'ficha/jugador' %></td></tr>
+					<tr><td><%= erb :'ficha/lore' %></td></tr>
+				</table>
 			</td>
-			<td><img src="../images/clases/<%= @heroe.personaje %>.png" alt=<%=  @heroe.personaje %> /, id='box'></td>
+			<td><img src="../images/clases/<%= heroe.personaje %>.png" alt=<%= heroe.personaje %> /, id='box'></td>
 		</tr>
 	</tbody>
 </table>
