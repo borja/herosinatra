@@ -247,7 +247,7 @@ def heros
       :id           => 9,
       :name         => "Steinberg",
       :personaje    => "hechicero",
-      :jugador      => "Dani Acha",
+      :jugador      => "Daniel Acha",
       :status       => "reserva",
       :nivel        => 3,
       :cuerpo       => 4,
@@ -435,7 +435,7 @@ def heros
       :id           => 18,
       :name         => "Paul Baloff",
       :personaje    => "señor de las bestias",
-      :jugador      => "adrián",
+      :jugador      => "Adrián",
       :nivel        => 1,
       :cuerpo       => 8,
       :mente        => 2,
@@ -890,6 +890,20 @@ def heros
       :armas        => [Arma.new({:id => 3})],
       :armadura     => Armadura.new({:id => 1}),
       :hechizos     => [0,1,2,12,13,14,18,19,20],
+    }),
+    Hero.new({ 
+      :id           => 46,
+      :name         => "Legolas",
+      :personaje    => "derviche",
+      :jugador      => "Daniel Cabañas",
+      :status       => "reserva",
+      :nivel        => 1,
+      :cuerpo       => 6,
+      :mente        => 4,
+      :mov          => 8,
+      :armas        => [Arma.new({:id => 1})],
+      :armadura     => Armadura.new({:id => 2}),
+      :hechizos     => [18,19,20],
     })
   ]
 end
@@ -897,6 +911,7 @@ end
 def hero id    ; heros[id] end
 def personajes ; heros.map{ |p| p.personaje }.uniq end
 def clases     ; heros.map{ |p| p.clase     }.uniq end
+def jugadores  ; heros.map{ |p| p.jugador   }.uniq end
 
 def clase_bárbaro  ; ["señor de las bestias","bersérker","hoplita"] end
 def clase_enano    ; ["falangista","matador","ingeniero"]           end
