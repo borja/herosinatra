@@ -17,7 +17,7 @@ class Pet < Hash
   def bicho      ; pet(self.id)[:name]       end # > "pitufo", "rata"  
   
   def nombre
-    "#{self.name.capitalize}, #{self.sex ? "la" : "el"} #{self.bicho.capitalize}"
+    "#{self.name.capitalize}, #{self.sex ? "la" : "el"} #{self.bicho.capitalize} #{"torpe" if self.torpe}"
   end
   
   def img_path
