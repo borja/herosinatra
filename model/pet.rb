@@ -24,4 +24,8 @@ class Pet < Hash
     "'../../images/pets/#{self.bicho}.png'"
   end
   
+  def descripcion
+    "<b>Bonificador</b>: <i>#{self.bono}</i>#{"<br><b>Penalizador: </b><i>#{self.lacra}</i>" if self.torpe}"
+  end
+  
 end
