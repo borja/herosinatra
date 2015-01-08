@@ -133,6 +133,12 @@ class Hero < Hash
       end
     else return nil end
   end
+  
+  def descendientes # I kill you with my spaguetti code, TODO: Tune up this!
+    padres = heros.map{ |h| h.progenitores}
+    hijos  = padres.each_index.select{|i| padres[i].include?(self.id) unless padres[i].nil?  }
+    hijos.empty? ? nil : hijos
+  end
     
   def genderize
     if self.gender == "female" 

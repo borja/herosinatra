@@ -4,6 +4,9 @@
 			<% descripcion.each do |f| %>
 				<th><%= f.capitalize %></th>
 			<% end%>
+			<% if @heroe.descendientes %>
+				<th>Descendientes</th>
+			<% end %>
 			<% if @heroe.profesion %>
 				<th>Profesión</th>
 			<% end %>
@@ -14,10 +17,12 @@
 			<td><%= @heroe.jugador %></td>
 			<td>El <%= @heroe.clase %> <%= @heroe.personaje %></td>
 			<td><h2><%= @heroe.nivel %></h2></td>
-			<td>X</td>
 			<td style="background-image:url(../images/ficha/star.png); 
 				background-repeat: no-repeat; background-position:center;">
-				<%= @heroe.repu || 0 %></td>	
+				<%= @heroe.repu || 0 %></td>
+			<% if @heroe.descendientes %>
+				<td><%= erb :'ficha/descendientes' %></td>
+			<% end %>	
 			<% if @heroe.profesion %>
 				<td><%= erb :'ficha/profesion', :locals => { :prof => @heroe.profesion } %></td>
 			<% end %>
