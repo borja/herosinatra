@@ -28,7 +28,7 @@ def heros
     Hero.new({ 
       :id           => 1,
       :name         => "Lord Fuckencio",
-      :progenitores => [],
+      :progenitores => ["El Emperador",33],
       :personaje    => "asesino",
       :jugador      => "Alberto",
       :status       => "activo",
@@ -65,6 +65,7 @@ def heros
     Hero.new({ 
       :id           => 2,
       :name         => "Elros Amarie",
+      :progenitores => [29,"Pacote"],
       :personaje    => "druida",
       :jugador      => "Iris",
       :status       => "activo",
@@ -666,6 +667,7 @@ def heros
     Hero.new({ 
       :id           => 33,
       :name         => "Fuckencia",
+      :progenitores => [32,"Amparo"],
       :personaje    => "asesino",
       :jugador      => "Alberto",
       :status       => "retirado",

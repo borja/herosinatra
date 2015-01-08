@@ -4,6 +4,9 @@
 			<% lore.each do |f| %>
 				<th><%= f.capitalize %></th>
 			<% end%>
+			<% if @heroe.progenitores %>
+				<th>Progenitores</th>
+			<% end %>
 			<% if @heroe.pet %>
 				<th>Familiar</th>
 			<% end %>
@@ -21,7 +24,9 @@
 			<td><%= @heroe.name %></td>
 			<td><%= @heroe.raza.capitalize %></td>
 			<td>X</td>
-			<td>X</td>
+			<% if @heroe.progenitores %>
+				<td><%= erb :'ficha/progenitores' %></td>
+			<% end %>
 			<% if p = @heroe.pet %>
 				<td><%= erb :'display/display', :locals => { 
 						:title       => p.nombre, 

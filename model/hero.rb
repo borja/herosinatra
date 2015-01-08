@@ -111,6 +111,28 @@ class Hero < Hash
   def magias        ; self.hechizos.map { |num| spell(num)}  if self.hechizos end
   def blood_magic   ; self.sangres.map  { |num| sangre(num)} if self.sangres  end
   def shadow_magic  ; self.sombras.map  { |num| sombra(num)} if self.sombras  end  
+  
+  def padre
+    if self.progenitores
+      papa = self.progenitores.first
+      case papa
+        when Fixnum then return {:type => "pj",  :char => hero(papa)}
+        when String then return {:type => "pnj", :char => papa}
+        else return "Fallo de padre => #{papa.class}"
+      end
+    else return nil end
+  end
+  
+  def madre
+    if self.progenitores
+      mama = self.progenitores[1]
+      case mama
+        when Fixnum then return {:type => "pj",  :char => hero(mama)}
+        when String then return {:type => "pnj", :char => mama}
+        else return "Fallo de madre => #{mama.class}"
+      end
+    else return nil end
+  end
     
   def genderize
     if self.gender == "female" 
