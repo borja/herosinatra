@@ -189,7 +189,7 @@ def enchants
     },
     { :id           => 37,
       :name         => "aéreo",
-      :descripcion  => "+1 vs aire.",
+      :descripcion  => "+1 vs rayo.",
       :tipo         => "bendito",
     },
     { :id           => 38,
