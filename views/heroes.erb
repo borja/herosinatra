@@ -47,12 +47,9 @@
 				<td>
 					<table id='table-2'>
  					  <tbody>
-					    <tr><td>
-							<%= erb :'display/display', :locals => { 
-								:title       => hero.armadura.name, 
-								:path        => hero.armadura.img_path,
-								:description => hero.armadura.defensa } %>
-						</td></tr>
+					    <tr>
+							<td><%= erb :'display/armadura', :locals => { :a => hero.armadura } %></td>
+						</tr>
 					  </tbody>
 					</table>
 				</td>

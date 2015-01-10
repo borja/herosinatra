@@ -6,11 +6,7 @@
 			<table id='table-2'>
 				<thead>
 					<tr><th width='80%'>Armadura</th>
-						<td><%= erb :'display/display', :locals => { 
-							:title       => @heroe.armadura.name , 
-							:path        => @heroe.armadura.img_path, 
-							:description => @heroe.armadura.defensa } %>
-						</td>
+						<td><%= erb :'display/armadura', :locals => { :a => @heroe.armadura } %></td>
 					</tr>
 					<% fields[1].each do |field| %>
 						<%= erb :'ficha/inventario/field', :locals => {:fits => field } %>
