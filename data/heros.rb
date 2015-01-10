@@ -899,7 +899,7 @@ def heros
     }),
     Hero.new({ 
       :id           => 46,
-      :name         => "Vowie Favule",
+      :name         => "Gracia Favule",
       :personaje    => "derviche",
       :jugador      => "Daniel Cabañas",
       :status       => "reserva",
@@ -909,6 +909,7 @@ def heros
       :mov          => 8,
       :armas        => [Arma.new({:id => 1})],
       :armadura     => Armadura.new({:id => 2}),
+      :pet          => Pet.new({:id => 15, :name => "Fabulosa", :torpe => true}),
       :hechizos     => [18,19,20],
     }),
     Hero.new({ 
