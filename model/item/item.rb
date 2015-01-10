@@ -12,7 +12,7 @@ class Item < Hash
     end
   end 
   
-  def tier_color ; 'blue' end
+  def tier_color ; 'black' end
   def enchanted? ; self.enchants            end
   def item       ; self.class.to_s.downcase end
   def engarzado? ; self.gemas or self.joyas or self.runas end
