@@ -17,12 +17,7 @@
 	<tbody>
 		<% heros.each do |hero| %><% if ((hero.status || "ausente") == @status) %>
 			<tr>
-				<td><% if hero.muerto %>
-						<img src=../images/personajes/dead.png	alt="muerto" /, id='icon'>
-					<% else %>
-						<%= erb :'display/portrait', :locals => { :h => hero } %>
-					<% end%>
-				</td>
+				<td><%= erb :'display/portrait', :locals => { :h => hero } %></td>
 				<td><a href=hero/<%= hero.id %>><%= hero.name %></a><br>
 					<i><%= hero.jugador %></i>
 				</td>
