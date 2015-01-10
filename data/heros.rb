@@ -931,7 +931,22 @@ def heros
       :armadura     => Armadura.new({:id => 0}),
       :skills       => [0,1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19,20,22,25,26,27,28,29,30,32,33,34,35],
       :profesion    => Profesion.new({:id => 5, :aprendiz => [0,3,4]}),
-    })
+    }),
+    Hero.new({ 
+      :id           => 48,
+      :name         => "Ana Killarney",
+      :personaje    => "hoplita",
+      :jugador      => "Iris",
+      :gender       => "female",
+      :status       => "reserva",
+      :nivel        => 2,
+      :cuerpo       => 8,
+      :mente        => 3,
+      :mov          => 7,
+      :armadura     => Armadura.new({:id => 2}),
+      :armas        => [Arma.new({:id => 2})],
+      :skills       => [0,1],
+    }),
   ]
 end
 
