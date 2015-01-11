@@ -30,7 +30,6 @@ def pets
       :name         => "rata",
       :personajes   => ["mago"],
       :bono         => "+1 PM",
-      :lacra        => "-1 vs Peste",
       :sex          => "female",
       :lacra        => "-1 Reputación",
     },

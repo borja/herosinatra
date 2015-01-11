@@ -387,6 +387,11 @@ def enchants
       :descripcion  => "+1 Potencia de las magias de aire.",
       :tipo         => "aire",
     },
+    { :id           => 77,
+      :name         => "térmico",
+      :descripcion  => "+1 vs fuego",
+      :tipo         => "agua",
+    },
   ]
 end
 def enchant id ;  enchants[id] end
