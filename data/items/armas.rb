@@ -207,6 +207,14 @@ def armas
       :diagonal     => true,
       :unico        => true,
     },
+    { 
+      :id           => 25,
+      :name         => "Flechas",
+      :categoria    => "munición",
+      :ataque       => 0,
+      :ranuras      => 0,
+      :diagonal     => false,
+    },
   ]
 end
 

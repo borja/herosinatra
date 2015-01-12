@@ -406,6 +406,11 @@ def enchants
       :name         => "de hierro meteórico",
       :descripcion  => "1/reto: +1 defensa",
       :tipo         => "tierra",
+    },
+    { :id           => 81,
+      :name         => "rúnicas de cuarzo",
+      :descripcion  => "Al matar: +1 PM",
+      :tipo         => "tierra",
     }
   ]
 end
