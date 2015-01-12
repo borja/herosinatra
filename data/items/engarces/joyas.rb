@@ -92,6 +92,9 @@ def joyas
     Joya.new({ :id => 18, :name => "atrapasueños élfico",:fits => { 
       :bastón   => "Permite armonizar el báculo de las estaciones.",  
     } }),
+    Joya.new({ :id => 19, :name => "talismán guardabosques",:fits => { 
+      :cabeza   => "+1PM al defender con éxito",  
+    } }),
   ]
 end
 

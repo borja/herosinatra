@@ -15,9 +15,13 @@ def gemas
     Gema.new({ :id => 8,  :name => "almandino", :fits => {} }),
     Gema.new({ :id => 9,  :name => "heliotropo", :fits => {} }),
     Gema.new({ :id => 10, :name => "turquesa", :fits => {} }),
-    Gema.new({ :id => 11, :name => "lapislázuli", :fits => {} }),
+    Gema.new({ :id => 11, :name => "lapislázuli", :fits => {
+      :hombros  => "2 escudos negros al defender: magia de agua nivel 1 aleatoria",
+    } }),
     Gema.new({ :id => 12, :name => "espinela", :fits => {} }),
-    Gema.new({ :id => 13, :name => "hessonita", :fits => {} }),
+    Gema.new({ :id => 13, :name => "hessonita", :fits => {
+      :anillo   => "+2 PM",
+    } }),
     Gema.new({ :id => 14, :name => "malaquita", :fits => {} }),
     Gema.new({ :id => 15, :name => "obsidiana", :fits => {} }),
  
@@ -45,6 +49,7 @@ def gemas
       :espalda  => "+2 vs escarcha",
       :cabeza   => "+1 PM",
       :arma     => "+1 dado de escarcha",
+      :hombros  => "+1 PM",
     } }),
     Gema.new({ :id => 27, :name => "topacio", :fits => {
       :espalda  => "+2 vs rayo",
@@ -53,6 +58,7 @@ def gemas
     Gema.new({ :id => 28, :name => "rubí", :fits => {} }),
     Gema.new({ :id => 29, :name => "diamante", :fits => {
       :armadura => "+2 Protección",
+      :cuello   => "1/reto: cura corporal",
     } }),
     Gema.new({ :id => 30, :name => "jacinto", :fits => {
       :cabeza   => "+2 vs Fuego",
