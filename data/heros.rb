@@ -953,6 +953,24 @@ def heros
                         Arma.new({:id => 7})],
       :skills       => [0,2],
     }),
+    Hero.new({ 
+      :id           => 49,
+      :name         => "Damadius Umbradrack",
+      :personaje    => "brujo",
+      :jugador      => "Javier Galindo",
+      :status       => "retirado",
+      :nivel        => 2,
+      :cuerpo       => 6,
+      :mente        => 5,
+      :mov          => 7,
+      :hechizos     => [0,1,2],
+      :sombras      => [0,1,2],
+      :armas        => [Arma.new({:id =>  3})],
+      :armadura     => Armadura.new({:id => 1}),
+      :skills       => [0,1],
+      :pet          => Pet.new({:id  => 20, :name => "terry"}),
+      :muerto       => true,
+    }),
   ]
 end
 
