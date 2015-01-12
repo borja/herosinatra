@@ -3,16 +3,28 @@ def brujos
   [
     {
       :id           => 0,
-      :name         => "brujería",
-      :description  => "sin definir",
-      :type         => "única"
+      :name         => "Maldecir",
+      :description  => "A cambio de 2 PC el brujo recupera 1 Punto de Sombra (1 PS)",
+      :type         => "Única"
     },
     {
       :id           => 1,
-      :name         => "maldecir",
+      :name         => "Secuestrar sombra",
+      :description  => "A cambio de 1 PS el tiefling se convierte en la sombra de su enemigo permitiendo un ataque a distancia. Si consigue matar al enemigo, el brujo gana un hechizo.",
+      :type         => "Activa"
+    },
+    {
+      :id           => 2,
+      :name         => "Invocar diablillo",
+      :description  => "A cambio de 2 PC el brujo invoca un diablillo 1/1",
+      :type         => "Activa"
+    },
+    {
+      :id           => 3,
+      :name         => "Brujería",
       :description  => "sin definir",
-      :type         => "pasiva"
-    }
+      :type         => "Pasiva"
+    },
   ]
 end
 
