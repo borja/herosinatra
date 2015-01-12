@@ -3,30 +3,21 @@
 		<img src=<%= item.img_path %> alt=<%= item.name %>, id='icon' />
 	</div>
 	<div class="popup_information">
-		<center><h3>
+		<h3>
 			<% if item.enchanted? %>
 				<%= item.name.capitalize %>
 				<%= enchant(item.enchants.first)[:name] %>
 			<% else %>
 				<%= item.name %>
-			<% end %>
-			<br><br>
-			
+			<% end %>	
+			<br>
 			<img src=<%= item.img_path %> alt=<%= item.name %>, id='icon3' />
-		</h3></center>
-		
-		<h4>Características</h4>
+		</h3>
 		<% if item.item == "proteccion" %>
 			<li>Protección: <i>+<%= item.defensa %> potencia.</i></li>
 			<li>Categoría: <i><%= item.categoria %></i></li>
 		<% end %>
-		<% if item.mundano? %>
-			<li>No ha sido engarzado.</li>       
-		<% else %>
-			<br>
-			<%= erb :'display/item/engarces', :locals => {:item => item } %>
-		<% end %>
-		
+		<%= erb :'display/item/engarces', :locals => {:item => item } unless item.mundano? %>
 		<% if item.enchants %>	
 			<br>
 			<h4>Propiedades mágicas</h4>
