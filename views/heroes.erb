@@ -15,7 +15,7 @@
 		</tr>
 	</thead>
 	<tbody>
-		<% heros.each do |hero| %><% if ((hero.status || "ausente") == @status) %>
+		<% heros.sort_by { |h| h.nivel }.reverse.each do |hero| %><% if ((hero.status || "ausente") == @status) %>
 			<tr>
 				<td><%= erb :'display/portrait', :locals => { :h => hero } %></td>
 				<td><a href=hero/<%= hero.id %>><%= hero.name %></a><br>
