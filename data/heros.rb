@@ -885,6 +885,7 @@ def heros
                         Miscelanea.new({:id => 2,  :gemas => [29]}),
                         Miscelanea.new({:id => 3}),
                         Miscelanea.new({:id => 4}),
+                        Miscelanea.new({:id => 19, :enchants => [82]}),
                         Miscelanea.new({:id => 5,  :gemas => [20,24]})],
       :pet          => Pet.new({:id  => 15, :name => "Farfala", :torpe => true}),
       :skills       => [1,2,3,4,5,6,9,10,13,14,15,16,17,18,19,20,21,22],

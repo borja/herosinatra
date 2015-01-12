@@ -17,8 +17,10 @@
 		<% if a.diagonal %>
 			<li>Permite atacar en diagonal</li>
 		<% end %>
-		<% if a.mundano? && !a.enchanted? %>
-			<li>Arma mundana</li>
+		<% if a.mundano? %>
+			<% unless a.enchanted? %>
+				<li>Arma mundana</li>
+			<% end %>
 		<% else %>
 			<br><%= erb :'display/item/engarces', :locals => {:item => a}%>
 		<% end %>

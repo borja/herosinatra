@@ -119,6 +119,12 @@ def miscelaneas
       :max  => 4,
       :fits => "amuleto", 
     },
+    {
+      :id   => 19,
+      :name => "carcaj",  
+      :max  => 1,
+      :fits => "amuleto", 
+    },
   ]
 end
 

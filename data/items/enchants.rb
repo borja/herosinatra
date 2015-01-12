@@ -411,6 +411,11 @@ def enchants
       :name         => "rúnicas de cuarzo",
       :descripcion  => "Al matar: +1 PM",
       :tipo         => "tierra",
+    },
+    { :id           => 82,
+      :name         => "de flechas infinitas",
+      :descripcion  => "Nunca se termina la munición",
+      :tipo         => "élfico",
     }
   ]
 end
