@@ -213,6 +213,7 @@ def heros
       :cuerpo       => 10,
       :mente        => 4,
       :mov          => 8,
+      :pet          => Pet.new({:id  => 18, :name => "Menta", :torpe => true}),
       :armas        => [Arma.new({:id => 12, :enchants => [58]})],
       :armadura     => Armadura.new({:id => 3}),
       :proteccions  => [Proteccion.new({:id => 2}),
@@ -222,7 +223,7 @@ def heros
       :pergaminos   => [Pergamino.new({:id => 2, :spells  => [8,10]}),
                         Pergamino.new({:id => 1, :spells  => [32]})],
       :skills       => [0,1,2,3,4,5,6,7,8,9],
-      :profesion    => Profesion.new({:id => 2,  :aprendiz => [0]}),
+      :profesion    => Profesion.new({:id => 2,  :aprendiz => [0,1]}),
       :historia     => "Inscrito en el concurso",
     }),
     Hero.new({ 
