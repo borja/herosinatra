@@ -31,7 +31,7 @@ def proteccions
       :categoria    => "cuero",
       :defensa      => 1,
       :ranuras      => 2,
-      :fits         => "piés",
+      :fits         => "pies",
     },
     { 
       :id           => 4,

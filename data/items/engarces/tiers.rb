@@ -61,9 +61,16 @@ def tiers
       :id    => 8,
       :name  => "disformidad",
       :bono  => "permite gobernar no-muertos",
-      :mix   => {:gemas => [19], :joyas => [1,1], :runas => nil },
+      :mix   => {:gemas => [24], :joyas => [1,1], :runas => nil },
       :color => "#996699"
-    }
+    },
+    {
+      :id    => 9,
+      :name  => "dracónico",
+      :bono  => "+1 hechizo élfico",
+      :mix   => {:gemas => [25,16,48], :joyas => nil, :runas => nil },
+      :color => "#1C975B"
+    },
   ]
 end
 

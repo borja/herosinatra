@@ -50,6 +50,11 @@ def pociones
       :name         => "velocidad",
       :efecto       => "+5 movimiento",
       :precio       => 25,
+    },
+    { :id           => 10,
+      :name         => "nunca estuve aquí",
+      :efecto       => "Los enemigos olvidan la presencia del héroe en la S/P",
+      :precio       => 400,
     }
   ]
 end

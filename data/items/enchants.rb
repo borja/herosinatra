@@ -104,7 +104,7 @@ def enchants
     },
     { :id           => 20,
       :name         => "imperial",
-      :descripcion  => "el objeto otorga + 1 Punto de reputación.",
+      :descripcion  => "+ 1 Reputación.",
       :tipo         => "imperial",
     },
     { :id           => 21,
@@ -392,6 +392,11 @@ def enchants
       :descripcion  => "+1 vs fuego",
       :tipo         => "agua",
     },
+    { :id           => 78,
+      :name         => "balsámico",
+      :descripcion  => "+1 vs escarcha y peste",
+      :tipo         => "tierra",
+    }
   ]
 end
 def enchant id ;  enchants[id] end
