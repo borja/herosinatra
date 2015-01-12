@@ -209,7 +209,7 @@ def armas
     },
     { 
       :id           => 25,
-      :name         => "Flechas",
+      :name         => "flechas",
       :categoria    => "munición",
       :ataque       => 0,
       :ranuras      => 0,
