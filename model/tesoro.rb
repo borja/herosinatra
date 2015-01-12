@@ -11,6 +11,15 @@ class Engarce < Hash
   end
   def item ; self.class.to_s.downcase end
   def img_path ; "'../../images/treasures/#{self.item}s/#{self.name}.png'" end
+  
+  def bonificador item
+    case 
+      when item.fits == "arma"         then return self.fits[item.categoria.to_sym] || "Sin efecto"
+      when item.fits == "armadura"     then return self.fits[item.categoria.to_sym] || "Sin efecto"
+      when self.fits[item.fits.to_sym] then return self.fits[item.fits.to_sym]
+      else return "Sin efecto"
+    end
+  end
 end
 
 class Gema < Engarce

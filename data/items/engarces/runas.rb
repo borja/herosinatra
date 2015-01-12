@@ -34,7 +34,7 @@ def runas
     Runa.new({ :id => 5,  :name => "yom"  , :fits => {
       :cabeza   => "Durante la defensa vs hechizos añade +1d6 a la Mente.",
       :arma     => "Eléctrica",
-      :capa     => "Se tiran dados morados al saltar fosos.",
+      :espalda  => "Se tiran dados morados al saltar fosos.",
       :anillo   => "El fuego de Ira contra no-muertos dobla el daño",
     } }),  
     Runa.new({ :id => 6,  :name => "sinq" , :fits => {
@@ -64,7 +64,7 @@ def runas
       :daga     => "+ 1 potencia",
       :espada	  => "+ 1 dado verde de ataque",
       :cintura	=> "+ 2 al número de pociones y pergaminos portables.",
-      :capa	    => "1 vez / foso: Saltar satisfactoriamente recupera 1PC.",
+      :espalda  => "1 vez / foso: Saltar satisfactoriamente recupera 1PC.",
     } }),  
     Runa.new({ :id => 11, :name => "gar"  , :fits => {
       :anillo 	=> "Duplica el oro de las tiradas de tesoro",

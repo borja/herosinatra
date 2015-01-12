@@ -13,10 +13,11 @@ def joyas
       :daga     => "Al arrojar y matar, se arroja sola automáticamente",
       :arma     => "+1 ataque (excepto demonios y caóticos)",
       :colgante => "+1 hechizo tenebro aleatorio",
+      :muñecas  => "TBD",
     } }),
     Joya.new({ :id => 2,  :name => "multicolor",  :fits => { 
       :hacha    => "Hacha doble (4 calaveras): magia elemental aleatoria potencia:nivel",
-      :coraza   => "(4 calaveras): magia elemental aleatoria potencia:nivel",
+      :metal    => "(4 calaveras): magia elemental aleatoria potencia:nivel",
       :anillo   => "Pergaminos elementales +1 efecto.",
     } }),
     Joya.new({ :id => 3,  :name => "simbionte",   :fits => {
@@ -88,7 +89,9 @@ def joyas
     Joya.new({ :id => 17, :name => "de la primavera",    :fits => {
       :bastón   => "permite usar 3 magias de la primavera (si se usa 1, se desactivan las demás, salvo que sea gratuita)",
     } }),
-    Joya.new({ :id => 18, :name => "atrapasueños élfico",:fits => { } }),
+    Joya.new({ :id => 18, :name => "atrapasueños élfico",:fits => { 
+      :bastón   => "Permite armonizar el báculo de las estaciones.",  
+    } }),
   ]
 end
 

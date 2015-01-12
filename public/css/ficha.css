@@ -128,3 +128,25 @@
 #scrolls:hover {
     border-color: red;
 }
+
+#tablaengarces {
+    width: 96%;
+    margin-left:auto; 
+    margin-right:auto;
+}
+#tablaengarces td {
+	line-height: 20px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	border: 1px solid transparent;
+}
+#tablaengarces #engarce {
+	width: 10%;
+}
+#tablaengarces #nombre {
+	width: 30%;
+	color: white;
+}
+#tablaengarces #descriptor {
+    color: white;
+}

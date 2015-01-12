@@ -895,6 +895,7 @@ def heros
       :cuerpo       => 4,
       :mente        => 6,
       :mov          => 7,
+      :pet          => Pet.new({:id => 5, :name => "Vladimir", :torpe => true}),
       :armas        => [Arma.new({:id => 3})],
       :armadura     => Armadura.new({:id => 1}),
       :proteccions  => [Proteccion.new({:id => 4, :ranuras => 1})],

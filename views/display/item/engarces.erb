@@ -1,28 +1,18 @@
 <table id='tier', style="background-color:<%= item.tier_color %>;">
-<tbody>
-	<tr><td>
-		<% if item.tier %>
-			<h3>Tier de <%= "ola ke ase" %></h3>
-		<% end %>
-		<h3>Engarces</h3>
-			<% if item.gemas %>
-				<% item.gemas.each do |g| %>
-					<img src=<%= gema(g).img_path %> alt=<%= gema(g).name %>, id='icon' />
-				<% end %>
+	<tbody>
+		<tr><td>
+			<% if item.is_tier? %>
+				<h3>Tier de <%= item.is_tier?[:name] %></h3>
+				<p style="color: white">Efecto: <i><%= item.is_tier?[:bono] %></i></p>
+			<% else %>
+				<h3>Engarces</h3>
 			<% end %>
-			<% if item.joyas %>
-				<% item.joyas.each do |j| %>
-					<img src=<%= joya(j).img_path %> alt=<%= joya(j).name %>, id='icon' />
+				<%= erb :'display/item/gemas', :locals => {:item => item} if item.gemas %>
+				<%= erb :'display/item/joyas', :locals => {:item => item} if item.joyas %>
+				<%= erb :'display/item/runas', :locals => {:item => item} if item.runas %>
+				<% item.ranuras_libres.times do %>
+					<%= erb :'display/ranura' %>
 				<% end %>
-			<% end %>
-			<% if item.runas %>
-				<% item.runas.each do |r| %>
-					<img src=<%= runa(r).img_path %> alt=<%= runa(r).name %>, id='icon' />
-				<% end %>
-			<% end %>	
-			<% item.ranuras_libres.times do %>
-				<%= erb :'display/ranura' %>
-			<% end %>
-	</td></tr>
-</tbody>
+		</td></tr>
+	</tbody>
 </table>	

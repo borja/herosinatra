@@ -52,7 +52,7 @@ def armas
     { 
       :id           => 6,
       :name         => "katar",
-      :categoria    => "cuchillo",
+      :categoria    => "espada",
       :ataque       => 2,
       :ranuras      => 2,
       :diagonal     => false

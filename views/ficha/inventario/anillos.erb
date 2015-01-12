@@ -2,21 +2,25 @@
 	<thead>
 		<tr>
 			<th width='80%'>Anillo Izquierdo</th>
-			<% if a = @heroe.anillos.first %>
-				<td><%= erb :'display/display', :locals => {:title => a.name, :path => a.img_path, :description => ""} %></td>
-			<% else %>
-				<% img_path = "'../../images/treasures/socket.png'" %>
-				<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
-			<% end %>
+				<td>
+					<% if a = @heroe.anillos.first %>
+						<%= erb :'display/item', :locals => {:item => a } %></td>
+					<% else %>
+						<%= erb :'display/ranura' %>
+					<% end %>
+				</td>
+			</th>
 		</tr>
 		<tr>
 			<th width='80%'>Anillo Derecho</th>
-			<% if a = @heroe.anillos[1] %>
-				<td><%= erb :'display/display', :locals => {:title => a.name, :path => a.img_path, :description => ""} %></td>
-			<% else %>
-				<% img_path = "'../../images/treasures/socket.png'" %>
-				<td><img src=<%=img_path%> alt='ranura-hueca', id='icon' /></td>
-			<% end %>
+				<td>
+					<% if a = @heroe.anillos[1] %>
+						<%= erb :'display/item', :locals => {:item => a } %></td>
+					<% else %>
+						<%= erb :'display/ranura' %>
+					<% end %>
+				</td>
+			</th>
 		</tr>
 	</thead>
 </table>

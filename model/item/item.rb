@@ -12,7 +12,6 @@ class Item < Hash
     end
   end 
   
-  def tier_color ; 'black' end
   def enchanted? ; self.enchants            end
   def item       ; self.class.to_s.downcase end
   def engarzado? ; self.gemas or self.joyas or self.runas end
@@ -29,28 +28,24 @@ class Item < Hash
     total -= self.joyas.size if self.joyas
     return total
   end
-  
-  def piedras
-    p = []
-    self.gemas.each do |g|
-      p << gema(g)
-    end
-    return p
-  end
-  
+   
   def img_path
     carpeta = self.enchanted? ? "magic/#{self.name + self.enchants.size.to_s}" : self.name
     "'../images/#{self.item}s/#{carpeta}.png'"
   end
   
-  def tier
-    combo = nil
+  def is_tier?
+    combo = false
     mix = {:gemas => self.gemas, :runas => self.runas, :joyas => self.joyas }
     tiers.each do |t|
-      combo = tier(t[:id]) if t[:mix] == mix
+      if t[:mix] == mix
+        combo = tier(t[:id]) 
+      end
     end
     return combo 
   end  
+  
+  def tier_color ; self.is_tier? ? self.is_tier?[:color] : "black" end
 end
 
 class Proteccion < Item
@@ -70,12 +65,14 @@ class Arma < Item
   def ataque   ; arma(self.id)[:ataque]    end
   def diagonal ; arma(self.id)[:diagonal]  end
   def categoria; arma(self.id)[:categoria] end
+  def fits     ; "arma" end
 end
 
 class Armadura < Item  
   def name     ; armadura(self.id)[:name] end
   def defensa  ; armadura(self.id)[:defensa] end
   def categoria; armadura(self.id)[:categoria] end
+  def fits     ; "armadura" end
 end
 
 class Util < Hash
@@ -115,15 +112,3 @@ class Pergamino < Util
     return magias
   end
 end
-
-
-
-
-
-
-
-
-
-
-
-

@@ -57,10 +57,7 @@
 					<table id='table-2'>
  					  <tbody>
 					    <tr><% hero.proteccions.each do |p| %>
-								<td><%= erb :'display/display', :locals => { 
-										:title       => p.name, 
-										:path        => p.img_path,
-										:description => p.defensa } %></td>
+								<td><%= erb :'display/item', :locals => {:item => p} %></td>
 							<% end %>
 						</tr>
 					  </tbody>
