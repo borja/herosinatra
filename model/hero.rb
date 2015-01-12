@@ -7,7 +7,7 @@ class Hero < Hash
     :repu, :nivel, :cuerpo, :mente, :mov, :historia,       
     :pet,:montura, :descendencia, :pareja, :progenitores,        
     :hechizos, :sombras, :sangres, :skills,   
-    :armas, :armadura, :proteccions, :miscelaneas,           
+    :armas, :armadura, :proteccions, :miscelaneas, :abalorios,          
     :profesion,  
     :piezas, :pociones, :pergaminos,
     :oro,:joyas,:runas, :gemas             
@@ -23,13 +23,6 @@ class Hero < Hash
     define_method(f) do
   		((self.proteccions || []) + (self.miscelaneas || [])).detect { |item| item.fits == f }
     end
-  end
-    
-  def tesoros
-    self.gemas.each do |gem|
-      puts gema(gem)
-    end
-    return 4
   end
   
   def cuerpo_base

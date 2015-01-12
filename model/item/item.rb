@@ -75,6 +75,11 @@ class Armadura < Item
   def fits     ; "armadura" end
 end
 
+class Abalorio < Item
+  def name     ; abalorio(self.id)[:name] end
+  def fits     ; "abalorio" end
+end
+
 class Util < Hash
   attr_accessor :id,
     :spells # Only for pergaminos

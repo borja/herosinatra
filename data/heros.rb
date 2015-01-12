@@ -100,7 +100,8 @@ def heros
       :pergaminos   => [Pergamino.new({:id => 1, :spells  => [60]}),
                         Pergamino.new({:id => 1, :spells  => [71]})],
       :gemas        => [51,25,25,25,17,17,35,4,26,16,27,18,39],
-      :runas        => [7,9],                      
+      :runas        => [7,9],
+      :abalorios    => [Abalorio.new({:id  =>1})],                      
     }),
     Hero.new({ 
       :id           => 3,
