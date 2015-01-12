@@ -74,7 +74,7 @@ def joyas
       :colgante => "1/reto: El siguiente hechizo es súmmum y chakra",
     } }),
     Joya.new({ :id => 12, :name => "cerebro congelado",  :fits => {
-      :cinturón => "1/reto: puede ejecutar el hechizo Reposición Mental"
+      :cintura  => "1/reto: puede ejecutar el hechizo Reposición Mental",
     } }),
     Joya.new({ :id => 13, :name => "demonio en tarro",   :fits => { } }),
     Joya.new({ :id => 14, :name => "del verano",         :fits => {

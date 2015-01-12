@@ -3,8 +3,8 @@ def tiers
   [
     {
       :id    => 0,
-      :name  => "turmalina",
-      :bono  => "dos imperiales azules aturden al objetivo",
+      :name  => "maestra de turmalina",
+      :bono  => "+1 ataque, dos imperiales azules aturden al objetivo",
       :mix   => {:gemas => [25,17,26], :runas => nil, :joyas => nil },
       :color => "#003366"
     },

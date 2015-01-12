@@ -55,7 +55,12 @@ def pociones
       :name         => "nunca estuve aquí",
       :efecto       => "Los enemigos olvidan la presencia del héroe en la S/P",
       :precio       => 400,
-    }
+    },
+    { :id           => 11,
+      :name         => "teletransporte",
+      :efecto       => "1d6+2 casillas",
+      :precio       => 300,
+    }, 
   ]
 end
 def pocion id ; pociones[id] end

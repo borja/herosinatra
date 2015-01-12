@@ -21,7 +21,8 @@ def gemas
  
     Gema.new({ :id => 16, :name => "jade", :fits => {} }),
     Gema.new({ :id => 17, :name => "aguamarina", :fits => {
-      :pies   => "2 escudos blancos -> 1 genio"
+      :pies   => "2 escudos blancos -> 1 genio",
+      :arma   => "+1 dado de escarcha",
     } }),
     Gema.new({ :id => 18, :name => "ámbar", :fits => {} }),
     Gema.new({ :id => 19, :name => "piropo", :fits => {} }),
@@ -41,6 +42,7 @@ def gemas
     Gema.new({ :id => 26, :name => "zafiro", :fits => {
       :espalda  => "+2 vs escarcha",
       :cabeza   => "+1 PM",
+      :arma     => "+1 dado de escarcha",
     } }),
     Gema.new({ :id => 27, :name => "topacio", :fits => {
       :espalda  => "+2 vs rayo",
@@ -80,7 +82,9 @@ def gemas
     Gema.new({ :id => 46, :name => "piedra fénix", :fits => {} }),
     Gema.new({ :id => 47, :name => "dragonita", :fits => {} }),
 
-    Gema.new({ :id => 48, :name => "serpentina del dragón", :fits => {} }),
+    Gema.new({ :id => 48, :name => "serpentina del dragón", :fits => {
+      :armadura => "+2 vs Peste",
+    } }),
     Gema.new({ :id => 49, :name => "hierro antigravedad", :fits => {
       :espalda => "Al correr, el héroe vuela.",
     } }),

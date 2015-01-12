@@ -96,10 +96,11 @@ def heros
       :skills       => [0,1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,19,20,22,25,26,27,28,29,30,32,33,34,35,36],
       :profesion    => Profesion.new({:id => 5, :aprendiz => [0,3,4]}),
       :piezas       => [3],
-      :pociones     => [4,9,6,7],
+      :pociones     => [4,6,7,7,11],
       :pergaminos   => [Pergamino.new({:id => 1, :spells  => [60]}),
                         Pergamino.new({:id => 1, :spells  => [71]})],
-      :gemas        => [51,25,25,1,17,17,35,2,4,26,16],                      
+      :gemas        => [51,25,25,25,17,17,35,4,26,16,27,18,39],
+      :runas        => [7,9],                      
     }),
     Hero.new({ 
       :id           => 3,
