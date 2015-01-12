@@ -5,7 +5,9 @@ def gemas
     Gema.new({ :id => 1,  :name => "antracita", :fits => {} }),
     Gema.new({ :id => 2,  :name => "pirita", :fits => {} }),
     Gema.new({ :id => 3,  :name => "serpentina", :fits => {} }),
-    Gema.new({ :id => 4,  :name => "ojo de gato", :fits => {} }),
+    Gema.new({ :id => 4,  :name => "ojo de tigre", :fits => {
+      :armadura => "Los ataques por el flanco se consideran frontales.",
+    } }),
     Gema.new({ :id => 5,  :name => "hematites", :fits => {} }),
     Gema.new({ :id => 6,  :name => "piedra pómez", :fits => {} }),
     Gema.new({ :id => 7,  :name => "cuarzo", :fits => {} }),
