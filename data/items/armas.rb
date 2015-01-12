@@ -75,7 +75,7 @@ def armas
     },
     { 
       :id           => 9,
-      :name         => "Espada Roja",
+      :name         => "espada roja",
       :categoria    => "filo",
       :ataque       => 4,
       :ranuras      => 3,
