@@ -620,6 +620,7 @@ def heros
       :armadura     => Armadura.new({:id => 0}),
       :skills       => [0,1,2,3,4,5,6,7,8,9,10,11,12,13,16,17,18],
       :hechizos     => [1,2,3,4,5,6,7,8,9,10,11,12,16,17,18,19,20,21,22,23],
+      :historia     => "Inscrita en el concurso",
     }),
     Hero.new({ 
       :id           => 30,
@@ -949,10 +950,12 @@ def heros
       :nivel        => 2,
       :cuerpo       => 8,
       :mente        => 3,
-      :mov          => 7,
+      :mov          => 8,
+      :pet          => Pet.new({:id  => 17, :name => "Chop", :torpe => true}),
       :armadura     => Armadura.new({:id => 2}),
-      :armas        => [Arma.new({:id => 2})],
-      :skills       => [0,1],
+      :armas        => [Arma.new({:id => 5}),
+                        Arma.new({:id => 7})],
+      :skills       => [0,2],
     }),
   ]
 end
