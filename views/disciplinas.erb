@@ -18,7 +18,7 @@
 				<td><%= c[:type].capitalize %></td>
 				<td><%= c[:name] %></td>
 				<td><i><%= c[:description] %></i></td>
-				<td><%= "In progress" %></td>
+				<td><%= c[:nivel] || "Sin definir" %></td>
 				<td><%= "In progress" %></td>
 			</tr>
 		<% end %>

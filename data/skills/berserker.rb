@@ -3,27 +3,31 @@ def bersérkers
   [
     {
       :id           => 0,
-      :name         => "esquiva",
-      :description  => "+1 Defensa vs un enemigo declarado. Tiene que declararse en el turno del jugador, pudiendo cambiar de enemigo cada turno.",
-      :type         => "declarativa"
+      :name         => "furia",
+      :description  => "1 PM: +1 dado de ataque",
+      :type         => "activa",
+      :nivel        => 1,
     },
     {
       :id           => 1,
-      :name         => "furia",
-      :description  => "1 PM: +1 dado de ataque",
-      :type         => "activa"
+      :name         => "esquiva",
+      :description  => "+1 Defensa vs un enemigo declarado. Tiene que declararse en el turno del jugador, pudiendo cambiar de enemigo cada turno.",
+      :type         => "declarativa",
+      :nivel        => 2,
     },
     {
       :id           => 2,
       :name         => "barrido",
       :description  => "Hace un ataque a todo su alrededor",
-      :type         => "Pasiva"
+      :type         => "Única",
+      :nivel        => 2,
     },
     {
       :id           => 3,
       :name         => "hendedura",
       :description  => "-2 ataque/enemigo",
-      :type         => "Pasiva"
+      :type         => "Activa",
+      :nivel        => 2,
     },
     {
       :id           => 4,
