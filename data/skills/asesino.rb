@@ -129,7 +129,4 @@ def asesinos
     },
   ]
 end
-
-def asesino(id)
-  asesinos[id]
-end
+def asesino id ; asesinos[id] end

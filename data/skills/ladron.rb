@@ -1,5 +1,5 @@
 # encoding: UTF-8
-def ladrons
+def ladróns
   [
     {
       :id           => 0,
@@ -16,6 +16,4 @@ def ladrons
   ]
 end
 
-def ladron(id)
-  ladrons[id]
-end
+def ladrón id ; ladrons[id] end
