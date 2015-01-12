@@ -945,10 +945,11 @@ def heros
       :nivel        => 2,
       :cuerpo       => 8,
       :mente        => 3,
-      :mov          => 7,
+      :mov          => 8,
       :armadura     => Armadura.new({:id => 2}),
-      :armas        => [Arma.new({:id => 2})],
-      :skills       => [0,1],
+      :armas        => [Arma.new({:id => 5}),
+                        Arma.new({:id => 7})],
+      :skills       => [0,2],
     }),
   ]
 end
