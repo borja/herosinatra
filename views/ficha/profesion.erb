@@ -1,6 +1,8 @@
 <div class="information_popup_container">
 	<div class="information">
-		<img src=<%= prof.img_path %> alt=<%= prof.name %>, id='icon' />
+		<a href="/profesiones/<%= prof.name %>">
+			<img src=<%= prof.img_path %> alt=<%= prof.name %>, id='icon' />
+		</a>
 	</div>
 	<div class="popup_information">
 		<h3><%= prof.name.capitalize %>
