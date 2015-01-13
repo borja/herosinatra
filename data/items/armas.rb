@@ -204,7 +204,7 @@ def armas
       :categoria    => "bastón",
       :ataque       => 4,
       :ranuras      => 4,
-      :diagonal     => true,
+      :diagonal     => false,
       :unico        => true,
     },
     { 
