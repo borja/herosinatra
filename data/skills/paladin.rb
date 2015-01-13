@@ -1,21 +1,18 @@
 # encoding: UTF-8
-def paladins
+def paladíns
   [
     {
       :id           => 0,
       :name         => "golpe santificado",
       :description  => "sin definir",
-      :type         => "única"
+      :type         => "única",
     },
     {
       :id           => 1,
       :name         => "aura de valor",
       :description  => "sin definir",
-      :type         => "pasiva"
+      :type         => "pasiva",
     }
   ]
 end
-
-def paladin(id)
-  paladin[id]
-end
+def paladín id ; paladíns[id] end
