@@ -23,7 +23,7 @@ def druidas
       :description  => "+1 set de magia elemental.",
       :type         => "Pasiva",
       :nivel        => 2,
-      :requisitos   => "Ninguno",
+      :requisitos   => "Hechizar (Elfo: nivel 1)",
     },
     {
       :id           => 3,
@@ -31,7 +31,7 @@ def druidas
       :description  => "1 Punto de Vínculo (PV): +1 dado verde de defensa. El agresor recibe el exceso como daño defendible. Se aplica al druida y al espíritu. Debe declararse en la fase de Instintos.",
       :type         => "Reactiva",
       :nivel        => 2,
-      :requisitos   => "Ninguno",
+      :requisitos   => "Espíritu guardián",
     },
     {
       :id           => 4,
@@ -47,7 +47,7 @@ def druidas
       :description  => "1PV: creas 1 bellota que cura 1 PC y 1 PM.",
       :type         => "Activa",
       :nivel        => 3,
-      :requisitos   => "Ninguno",
+      :requisitos   => "Espíritu guardián",
     },
     {
       :id           => 6,
