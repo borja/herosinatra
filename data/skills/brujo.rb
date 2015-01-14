@@ -5,7 +5,7 @@ def brujos
       :id           => 0,
       :name         => "Brujería",
       :description  => "A cambio de 2 PC el brujo recupera 1 Punto de Sombra (1 PS)",
-      :type         => "Única"
+      :type         => "Activa"
     },
     {
       :id           => 1,
@@ -23,7 +23,7 @@ def brujos
       :id           => 3,
       :name         => "Maldecir",
       :description  => "sin definir",
-      :type         => "Pasiva"
+      :type         => "Única"
     },
   ]
 end
