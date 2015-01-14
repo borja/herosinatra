@@ -963,6 +963,7 @@ def heros
     Hero.new({ 
       :id           => 49,
       :name         => "Damadius Umbradrack",
+      :progenitores => [39, "Azakel"],
       :personaje    => "brujo",
       :jugador      => "Javier Galindo",
       :status       => "retirado",
