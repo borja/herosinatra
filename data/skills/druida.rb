@@ -79,7 +79,7 @@ def druidas
       :description  => "2PV: Una guadaña (2 de ataque morado, diagonal, a dos manos) púrpura sustituye tu arma/s. En eclipse, su potencia es igual a tu eclipse.",
       :type         => "Activa",
       :nivel        => 4,
-      :requisitos   => "Ninguno",
+      :requisitos   => "Eclipse",
     },
     {
       :id           => 10,
