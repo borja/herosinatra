@@ -220,6 +220,8 @@ def heros
                         Proteccion.new({:id => 5, :ranuras => 1, :enchants => [7]}),
                         Proteccion.new({:id => 8, :ranuras => 1})],
       :miscelaneas  => [Miscelanea.new({:id => 1, :ranuras => 2, :enchants => [25]})],
+      :gemas        => [3,3,11,8,25],
+      :runas        => [3,6,8],  
       :pergaminos   => [Pergamino.new({:id => 2, :spells  => [8,10]}),
                         Pergamino.new({:id => 1, :spells  => [32]})],
       :skills       => [0,1,2,3,4,5,6,7,8,9],
