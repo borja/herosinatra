@@ -4,7 +4,9 @@ def gemas
     Gema.new({ :id => 0,  :name => "halita", :fits => {} }),
     Gema.new({ :id => 1,  :name => "antracita", :fits => {} }),
     Gema.new({ :id => 2,  :name => "pirita", :fits => {} }),
-    Gema.new({ :id => 3,  :name => "serpentina", :fits => {} }),
+    Gema.new({ :id => 3,  :name => "serpentina", :fits => {
+      :arma   => "envenena"
+    } }),
     Gema.new({ :id => 4,  :name => "ojo de tigre", :fits => {
       :armadura => "Los ataques por el flanco se consideran frontales.",
     } }),
@@ -43,22 +45,29 @@ def gemas
       :muñecas  => "Golpes inflingidos pueden ser profanos",
     } }),
     Gema.new({ :id => 25, :name => "esmeralda", :fits => {
-      :arma => "Añade un dado de peste al ataque.",
+      :arma     => "Añade un dado de peste al ataque.",
+      :cadena   => " +1 magia élfica",
+      :espalda  => "+2 vs peste",
     } }),
     Gema.new({ :id => 26, :name => "zafiro", :fits => {
       :espalda  => "+2 vs escarcha",
       :cabeza   => "+1 PM",
       :arma     => "+1 dado de escarcha",
       :hombros  => "+1 PM",
+      :pies     => "+1 vs calor, +1 vs escarcha",
     } }),
     Gema.new({ :id => 27, :name => "topacio", :fits => {
       :espalda  => "+2 vs rayo",
       :cabeza   => "+10 oro del tesoro",
+      :arma     => "+1 dado eléctrico",
     } }),
-    Gema.new({ :id => 28, :name => "rubí", :fits => {} }),
+    Gema.new({ :id => 28, :name => "rubí", :fits => {
+      :pies     => "+1 PC y +1 PM",
+    } }),
     Gema.new({ :id => 29, :name => "diamante", :fits => {
       :armadura => "+2 Protección",
       :cuello   => "1/reto: cura corporal",
+      :cadena   => "+ 1 potencia defensiva",
     } }),
     Gema.new({ :id => 30, :name => "jacinto", :fits => {
       :cabeza   => "+2 vs Fuego",
