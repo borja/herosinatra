@@ -261,7 +261,7 @@ def druidas
       :id           => 32,
       :name         => "El dragón verde",
       :description  => "A cambio de 5PV: Invoca a un dragón verde (mantenimiento/turno: 4PV).Sólo será montura de elfos.",
-      :type         => "Activa"
+      :type         => "Activa",
       :nivel        => 10,
       :requisitos   => "Espíritu guardián II y Oso furioso.",
     },
