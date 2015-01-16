@@ -19,7 +19,7 @@
 				<td><%= c[:name] %></td>
 				<td><i><%= c[:description] %></i></td>
 				<td><%= c[:nivel] || "Sin definir" %></td>
-				<td><%= "In progress" %></td>
+				<td><%= c[:requisitos] || "In progress" %></td>
 			</tr>
 		<% end %>
 	</tbody>
