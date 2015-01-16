@@ -68,6 +68,11 @@ class App < Sinatra::Base
   end
   get '/magia/:topic' do |tema|
     erb :"magia/#{tema}"
+  end  
+  get '/escuela/:escuela/:nivel' do |escuela, level|
+    @spelllevel = level.to_i
+    @elemento   = escuela
+    erb :"magia/hechizos"
   end
   
   get '/combate/:topic' do |tema|

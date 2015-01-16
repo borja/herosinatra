@@ -1,6 +1,6 @@
 <%= erb :menu %><br>
-
 <h1>Escuelas de la magia</h1>
+
 <table id='tlabel'>
 	<tbody>
 		<tr>
@@ -16,11 +16,13 @@
 							</tr>	
 						</thead>
 						<tbody>
-							<tr><td>Nivel 1</td></tr>
-							<tr><td>Nivel 2</td></tr>
-							<tr><td>Nivel 3</td></tr>
-							<tr><td>Nivel 4</td></tr>
-							</tr>
+							<% 4.times do |nivel| %>
+								<tr>
+									<td><a href='<%= "/escuela/#{escuela}/#{nivel+1}" %>'>
+										Nivel <%= nivel+1 %></a>
+									</td>
+								</tr>
+							<% end %>
 						</tbody>
 					</table>
 				</td>	

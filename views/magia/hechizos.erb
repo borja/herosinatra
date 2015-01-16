@@ -1,7 +1,7 @@
 <title>HeroSheet: Hechizos</title>
 <%= erb :menu %>	
 <br>
-<h1>Hechizos elementales de nivel <%= @spelllevel || 1 %></h1>
+<h1>Hechizos <%= @elemento || "elementales" %> de nivel <%= @spelllevel || 1 %></h1>
 
 <table id='table-2'>
 	<thead>
@@ -19,21 +19,23 @@
 	<tbody>
 		<% spells.each do |s|%>
 			<% if @spelllevel.to_i == s.nivel %>
-				<% magic = spell(s.id) %>
-				<tr style=<%= magic.color %>>				
-					<td><% img_path = "'../../images/spells/#{magic.name}.png'" %>
-						<img src=<%=img_path%> alt=<%=magic.name%>, id='icon' />
-					</td>
-					<td><%= magic.elemento.capitalize %></td>
-					<td><%= magic.name.capitalize %></td>
-					<td><%= magic.efecto %></td>
-					<% if @spelllevel == 1 %>
-						<td><%= magic.diablura %></td>
-						<td><%= magic.ardid %></td>
-						<td><%= magic.maestría %></td>
-					<% end %>	
-					<td><%= magic.potencia %></td>			
-				</tr>
+				<% if (@elemento == s.elemento) || @elemento.nil? %>
+					<% magic = spell(s.id) %>
+					<tr style=<%= magic.color %>>				
+						<td><% img_path = "'../../images/spells/#{magic.name}.png'" %>
+							<img src=<%=img_path%> alt=<%=magic.name%>, id='icon' />
+						</td>
+						<td><%= magic.elemento.capitalize %></td>
+						<td><%= magic.name.capitalize %></td>
+						<td><%= magic.efecto %></td>
+						<% if @spelllevel == 1 %>
+							<td><%= magic.diablura %></td>
+							<td><%= magic.ardid %></td>
+							<td><%= magic.maestría %></td>
+						<% end %>	
+						<td><%= magic.potencia %></td>			
+					</tr>
+				<% end %>
 			<% end %>
 		<% end %>
 	</tbody>
