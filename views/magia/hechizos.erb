@@ -10,9 +10,9 @@
 		<th>Nombre</th>
 		<th>Descripción</th>
 		<% if @spelllevel == 1 %>
-			<th>Diablura</th>
+			<th><%= @elemento == "luz" ? "Summun" : "Diablura" %></th>
 			<% unless ["sombra","sangre"].include?(@elemento) %>
-				<th>Ardid</th>
+				<th><%= @elemento == "luz" ? "Chakra" : "Ardid" %></th>
 				<th>Maestría</th>
 			<% end %>
 		<% end %>
@@ -22,6 +22,7 @@
  		<% case @elemento  
  		   when "sombra" %><%= erb :'magia/hechizos/sombra' %>
  		<% when "sangre" %><%= erb :'magia/hechizos/sangre' %>
+ 		<% when "luz"    %><%= erb :'magia/hechizos/plegarias' %>
  		<% else %>		   <%= erb :'magia/hechizos/elemental' %>
  		<% end %>	
 	</tbody>
