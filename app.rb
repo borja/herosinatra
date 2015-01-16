@@ -83,6 +83,10 @@ class App < Sinatra::Base
   get '/ciudad/:topic' do |tema|
     erb :"ciudad/#{tema}"
   end
+  get '/city/:city' do |city|
+    @ciudad = city
+    erb :ciudad
+  end
   
   # Try root-view
   get '/:view' do |view|

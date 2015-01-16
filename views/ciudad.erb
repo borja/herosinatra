@@ -59,7 +59,11 @@
 						<tr><th>Los cuarteles</th></tr>
 					</thead>
 					<tbody>
-						<tr><td><a href='/heroes'>Héroes de la Ciudad</a></th></tr>
+						<tr><td>
+							<a href='/<%= @ciudad == "Xanandra" ? "extranjeros" : "heroes" %>'>
+								Héroes de la Ciudad
+							</a>
+						</td></tr>
 						<tr><td><a href='/maestrodearmas'>Maestro de Armas</a></td></tr>
 						<tr><td><a href='/licenciados'>Muro de la Gloria</a></td></tr>
 						</tr>
