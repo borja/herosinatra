@@ -22,8 +22,8 @@
 				<td>
 					<%= erb :'display/display', :locals => { 
 							:title       => p.name , 
-							:path        => "'../../images/magia/plegarias1/#{ p.name }.png'",
-							:description => 'popop' } %>
+							:path        => p.img_path,
+							:description => 'in progress' } %>
 				</td>
 				<td><%= p.nivel %></td>	
 				<td><%= p.name.capitalize %></td>

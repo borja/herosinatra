@@ -1,42 +1,28 @@
 <title>HeroSheet: Hechizos</title>
 <%= erb :menu %>	
 <br>
-<h1>Hechizos <%= @elemento || "elementales" %> de nivel <%= @spelllevel || 1 %></h1>
+<h1>Hechizos <%= @elemento ? "de #{@elemento}" : "elementales" %> de nivel <%= @spelllevel || 1 %></h1>
 
 <table id='table-2'>
 	<thead>
 		<th>Icono</th>
-		<th>Elemento</th>
+		<% unless @elemento %><th>Elemento</th><% end %>
 		<th>Nombre</th>
 		<th>Descripción</th>
 		<% if @spelllevel == 1 %>
 			<th>Diablura</th>
-			<th>Ardid</th>
-			<th>Maestría</th>
+			<% unless ["sombra","sangre"].include?(@elemento) %>
+				<th>Ardid</th>
+				<th>Maestría</th>
+			<% end %>
 		<% end %>
 		<th>Potencia</th>
 	</thead>
 	<tbody>
-		<% spells.each do |s|%>
-			<% if @spelllevel.to_i == s.nivel %>
-				<% if (@elemento == s.elemento) || @elemento.nil? %>
-					<% magic = spell(s.id) %>
-					<tr style=<%= magic.color %>>				
-						<td><% img_path = "'../../images/spells/#{magic.name}.png'" %>
-							<img src=<%=img_path%> alt=<%=magic.name%>, id='icon' />
-						</td>
-						<td><%= magic.elemento.capitalize %></td>
-						<td><%= magic.name.capitalize %></td>
-						<td><%= magic.efecto %></td>
-						<% if @spelllevel == 1 %>
-							<td><%= magic.diablura %></td>
-							<td><%= magic.ardid %></td>
-							<td><%= magic.maestría %></td>
-						<% end %>	
-						<td><%= magic.potencia %></td>			
-					</tr>
-				<% end %>
-			<% end %>
-		<% end %>
+ 		<% case @elemento  
+ 		   when "sombra" %><%= erb :'magia/hechizos/sombra' %>
+ 		<% when "sangre" %><%= erb :'magia/hechizos/sangre' %>
+ 		<% else %>		   <%= erb :'magia/hechizos/elemental' %>
+ 		<% end %>	
 	</tbody>
 </table><br>
