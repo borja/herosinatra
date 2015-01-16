@@ -1,6 +1,6 @@
-<title>Hero Sheet: La Ciudad</title>
+<title>Hero Sheet: <%= @ciudad %></title>
 <%= erb :menu %>
-<br><h1>La Ciudad de Jadessvärd</h1>
+<br><h1>La Ciudad de <%= @ciudad %></h1>
 
 
 <table id='tlabel'>
@@ -14,9 +14,9 @@
 						<tr><th>Ayuntamiento</th></tr>
 					</thead>
 					<tbody>
-						<tr><td>Consejo de Notables</td></tr>
-						<tr><td>Palacio Imperial</td></tr>
-						<tr><td>Templo de Sigmar</td></tr>
+						<tr><td><a href='/ciudad/notaria'>Consejo de Notables</a></td></tr>
+						<tr><td><a href='/ciudad/palacio'>Palacio Imperial</a></td></tr>
+						<tr><td><a href='/ciudad/templo'>Templo de Sigmar</a></td></tr>
 						</tr>
 					</tbody>
 				</table>
