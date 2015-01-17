@@ -3,10 +3,10 @@
 <h1>Los Caminos del Héroe</h1>
 <table id='table-2'>
 	<tbody>
-		<% caminos.each do |camino| %>
+		<% caminos.keys.each do |c| %>
 			<tr>
-				<td><%= camino %></td>
-				<td><%= erb :'ficha/caminos' %></td>
+				<td><%= c %></td>
+				<td><%= erb :'ficha/caminos' , :locals => {:path => c } %></td>
 			</tr>
 		<% end %>
 	</tbody>

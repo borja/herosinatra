@@ -7,15 +7,4 @@ def habs        ;["icono", "tipo", "nombre", "descripción"]                    
 def fields      ;{ 1 => ["cabeza","hombros","muñecas","cintura","pies"],
                    2 => ["cuello","espalda","pechera","manos","hebilla","tobillos"],
                    3 => ["argolla","pendientes","tatuajes","cadena","broche","entrepierna"],
-                 } end 
-def caminos
-  [
-	  "El Heredero",
-	  "El Burgués",
-	  "El Arconte",
-	  "El Justiciero",
-	  "El Eremita",
-	  "El Santo",
-    "El Bardo"
-  ]
-end
+                 } end
