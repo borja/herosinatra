@@ -1,44 +1,13 @@
 <title>Herosheet: Caminos</title>
 <%= erb :menu %><br>
-
-<h1>Los Caminos del Héroe</h1><br>
-<%= erb :'ficha/caminos' %>
+<h1>Los Caminos del Héroe</h1>
 <table id='table-2'>
-	<thead>
-		<tr>
-			<th>Camino / Misión</th>
-			<th>1</th>
-			<th>2</th>
-			<th>3</th>
-			<th>4</th>
-			<th>5</th>
-			<th>6</th>
-			<th>7</th>		
-		</tr>
-	</thead>
 	<tbody>
-		<tr>
-			<td>El Heredero
-				<br>
-			</td>
-		</tr>
-		<tr>
-			<td>El Burgués</td>
-		</tr>
-		<tr>
-			<td>El Arconte</td>
-		</tr>
-		<tr>
-			<td>El Justiciero</td>
-		</tr>
-		<tr>
-			<td>El Eremita</td>
-		</tr>
-		<tr>
-			<td>El Santo</td>
-		</tr>
-		<tr>
-			<td>El Bardo</td>
-		</tr>	
+		<% caminos.each do |camino| %>
+			<tr>
+				<td><%= camino %></td>
+				<td><%= erb :'ficha/caminos' %></td>
+			</tr>
+		<% end %>
 	</tbody>
 </table>
