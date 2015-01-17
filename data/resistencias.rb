@@ -7,4 +7,4 @@ def resistencia(res)
   end
 end
 
-def resistencias ; ["psionico", "calor", "escarcha", "miedo", "peste", "rayos", "tenebro"] end
+def resistencias ; ["psiónica", "calor", "escarcha", "miedo", "peste", "rayo", "tenebro"] end

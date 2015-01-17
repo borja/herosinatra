@@ -105,8 +105,25 @@ class Hero < Hash
   def blood_magic   ; self.sangres.map  { |num| sangre(num)} if self.sangres  end
   def shadow_magic  ; self.sombras.map  { |num| sombra(num)} if self.sombras  end  
   
-  def resistencia(elemento)
-    0
+  def resistencia(elemento) # I'm sorry for this...
+    total = 0 # Initialize default returns 0
+    ["proteccions","miscelaneas","armadura"].each do |i|
+      if self.send(i) # ask for item-type
+        self.send(i).each do |item|
+          if item.enchanted?
+            item.enchants.each do |e|
+              texto =  enchant(e)[:descripcion] # takes description
+              regex = /vs #{Regexp.quote(elemento)}/  # looks for "+N vs #{elemento}"
+              if m = (regex =~ texto) # if positive (TODO: tune up this)
+                bono  = texto[m.to_i-2].to_i # add the bonificator
+                total += bono
+              end
+            end
+          end
+        end
+      end
+    end
+    return total
   end
   
   def padre
