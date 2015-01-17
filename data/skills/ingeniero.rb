@@ -9,13 +9,13 @@ def ingenieros
     },
     {
       :id           => 1,
-      :name         => "Chatarrero",
+      :name         => "chatarrero",
       :description  => "Permite obtener una pieza al desactivar satisfactoriamente una trampa",
       :type         => "Pasiva"
     },
     {
       :id           => 2,
-      :name         => "Desvalijar",
+      :name         => "desvalijar",
       :description  => "Permite obtener una pieza de las puertas.",
       :type         => "activa"
     },
@@ -27,37 +27,37 @@ def ingenieros
     },
     {
       :id           => 4,
-      :name         => "Retroceso",
+      :name         => "retroceso",
       :description  => "El exceso de potencia hará que el ingeniero retroceda, pudiendo golpear al posible enemigo con el que se choque.",
       :type         => "pasiva"
     },
     {
       :id           => 5,
-      :name         => "Disparo perforante",
+      :name         => "disparo perforante",
       :description  => "El exceso de daño que no se pueda parar un enemigo, le atravesará, yendo el disparo hacia otro enemigo que esté adyacente.",
       :type         => "pasiva"
     },
     {
       :id           => 6,
-      :name         => "Éter",
+      :name         => "eter",
       :description  => "Por describir.",
       :type         => "activa"
     },
     {
       :id           => 7,
-      :name         => "Cachivache",
+      :name         => "cachivache",
       :description  => "A cambio de 3 piezas de éter creas un cachivache que puede hacer las siguientes funciones: autodestrucción, +1 a buscar si se coloca en el casco,  permite disparo oblicuo si se coloca en la mirilla.",
       :type         => "pasiva"
     },
     {
       :id           => 8,
-      :name         => "Diógenes",
+      :name         => "diógenes",
       :description  => "Si tienes éxito, no gastas piezas.",
       :type         => "pasiva"
     },
     {
       :id           => 9,
-      :name         => "Disparo doble",
+      :name         => "disparo doble",
       :description  => "Permite disparar 2 veces.",
       :type         => "pasiva"
     },
