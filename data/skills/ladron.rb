@@ -15,4 +15,4 @@ def ladróns
     }
   ]
 end
-def ladrón id ; ladrons[id] end
+def ladrón id ; ladróns[id] end

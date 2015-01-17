@@ -5,7 +5,7 @@ def clérigos
       :id           => 0,
       :name         => "luz sagrada",
       :description  => "El sacerdote reza y tira con 1d20 para obtener su plegaria.",
-      :type         => "pasiva"
+      :type         => "pasiva",
     },
     {
       :id           => 1,
@@ -59,23 +59,20 @@ def clérigos
       :id           => 9,
       :name         => "bendecir",
       :description  => "A cambio de 1PM, el sacerdote bendice un arma, obteniendo así un arma sagrada.",
-      :type         => "pasiva"
+      :type         => "pasiva",
     },
     {
       :id           => 10,
       :name         => "crítico",
       :description  => "Con 2d6, si se obtiene 9+ la plegaria se ejecuta con summun/chakra.",
-      :type         => "pasiva"
+      :type         => "pasiva",
     },
     {
       :id           => 11,
       :name         => "último ruego",
       :description  => "Se aplica cuando el sacerdote está muriendo.",
-      :type         => "pasiva"
+      :type         => "pasiva",
     }
   ]
 end
-
-def clérigo(id)
-  clérigo[id]
-end
+def clérigo id ;  clérigos[id] end
