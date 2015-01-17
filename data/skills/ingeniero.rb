@@ -39,7 +39,7 @@ def ingenieros
     },
     {
       :id           => 6,
-      :name         => "eter",
+      :name         => "éter",
       :description  => "Por describir.",
       :type         => "activa"
     },
