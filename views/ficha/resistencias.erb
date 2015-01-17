@@ -3,7 +3,11 @@
 	<thead>
 		<tr>
 			<% resistencias.each do |r| %>	
-				<th><%= r %></th>
+				<th><%= erb :'display/display', :locals => { 
+						:title       => r, 
+						:path        => "'../images/elements/#{r}.png'",
+						:description => "Resistencia"} %>
+				</th>
 			<% end %>
 		</tr>
 	</thead>
@@ -11,10 +15,7 @@
 		<tr>
 			<% resistencias.each do |r| %>
 				<td>
-					<%= erb :'display/display', :locals => { 
-						:title       => r, 
-						:path        => "'../images/elements/#{r}.png'",
-						:description => "Resistencia"} %>
+					<%= @heroe.resistencia(r) %>
 				</td>
 			<% end%>
 		</tr>

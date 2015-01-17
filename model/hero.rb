@@ -105,6 +105,10 @@ class Hero < Hash
   def blood_magic   ; self.sangres.map  { |num| sangre(num)} if self.sangres  end
   def shadow_magic  ; self.sombras.map  { |num| sombra(num)} if self.sombras  end  
   
+  def resistencia(elemento)
+    0
+  end
+  
   def padre
     if self.progenitores
       papa = self.progenitores.first
