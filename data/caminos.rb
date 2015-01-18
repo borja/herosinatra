@@ -25,6 +25,10 @@ def caminos
       ["algo", "algo mas"],
       ["algo2", "y mas..."]
     ],
+    "El Oscuro"     => [
+      ["La Piedra", "Descubres un pendril perdido y hablas con el señor oscuro al otro lado."],
+      ["Susurros", "..."]
+    ],
   }
 end
 def camino path ; caminos[path] end 
