@@ -17,6 +17,12 @@ def cities
        :name   => "Zindor",
        :style  => "width: 30px; height: 30px; top: 390px; left: 440px;",
        :master => "Daniel de Haro",
+    },
+    {
+	     :id     => 3,
+       :name   => "Oszthgard",
+       :style  => "width: 30px; height: 30px; top: 30px; left: 550px;",
+       :master => "Iris",
     }
   ]
 end
