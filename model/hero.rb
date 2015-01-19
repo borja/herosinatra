@@ -6,11 +6,11 @@ class Hero < Hash
     :name, :personaje, :jugador, :status, :muerto, :gender,
     :repu, :nivel, :cuerpo, :mente, :mov, :historia,       
     :pet,:montura, :descendencia, :pareja, :progenitores,        
-    :hechizos, :sombras, :sangres, :skills,   
+    :hechizos, :shadows, :blood, :skills,   
     :armas, :armadura, :proteccions, :miscelaneas, :abalorios,          
-    :profesion,  
+    :profesion, :ciudad,
     :piezas, :pociones, :pergaminos,
-    :oro,:joyas,:runas, :gemas             
+    :oro, :tesoro            
 
   def initialize args
     args.each do |k,v|
@@ -68,8 +68,6 @@ class Hero < Hash
     end
   end
   
-  def potis ; self.pociones.map { |pot| Pocion.new(p) }  end
-  
   def habilidades
     self.skills.map { |id| Habilidad.new(send(self.personaje.gsub('señor de las bestias', 'beastlord'), id )) }
   end
@@ -77,8 +75,8 @@ class Hero < Hash
   def elementos
     elementos = []
     elementos = self.magias.map { |magia|  magia.elemento }.uniq if self.magias
-    elementos << "sombras" if self.sombras
-    elementos << "sangre" if self.sangres
+    elementos << "sombras" if self.shadows
+    elementos << "sangre"  if self.blood
     return elementos
   end
   
@@ -90,7 +88,6 @@ class Hero < Hash
   def desprotegido? ; self.protecciones.nil? end
   def pobre?        ; self.miscelaneas.nil? end
   def desprovisto?  ; self.pergaminos.nil? && self.pociones.nil? && self.piezas.nil?     end
-  def sin_recursos  ; self.gemas.nil? && self.joyas.nil? && self.runas.nil? && self.nil? end
   def anillos       ; (self.miscelaneas || []).select { |m| m.fits == "anillo"  } end
   def amuletos      ; (self.miscelaneas || []).select { |m| m.fits == "amuleto" } end 
   def img_path      ; "'../images/personajes/#{self.genderize}.png'" end
@@ -100,29 +97,49 @@ class Hero < Hash
   def ataque        ; self.armas.first.categoria != 'distancia' ? self.armas.first.ataque : 0 end
   def rango         ; self.armas.first.categoria == 'distancia' ? self.armas.first.ataque : 0 end
   def defensa       ; self.armadura.defensa end
-  def cacharros     ; self.piezas.map   { |num| Pieza.new(:id => num) } if self.piezas end
-  def magias        ; self.hechizos.map { |num| spell(num)}  if self.hechizos end
-  def blood_magic   ; self.sangres.map  { |num| sangre(num)} if self.sangres  end
-  def shadow_magic  ; self.sombras.map  { |num| sombra(num)} if self.sombras  end  
+  def cacharros     ; self.piezas.map   {|num| Pieza.new(:id => num) } if self.piezas end
+  def magias        ; self.hechizos.map {|num|  spell(num)} if self.hechizos end
+  def blood_magic   ; self.blood.map    {|num| sangre(num)} if self.blood    end
+  def shadow_magic  ; self.shadows.map  {|num| sombra(num)} if self.shadows  end  
+  def sin_recursos  ; self.tesoro.nil? end
+  def empadronado   ; self.ciudad || "Jadessvärd"  end
+  def potis         ; self.pociones.map { |pot| Pocion.new(p) } end
   
   def resistencia(elemento) # I'm sorry for this...
     total = 0 # Initialize default returns 0
+    regex = /vs #{Regexp.quote(elemento)}/  # looks for "+N vs #{elemento}"
+    reg2x = /vs todas las resistencias/
+    
     ["proteccions","miscelaneas","armadura"].each do |i|
       if self.send(i) # ask for item-type
         self.send(i).each do |item|
           if item.enchanted?
             item.enchants.each do |e|
               texto =  enchant(e)[:descripcion] # takes description
-              regex = /vs #{Regexp.quote(elemento)}/  # looks for "+N vs #{elemento}"
               if m = (regex =~ texto) # if positive (TODO: tune up this)
                 bono  = texto[m.to_i-2].to_i # add the bonificator
+                puts "#{elemento}, #{item.name},magia: #{texto}"
                 total += bono
+              end
+            end
+          end
+          if item.engarzado?
+            ["gemas","joyas","runas"].each do |engarce|
+              if eng = item.send(engarce)
+                eng.each do |id|
+                  texto = send(engarce[0..-2], id).fits[item.fits.to_sym] # takes description
+                  if m = (regex =~ texto) # if positive (TODO: tune up this)
+                    puts "#{elemento}, #{item.name},#{engarce} #{texto}"
+                    bono  = texto[m.to_i-2].to_i # add the bonificator
+                    total += bono
+                  end
+                end
               end
             end
           end
         end
       end
-    end
+    end  
     return total
   end
   

@@ -48,6 +48,7 @@ def gemas
       :arma     => "Añade un dado de peste al ataque.",
       :cadena   => " +1 magia élfica",
       :espalda  => "+2 vs peste",
+      :anillo   => "+2 vs peste"
     } }),
     Gema.new({ :id => 26, :name => "zafiro", :fits => {
       :espalda  => "+2 vs escarcha",
@@ -70,7 +71,7 @@ def gemas
       :cadena   => "+ 1 potencia defensiva",
     } }),
     Gema.new({ :id => 30, :name => "jacinto", :fits => {
-      :cabeza   => "+2 vs Fuego",
+      :cabeza   => "+2 vs calor",
     } }),
     Gema.new({ :id => 31, :name => "ágata", :fits => {} }),
  
@@ -100,7 +101,7 @@ def gemas
     Gema.new({ :id => 47, :name => "dragonita", :fits => {} }),
 
     Gema.new({ :id => 48, :name => "serpentina del dragón", :fits => {
-      :armadura => "+2 vs Peste",
+      :armadura => "+2 vs peste",
     } }),
     Gema.new({ :id => 49, :name => "hierro antigravedad", :fits => {
       :espalda => "Al correr, el héroe vuela.",

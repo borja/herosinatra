@@ -15,7 +15,7 @@ def runas
       :hacha    => "+1 dado morado de ataque (calavera única: potencia +1)"
     } }),
     Runa.new({ :id => 2,  :name => "feth" , :fits => {
-      :armadura => "+2 resistencia vs fuego (3 calaveras al defender: Niebla)",
+      :armadura => "+2 vs calor (3 calaveras al defender: Niebla)",
       :arma     => "Maldición: -2 a la resistencia mágica del objetivo",
       :muñecas  => "+1 dado negro de defensa, escudo blanco: indemne"
     } }),

@@ -10,7 +10,7 @@
 		<tr>				
 			<% engarces.each do |engarce| %>
 				<td>
-					<% if tesoros = heroe.send(engarce) %>
+					<% if tesoros = heroe.tesoro[engarce.to_sym] %>
 						<table id='table-2'>
 							<tbody>
 								<tr>

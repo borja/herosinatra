@@ -22,6 +22,10 @@
 		<tr>
 			<td><%= erb :'display/portrait', :locals => { :h => @heroe } %></td>
 			<td><%= @heroe.name %></td>
+			<td><a href='/city/<%= @heroe.empadronado %>'>
+					<%= @heroe.empadronado %>
+				</a>
+			</td>
 			<td><%= @heroe.raza.capitalize %></td>
 			<td>X</td>
 			<% if @heroe.progenitores %>

@@ -1,22 +1,18 @@
 <br>
 <table id='table-2'>
 	<thead>
-		<tr>
-			<% resistencias.each do |r| %>	
+		<tr><% resistencias.each do |r| %>	
 				<th><%= erb :'display/display', :locals => { 
-						:title       => r, 
-						:path        => "'../images/elements/#{r}.png'",
-						:description => "Resistencia"} %>
+						:title       => r[:nombre], 
+						:path        => "'../images/elements/#{r[:nombre]}.png'",
+						:description => r[:description]} %>
 				</th>
 			<% end %>
 		</tr>
 	</thead>
 	<tbody>
-		<tr>
-			<% resistencias.each do |r| %>
-				<td>
-					+<%= @heroe.resistencia(r) %>
-				</td>
+		<tr><% resistencias.each do |r| %>
+				<td>+<%= @heroe.resistencia(r[:nombre]) %></td>
 			<% end%>
 		</tr>
 	</tbody>

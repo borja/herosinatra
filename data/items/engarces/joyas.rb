@@ -13,7 +13,7 @@ def joyas
       :daga     => "Al arrojar y matar, se arroja sola automáticamente",
       :arma     => "+1 ataque (excepto demonios y caóticos)",
       :colgante => "+1 hechizo tenebro aleatorio",
-      :armadura => "+1 vs Tenebro",
+      :armadura => "+1 vs tenebro",
     } }),
     Joya.new({ :id => 2,  :name => "multicolor",  :fits => { 
       :hacha    => "Hacha doble (4 calaveras): magia elemental aleatoria potencia:nivel",

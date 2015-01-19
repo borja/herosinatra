@@ -1,7 +1,4 @@
-<%= erb :menu %><br><br><br<br>
-
-<link rel="stylesheet" href="../../css/main.css" type="text/css" />
-<link rel="stylesheet" href="../../app.css"      type="text/css" />
+<%= erb :menu %><br><br>
 <link rel="stylesheet" href="../../css/map.css"  type="text/css" />
 
 <title>Herosheet: Mapa del mundo</title>
@@ -11,14 +8,15 @@
 	<div class="mapa_imagen">
 	  <img src="/images/mapa.png" id='mapamundi'>
 	  <ul class="notas">
-	    <a href="#"><li id="nota1"><p>El Gran Lago</p></li></a>
-	    <li id="nota2"><p>La temible costa de los pirata</p></li>
+	   	<li id="nota1"><p>El Gran Lago</p></li>
+		<li id="nota2"><p>La temible costa de los piratas</p></li>
 	    <li id="nota3"><p>Altdorf, capital del Imperio</p></li>
-	    <li id="nota4"><p>El Desierto prohibido</p></li>
-		<a href='/city/Jadessvärd'><li id="nota5" style="width: 30px; height: 30px; top: 280px; left: 240px;">
-		 <p>Jadessvärd</p>
-	 	</li></a>
-	    <a href='/city/Xanandra'><li id="nota6"><p>Xanandra</p></li>
+	    <li id="nota4"><p>El Desierto prohibido</p></li>	
+		<% cities.each do |c| %>
+			<a href='/city/<%= c[:name] %>'>
+				<li style='<%= c[:style] %>'><p><%= c[:name] %></p></li>
+			</a>
+		<% end %>
 	  </ul>
 	</div>
 	<br>
