@@ -1,12 +1,6 @@
 <title>Hero Sheet: Elementales</title>
-<body>
 <%= erb :menu %>
-
-<link rel="stylesheet" href="../../css/main.css" type="text/css" />
-<link rel="stylesheet" href="../../app.css" type="text/css" />
-
-<br><h1>Elementales</h1><br><br>
-
+<br><h1>Elementales</h1>
 <table id='table-2'>
 	<thead>
 		<tr><td>Icono</td>
@@ -17,23 +11,20 @@
 	</thead>
 	<tbody>
 		<% elementals.each do |d| %>
-			<tr><td><% img_path = "'../images/criaturas/elementales/#{d[:name]}.png'" %>
-					<img src=<%=img_path%> alt=<%=d[:name]%>, id='icon3' />
+			<tr><td><% img_path = "'../images/criaturas/elementales/#{d[:nombre]}.png'" %>
+					<img src=<%=img_path%> alt=<%=d[:nombre]%>, id='icon' />
 				</td>
-				<td>Elemental de <%= d[:name].capitalize %></td>
+				<td>Elemental de <%= d[:nombre].capitalize %></td>
 				<td><%= d[:cuerpo]      %></td>
 				<td><%= d[:mente]       %></td>
 				<td><%= d[:movimiento]  %></td>
-				<td>
-					<% if d[:hechizos] %>
+				<td><% if d[:hechizos] %>
 						<table id = 'table-2'>
 							<tbody>
-								<tr><% d[:hechizos].each do |magia| %>
-										<td><% hechizo = (spell(magia))[:name] %>									
-											<% img_path   = "'../images/spells/#{hechizo}.png'"     %>
-											<img style="vertical-align:middle" 
-										 	src=<%=img_path%> alt=<%= hechizo %>, id='icon' />		
-										 	<%= hechizo.capitalize %>
+								<tr><% d[:hechizos].map{|id| spell(id)}.each do |s| %>
+										<td><img style="vertical-align:middle" 
+										 	src=<%= s.img_path %> alt=<%= s.name %>, id='icon' />		
+										 	<%= s.name.capitalize %>
 										</td>
 									<% end %>	
 								</tr>
@@ -43,7 +34,6 @@
 						Ninguno.
 					<% end %>
 				</td>
-				<td><%= d[:miedo] %>+</td>
 			</tr>
 		<% end %>
 	</tbody>
