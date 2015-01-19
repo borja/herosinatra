@@ -19,7 +19,11 @@
 			<tr>
 				<td><%= erb :'display/portrait', :locals => { :h => hero } %></td>
 				<td><a href=hero/<%= hero.id %>><%= hero.name %></a><br>
-					<i><%= hero.jugador %></i>
+					<% if ciudad?(hero.jugador).empty? %>
+						<i><%= hero.jugador %></i>
+					<% else %>
+						<a href='/city/<%= ciudad?(hero.jugador).first[:name] %>'><i><%= hero.jugador %></i></a>
+					<% end %>
 				</td>
 				<td><%= hero.genderize.capitalize%><br>
 					<i><a href="/habilidades/<%= hero.personaje.gsub("señor de las bestias","beastlord") %>">
