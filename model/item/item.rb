@@ -81,8 +81,7 @@ class Abalorio < Item
 end
 
 class Util < Hash
-  attr_accessor :id,
-    :spells # Only for pergaminos
+  attr_accessor :id, :spells # Only for pergaminos
   
   def initialize args
     args.each do |k,v|
@@ -107,13 +106,6 @@ end
 
 class Pergamino < Util
   def name     ; pergamino(self.id)[:name]     end
-  def max      ; pergamino(self.id)[:hechizos] end # Máximo número permitido
-  
-  def hechizos
-    magias = []
-    self.spells.each do |s|
-      magias << Elemental.new({:id => s}).name
-    end
-    return magias
-  end
+  def max      ; pergamino(self.id)[:hechizos] end # Máximo número permitido  
+  def hechizos ; self.spells.map { |s| Elemental.new({:id => s}).name } end
 end

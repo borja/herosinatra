@@ -121,6 +121,11 @@ class Hero < Hash
                 puts "#{elemento}, #{item.name},magia: #{texto}"
                 total += bono
               end
+              if m = (reg2x =~ texto) # if positive (TODO: tune up this)
+                bono  = texto[m.to_i-2].to_i # add the bonificator
+                puts "+1 todas las resistencias"
+                total += bono
+              end
             end
           end
           if item.engarzado?
@@ -131,6 +136,11 @@ class Hero < Hash
                   if m = (regex =~ texto) # if positive (TODO: tune up this)
                     puts "#{elemento}, #{item.name},#{engarce} #{texto}"
                     bono  = texto[m.to_i-2].to_i # add the bonificator
+                    total += bono
+                  end
+                  if m = (reg2x =~ texto) # if positive (TODO: tune up this)
+                    bono  = texto[m.to_i-2].to_i # add the bonificator
+                    puts "+1 todas las resistencias"
                     total += bono
                   end
                 end
