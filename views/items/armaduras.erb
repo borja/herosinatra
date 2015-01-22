@@ -1,18 +1,18 @@
-<title>Hero Sheet: Lista de armaduras %></title>
+<title>Hero Sheet: Armaduras %></title>
 <%= erb :menu %><br>
 <h1>Lista de Armaduras</h1>
 
 <table id='table-2'>
 	<thead>
 		<tr>
-			<% armaduras.each do |item| %>
+			<% armaduras[1..-1].each do |item| %>
 				<th width='12%'><%= item[:name].gsub("armadura","").gsub("de","") %></th>
 			<% end %>
 		</tr>	
 	</thead>
 	<tbody>
 		<tr>
-			<% armaduras.each do |item| %>
+			<% armaduras[1..-1].each do |item| %>
 			<% a = Armadura.new(item) %>
 				<td><%= erb :'display/display', :locals => {
 					:title       => a.name,
