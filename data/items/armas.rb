@@ -15,7 +15,8 @@ def armas
       :categoria    => "filo",
       :ataque       => 2,
       :ranuras      => 2,
-      :diagonal     => false
+      :diagonal     => false,
+      :precio       => 150
     },
     { 
       :id           => 2,
@@ -23,7 +24,8 @@ def armas
       :categoria    => "filo",
       :ataque       => 3,
       :ranuras      => 3,
-      :diagonal     => false
+      :diagonal     => false,
+      :precio       => 250
     },
     { 
       :id           => 3,
@@ -31,7 +33,8 @@ def armas
       :categoria    => "cuchillo",
       :ataque       => 1,
       :ranuras      => 1,
-      :diagonal     => false
+      :diagonal     => false,
+      :precio       => 50
     },
     { 
       :id           => 4,
@@ -47,7 +50,8 @@ def armas
       :categoria    => "asta",
       :ataque       => 2,
       :ranuras      => 3,
-      :diagonal     => true
+      :diagonal     => true,
+      :precio       => 200
     },
     { 
       :id           => 6,
@@ -63,7 +67,8 @@ def armas
       :categoria    => "escudo",
       :ataque       => 1,
       :ranuras      => 4,
-      :diagonal     => false
+      :diagonal     => false,
+      :precio       => 100
     },
     { 
       :id           => 8,
@@ -71,7 +76,8 @@ def armas
       :categoria    => "bastón",
       :ataque       => 1,
       :ranuras      => 4,
-      :diagonal     => true
+      :diagonal     => true,
+      :precio       => 100
     },
     { 
       :id           => 9,
@@ -88,7 +94,8 @@ def armas
       :categoria    => "filo",
       :ataque       => 3,
       :ranuras      => 3,
-      :diagonal     => true
+      :diagonal     => true,
+      :precio       => 350
     },
     { 
       :id           => 11,
@@ -96,7 +103,8 @@ def armas
       :categoria    => "filo",
       :ataque       => 2,
       :ranuras      => 4,
-      :diagonal     => false
+      :diagonal     => false,
+      :precio       => 175
     },
     { 
       :id           => 12,
@@ -104,7 +112,8 @@ def armas
       :categoria    => "filo",
       :ataque       => 4,
       :ranuras      => 4,
-      :diagonal     => false
+      :diagonal     => false,
+      :precio       => 450
     },
     { 
       :id           => 13,
@@ -120,7 +129,8 @@ def armas
       :categoria    => "distancia",
       :ataque       => 2,
       :ranuras      => 2,
-      :diagonal     => false
+      :diagonal     => false,
+      :precio       => 250
     },
     { 
       :id           => 15,
@@ -153,7 +163,8 @@ def armas
       :categoria    => "distancia",
       :ataque       => 3,
       :ranuras      => 2,
-      :diagonal     => false
+      :diagonal     => false,
+      :precio       => 350
     },
     { 
       :id           => 19,
