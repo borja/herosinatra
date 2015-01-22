@@ -18,7 +18,7 @@
 		<% armas.each do |item| %>
 			<% a = Arma.new(item) %>
 			<tr>
-				<td><img src=<%= "'../images/armas/#{a.name}.png'" %> alt=<%=a.name%>, id='icon' /></td>
+				<td><img src=<%= a.img_path %> alt=<%=a.name%>, id='icon' /></td>
 				<td><%= a.name %></td>
 				<td><%= a.categoria %></td>
 				<td><%= a.ataque %></td>

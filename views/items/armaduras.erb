@@ -15,9 +15,7 @@
 		<% armaduras.each do |item| %>
 		<% a = Armadura.new(item) %>
 			<tr>
-				<td><% img_path = "'../images/armaduras/#{a.name}.png'" %>
-					<img src=<%=img_path%> alt=<%=a.name%>, id='icon' />
-				</td>
+				<td><img src=<%= a.img_path %> alt=<%=a.name%>, id='icon' /></td>
 				<td><%= a.name.capitalize %></td>
 				<td><%= a.categoria %></td>
 				<td><%= a.defensa.to_s %></td>
@@ -25,4 +23,5 @@
 			</tr>
 		<% end %>
 	</tbody>
-</table><br>
+</table>
+<br>

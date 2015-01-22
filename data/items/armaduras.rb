@@ -55,11 +55,8 @@ def armaduras
       :name         => "armadura completa",
       :categoria    => "metal",
       :defensa      => 4,
-      :precio	    => 1000,
+      :precio	    => 1250,
     },
   ]
 end
-
-def armadura(id)
-  armaduras[id]
-end
+def armadura id ; armaduras[id] end

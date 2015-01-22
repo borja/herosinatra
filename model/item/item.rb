@@ -2,7 +2,7 @@
 # encoding: UTF-8
 
 class Item < Hash
-  attr_accessor :id, :enchants, :max,
+  attr_accessor :id, :enchants, :max, :precio,
                 :runas, :joyas, :ranuras, :gemas,
                 :legendario, :unico, :artefacto
                   

@@ -7,7 +7,8 @@ def armas
       :categoria    => "puños",
       :ataque       => 1,
       :ranuras      => 0,
-      :diagonal     => true
+      :diagonal     => true,
+      :precio       => 0,
     },
     { 
       :id           => 1,
