@@ -64,9 +64,21 @@ def falangistas
     {
       :id           => 10,
       :name         => "bandeja",
-      :descripcion  => "porta sobre si a un aliado que adquiere su defensa",
+      :descripcion  => "porta sobre sí a un aliado que adquiere su defensa",
       :type         => "activa"
-    },  
+    }, 
+    {
+      :id           => 11,
+      :name         => "Rompedientes",
+      :descripcion  => "+1 fuerza al atacar con escudos",
+      :type         => "pasiva",
+      {
+      :id           => 12,
+      :name         => "Sangramos todos",
+      :descripcion  => "1 Punto de Honor: En la fase trepidante recibe -1 daño de cada aliado",
+      :type         => "activa"
+    },
+    },
     
   ]
 end
