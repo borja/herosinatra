@@ -416,6 +416,11 @@ def enchants
       :name         => "de flechas infinitas",
       :descripcion  => "Nunca se termina la munición",
       :tipo         => "élfico",
+    },
+    { :id           => 83,
+      :name         => "de fuego súbito",
+      :descripcion  => "Cuando defiendes, tiras aleatoriamente una magia de fuego de nivel 1 o 2",
+      :tipo         => "fuego",
     }
   ]
 end
