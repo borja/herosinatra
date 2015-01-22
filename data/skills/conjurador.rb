@@ -16,7 +16,7 @@ def conjuradors
     {
       :id           => 2,
       :name         => "Levitar",
-      :description  => "A cambio de 1 punto de mente, el conjurador levita.",
+      :description  => "A cambio de 1 punto de mente (PM), el conjurador levita.",
       :type         => "Activa"
     },
     {
@@ -28,7 +28,7 @@ def conjuradors
     {
       :id           => 4,
       :name         => "Sadismo arcano",
-      :description  => "Al matar con magia, gana 1 punto de mente.",
+      :description  => "Al matar con magia, gana 1 PM.",
       :type         => "Activa"
     },
     {
@@ -46,14 +46,14 @@ def conjuradors
     {
       :id           => 7,
       :name         => "Explosión arcana",
-      :description  => "Alrededor del del conjurador hay X daños peana con peana, por cada X PM invertidos.",
+      :description  => "Alrededor del conjurador hay X daños peana con peana, por cada X PM invertidos.",
       :type         => "Activa"
     },
     {
       :id           => 8,
       :name         => "Teleportarse",
       :description  => "El conjurador se desplaza tantas casillas como su mente, sin atravesar muros.",
-      :type         => "Activa"
+      :type         => "Única"
     },
     {
       :id           => 9,
@@ -70,14 +70,24 @@ def conjuradors
     {
       :id           => 11,
       :name         => "Mentor",
-      :description  => "Cuando se usa una magia, ya sea un aliado o el mismo, el conjurador puede recuperarla con 1d6. Nivel (1->6+; 2->5+; 3->4+; 4->3+)",
+      :description  => "Cuando se usa una magia, ya sea en un aliado o él mismo, el conjurador puede recuperarla con 1d6. Nivel (1->6+; 2->5+; 3->4+; 4->3+)",
       :type         => "Activa"
     },
     {
       :id           => 12,
       :name         => "Perseverancia",
       :description  => "Consumir toda su mente: Gloria del Héroe",
-      :type         => "Activa"
+      :type         => "Activa",
+      {
+      :id           => 13,
+      :name         => "Conjuro deseado",
+      :description  => "A cambio de 3PM, el conjurador tiene el conjuro que desee de nivel 1",
+      :type         => "Activa",
+      {
+      :id           => 14,
+      :name         => "Simetría arcana",
+      :description  => "Consumir todo su movimiento hace que el siguiente conjuro sea con +1 potencia",
+      :type         => "Activa",
     },
   ]
 end
