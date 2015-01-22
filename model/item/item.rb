@@ -73,6 +73,11 @@ class Armadura < Item
   def defensa  ; armadura(self.id)[:defensa] end
   def categoria; armadura(self.id)[:categoria] end
   def fits     ; "armadura" end
+  def description 
+    "<li>Categoría: #{ self.categoria}</li>
+		 <li>Defensa: #{ self.defensa.to_s}</li>
+		 <li>Precio: #{ self.precio}</li>"
+  end
 end
 
 class Abalorio < Item
