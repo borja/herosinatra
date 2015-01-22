@@ -15,17 +15,13 @@ class Pet < Hash
   def bono       ; pet(self.id)[:bono]       end
   def sex        ; pet(self.id)[:sex]        end
   def bicho      ; pet(self.id)[:name]       end # > "pitufo", "rata"  
+  def img_path   ;  "'../../images/pets/#{self.bicho}.png'"  end
   
   def nombre
     "#{self.name.capitalize}, #{self.sex ? "la" : "el"} #{self.bicho.capitalize} #{"torpe" if self.torpe}"
   end
   
-  def img_path
-    "'../../images/pets/#{self.bicho}.png'"
-  end
-  
   def descripcion
     "<b>Bonificador</b>: <i>#{self.bono}</i>#{"<br><b>Penalizador: </b><i>#{self.lacra}</i>" if self.torpe}"
-  end
-  
+  end 
 end
