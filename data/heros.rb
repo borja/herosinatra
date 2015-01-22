@@ -168,7 +168,6 @@ def heros
                         Proteccion.new({:id => 11}),
                         Proteccion.new({:id => 1}),
                         Proteccion.new({:id => 8, :runas => [2]}),
-<<<<<<< HEAD
                         Proteccion.new({:id => 6, :ranuras => 1, :enchants => [20,47,83] }),
                         Proteccion.new({:id => 10, :ranuras => 1 }) ],
       :miscelaneas  => [Miscelanea.new({:id => 1, :runas => [7], :enchants => [8] }),
