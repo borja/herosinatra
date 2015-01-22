@@ -173,14 +173,7 @@ def heros
                         Proteccion.new({:id => 10, :ranuras => 1 }) ],
       :miscelaneas  => [Miscelanea.new({:id => 1, :runas => [7], :enchants => [8] }),
                         Miscelanea.new({:id => 6, :enchants => [6] }) ],
-      :skills       => [1,2,3,4,5,6,7,8,9,10,11,12],
-=======
-                        Proteccion.new({:id => 6, :ranuras => 1, :enchants => [20,47,83]},
-                        Proteccion.new({:id => 10, :ranuras => 1)],
-      :miscelaneas  => [Miscelanea.new({:id => 1, :runas => [7], :enchants => [8]}),
-                        Miscelanea.new({:id => 6, :enchants => [6]})],
       :skills       => [1,2,3,4,5,6,7,8,9,10,11,12,13,14],
->>>>>>> 2f9250876a0daa22bcc6c9d36c2c7e6ba3d6cd3b
       :profesion    => Profesion.new({:id => 1, :aprendiz => [0,2]}),
       :piezas       => [3,8],
       :hechizos     => [1,2,3,4,5,6,7,8,9,10,11,12,24,25,26,27,28,29,30,31,32,33,
